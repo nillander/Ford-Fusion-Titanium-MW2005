@@ -340,36 +340,36 @@
     {
       "name": "MUSTANGGT_BASE_A",
       "hash": 3280541011,
-      "triangles": 26097,
-      "vertices": 27396,
+      "triangles": 26162,
+      "vertices": 26709,
       "materials": 6
     },
     {
       "name": "MUSTANGGT_BASE_B",
       "hash": 3280541012,
-      "triangles": 13047,
-      "vertices": 16839,
+      "triangles": 13079,
+      "vertices": 16786,
       "materials": 6
     },
     {
       "name": "MUSTANGGT_BASE_C",
       "hash": 3280541013,
-      "triangles": 5739,
-      "vertices": 8314,
+      "triangles": 5753,
+      "vertices": 8282,
       "materials": 5
     },
     {
       "name": "MUSTANGGT_BASE_D",
       "hash": 3280541014,
-      "triangles": 3098,
-      "vertices": 4919,
+      "triangles": 3065,
+      "vertices": 4843,
       "materials": 5
     },
     {
       "name": "MUSTANGGT_BASE_E",
       "hash": 3280541015,
-      "triangles": 3098,
-      "vertices": 4919,
+      "triangles": 3065,
+      "vertices": 4843,
       "materials": 5
     },
     {
@@ -450,6 +450,6 @@
       "materials": 3
     }
   ],
-  "triangles": 208035,
+  "triangles": 208080,
   "passed": true
 }

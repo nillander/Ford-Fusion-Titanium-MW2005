@@ -49,32 +49,32 @@
   },
   {
     "part": "BASE_A",
-    "vertices": 27487,
-    "triangles": 26100,
+    "vertices": 27275,
+    "triangles": 26165,
     "source_triangles": 967418
   },
   {
     "part": "BASE_B",
-    "vertices": 18663,
-    "triangles": 13050,
+    "vertices": 18622,
+    "triangles": 13082,
     "source_triangles": 967418
   },
   {
     "part": "BASE_C",
-    "vertices": 13052,
-    "triangles": 5742,
+    "vertices": 13061,
+    "triangles": 5756,
     "source_triangles": 967418
   },
   {
     "part": "BASE_D",
-    "vertices": 11095,
-    "triangles": 3101,
+    "vertices": 11075,
+    "triangles": 3068,
     "source_triangles": 967418
   },
   {
     "part": "BASE_E",
-    "vertices": 11095,
-    "triangles": 3101,
+    "vertices": 11075,
+    "triangles": 3068,
     "source_triangles": 967418
   },
   {
