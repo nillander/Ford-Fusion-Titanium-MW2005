@@ -67,6 +67,10 @@ for part,objects in groups.items():
     detail_weight=2.0
     def object_weight(o):
         bone=o['dominant_bone'].lower()
+        # The rear exhaust surround is three thin black fascia pieces.  Keep
+        # their topology through the reduction so they remain a solid opening.
+        if part=='BASE' and o['source_key'] in ('fusion_rollcage_m000_g011', 'fusion_rollcage_m000_g012', 'fusion_rollcage_m000_g013'):
+            return 12.0
         # Hinged painted panels show collapse holes much sooner than broad body
         # panels, so reserve enough topology for their compound curved shells.
         if part=='KIT00_BODY' and 'boot' in bone:return 3.0
@@ -105,10 +109,7 @@ for part,objects in groups.items():
             bpy.ops.object.modifier_apply(modifier=mod.name)
         # Record original shading for export after topology reduction.
         original=np.load(ROOT/'work/source-meshes'/f'{source_obj["source_key"]}.npz')['vertices']['Normal']
-        # The NASCAR grille extractor already writes MW-space positions and normals.
-        # GTA source meshes still need the coordinate conversion below.
-        if source_obj['source_key'] != 'nascar_front_grille':
-            original=np.column_stack((original[:,1]/alignment['longitudinal_scale'],-original[:,0],original[:,2]))
+        original=np.column_stack((original[:,1]/alignment['longitudinal_scale'],-original[:,0],original[:,2]))
         original/=np.maximum(np.linalg.norm(original,axis=1)[:,None],1e-8)
         normal_positions.extend(v.co[:] for v in source_obj.data.vertices)
         normal_values.extend(original.tolist())

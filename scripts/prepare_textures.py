@@ -52,16 +52,6 @@ def load_source(index):
             font = small = ImageFont.load_default()
         draw.text(((x0 + x1) / 2, y0 + band * 0.48), "BRASIL", font=small, fill="white", anchor="mm")
         draw.text(((x0 + x1) / 2, y0 + band + (y1 - y0 - band) / 2), "NEWZERA", font=font, fill=(12, 12, 16, 255), anchor="mm")
-    if index == 8:
-        # The Fusion's front grille surround has collapsed UVs in the GTA source.
-        # Feed it a neutral, high-contrast chrome field: this keeps the geometry
-        # from looking like a blue transparent placeholder in the MW Chrome shader.
-        image = Image.new("RGBA", (256, 256), (150, 154, 160, 255))
-        draw = ImageDraw.Draw(image)
-        for y in range(0, image.height, 24):
-            draw.rectangle((0, y, image.width, y + 5), fill=(222, 225, 230, 255))
-            draw.rectangle((0, y + 6, image.width, y + 15), fill=(82, 86, 92, 255))
-            draw.rectangle((0, y + 16, image.width, y + 23), fill=(172, 176, 182, 255))
     return image
 
 
