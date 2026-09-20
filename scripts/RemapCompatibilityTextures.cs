@@ -3,18 +3,6 @@ using System.IO;
 using mwgc.RealEngine;
 
 public class RemapCompatibilityTextures {
-    const uint OpaquePainted = 0x22719FA9u;
-    const uint HeadlightAtlas = 0x95DE5B23u;
-    const uint BrakelightAtlas = 0x4B7D95B6u;
-    const uint RimAtlas = 0x0A7C3B20u;
-    const uint WindowGlass = 0x7B220DDFu;
-    const uint ChromeA = 0xC83DAC78u;
-    const uint ChromeB = 0x0FEDEE40u;
-    const uint OfficialHeadlight = 0x12C9453Cu;
-    const uint OfficialBrakelight = 0x05BC3A3Cu;
-    const uint MissingHeadlight = 0xA532FC46u;
-    const uint MissingGlass = 0xF68EF19Fu;
-
     static RealGeometryFile Read(string path) {
         byte[] bytes=File.ReadAllBytes(path);
         Buffer.BlockCopy(BitConverter.GetBytes(bytes.Length-8),0,bytes,4,4);
@@ -27,30 +15,27 @@ public class RemapCompatibilityTextures {
         return (hash & 0xFFFFFF00u)==0xCBADCA00u;
     }
 
-    static bool IsDroppedChrome(uint shader) {
-        return shader==ChromeA || shader==ChromeB || shader==OfficialHeadlight || shader==OfficialBrakelight;
-    }
-
     static uint Replacement(string partName,uint hash) {
-        if(partName.Contains("_WINDOW_")) return WindowGlass;
-        if(partName.Contains("_HEADLIGHT_")) return HeadlightAtlas;
-        if(partName.Contains("_BRAKELIGHT_")) return BrakelightAtlas;
-        if(partName.Contains("_TIRE_")) return RimAtlas;
-        if(hash==0xCBADCA49u) return 0x339D0D44u;
-        return 0x2AF3D244u;
+        // These hashes already exist in the working donor pack and are known
+        // to be resolved by the retail game.
+        if(partName.Contains("_WINDOW_")) return 0x7B220DDFu;
+        if(partName.Contains("_HEADLIGHT_GLASS_")) return 0x95DE5B23u;
+        if(partName.Contains("_BRAKELIGHT_GLASS_")) return 0x95DE5B23u;
+        if(partName.Contains("_HEADLIGHT_")) return 0x4B7D95B6u;
+        if(partName.Contains("_BRAKELIGHT_")) return 0x4B7D95B6u;
+        if(hash==0xCBADCA49u) return 0x339D0D44u; // source licence plate
+        return 0x2AF3D244u; // opaque donor interior texture
     }
 
     static uint KnownPartReplacement(string partName,uint hash) {
         const uint compiledHeadlight=0x6A9A946Du;
-        if(hash==MissingHeadlight || hash==MissingGlass) {
-            if(partName.Contains("_BRAKELIGHT_")) return BrakelightAtlas;
-            return HeadlightAtlas;
-        }
-        if(partName.Contains("_TIRE_") && hash==0x2AF3D244u) return RimAtlas;
-        if(partName.Contains("_WINDOW_") && hash==compiledHeadlight) return WindowGlass;
-        if(partName.Contains("_BRAKELIGHT_") && hash==compiledHeadlight) return BrakelightAtlas;
-        if(partName.Contains("_HEADLIGHT_") && hash==compiledHeadlight) return HeadlightAtlas;
-        if(hash==compiledHeadlight) return HeadlightAtlas;
+        if(partName.Contains("_TIRE_") && hash==0x2AF3D244u) return 0x0A7C3B20u;
+        if(partName.Contains("_HEADLIGHT_GLASS_") && (hash==compiledHeadlight || hash==0x95DE5B23u)) return 0xF68EF19Fu;
+        if(partName.Contains("_HEADLIGHT_") && (hash==compiledHeadlight || hash==0x95DE5B23u)) return 0xA532FC46u;
+        if(partName.Contains("_WINDOW_") && hash==compiledHeadlight) return 0x7B220DDFu;
+        if(partName.Contains("_BRAKELIGHT_") && hash==compiledHeadlight) return 0x4B7D95B6u;
+        if(partName.Contains("_HEADLIGHT_") && hash==compiledHeadlight) return 0x95DE5B23u;
+        if(hash==compiledHeadlight) return 0x95DE5B23u;
         return hash;
     }
 
@@ -60,12 +45,19 @@ public class RemapCompatibilityTextures {
         foreach(RealGeometryPart part in geometry) {
             if(part.PartInfo.Textures==null) continue;
             string name=part.PartInfo.PartName.ToString();
-            if(part.PartInfo.Shaders!=null) {
+            if(name.Contains("_TIRE_") && part.PartInfo.Shaders!=null) {
                 for(int i=0;i<part.PartInfo.Shaders.Length;i++) {
-                    if(IsDroppedChrome(part.PartInfo.Shaders[i])) {
-                        part.PartInfo.Shaders[i]=OpaquePainted;
+                    if(part.PartInfo.Shaders[i]==0xC83DAC78u || part.PartInfo.Shaders[i]==0x0FEDEE40u) {
+                        // Main opaque rim shader used by stock and shop wheels.
+                        part.PartInfo.Shaders[i]=0x22719FA9u;
                         changed++;
                     }
+                }
+            }
+            if(name.Contains("_HEADLIGHT_") && !name.Contains("_HEADLIGHT_GLASS_") && part.PartInfo.Shaders!=null) {
+                for(int i=0;i<part.PartInfo.Shaders.Length;i++) {
+                    // Common opaque/reflective headlamp interior shader used by official cars.
+                    part.PartInfo.Shaders[i]=0x12C9453Cu;
                 }
             }
             for(int i=0;i<part.PartInfo.Textures.Length;i++) {
@@ -79,6 +71,6 @@ public class RemapCompatibilityTextures {
         }
         geometry.GeometryInfo.PartCount=geometry.PartCount;
         geometry.Save(args[1]);
-        Console.WriteLine("Remapped "+changed+" shader/texture slots to painted Fusion hashes");
+        Console.WriteLine("Remapped "+changed+" texture slots to donor-compatible hashes");
     }
 }

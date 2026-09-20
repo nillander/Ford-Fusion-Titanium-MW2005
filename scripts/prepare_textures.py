@@ -52,17 +52,10 @@ def load_source(index):
             font = small = ImageFont.load_default()
         draw.text(((x0 + x1) / 2, y0 + band * 0.48), "BRASIL", font=small, fill="white", anchor="mm")
         draw.text(((x0 + x1) / 2, y0 + band + (y1 - y0 - band) / 2), "NEWZERA", font=font, fill=(12, 12, 16, 255), anchor="mm")
-    # GTA chrome/spec maps are tiny cubemaps. MW drops CHROME, so paint the
-    # Fusion 2017-dev metal/grille look onto an opaque atlas tile instead.
-    if index in (7, 8, 13, 17, 19) and min(image.size) < 64:
-        painted = ROOT / "work" / "source-textures" / "specbrilho.dds"
-        fallback = ROOT / "work" / "source-textures" / "gray56.dds"
-        if painted.exists():
-            image = Image.open(painted).convert("RGBA")
-        elif fallback.exists():
-            image = Image.open(fallback).convert("RGBA")
-        else:
-            image = Image.new("RGBA", (256, 256), (168, 174, 182, 255))
+    if index in (7, 8, 13, 17, 19):
+        # MW silently drops the converted CHROME shader on this car.  Keep the
+        # same geometry visible with an opaque neutral silver texture instead.
+        image = Image.new("RGBA", (256, 256), (145, 150, 158, 255))
     return image
 
 
@@ -103,13 +96,7 @@ paint = Image.new("RGBA", (16, 16), (255, 255, 255, 255))
 save_dds(paint, out / "MUSTANGGT_SKIN1.dds")
 paint.save(out / "MUSTANGGT_SKIN1.png")
 
-rim_source = ROOT / "work" / "source-textures" / "specbrilho.dds"
-if not rim_source.exists():
-    rim_source = ROOT / "work" / "source-textures" / "gray56.dds"
-if rim_source.exists():
-    rim = Image.open(rim_source).convert("RGBA").resize((256, 256), Image.Resampling.LANCZOS)
-else:
-    rim = Image.new("RGBA", (256, 256), (168, 174, 182, 255))
+rim = Image.new("RGBA", (256, 256), (155, 160, 168, 255))
 save_dds(rim, out / "MUSTANGGT_RIM.dds")
 rim.save(out / "MUSTANGGT_RIM.png")
 
@@ -161,14 +148,6 @@ for name in names:
     explicit = {
         "MUSTANGGT_KIT00_HEADLIG": "95DE5B23",
         "MUSTANGGT_KIT00_BRAKELI": "4B7D95B6",
-        "MUSTANGGT_MISC": "5A006DE9",
-        "MUSTANGGT_LOGO": "5A00E244",
-        "MUSTANGGT_RIM": "0A7C3B20",
-        "MUSTANGGT_SKIN1": "9A8AAD9E",
-        "MUSTANGGT_INTERIOR": "2AF3D244",
-        "MUSTANGGT_BADGING": "339D0D44",
-        "MUSTANGGT_TIRE": "5A04B8CC",
-        "MUSTANGGT_DRIVER": "C961D064",
     }.get(name)
     config.extend(["[texture]", f"name={name}", f"file={name}.dds"])
     if explicit:

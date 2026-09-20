@@ -1,0 +1,60 @@
+{
+  "grade_keys": [
+    "fusion_rollcage_m000_g017",
+    "fusion_rollcage_m000_g018",
+    "fusion_rollcage_m000_g025",
+    "fusion_rollcage_m000_g026",
+    "fusion_rollcage_m000_g027",
+    "fusion_rollcage_m000_g028",
+    "fusion_rollcage_m000_g029",
+    "fusion_rollcage_m000_g030",
+    "fusion_rollcage_m000_g031",
+    "fusion_rollcage_m000_g032",
+    "fusion_rollcage_m000_g033",
+    "fusion_rollcage_m000_g034",
+    "fusion_rollcage_m000_g035",
+    "fusion_rollcage_m000_g036",
+    "fusion_rollcage_m000_g055"
+  ],
+  "head_keys": [
+    "main_m000_g002",
+    "main_m000_g003",
+    "main_m000_g004",
+    "main_m000_g005",
+    "fusion_rollcage_m000_g007"
+  ],
+  "tail_keys": [
+    "main_m000_g012",
+    "main_m000_g100",
+    "main_m000_g101",
+    "fusion_rollcage_m000_g005"
+  ],
+  "grille_triangles": 860,
+  "head_triangles": 15104,
+  "tail_triangles": 11516,
+  "body_overlay_triangles": 1800,
+  "body_overlay_bounds": {
+    "min": [
+      -2.3331480026245117,
+      -0.8745999932289124,
+      0.091201551258564
+    ],
+    "max": [
+      2.475015163421631,
+      0.8662999868392944,
+      1.1707756519317627
+    ]
+  },
+  "grille_bounds": {
+    "min": [
+      2.0084152221679688,
+      -0.8745999932289124,
+      0.3476691246032715
+    ],
+    "max": [
+      2.450015068054199,
+      0.8745999932289124,
+      0.6456691026687622
+    ]
+  }
+}

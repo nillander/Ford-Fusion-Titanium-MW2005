@@ -399,3 +399,13 @@
 /work/game-backup/vanilla-FORDGT/VINYLS.BIN filter=lfs diff=lfs merge=lfs -text
 /release/SLR/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /release/SLR/VINYLS.BIN filter=lfs diff=lfs merge=lfs -text
+/work/approved-glass/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/pre-glass-restore-ADDONS-MUSTANGGT/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/pre-glass-restore-ADDONS-MUSTANGGT/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/pre-glass-restore-ADDONS-MUSTANGGT/MUSTANGGT/VINYLS.BIN filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/pre-visibility-paint-MUSTANGGT/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/pre-visibility-paint-MUSTANGGT/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/pre-visibility-paint-MUSTANGGT/MUSTANGGT/VINYLS.BIN filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/vanilla-SLR/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/vanilla-SLR/VINYLS.BIN filter=lfs diff=lfs merge=lfs -text
+/work/opaque-lights.mwr filter=lfs diff=lfs merge=lfs -text
