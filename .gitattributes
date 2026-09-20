@@ -380,3 +380,5 @@
 /work/official-CTS.json filter=lfs diff=lfs merge=lfs -text
 /work/official-GALLARDO.json filter=lfs diff=lfs merge=lfs -text
 /work/official-IMPREZAWRX.json filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/before-gray-rim-test-MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/before-gray-rim-test-MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
