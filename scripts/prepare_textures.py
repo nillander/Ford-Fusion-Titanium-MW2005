@@ -52,6 +52,10 @@ def load_source(index):
             font = small = ImageFont.load_default()
         draw.text(((x0 + x1) / 2, y0 + band * 0.48), "BRASIL", font=small, fill="white", anchor="mm")
         draw.text(((x0 + x1) / 2, y0 + band + (y1 - y0 - band) / 2), "NEWZERA", font=font, fill=(12, 12, 16, 255), anchor="mm")
+    if index in (7, 8, 13, 17, 19):
+        # MW silently drops the converted CHROME shader on this car.  Keep the
+        # same geometry visible with an opaque neutral silver texture instead.
+        image = Image.new("RGBA", (256, 256), (145, 150, 158, 255))
     return image
 
 
@@ -92,6 +96,10 @@ paint = Image.new("RGBA", (16, 16), (255, 255, 255, 255))
 save_dds(paint, out / "MUSTANGGT_SKIN1.dds")
 paint.save(out / "MUSTANGGT_SKIN1.png")
 
+rim = Image.new("RGBA", (256, 256), (155, 160, 168, 255))
+save_dds(rim, out / "MUSTANGGT_RIM.dds")
+rim.save(out / "MUSTANGGT_RIM.png")
+
 # Retain the donor wheel and driver payloads because those meshes stay in the car.
 for name, hash_name in (("MUSTANGGT_TIRE", "5A04B8CC"), ("MUSTANGGT_DRIVER", "C961D064")):
     shutil.copy2(ROOT / "work" / "compiled-textures" / f"{hash_name}.dds", out / f"{name}.dds")
@@ -110,7 +118,7 @@ for i, shader_source in enumerate(source["shaders"]):
         if i in (14, 15, 26):
             shader = "0xa6348ee3"
     elif i in (7, 8, 13, 17, 19):
-        shader = "CHROME"
+        shader = "DULLPLASTIC"
     elif texture == "black":
         shader = "DULLPLASTIC"
     elif "brasil" in texture or texture == "base_ptq":
@@ -133,6 +141,7 @@ names = [
     "MUSTANGGT_INTERIOR", "MUSTANGGT_BADGING", "MUSTANGGT_KIT00_BRAKELI",
     "MUSTANGGT_LOGO", "MUSTANGGT_MISC", "MUSTANGGT_TIRE",
     "MUSTANGGT_KIT00_HEADLIG", "MUSTANGGT_SKIN1", "MUSTANGGT_DRIVER",
+    "MUSTANGGT_RIM",
 ]
 config = ["[tpk]", "name=MUSTANGGT", "output=TEXTURES.BIN", ""]
 for name in names:

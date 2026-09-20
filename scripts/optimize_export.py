@@ -10,6 +10,11 @@ from mathutils.kdtree import KDTree
 ROOT=Path(__file__).resolve().parents[1]
 bpy.ops.wm.open_mainfile(filepath=str(ROOT/'blender/source-aligned.blend'))
 mapping=json.loads((ROOT/'reference/materials.json').read_text())
+# Official MW cars layer the regular glass shader with a separate tint shader.
+# Keep this extra material local to the MWR export; its texture is global and
+# intentionally absent from the car's TPK.
+window_tint_index=len(mapping)
+mapping.append({'shader':'0x3ed70c43','texture':'0x1b049702'})
 donor=json.loads((ROOT/'work/donor-geometry.json').read_text())
 names={x['name'].removeprefix('MUSTANGGT_') for x in donor}
 names.update('KIT00_LEFT_SIDE_MIRROR_'+lod for lod in 'ABCDE')
@@ -67,10 +72,6 @@ for part,objects in groups.items():
     detail_weight=2.0
     def object_weight(o):
         bone=o['dominant_bone'].lower()
-        # The rear exhaust surround is three thin black fascia pieces.  Keep
-        # their topology through the reduction so they remain a solid opening.
-        if part=='BASE' and o['source_key'] in ('fusion_rollcage_m000_g011', 'fusion_rollcage_m000_g012', 'fusion_rollcage_m000_g013'):
-            return 12.0
         # Hinged painted panels show collapse holes much sooner than broad body
         # panels, so reserve enough topology for their compound curved shells.
         if part=='KIT00_BODY' and 'boot' in bone:return 3.0
@@ -153,6 +154,8 @@ for part,objects in groups.items():
             best=max(eligible,key=lambda c:float(np.dot(base_normals[c[1]],normals[vi])))
             if np.dot(base_normals[best[1]],normals[vi])>.3:normals[vi]=base_normals[best[1]]
         face_records=[]
+        tint_faces=[]
+        is_window=part in ('KIT00_FRONT_WINDOW','KIT00_REAR_WINDOW')
         uv=mesh.uv_layers.active.data
         for tri in mesh.loop_triangles:
             # mwgc reverses input winding; reverse here so output retains Blender winding.
@@ -170,8 +173,22 @@ for part,objects in groups.items():
             else:
                 out_u=[t.x for t in tex];out_v=[1-t.y for t in tex]
             face_records.append(struct.pack('<i4h6f',si,*vi,0,*out_u,*out_v))
-        vertex_records=np.column_stack((pos[:,1],pos[:,2],pos[:,0],normals[:,1],normals[:,2],normals[:,0])).astype('<f4').tobytes()
-        export.append((o.name,len(pos),len(face_records),vertex_records,b''.join(face_records)))
+            if is_window:
+                tint_vi=[index+len(pos) for index in vi]
+                tint_faces.append(struct.pack('<i4h6f',window_tint_index,*tint_vi,0,*out_u,*out_v))
+        if is_window:
+            # Match the two-layer construction used by official cars while
+            # avoiding coplanar z-fighting between clear glass and tint.
+            tint_pos=pos-normals*.001
+            export_pos=np.vstack((pos,tint_pos))
+            export_normals=np.vstack((normals,normals))
+            face_records.extend(tint_faces)
+        else:
+            export_pos=pos
+            export_normals=normals
+        vertex_records=np.column_stack((export_pos[:,1],export_pos[:,2],export_pos[:,0],
+                                        export_normals[:,1],export_normals[:,2],export_normals[:,0])).astype('<f4').tobytes()
+        export.append((o.name,len(export_pos),len(face_records),vertex_records,b''.join(face_records)))
         report.append({'part':o.name,'vertices':len(pos),'triangles':len(face_records),'source_triangles':source_tris})
         print(o.name,len(pos),len(face_records),flush=True)
     for o in objects: o.hide_render=True; o.hide_viewport=True

@@ -67,9 +67,9 @@
     {
       "name": "MUSTANGGT_KIT00_REAR_WINDOW_A",
       "hash": 533198272,
-      "triangles": 8000,
-      "vertices": 4103,
-      "materials": 1
+      "triangles": 16000,
+      "vertices": 8206,
+      "materials": 2
     },
     {
       "name": "MUSTANGGT_KIT00_REAR_BRAKE_A",
@@ -340,36 +340,36 @@
     {
       "name": "MUSTANGGT_BASE_A",
       "hash": 3280541011,
-      "triangles": 26162,
-      "vertices": 26709,
+      "triangles": 26048,
+      "vertices": 28021,
       "materials": 6
     },
     {
       "name": "MUSTANGGT_BASE_B",
       "hash": 3280541012,
-      "triangles": 13079,
-      "vertices": 16786,
+      "triangles": 13022,
+      "vertices": 16874,
       "materials": 6
     },
     {
       "name": "MUSTANGGT_BASE_C",
       "hash": 3280541013,
-      "triangles": 5753,
-      "vertices": 8282,
+      "triangles": 5728,
+      "vertices": 8312,
       "materials": 5
     },
     {
       "name": "MUSTANGGT_BASE_D",
       "hash": 3280541014,
-      "triangles": 3065,
-      "vertices": 4843,
+      "triangles": 3106,
+      "vertices": 4913,
       "materials": 5
     },
     {
       "name": "MUSTANGGT_BASE_E",
       "hash": 3280541015,
-      "triangles": 3065,
-      "vertices": 4843,
+      "triangles": 3106,
+      "vertices": 4913,
       "materials": 5
     },
     {
@@ -410,23 +410,23 @@
     {
       "name": "MUSTANGGT_KIT00_FRONT_WINDOW_A",
       "hash": 3928065023,
-      "triangles": 11993,
-      "vertices": 6436,
-      "materials": 1
+      "triangles": 23986,
+      "vertices": 12872,
+      "materials": 2
     },
     {
       "name": "MUSTANGGT_KIT00_FRONT_WINDOW_B",
       "hash": 3928065024,
-      "triangles": 5995,
-      "vertices": 3439,
-      "materials": 1
+      "triangles": 11990,
+      "vertices": 6878,
+      "materials": 2
     },
     {
       "name": "MUSTANGGT_KIT00_FRONT_WINDOW_C",
       "hash": 3928065025,
-      "triangles": 2638,
-      "vertices": 1663,
-      "materials": 1
+      "triangles": 5276,
+      "vertices": 3326,
+      "materials": 2
     },
     {
       "name": "MUSTANGGT_KIT00_INTERIOR_A",
@@ -450,6 +450,6 @@
       "materials": 3
     }
   ],
-  "triangles": 208080,
+  "triangles": 236592,
   "passed": true
 }

@@ -29,6 +29,7 @@ public class RemapCompatibilityTextures {
 
     static uint KnownPartReplacement(string partName,uint hash) {
         const uint compiledHeadlight=0x6A9A946Du;
+        if(partName.Contains("_TIRE_") && hash==0x2AF3D244u) return 0x0A7C3B20u;
         if(partName.Contains("_WINDOW_") && hash==compiledHeadlight) return 0x7B220DDFu;
         if(partName.Contains("_BRAKELIGHT_") && hash==compiledHeadlight) return 0x4B7D95B6u;
         if(partName.Contains("_HEADLIGHT_") && hash==compiledHeadlight) return 0x95DE5B23u;
@@ -42,6 +43,14 @@ public class RemapCompatibilityTextures {
         foreach(RealGeometryPart part in geometry) {
             if(part.PartInfo.Textures==null) continue;
             string name=part.PartInfo.PartName.ToString();
+            if(name.Contains("_TIRE_") && part.PartInfo.Shaders!=null) {
+                for(int i=0;i<part.PartInfo.Shaders.Length;i++) {
+                    if(part.PartInfo.Shaders[i]==0xC83DAC78u) {
+                        part.PartInfo.Shaders[i]=0x0FEDEE40u;
+                        changed++;
+                    }
+                }
+            }
             for(int i=0;i<part.PartInfo.Textures.Length;i++) {
                 uint hash=part.PartInfo.Textures[i];
                 uint replacement=IsFusionTexture(hash) ? Replacement(name,hash) : KnownPartReplacement(name,hash);

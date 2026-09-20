@@ -49,32 +49,32 @@
   },
   {
     "part": "BASE_A",
-    "vertices": 27275,
-    "triangles": 26165,
+    "vertices": 27791,
+    "triangles": 26051,
     "source_triangles": 967418
   },
   {
     "part": "BASE_B",
-    "vertices": 18622,
-    "triangles": 13082,
+    "vertices": 18690,
+    "triangles": 13025,
     "source_triangles": 967418
   },
   {
     "part": "BASE_C",
-    "vertices": 13061,
-    "triangles": 5756,
+    "vertices": 13037,
+    "triangles": 5731,
     "source_triangles": 967418
   },
   {
     "part": "BASE_D",
-    "vertices": 11075,
-    "triangles": 3068,
+    "vertices": 11102,
+    "triangles": 3109,
     "source_triangles": 967418
   },
   {
     "part": "BASE_E",
-    "vertices": 11075,
-    "triangles": 3068,
+    "vertices": 11102,
+    "triangles": 3109,
     "source_triangles": 967418
   },
   {
@@ -116,25 +116,25 @@
   {
     "part": "KIT00_FRONT_WINDOW_A",
     "vertices": 6542,
-    "triangles": 11993,
+    "triangles": 23986,
     "source_triangles": 26568
   },
   {
     "part": "KIT00_FRONT_WINDOW_B",
     "vertices": 3433,
-    "triangles": 5995,
+    "triangles": 11990,
     "source_triangles": 26568
   },
   {
     "part": "KIT00_FRONT_WINDOW_C",
     "vertices": 1660,
-    "triangles": 2638,
+    "triangles": 5276,
     "source_triangles": 26568
   },
   {
     "part": "KIT00_REAR_WINDOW_A",
     "vertices": 4103,
-    "triangles": 8000,
+    "triangles": 16000,
     "source_triangles": 8312
   },
   {

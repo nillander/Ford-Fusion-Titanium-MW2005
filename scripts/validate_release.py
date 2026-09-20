@@ -30,7 +30,8 @@ for p in compiled:
 textures=load('reference/texture-independent-validation.json')
 expected_names={'MUSTANGGT_INTERIOR','MUSTANGGT_BADGING','MUSTANGGT_KIT00_BRAKELI',
                 'MUSTANGGT_LOGO','MUSTANGGT_MISC','MUSTANGGT_TIRE',
-                'MUSTANGGT_KIT00_HEADLIG','MUSTANGGT_SKIN1','MUSTANGGT_DRIVER'}
+                'MUSTANGGT_KIT00_HEADLIG','MUSTANGGT_SKIN1','MUSTANGGT_DRIVER',
+                'MUSTANGGT_RIM'}
 assert textures['passed'] and textures['count']==len(expected_names)
 assert {t['Name'] for t in textures['textures']}==expected_names
 for path in (ROOT/'work/compiled-textures').glob('*.dds'):
