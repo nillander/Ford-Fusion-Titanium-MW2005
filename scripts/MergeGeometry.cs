@@ -17,7 +17,6 @@ public class MergeGeometry {
             var name=original.PartInfo.PartName.ToString();
             var p=newer[original.PartInfo.Hash];
             if(p!=null) {
-                p.PartInfo.MountPoints=original.PartInfo.MountPoints;
                 result.AddPart(p);replaced++;
             } else if(name.Contains("_TIRE_")||name.Contains("_BRAKE_")||name.Contains("_DRIVER_")||name.Contains("_KIT01_BODY_")||name.Contains("_KIT02_BODY_")) {
                 if(name.Contains("_DRIVER_")) {

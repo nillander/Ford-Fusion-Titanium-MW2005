@@ -1,6 +1,6 @@
 # Fusion Titanium 2018 para MW2005
 
-Projeto de transplante visual para o donor Fusion 2010 AJM3899, slot MUSTANGGT. O escopo inicial é um candidato de teste; a instalação do jogo e a validação em corrida ficaram para depois, conforme solicitado.
+O projeto de transplante visual do Fusion Titanium 2018 para MW2005. O visual atual ocupa o slot FORDGT (performance do Ford GT). O slot MUSTANGGT volta ao Mustang original.
 
 ## Reconstruir
 
@@ -15,7 +15,8 @@ O script interrompe a execução quando alguma etapa retorna erro. Ele verifica 
 
 ## Arquivos
 
-- `release/Fusion2018_MW2005_test-v0.1.zip`: pacote para a futura instalação de teste.
+- `release/FORDGT/`: visual Fusion no slot do Ford GT.
+- `release/MUSTANGGT/`: Mustang GT original para restauração.
 - `release/LEIA-ME.md`: instalação, limites e créditos.
 - `blender/source-aligned.blend`: modelo completo importado e alinhado.
 - `blender/fusion-mw.blend`: cena do resultado reimportado, com materiais de prévia.

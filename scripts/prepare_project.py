@@ -3,7 +3,7 @@ import json
 import struct
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-for directory in ('work','reference','blender','preview','release/MUSTANGGT'):
+for directory in ('work','reference','blender','preview','release/FORDGT'):
     (ROOT/directory).mkdir(parents=True,exist_ok=True)
 manifest={}
 # Only the two declared conversion inputs are immutable. Other reference cars

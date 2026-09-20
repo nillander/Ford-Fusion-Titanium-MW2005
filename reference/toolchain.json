@@ -8,20 +8,20 @@
   ],
   "repositories": {
     "mwgc": {
-      "url": "https://github.com/NFSTools/mwgc.git",
-      "commit": "63dbbe15738dc1373b7c60d125c45852ccf28c48"
+      "url": "git@github.com:nillander/nfsmw-ford-fusion-titanium.git",
+      "commit": "920542fbce6f67314c9e4540ca77ae58ae455fbe"
     },
     "mwtc": {
-      "url": "https://github.com/NFSTools/mwtc.git",
-      "commit": "dde9158589962be3b53d83ffc05cefaa5d3c26ab"
+      "url": "git@github.com:nillander/nfsmw-ford-fusion-titanium.git",
+      "commit": "920542fbce6f67314c9e4540ca77ae58ae455fbe"
     },
     "NFS-ModTools": {
-      "url": "https://github.com/NFSTools/NFS-ModTools.git",
-      "commit": "897c170eececb6f0f31c1925c2db4160d135c3b5"
+      "url": "git@github.com:nillander/nfsmw-ford-fusion-titanium.git",
+      "commit": "920542fbce6f67314c9e4540ca77ae58ae455fbe"
     },
     "OpenNFSTools": {
-      "url": "https://github.com/MWisBest/OpenNFSTools.git",
-      "commit": "aef46789b804a7a523b91c14cf401596c108391b"
+      "url": "git@github.com:nillander/nfsmw-ford-fusion-titanium.git",
+      "commit": "920542fbce6f67314c9e4540ca77ae58ae455fbe"
     }
   }
 }

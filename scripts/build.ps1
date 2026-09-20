@@ -24,17 +24,17 @@ try {
     Run $py @('scripts\analyze_source.py')
     Run $py @('scripts\prepare_textures.py')
     Run 'tools\mwtc\mwtc.exe' @('work\mw-textures\textures.txt')
-    Copy-Item -LiteralPath 'work\mw-textures\TEXTURES.BIN' -Destination 'release\MUSTANGGT\TEXTURES.BIN' -Force
+    Copy-Item -LiteralPath 'work\mw-textures\TEXTURES.BIN' -Destination 'release\FORDGT\TEXTURES.BIN' -Force
     Run $blender @('--background','--factory-startup','--python-exit-code','1','--python','scripts\build_scene.py')
     Run $blender @('--background','--factory-startup','--python-exit-code','1','--python','scripts\optimize_export.py')
     Run $py @('scripts\remove_mwr_spikes.py')
-    Run 'tools\mwgc\mwgc.exe' @('-nowait','-xname','MUSTANGGT','work\fusion.mwr','work\new-geometry.bin')
-    Run 'tools\mwgc\MergeGeometry.exe' @('donor\fusion-ajm3899\MUSTANGGT\GEOMETRY.BIN','work\new-geometry.bin','release\MUSTANGGT\GEOMETRY.BIN')
-    Run 'tools\mwgc\RemapCompatibilityTextures.exe' @('release\MUSTANGGT\GEOMETRY.BIN','work\remapped-geometry.bin')
-    Move-Item -LiteralPath 'work\remapped-geometry.bin' -Destination 'release\MUSTANGGT\GEOMETRY.BIN' -Force
-    Run $dotnet @('scripts\validator\bin\Release\net8.0\Validator.dll','release\MUSTANGGT\GEOMETRY.BIN','reference\geometry-validation.json')
-    Run $dotnet @('scripts\validator\bin\Release\net8.0\Validator.dll','release\MUSTANGGT\TEXTURES.BIN','reference\texture-independent-validation.json','work\compiled-textures')
-    Run 'tools\mwgc\InspectGeometry.exe' @('release\MUSTANGGT\GEOMETRY.BIN','work\compiled-geometry.json')
+    Run 'tools\mwgc\mwgc.exe' @('-nowait','-xname','FORDGT','work\fusion.mwr','work\new-geometry.bin')
+    Run 'tools\mwgc\MergeGeometry.exe' @('work\fordgt-vanilla\GEOMETRY.BIN','work\new-geometry.bin','release\FORDGT\GEOMETRY.BIN')
+    Run 'tools\mwgc\RemapCompatibilityTextures.exe' @('release\FORDGT\GEOMETRY.BIN','work\remapped-geometry.bin')
+    Move-Item -LiteralPath 'work\remapped-geometry.bin' -Destination 'release\FORDGT\GEOMETRY.BIN' -Force
+    Run $dotnet @('scripts\validator\bin\Release\net8.0\Validator.dll','release\FORDGT\GEOMETRY.BIN','reference\geometry-validation.json')
+    Run $dotnet @('scripts\validator\bin\Release\net8.0\Validator.dll','release\FORDGT\TEXTURES.BIN','reference\texture-independent-validation.json','work\compiled-textures')
+    Run 'tools\mwgc\InspectGeometry.exe' @('release\FORDGT\GEOMETRY.BIN','work\compiled-geometry.json')
     Run $py @('scripts\validate_release.py')
 Run $blender @('--background','--threads','1','--factory-startup','--python-exit-code','1','--python','scripts\render_compiled.py')
     Run $py @('scripts\package_release.py')

@@ -1,7 +1,16 @@
 {
   "passed": true,
-  "count": 9,
+  "count": 10,
   "textures": [
+    {
+      "Name": "MUSTANGGT_RIM",
+      "TexHash": 175913760,
+      "Width": 256,
+      "Height": 256,
+      "DataSize": 65536,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
     {
       "Name": "MUSTANGGT_INTERIOR",
       "TexHash": 720622148,
