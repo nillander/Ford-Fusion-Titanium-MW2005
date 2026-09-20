@@ -1,0 +1,14 @@
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\bin\Release\net8.0\Validator.exe
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\bin\Release\net8.0\Validator.deps.json
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\bin\Release\net8.0\Validator.runtimeconfig.json
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\bin\Release\net8.0\Validator.dll
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\bin\Release\net8.0\Validator.pdb
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\obj\Release\net8.0\Validator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\obj\Release\net8.0\Validator.AssemblyInfoInputs.cache
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\obj\Release\net8.0\Validator.AssemblyInfo.cs
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\obj\Release\net8.0\Validator.csproj.CoreCompileInputs.cache
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\obj\Release\net8.0\Validator.dll
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\obj\Release\net8.0\refint\Validator.dll
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\obj\Release\net8.0\Validator.pdb
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\obj\Release\net8.0\Validator.genruntimeconfig.cache
+C:\Users\nillander\NoDocuments\fusion-mw2005\scripts\validator\obj\Release\net8.0\ref\Validator.dll

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>NFSTools.Core.ModuleSystem</PackageId>
+    <Authors>heyitsleo/NFSTools</Authors>
+    <Company>NFSTools</Company>
+    <Product>NFSTools Core - Module System</Product>
+    <Platforms>x86</Platforms>
+    <Version>1.0.3</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Composition" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoreLibraries.GameUtilities\CoreLibraries.GameUtilities.csproj" />
+  </ItemGroup>
+
+</Project>

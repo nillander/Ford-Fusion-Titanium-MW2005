@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "mj9Y8ixlcRU=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\nillander\\NoDocuments\\fusion-mw2005\\tools\\NFS-ModTools\\Common\\Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nillander\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\nillander\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\nillander\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Não é possível encontrar o pacote NFSTools.CompLib. Não existe nenhum pacote com esta ID nas origens: nuget.org",
+      "libraryId": "NFSTools.CompLib",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "installed_at": "2026-09-19T17:47:53.5078749-03:00",
+  "game": "D:\\Program Files (x86)\\Electronic Arts\\Need For Speed Most Wanted Black Edition",
+  "method": "Direct CARS/MUSTANGGT replacement plus ADDONS/CARS_REPLACE copy",
+  "files": {
+    "GEOMETRY.BIN": {
+      "sha256": "a091add6d4935c9d807ea0c62c1733de3c73bad2443ec9555d379870c61e545a",
+      "bytes": 10563584
+    },
+    "VINYLS.BIN": {
+      "sha256": "1a721acee2d5d68f7cacbeaedb037c761fa178affa3072c34c18d12b703bf342",
+      "bytes": 1986560
+    },
+    "TEXTURES.BIN": {
+      "sha256": "9bdd669c54e8f6982b5f4e7fcc26b3cf79d3bc2a22ed38c5beec6ce65d60b665",
+      "bytes": 6337664
+    }
+  },
+  "backups": {
+    "vanilla_backup_created": false,
+    "donor": "C:\\Users\\nillander\\NoDocuments\\fusion-mw2005\\work\\game-backup\\donor-MUSTANGGT",
+    "note": "Copia vanilla do Mustang nao foi gravada antes da substituicao. PREVINYL.BIN original foi mantido. VINYLS.BIN do pacote tem o mesmo tamanho do vanilla."
+  },
+  "hashes_verified": true,
+  "in_game_tested": false
+}

@@ -1,0 +1,27 @@
+{
+  "blender": "4.5.14 LTS portable; official ZIP SHA256 verified",
+  "python_packages": [
+    "numpy==2.5.3",
+    "pillow==12.3.0",
+    "pymateria==0.2.0",
+    "szio==1.3.0"
+  ],
+  "repositories": {
+    "mwgc": {
+      "url": "https://github.com/NFSTools/mwgc.git",
+      "commit": "63dbbe15738dc1373b7c60d125c45852ccf28c48"
+    },
+    "mwtc": {
+      "url": "https://github.com/NFSTools/mwtc.git",
+      "commit": "dde9158589962be3b53d83ffc05cefaa5d3c26ab"
+    },
+    "NFS-ModTools": {
+      "url": "https://github.com/NFSTools/NFS-ModTools.git",
+      "commit": "897c170eececb6f0f31c1925c2db4160d135c3b5"
+    },
+    "OpenNFSTools": {
+      "url": "https://github.com/MWisBest/OpenNFSTools.git",
+      "commit": "aef46789b804a7a523b91c14cf401596c108391b"
+    }
+  }
+}

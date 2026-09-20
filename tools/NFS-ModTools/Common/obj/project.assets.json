@@ -1,0 +1,104 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "NFSTools.CompLib >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\nillander\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\nillander\\NoDocuments\\fusion-mw2005\\tools\\NFS-ModTools\\Common\\Common.csproj",
+      "projectName": "Common",
+      "projectPath": "C:\\Users\\nillander\\NoDocuments\\fusion-mw2005\\tools\\NFS-ModTools\\Common\\Common.csproj",
+      "packagesPath": "C:\\Users\\nillander\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nillander\\NoDocuments\\fusion-mw2005\\tools\\NFS-ModTools\\Common\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\nillander\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "NFSTools.CompLib": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Users\\nillander\\NoDocuments\\fusion-mw2005\\tools\\dotnet\\sdk\\8.0.425\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Não é possível encontrar o pacote NFSTools.CompLib. Não existe nenhum pacote com esta ID nas origens: nuget.org",
+      "libraryId": "NFSTools.CompLib",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

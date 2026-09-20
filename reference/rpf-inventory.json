@@ -1,0 +1,236 @@
+[
+  {
+    "path": "work\\source-extracted\\content.xml",
+    "bytes": 2543,
+    "sha256": "6edaed9953c126408aacd62c4eee9778e15064247471d43d15c55dcbc28553fc",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\data\\carcols.meta",
+    "bytes": 25911,
+    "sha256": "37f77ab45c85b9373292b966c6c4c654ef55109b51ddc4b3063ffb7d65cac32b",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\data\\carvariations.meta",
+    "bytes": 1130,
+    "sha256": "7c3552351b336b153b66fbcb46a13e2f69608c88aff5696eeeb3e1814e87e78c",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\data\\dlctext.meta",
+    "bytes": 191,
+    "sha256": "1cb8688fbc64687933f29117bcc20d307a15baa1876bed02f1d65575f5fb9a86",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\data\\handling.meta",
+    "bytes": 2941,
+    "sha256": "6c29c9c7f8ccc3de313235eb35abe8599ac308e2c2fa6a42a8072acf9a38d8b0",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\data\\vehicles.meta",
+    "bytes": 5797,
+    "sha256": "c719e4661dfdbdf8937fa192996d32cb38e0aa5a0fe55ab7fb6a1900992de432",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\setup2.xml",
+    "bytes": 502,
+    "sha256": "c7ebaa469c4ff439273eeab509657ae3ae2267f6f5883b02836ef970d84eabe2",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\americandlc.rpf",
+    "bytes": 1024,
+    "sha256": "09b4ed0597f5462373924bc00e28bd21dfc0992d76df4832ee781366e6227999",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\americandlc.extracted\\global.gxt2",
+    "bytes": 36,
+    "sha256": "c3d952edceb8f45f4c53185aca94029ec11ea38990ae34b13b0e100ae92d9888",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\chinesedlc.rpf",
+    "bytes": 1024,
+    "sha256": "09b4ed0597f5462373924bc00e28bd21dfc0992d76df4832ee781366e6227999",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\chinesedlc.extracted\\global.gxt2",
+    "bytes": 36,
+    "sha256": "c3d952edceb8f45f4c53185aca94029ec11ea38990ae34b13b0e100ae92d9888",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\frenchdlc.rpf",
+    "bytes": 1024,
+    "sha256": "09b4ed0597f5462373924bc00e28bd21dfc0992d76df4832ee781366e6227999",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\frenchdlc.extracted\\global.gxt2",
+    "bytes": 36,
+    "sha256": "c3d952edceb8f45f4c53185aca94029ec11ea38990ae34b13b0e100ae92d9888",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\germandlc.rpf",
+    "bytes": 1024,
+    "sha256": "09b4ed0597f5462373924bc00e28bd21dfc0992d76df4832ee781366e6227999",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\germandlc.extracted\\global.gxt2",
+    "bytes": 36,
+    "sha256": "c3d952edceb8f45f4c53185aca94029ec11ea38990ae34b13b0e100ae92d9888",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\italiandlc.rpf",
+    "bytes": 1024,
+    "sha256": "09b4ed0597f5462373924bc00e28bd21dfc0992d76df4832ee781366e6227999",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\italiandlc.extracted\\global.gxt2",
+    "bytes": 36,
+    "sha256": "c3d952edceb8f45f4c53185aca94029ec11ea38990ae34b13b0e100ae92d9888",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\japanesedlc.rpf",
+    "bytes": 1024,
+    "sha256": "09b4ed0597f5462373924bc00e28bd21dfc0992d76df4832ee781366e6227999",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\japanesedlc.extracted\\global.gxt2",
+    "bytes": 36,
+    "sha256": "c3d952edceb8f45f4c53185aca94029ec11ea38990ae34b13b0e100ae92d9888",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\koreandlc.rpf",
+    "bytes": 1024,
+    "sha256": "09b4ed0597f5462373924bc00e28bd21dfc0992d76df4832ee781366e6227999",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\koreandlc.extracted\\global.gxt2",
+    "bytes": 36,
+    "sha256": "c3d952edceb8f45f4c53185aca94029ec11ea38990ae34b13b0e100ae92d9888",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\mexicandlc.rpf",
+    "bytes": 1024,
+    "sha256": "09b4ed0597f5462373924bc00e28bd21dfc0992d76df4832ee781366e6227999",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\mexicandlc.extracted\\global.gxt2",
+    "bytes": 36,
+    "sha256": "c3d952edceb8f45f4c53185aca94029ec11ea38990ae34b13b0e100ae92d9888",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\polishdlc.rpf",
+    "bytes": 1024,
+    "sha256": "09b4ed0597f5462373924bc00e28bd21dfc0992d76df4832ee781366e6227999",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\polishdlc.extracted\\global.gxt2",
+    "bytes": 36,
+    "sha256": "c3d952edceb8f45f4c53185aca94029ec11ea38990ae34b13b0e100ae92d9888",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\portuguesedlc.rpf",
+    "bytes": 1024,
+    "sha256": "09b4ed0597f5462373924bc00e28bd21dfc0992d76df4832ee781366e6227999",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\portuguesedlc.extracted\\global.gxt2",
+    "bytes": 36,
+    "sha256": "c3d952edceb8f45f4c53185aca94029ec11ea38990ae34b13b0e100ae92d9888",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\russiandlc.rpf",
+    "bytes": 1024,
+    "sha256": "09b4ed0597f5462373924bc00e28bd21dfc0992d76df4832ee781366e6227999",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\russiandlc.extracted\\global.gxt2",
+    "bytes": 36,
+    "sha256": "c3d952edceb8f45f4c53185aca94029ec11ea38990ae34b13b0e100ae92d9888",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\spanishdlc.rpf",
+    "bytes": 1024,
+    "sha256": "09b4ed0597f5462373924bc00e28bd21dfc0992d76df4832ee781366e6227999",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\data\\lang\\spanishdlc.extracted\\global.gxt2",
+    "bytes": 36,
+    "sha256": "c3d952edceb8f45f4c53185aca94029ec11ea38990ae34b13b0e100ae92d9888",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\vehiclemods\\fusion_mods.rpf",
+    "bytes": 146875392,
+    "sha256": "55b23a720c9d53a9e7d01d3b7017a57b4f103764e67fc1f7892cc4e8ba7a19d5",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\vehiclemods\\fusion_mods.extracted\\fusion_exh_2.yft",
+    "bytes": 10023596,
+    "sha256": "0b3432526c9da34a6ad5479d2e8f5ed03b61f5691415e5fd35badd8a74f976aa",
+    "resource": true
+  },
+  {
+    "path": "work\\source-extracted\\x64\\vehiclemods\\fusion_mods.extracted\\fusion_rfst.yft",
+    "bytes": 15225594,
+    "sha256": "993f10c4d1e745f331acfcff3f384f93ae6bc4fba29201decced5f9a68402877",
+    "resource": true
+  },
+  {
+    "path": "work\\source-extracted\\x64\\vehiclemods\\fusion_mods.extracted\\fusion_rollcage.yft",
+    "bytes": 7476551,
+    "sha256": "91775a54c70f1389d17f5d3b615952c845ca035b932ce145328f345e06331493",
+    "resource": true
+  },
+  {
+    "path": "work\\source-extracted\\x64\\vehicles.rpf",
+    "bytes": 91741696,
+    "sha256": "0aad5090b362e0332e1eb703fb1d6af6c5ed60813fb8021a3578fc6a4665a0fb",
+    "resource": false
+  },
+  {
+    "path": "work\\source-extracted\\x64\\vehicles.extracted\\fusion.yft",
+    "bytes": 16137978,
+    "sha256": "80abc573c6f0e32d0dafbc90619602cb347e7a6bd00b21afd783ceec761bfb12",
+    "resource": true
+  },
+  {
+    "path": "work\\source-extracted\\x64\\vehicles.extracted\\fusion.ytd",
+    "bytes": 1946255,
+    "sha256": "4fc4064beee02086066cefef9ed8a789989712626f3e65373c2c80a7c77b015a",
+    "resource": true
+  },
+  {
+    "path": "work\\source-extracted\\x64\\vehicles.extracted\\fusion_hi.yft",
+    "bytes": 15988931,
+    "sha256": "d88c842d3eb67cef6600625b1fc8df470191a785a7113c31a4b362e0294758cc",
+    "resource": true
+  }
+]

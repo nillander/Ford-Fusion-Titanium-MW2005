@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net8.0</TargetFramework><OutputType>Exe</OutputType><AllowUnsafeBlocks>true</AllowUnsafeBlocks><EnableDefaultCompileItems>false</EnableDefaultCompileItems></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../tools/NFS-ModTools/Common/**/*.cs" Exclude="../../tools/NFS-ModTools/Common/obj/**/*.cs;../../tools/NFS-ModTools/Common/Compression.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="../../tools/OpenNFSTools/LibNFS/Compression/JDLZ.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,254 @@
+﻿<Window x:Class="Viewer.MainWindow"
+        x:Name="MyMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Viewer"
+        xmlns:hx="http://helix-toolkit.org/wpf/SharpDX"
+        xmlns:core="clr-namespace:HelixToolkit.SharpDX.Core;assembly=HelixToolkit.SharpDX.Core"
+        mc:Ignorable="d"
+        Height="720" Width="1280" MinHeight="720" MinWidth="1280">
+    <Grid DataContext="{Binding ElementName=MyMainWindow}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="150*" MinHeight="150" />
+            <RowDefinition Height="5" MinHeight="5" MaxHeight="5" />
+            <RowDefinition Height="100" MinHeight="100" />
+        </Grid.RowDefinitions>
+
+        <Menu Grid.ColumnSpan="2"
+              Padding="5,6,0,6">
+            <Menu.Resources>
+                <Style x:Key="CustomMenuItem" TargetType="{x:Type MenuItem}">
+                    <Setter Property="FontSize" Value="12" />
+                    <Setter Property="Margin" Value="0,0,0,0" />
+                </Style>
+            </Menu.Resources>
+            <MenuItem Header="File" Style="{StaticResource CustomMenuItem}">
+                <MenuItem Header="Open"
+                          x:Name="OpenItem"
+                          Click="OpenItem_OnClick"
+                          Style="{StaticResource CustomMenuItem}" />
+            </MenuItem>
+            <MenuItem Header="Geometry" Style="{StaticResource CustomMenuItem}" />
+            <MenuItem Header="Camera" Style="{StaticResource CustomMenuItem}">
+                <MenuItem Header="Reset"
+                          x:Name="ResetCameraItem"
+                          Click="ResetCameraItem_OnClick"
+                          Style="{StaticResource CustomMenuItem}" />
+            </MenuItem>
+        </Menu>
+
+        <TreeView x:Name="AssetTree"
+                  Padding="0,0,0,0"
+                  Background="#232323"
+                  Grid.Row="1"
+                  Grid.Column="0"
+                  ItemsSource="{Binding Containers, ElementName=MyMainWindow}"
+                  VirtualizingStackPanel.IsVirtualizing="True"
+                  VirtualizingStackPanel.VirtualizationMode="Recycling"
+                  ScrollViewer.CanContentScroll="True">
+            <TreeView.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
+                                 Color="#555" />
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}"
+                                 Color="Black" />
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}"
+                                 Color="Transparent" />
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}"
+                                 Color="Black" />
+                <HierarchicalDataTemplate DataType="{x:Type local:FileContainer}" ItemsSource="{Binding Assets}">
+                    <TextBlock Text="{Binding FileName}"
+                               Foreground="#dedede" />
+                </HierarchicalDataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type local:SimpleAssetGroup}" ItemsSource="{Binding SubAssets}">
+                    <TextBlock Text="{Binding Name}"
+                               Foreground="#dedede" />
+                </HierarchicalDataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type local:SolidListAsset}" ItemsSource="{Binding SubAssets}">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,6,0">
+                        <CheckBox IsChecked="{Binding IsSelected}"
+                                  Margin="0,0,3,0"
+                                  Command="{Binding ElementName=MyMainWindow,Path=ModelPackCheckCommand}"
+                                  CommandParameter="{Binding}" />
+                        <TextBlock Text="{Binding Resource.Filename}"
+                                   Foreground="#bbb"
+                                   FontWeight="DemiBold"
+                                   Margin="0,0,4,0">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                            <Setter Property="Foreground" Value="Gold" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        <TextBlock Text="["
+                                   Foreground="#bbb" />
+                        <TextBlock Text="{Binding Resource.GroupName}"
+                                   Foreground="#bbb"
+                                   FontWeight="DemiBold" />
+                        <TextBlock Text="]"
+                                   Foreground="#bbb" />
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type local:TexturePackAsset}" ItemsSource="{Binding SubAssets}">
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding IsSelected}"
+                                  Margin="0,0,3,0"
+                                  Command="{Binding ElementName=MyMainWindow,Path=TexturePackCheckCommand}"
+                                  CommandParameter="{Binding}" />
+                        <TextBlock Text="{Binding Resource.PipelinePath}"
+                                   FontWeight="DemiBold"
+                                   Margin="0,0,4,0"
+                                   Foreground="LightGreen">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                            <Setter Property="FontWeight" Value="Bold" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        <TextBlock Text="["
+                                   Foreground="#bbb" />
+                        <TextBlock Text="{Binding Resource.Name}"
+                                   Foreground="#bbb"
+                                   FontWeight="DemiBold" />
+                        <TextBlock Text="]"
+                                   Foreground="#bbb" />
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type local:TextureAsset}">
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding IsSelected}"
+                                  Margin="0,0,3,0"
+                                  Command="{Binding ElementName=MyMainWindow,Path=TextureCheckCommand}"
+                                  CommandParameter="{Binding}" />
+                        <TextBlock Text="{Binding Resource.Name}" Foreground="LawnGreen">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                            <Setter Property="FontWeight" Value="Bold" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type local:SolidObjectAsset}">
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding IsSelected}"
+                                  Margin="0,0,3,0"
+                                  Command="{Binding ElementName=MyMainWindow,Path=ModelCheckCommand}"
+                                  CommandParameter="{Binding}" />
+                        <TextBlock Text="{Binding Resource.Name}" Foreground="#bbb">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                            <Setter Property="FontWeight" Value="Bold" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type local:FileAssetContainer}"
+                                          ItemsSource="{Binding SubAssets}" />
+            </TreeView.Resources>
+        </TreeView>
+        <hx:Viewport3DX x:Name="ModelViewport"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Camera="{Binding Camera}"
+                        BackgroundColor="White"
+                        CoordinateSystemLabelForeground="White"
+                        EnableSwapChainRendering="True"
+                        EnableDeferredRendering="True"
+                        FXAALevel="None"
+                        IsShadowMappingEnabled="False"
+                        MSAA="Disable"
+                        ShowCoordinateSystem="True"
+                        ShowFrameRate="True"
+                        TextBrush="Black"
+                        UseDefaultGestures="False">
+            <hx:Viewport3DX.EffectsManager>
+                <core:DefaultEffectsManager />
+            </hx:Viewport3DX.EffectsManager>
+            <hx:Viewport3DX.InputBindings>
+                <KeyBinding Key="B" Command="hx:ViewportCommands.BackView" />
+                <KeyBinding Key="F" Command="hx:ViewportCommands.FrontView" />
+                <KeyBinding Key="U" Command="hx:ViewportCommands.TopView" />
+                <KeyBinding Key="D" Command="hx:ViewportCommands.BottomView" />
+                <KeyBinding Key="L" Command="hx:ViewportCommands.LeftView" />
+                <KeyBinding Key="R" Command="hx:ViewportCommands.RightView" />
+                <KeyBinding Command="hx:ViewportCommands.ZoomExtents" Gesture="Control+E" />
+                <MouseBinding Command="hx:ViewportCommands.Rotate" Gesture="RightClick" />
+                <MouseBinding Command="hx:ViewportCommands.Zoom" Gesture="MiddleClick" />
+                <MouseBinding Command="hx:ViewportCommands.Pan" Gesture="LeftClick" />
+            </hx:Viewport3DX.InputBindings>
+            <hx:DirectionalLight3D
+                Direction="{Binding Camera.LookDirection, RelativeSource={RelativeSource AncestorType=hx:Viewport3DX}}"
+                Color="White" />
+            <hx:GroupModel3D
+                ItemsSource="{Binding RenderManager.CurrentElements.Values}" />
+        </hx:Viewport3DX>
+        <GridSplitter Grid.Row="2"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="2"
+                      HorizontalAlignment="Stretch" />
+        <StackPanel Grid.Row="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Background="#232323"
+                    DataContext="{Binding ElementName=MyMainWindow, Path=Log}"
+                    CanVerticallyScroll="True"
+                    CanHorizontallyScroll="True">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Path=Entries}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate DataType="{x:Type local:MainWindow+LogModel+LogEntry}">
+                            <Grid Margin="10,10,0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding Path=Timestamp}"
+                                           Grid.Column="0"
+                                           Foreground="LightGray" />
+                                <ItemsControl ItemsSource="{Binding Path=Message}" Grid.Column="2">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Window>
