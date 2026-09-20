@@ -105,7 +105,10 @@ for part,objects in groups.items():
             bpy.ops.object.modifier_apply(modifier=mod.name)
         # Record original shading for export after topology reduction.
         original=np.load(ROOT/'work/source-meshes'/f'{source_obj["source_key"]}.npz')['vertices']['Normal']
-        original=np.column_stack((original[:,1]/alignment['longitudinal_scale'],-original[:,0],original[:,2]))
+        # The NASCAR grille extractor already writes MW-space positions and normals.
+        # GTA source meshes still need the coordinate conversion below.
+        if source_obj['source_key'] != 'nascar_front_grille':
+            original=np.column_stack((original[:,1]/alignment['longitudinal_scale'],-original[:,0],original[:,2]))
         original/=np.maximum(np.linalg.norm(original,axis=1)[:,None],1e-8)
         normal_positions.extend(v.co[:] for v in source_obj.data.vertices)
         normal_values.extend(original.tolist())

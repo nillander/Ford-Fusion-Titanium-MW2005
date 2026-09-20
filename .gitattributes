@@ -349,3 +349,4 @@
 /work/venv/Lib/site-packages/numpy.libs/libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll filter=lfs diff=lfs merge=lfs -text
 /work/venv/Lib/site-packages/numpy/_core/_multiarray_umath.cp312-win_amd64.pyd filter=lfs diff=lfs merge=lfs -text
 /work/venv/Lib/site-packages/pymateria/_pymateria.cp312-win_amd64.pyd filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/before-nascar-grille-geometry-test-MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text

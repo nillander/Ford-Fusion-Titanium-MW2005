@@ -49,33 +49,33 @@
   },
   {
     "part": "BASE_A",
-    "vertices": 27791,
-    "triangles": 26051,
-    "source_triangles": 967418
+    "vertices": 27796,
+    "triangles": 26039,
+    "source_triangles": 968278
   },
   {
     "part": "BASE_B",
-    "vertices": 18690,
-    "triangles": 13025,
-    "source_triangles": 967418
+    "vertices": 18694,
+    "triangles": 13018,
+    "source_triangles": 968278
   },
   {
     "part": "BASE_C",
-    "vertices": 13037,
-    "triangles": 5731,
-    "source_triangles": 967418
+    "vertices": 13043,
+    "triangles": 5728,
+    "source_triangles": 968278
   },
   {
     "part": "BASE_D",
-    "vertices": 11102,
-    "triangles": 3109,
-    "source_triangles": 967418
+    "vertices": 11118,
+    "triangles": 3120,
+    "source_triangles": 968278
   },
   {
     "part": "BASE_E",
-    "vertices": 11102,
-    "triangles": 3109,
-    "source_triangles": 967418
+    "vertices": 11118,
+    "triangles": 3120,
+    "source_triangles": 968278
   },
   {
     "part": "KIT00_RIGHT_BRAKELIGHT_GLASS_A",

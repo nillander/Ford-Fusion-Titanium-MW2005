@@ -1,7 +1,6 @@
 {
   "backend": "OPTIX",
   "devices": [
-    "NVIDIA GeForce RTX 3080 Ti",
     "NVIDIA GeForce RTX 3080 Ti"
   ]
 }

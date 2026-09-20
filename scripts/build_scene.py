@@ -82,6 +82,32 @@ for item in src['meshes']:
     mesh.materials.append(mats[item['shader']]); obj['source_shader']=item['shader']; obj['source_key']=item['key']
     obj['dominant_bone']=item['dominant_bone']
 
+# The original GTA grille is a UV-collapsed, non-rendering fragment after MW
+# conversion.  Add the matching physical fascia fragment extracted from the
+# aligned 2015 Fusion NASCAR donor.  It remains a separate source object so
+# the exporter can fold it into BASE without touching paint, glass or wheels.
+nascar_grille = ROOT / 'work' / 'source-meshes' / 'nascar_front_grille.npz'
+if nascar_grille.exists():
+    grille = np.load(nascar_grille)
+    p = grille['vertices']['Position']
+    n = grille['vertices']['Normal']
+    f = grille['indices'].reshape(-1, 3)
+    mesh = bpy.data.meshes.new('nascar_front_grille')
+    mesh.from_pydata(p.tolist(), [], f.tolist()); mesh.update()
+    mesh.polygons.foreach_set('use_smooth', [True] * len(mesh.polygons))
+    mesh.normals_split_custom_set_from_vertices(n.tolist())
+    uv = mesh.uv_layers.new(name='UVMap')
+    for poly in mesh.polygons:
+        for li in poly.loop_indices:
+            t = grille['vertices']['TexCoord0'][mesh.loops[li].vertex_index]
+            uv.data[li].uv = (float(t[0]), 1 - float(t[1]))
+    obj = bpy.data.objects.new('nascar_front_grille', mesh)
+    bpy.context.collection.objects.link(obj)
+    mesh.materials.append(mats[8])
+    obj['source_shader'] = 8
+    obj['source_key'] = 'nascar_front_grille'
+    obj['dominant_bone'] = 'nascar_front_grille'
+
 # Donor tire vertices are already in metres; TireOffsets attachment is at the wheel face.
 tire=next(p for p in donor if p['name']=='MUSTANGGT_KIT00_FRONT_TIRE_A')
 rubber=bpy.data.materials.new('DONOR_tire_preview'); rubber.diffuse_color=(.025,.025,.025,1)
