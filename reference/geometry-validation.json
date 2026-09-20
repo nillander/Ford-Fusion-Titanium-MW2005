@@ -270,37 +270,37 @@
     {
       "name": "MUSTANGGT_KIT00_BODY_A",
       "hash": 2694687117,
-      "triangles": 39960,
-      "vertices": 27709,
-      "materials": 2
+      "triangles": 40385,
+      "vertices": 27685,
+      "materials": 3
     },
     {
       "name": "MUSTANGGT_KIT00_BODY_B",
       "hash": 2694687118,
-      "triangles": 19979,
-      "vertices": 17626,
-      "materials": 2
+      "triangles": 20192,
+      "vertices": 17493,
+      "materials": 3
     },
     {
       "name": "MUSTANGGT_KIT00_BODY_C",
       "hash": 2694687119,
-      "triangles": 8791,
-      "vertices": 10315,
-      "materials": 2
+      "triangles": 8884,
+      "vertices": 10276,
+      "materials": 3
     },
     {
       "name": "MUSTANGGT_KIT00_BODY_D",
       "hash": 2694687120,
-      "triangles": 3596,
-      "vertices": 5050,
-      "materials": 2
+      "triangles": 3634,
+      "vertices": 5116,
+      "materials": 3
     },
     {
       "name": "MUSTANGGT_KIT00_BODY_E",
       "hash": 2694687121,
-      "triangles": 1598,
-      "vertices": 2627,
-      "materials": 2
+      "triangles": 1615,
+      "vertices": 2643,
+      "materials": 3
     },
     {
       "name": "MUSTANGGT_KIT00_FRONT_TIRE_A",
@@ -450,6 +450,6 @@
       "materials": 3
     }
   ],
-  "triangles": 246437,
+  "triangles": 247223,
   "passed": true
 }

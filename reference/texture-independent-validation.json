@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "count": 11,
+  "count": 14,
   "textures": [
     {
       "Name": "MUSTANGGT_RIM",
@@ -39,6 +39,15 @@
       "Format": 861165636
     },
     {
+      "Name": "MUSTANGGT_OPAQUE_PARTS",
+      "TexHash": 1493526252,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 262144,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
       "Name": "MUSTANGGT_LOGO",
       "TexHash": 1509977577,
       "Width": 1024,
@@ -64,6 +73,24 @@
       "DataSize": 32768,
       "MipMapCount": 1,
       "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_LIGHTREAR",
+      "TexHash": 1745722746,
+      "Width": 256,
+      "Height": 256,
+      "DataSize": 65536,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_LIGHTFRONT",
+      "TexHash": 1760527097,
+      "Width": 256,
+      "Height": 256,
+      "DataSize": 65536,
+      "MipMapCount": 1,
+      "Format": 861165636
     },
     {
       "Name": "MUSTANGGT_KIT00_HEADLIG",

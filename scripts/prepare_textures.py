@@ -121,6 +121,25 @@ else:
 save_dds(grille, out / "MUSTANGGT_GRILLE.dds")
 grille.save(out / "MUSTANGGT_GRILLE.png")
 
+# Flat colours for replacement geometry.  These parts must remain visible on
+# the 2005 renderer, so every quadrant is fully opaque and uses no chrome or
+# glass alpha.
+opaque = Image.new("RGBA", (512, 512), (8, 9, 10, 255))
+draw = ImageDraw.Draw(opaque)
+draw.rectangle((0, 0, 255, 255), fill=(12, 14, 16, 255))
+draw.rectangle((256, 0, 511, 255), fill=(105, 110, 116, 255))
+draw.rectangle((0, 256, 255, 511), fill=(238, 226, 174, 255))
+draw.rectangle((256, 256, 511, 511), fill=(178, 18, 24, 255))
+save_dds(opaque, out / "MUSTANGGT_OPAQUE_PARTS.dds")
+opaque.save(out / "MUSTANGGT_OPAQUE_PARTS.png")
+
+front_light = Image.new("RGBA", (256, 256), (238, 226, 174, 255))
+rear_light = Image.new("RGBA", (256, 256), (178, 18, 24, 255))
+for name, image in (("MUSTANGGT_LIGHTFRONT", front_light),
+                    ("MUSTANGGT_LIGHTREAR", rear_light)):
+    save_dds(image, out / f"{name}.dds")
+    image.save(out / f"{name}.png")
+
 # Retain the donor wheel and driver payloads because those meshes stay in the car.
 for name, hash_name in (("MUSTANGGT_TIRE", "5A04B8CC"), ("MUSTANGGT_DRIVER", "C961D064")):
     shutil.copy2(ROOT / "work" / "compiled-textures" / f"{hash_name}.dds", out / f"{name}.dds")
@@ -161,6 +180,14 @@ for i, shader_source in enumerate(source["shaders"]):
 mapping.append({"index": len(mapping), "source": "shelby_grille_bake",
                 "preset": "vehicle_mesh.sps", "shader": "DULLPLASTIC",
                 "texture": "MUSTANGGT_GRILLE", "uv_rect": None})
+for source_name, rect in (
+        ("codex_dark", [0.02, 0.02, 0.46, 0.46]),
+        ("codex_metal", [0.52, 0.02, 0.46, 0.46]),
+        ("codex_front_light", [0.02, 0.52, 0.46, 0.46]),
+        ("codex_rear_light", [0.52, 0.52, 0.46, 0.46])):
+    mapping.append({"index": len(mapping), "source": source_name,
+                    "preset": "vehicle_mesh.sps", "shader": "DULLPLASTIC",
+                    "texture": "MUSTANGGT_OPAQUE_PARTS", "uv_rect": rect})
 
 names = [
     "MUSTANGGT_INTERIOR", "MUSTANGGT_BADGING", "MUSTANGGT_KIT00_BRAKELI",
@@ -168,6 +195,8 @@ names = [
     "MUSTANGGT_KIT00_HEADLIG", "MUSTANGGT_SKIN1", "MUSTANGGT_DRIVER",
     "MUSTANGGT_RIM",
     "MUSTANGGT_GRILLE",
+    "MUSTANGGT_OPAQUE_PARTS",
+    "MUSTANGGT_LIGHTFRONT", "MUSTANGGT_LIGHTREAR",
 ]
 config = ["[tpk]", "name=MUSTANGGT", "output=TEXTURES.BIN", ""]
 for name in names:

@@ -43,6 +43,22 @@ public class RemapCompatibilityTextures {
         foreach(RealGeometryPart part in geometry) {
             if(part.PartInfo.Textures==null) continue;
             string name=part.PartInfo.PartName.ToString();
+            bool frontLight=name.Contains("_HEADLIGHT_");
+            bool rearLight=name.Contains("_BRAKELIGHT_");
+            if(frontLight || rearLight) {
+                uint solidTexture=frontLight ? 0x68EF82F9u : 0x680D9D7Au;
+                if(part.PartInfo.Shaders!=null) {
+                    for(int i=0;i<part.PartInfo.Shaders.Length;i++) {
+                        if(part.PartInfo.Shaders[i]!=0x0FEDEE40u) changed++;
+                        part.PartInfo.Shaders[i]=0x0FEDEE40u;
+                    }
+                }
+                for(int i=0;i<part.PartInfo.Textures.Length;i++) {
+                    if(part.PartInfo.Textures[i]!=solidTexture) changed++;
+                    part.PartInfo.Textures[i]=solidTexture;
+                }
+                continue;
+            }
             if(name.Contains("_TIRE_") && part.PartInfo.Shaders!=null) {
                 for(int i=0;i<part.PartInfo.Shaders.Length;i++) {
                     if(part.PartInfo.Shaders[i]==0xC83DAC78u || part.PartInfo.Shaders[i]==0x0FEDEE40u) {

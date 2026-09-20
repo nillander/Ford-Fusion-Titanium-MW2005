@@ -414,3 +414,9 @@
 /work/game-backup/before-geometric-grille-test-MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /work/game-backup/before-shelby-painted-grille-test-MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /work/game-backup/before-shelby-painted-grille-test-MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/preview/opaque-parts-front.png filter=lfs diff=lfs merge=lfs -text
+/preview/opaque-parts-perspective.png filter=lfs diff=lfs merge=lfs -text
+/preview/opaque-parts-rear.png filter=lfs diff=lfs merge=lfs -text
+/preview/opaque-parts-side.png filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/before-3d-opaque-parts-test-MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/before-3d-opaque-parts-test-MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text

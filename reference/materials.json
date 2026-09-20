@@ -399,5 +399,57 @@
     "shader": "DULLPLASTIC",
     "texture": "MUSTANGGT_GRILLE",
     "uv_rect": null
+  },
+  {
+    "index": 32,
+    "source": "codex_dark",
+    "preset": "vehicle_mesh.sps",
+    "shader": "DULLPLASTIC",
+    "texture": "MUSTANGGT_OPAQUE_PARTS",
+    "uv_rect": [
+      0.02,
+      0.02,
+      0.46,
+      0.46
+    ]
+  },
+  {
+    "index": 33,
+    "source": "codex_metal",
+    "preset": "vehicle_mesh.sps",
+    "shader": "DULLPLASTIC",
+    "texture": "MUSTANGGT_OPAQUE_PARTS",
+    "uv_rect": [
+      0.52,
+      0.02,
+      0.46,
+      0.46
+    ]
+  },
+  {
+    "index": 34,
+    "source": "codex_front_light",
+    "preset": "vehicle_mesh.sps",
+    "shader": "DULLPLASTIC",
+    "texture": "MUSTANGGT_OPAQUE_PARTS",
+    "uv_rect": [
+      0.02,
+      0.52,
+      0.46,
+      0.46
+    ]
+  },
+  {
+    "index": 35,
+    "source": "codex_rear_light",
+    "preset": "vehicle_mesh.sps",
+    "shader": "DULLPLASTIC",
+    "texture": "MUSTANGGT_OPAQUE_PARTS",
+    "uv_rect": [
+      0.52,
+      0.52,
+      0.46,
+      0.46
+    ]
   }
 ]

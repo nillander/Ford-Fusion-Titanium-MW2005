@@ -1,5 +1,35 @@
 [
   {
+    "part": "KIT00_BODY_A",
+    "vertices": 26976,
+    "triangles": 40385,
+    "source_triangles": 373712
+  },
+  {
+    "part": "KIT00_BODY_B",
+    "vertices": 16406,
+    "triangles": 20192,
+    "source_triangles": 373712
+  },
+  {
+    "part": "KIT00_BODY_C",
+    "vertices": 9254,
+    "triangles": 8884,
+    "source_triangles": 373712
+  },
+  {
+    "part": "KIT00_BODY_D",
+    "vertices": 5158,
+    "triangles": 3634,
+    "source_triangles": 373712
+  },
+  {
+    "part": "KIT00_BODY_E",
+    "vertices": 3589,
+    "triangles": 1615,
+    "source_triangles": 373712
+  },
+  {
     "part": "KIT00_INTERIOR_A",
     "vertices": 24817,
     "triangles": 24398,
@@ -16,36 +46,6 @@
     "vertices": 10461,
     "triangles": 5367,
     "source_triangles": 893659
-  },
-  {
-    "part": "KIT00_BODY_A",
-    "vertices": 26913,
-    "triangles": 39960,
-    "source_triangles": 372790
-  },
-  {
-    "part": "KIT00_BODY_B",
-    "vertices": 16460,
-    "triangles": 19979,
-    "source_triangles": 372790
-  },
-  {
-    "part": "KIT00_BODY_C",
-    "vertices": 9230,
-    "triangles": 8791,
-    "source_triangles": 372790
-  },
-  {
-    "part": "KIT00_BODY_D",
-    "vertices": 5074,
-    "triangles": 3596,
-    "source_triangles": 372790
-  },
-  {
-    "part": "KIT00_BODY_E",
-    "vertices": 3524,
-    "triangles": 1598,
-    "source_triangles": 372790
   },
   {
     "part": "BASE_A",

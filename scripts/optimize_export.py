@@ -1,6 +1,7 @@
 import bpy
 import bmesh
 import json
+import math
 import struct
 import numpy as np
 from pathlib import Path
@@ -16,6 +17,7 @@ grille_material_index=next(i for i,m in enumerate(mapping) if m['texture']=='MUS
 # intentionally absent from the car's TPK.
 window_tint_index=len(mapping)
 mapping.append({'shader':'0x3ed70c43','texture':'0x1b049702'})
+replacement_materials={m['source']:i for i,m in enumerate(mapping) if m.get('source','').startswith('codex_')}
 # Codex window export is keyed to the Mustang donor catalog: FRONT/REAR
 # WINDOW only. The Ford GT catalog splits side glass into extra slots and
 # would drop the official dual-layer tint construction.
@@ -24,6 +26,93 @@ names={x['name'].removeprefix('MUSTANGGT_') for x in donor}
 names.update('KIT00_LEFT_SIDE_MIRROR_'+lod for lod in 'ABCDE')
 groups=defaultdict(list)
 alignment=json.loads((ROOT/'reference/alignment.json').read_text())
+
+def replacement_object(name,vertices,faces,material_key,bone):
+    mesh=bpy.data.meshes.new(name+'_mesh')
+    mesh.from_pydata(vertices,[],faces);mesh.update()
+    uv=mesh.uv_layers.new(name='UVMap')
+    for loop in mesh.loops:uv.data[loop.index].uv=(.5,.5)
+    mat=bpy.data.materials.new(name+'_material')
+    mat['source_shader']=replacement_materials[material_key]
+    mesh.materials.append(mat)
+    obj=bpy.data.objects.new(name,mesh);bpy.context.scene.collection.objects.link(obj)
+    obj['source_shader']=replacement_materials[material_key]
+    obj['dominant_bone']='codex_'+bone
+    return obj
+
+def box(name,center,size,material,bone):
+    x,y,z=center;dx,dy,dz=(v/2 for v in size)
+    v=[(x-dx,y-dy,z-dz),(x+dx,y-dy,z-dz),(x+dx,y+dy,z-dz),(x-dx,y+dy,z-dz),
+       (x-dx,y-dy,z+dz),(x+dx,y-dy,z+dz),(x+dx,y+dy,z+dz),(x-dx,y+dy,z+dz)]
+    f=[(0,3,2,1),(4,5,6,7),(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7)]
+    return replacement_object(name,v,f,material,bone)
+
+def prism_yz(name,x,depth,points,material,bone):
+    points=list(points)
+    area=sum(points[i][0]*points[(i+1)%len(points)][1]-points[(i+1)%len(points)][0]*points[i][1] for i in range(len(points)))
+    if area<0:points.reverse()
+    n=len(points);rear=x-depth/2;front=x+depth/2
+    v=[(rear,y,z) for y,z in points]+[(front,y,z) for y,z in points]
+    f=[tuple(range(n-1,-1,-1)),tuple(range(n,2*n))]
+    for i in range(n):
+        j=(i+1)%n;f.append((i,j,n+j,n+i))
+    return replacement_object(name,v,f,material,bone)
+
+def rod_xz(name,p0,p1,y,thickness,depth,material,bone):
+    x0,z0=p0;x1,z1=p1;dx=x1-x0;dz=z1-z0;length=max(math.hypot(dx,dz),1e-6)
+    nx=-dz/length*thickness/2;nz=dx/length*thickness/2;d=depth/2
+    corners=[(x0-nx,z0-nz),(x1-nx,z1-nz),(x1+nx,z1+nz),(x0+nx,z0+nz)]
+    v=[(x,y-d,z) for x,z in corners]+[(x,y+d,z) for x,z in corners]
+    f=[(0,3,2,1),(4,5,6,7),(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7)]
+    return replacement_object(name,v,f,material,bone)
+
+def cylinder(name,center,length,radius,axis,material,bone,segments=16):
+    x,y,z=center;v=[]
+    for side in (-1,1):
+        for i in range(segments):
+            a=2*math.pi*i/segments;c=math.cos(a)*radius;s=math.sin(a)*radius
+            if axis=='x':v.append((x+side*length/2,y+c,z+s))
+            else:v.append((x+c,y+side*length/2,z+s))
+    if axis=='x':v.extend(((x-length/2,y,z),(x+length/2,y,z)))
+    else:v.extend(((x,y-length/2,z),(x,y+length/2,z)))
+    f=[]
+    for i in range(segments):
+        j=(i+1)%segments;f.append((i,j,segments+j,segments+i))
+        f.append((2*segments,i,j));f.append((2*segments+1,segments+j,segments+i))
+    return replacement_object(name,v,f,material,bone)
+
+# Upper grille: a solid backing plus physical bars and perimeter.  It sits a
+# few millimetres outside the bumper to avoid depth fighting with old surfaces.
+for i,(z,width) in enumerate(((.355,.86),(.39,.98),(.425,1.04),(.46,1.05),(.495,1.02),(.53,.92),(.565,.68))):
+    box(f'CODEX_UPPER_GRILLE_BAR_{i}',(2.366,0,z),(.018,width,.01),'codex_dark','upper_grille')
+
+# Lower grille and fog lamps.
+lower=[(-.58,.115),(-.52,.275),(.52,.275),(.58,.115),(.48,.085),(-.48,.085)]
+prism_yz('CODEX_LOWER_GRILLE_BACK',2.37,.025,lower,'codex_dark','lower_grille')
+for i,z in enumerate((.12,.16,.20,.24)):
+    box(f'CODEX_LOWER_GRILLE_BAR_{i}',(2.374,0,z),(.018,1.02,.009),'codex_dark','lower_grille')
+
+# Window surrounds on both sides, including the central pillar.
+window_outline=[(.91,.79),(.72,1.08),(-.55,1.19),(-1.46,1.04),(-1.72,.80),(.91,.79)]
+for side in (-1,1):
+    y=side*.782
+    for i,(a,b) in enumerate(zip(window_outline,window_outline[1:])):
+        rod_xz(f'CODEX_WINDOW_TRIM_{side}_{i}',a,b,y,.018,.018,'codex_dark','window_trim')
+    rod_xz(f'CODEX_WINDOW_PILLAR_{side}',(-.18,.79),(-.18,1.165),y,.027,.02,'codex_dark','window_trim')
+
+# Rear diffuser/grille and two fully modelled exhaust tips.
+rear_panel=[(-.73,.09),(-.64,.23),(.64,.23),(.73,.09),(.57,.055),(-.57,.055)]
+prism_yz('CODEX_REAR_EXHAUST_GRILLE',-2.385,.03,rear_panel,'codex_dark','exhaust_grille')
+for side in (-1,1):
+    cylinder(f'CODEX_EXHAUST_TIP_{side}',(-2.41,side*.61,.135),.13,.068,'x','codex_metal','exhaust',20)
+    cylinder(f'CODEX_EXHAUST_INNER_{side}',(-2.481,side*.61,.135),.008,.047,'x','codex_dark','exhaust',20)
+
+# Static axle-centred caps cover the transparent centre of all four wheels.
+for axle,x in (('F',1.425),('R',-1.305)):
+    for side in (-1,1):
+        y=side*.895
+        cylinder(f'CODEX_WHEEL_CAP_{axle}_{side}',(x,y,0),.028,.115,'y','codex_metal','wheel_center',24)
+        cylinder(f'CODEX_WHEEL_HUB_{axle}_{side}',(x,y+side*.017,0),.009,.042,'y','codex_dark','wheel_center',20)
 
 def tree_for(pos):
     tree=KDTree(len(pos))
@@ -39,6 +128,7 @@ targets={'KIT00_BODY':40000,'BASE':26000,'KIT00_INTERIOR':24000,
 def classify(o):
     si=int(o['source_shader']); mat=mapping[si]; bone=o['dominant_bone'].lower()
     center=sum(v.co.x for v in o.data.vertices)/len(o.data.vertices)
+    if bone.startswith('codex_'):return 'KIT00_BODY'
     # The donor wheels already match the car slot and are kept unchanged.
     if 'hub_' in bone:return None
     if si==4:return 'KIT00_RIGHT_BRAKELIGHT'
@@ -90,6 +180,7 @@ for part,objects in groups.items():
     detail_weight=2.0
     def object_weight(o):
         bone=o['dominant_bone'].lower()
+        if bone.startswith('codex_'):return 12.0
         if part=='KIT00_BODY' and bone=='grade':return 1.5
         # Hinged painted panels show collapse holes much sooner than broad body
         # panels, so reserve enough topology for their compound curved shells.
@@ -98,6 +189,7 @@ for part,objects in groups.items():
     def preserve_panel(o):
         if part!='KIT00_BODY':return False
         bone=o['dominant_bone'].lower()
+        if bone.startswith('codex_'):return True
         if 'bonnet' in bone:return True
         # One boot-bound geometry is actually the long upper body/cowl shell.
         # Its thin overlapping surface tears around the windshield if collapsed.
@@ -128,9 +220,12 @@ for part,objects in groups.items():
             mod.use_collapse_triangulate=True
             bpy.ops.object.modifier_apply(modifier=mod.name)
         # Record original shading for export after topology reduction.
-        original=np.load(ROOT/'work/source-meshes'/f'{source_obj["source_key"]}.npz')['vertices']['Normal']
-        original=np.column_stack((original[:,1]/alignment['longitudinal_scale'],-original[:,0],original[:,2]))
-        original/=np.maximum(np.linalg.norm(original,axis=1)[:,None],1e-8)
+        if 'source_key' in source_obj:
+            original=np.load(ROOT/'work/source-meshes'/f'{source_obj["source_key"]}.npz')['vertices']['Normal']
+            original=np.column_stack((original[:,1]/alignment['longitudinal_scale'],-original[:,0],original[:,2]))
+            original/=np.maximum(np.linalg.norm(original,axis=1)[:,None],1e-8)
+        else:
+            original=np.array([v.normal[:] for v in source_obj.data.vertices],dtype=np.float32)
         normal_positions.extend(v.co[:] for v in source_obj.data.vertices)
         normal_values.extend(original.tolist())
         reduced.append(o); o.select_set(False)
