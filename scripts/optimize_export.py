@@ -15,8 +15,13 @@ mapping=json.loads((ROOT/'reference/materials.json').read_text())
 # intentionally absent from the car's TPK.
 window_tint_index=len(mapping)
 mapping.append({'shader':'0x3ed70c43','texture':'0x1b049702'})
-donor=json.loads((ROOT/'work/donor-geometry.json').read_text())
-names={x['name'].removeprefix('MUSTANGGT_') for x in donor}
+donor_catalog=ROOT/'work/fordgt-geometry.json'
+if not donor_catalog.exists():
+    donor_catalog=ROOT/'work/donor-geometry.json'
+donor=json.loads(donor_catalog.read_text())
+sample=next(item['name'] for item in donor)
+prefix='FORDGT_' if sample.startswith('FORDGT_') else 'MUSTANGGT_'
+names={x['name'].removeprefix(prefix) for x in donor}
 names.update('KIT00_LEFT_SIDE_MIRROR_'+lod for lod in 'ABCDE')
 groups=defaultdict(list)
 alignment=json.loads((ROOT/'reference/alignment.json').read_text())

@@ -1,3 +1,7 @@
 # Backup local — não versionar
 fusion-mw2005.*
 work/official-WHEELS.json
+work/modloader/
+work/*.bin
+work/*-geometry.json
+scripts/__pycache__/

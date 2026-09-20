@@ -397,3 +397,5 @@
 /work/game-backup/pre-fordgt-slot-MUSTANGGT/VINYLS.BIN filter=lfs diff=lfs merge=lfs -text
 /work/game-backup/vanilla-FORDGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /work/game-backup/vanilla-FORDGT/VINYLS.BIN filter=lfs diff=lfs merge=lfs -text
+/release/SLR/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/release/SLR/VINYLS.BIN filter=lfs diff=lfs merge=lfs -text

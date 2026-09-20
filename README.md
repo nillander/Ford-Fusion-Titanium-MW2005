@@ -1,6 +1,6 @@
 # Fusion Titanium 2018 para MW2005
 
-O projeto de transplante visual do Fusion Titanium 2018 para MW2005. O visual atual ocupa o slot FORDGT (performance do Ford GT). O slot MUSTANGGT volta ao Mustang original.
+O projeto de transplante visual do Fusion Titanium 2018 para MW2005. O Fusion ocupa o slot MUSTANGGT e uma compilação `mwgc`+`MergeGeometry` no catálogo `donor/fordgt` ocupa o Ford GT. A SLR McLaren foi substituída pelo SLK55 AMG.
 
 ## Reconstruir
 
@@ -15,8 +15,8 @@ O script interrompe a execução quando alguma etapa retorna erro. Ele verifica 
 
 ## Arquivos
 
-- `release/FORDGT/`: visual Fusion no slot do Ford GT.
-- `release/MUSTANGGT/`: Mustang GT original para restauração.
+- `release/FORDGT/`: visual Fusion no slot do Ford GT, mais o exemplo FordGT-EC.
+- `scripts/copy_slr_stats_to_mustang.py`: copia a performance da SLR para o mustanggt.
 - `release/LEIA-ME.md`: instalação, limites e créditos.
 - `blender/source-aligned.blend`: modelo completo importado e alinhado.
 - `blender/fusion-mw.blend`: cena do resultado reimportado, com materiais de prévia.

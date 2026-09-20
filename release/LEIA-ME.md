@@ -1,20 +1,14 @@
-# Fusion Titanium 2018 — MW2005 — candidato de teste v0.1
+# Fusion Titanium 2018 — MW2005
 
-Substitui o Ford GT (slot FORDGT) pelo visual Fusion Titanium.
-Restaura o Ford Mustang GT original no slot MUSTANGGT.
+- **MUSTANGGT**: visual Fusion
+- **FORDGT**: Fusion compilado no catálogo `donor/fordgt` (não é cópia retargetada do Mustang)
+- **SLR**: 2012 Mercedes-Benz SLK55 AMG
 
 ## Instalação
 
-1. Faça backup de `CARS/FORDGT` e `CARS/MUSTANGGT`.
-2. Copie `release/FORDGT` por cima da pasta do Ford GT.
-3. Copie `release/MUSTANGGT` por cima da pasta do Mustang GT.
-4. Teste o Ford GT no seletor: visual Fusion, performance do Ford GT.
-5. Confirme que o Mustang GT voltou ao modelo original.
+1. Copie `release/FORDGT` para `CARS/FORDGT` e `ADDONS/CARS_REPLACE/FORDGT`.
+2. Copie `release/SLR` para `CARS/SLR` e `ADDONS/CARS_REPLACE/SLR`.
+3. Instale o Mod Loader com `scripts/install_modloader.py`.
+4. Abra o jogo pelo `Start NFS MW Mod Loader.bat`.
 
-O handling, classes e nome de menu do Ford GT permanecem os do jogo.
-
-## Limites
-
-Peças exclusivas do Ford GT (capôs da loja, dano, faróis esquerdos separados) ficam como placeholders vazios.
-Os faróis e lanternas do Fusion já cobrem os dois lados na malha RIGHT.
-Ainda depende de inspeção no motor do jogo.
+O rebuild do Ford GT segue o fluxo Codex: source `fusion-2017-dev` → MWR → `mwgc -xname FORDGT` → merge no GEOMETRY do `donor/fordgt` → remap de texturas.
