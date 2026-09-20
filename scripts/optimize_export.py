@@ -2,15 +2,22 @@ import bpy
 import bmesh
 import json
 import math
+import os
 import struct
 import numpy as np
 from pathlib import Path
 from collections import defaultdict
 from mathutils.kdtree import KDTree
 
-ROOT=Path(__file__).resolve().parents[1]
-bpy.ops.wm.open_mainfile(filepath=str(ROOT/'blender/source-aligned.blend'))
-mapping=json.loads((ROOT/'reference/materials.json').read_text())
+PROJECT=Path(__file__).resolve().parents[1]
+# V2 writes every generated artifact under its own root but deliberately reads
+# the immutable source scene and extracted GTA meshes from the project root.
+ROOT=Path(os.environ.get('FUSION_OUTPUT_ROOT', str(PROJECT))).resolve()
+INPUT_ROOT=PROJECT
+for directory in ('work','reference','blender','preview'):
+    (ROOT/directory).mkdir(parents=True,exist_ok=True)
+bpy.ops.wm.open_mainfile(filepath=str(INPUT_ROOT/'blender/source-aligned.blend'))
+mapping=json.loads((INPUT_ROOT/'reference/materials.json').read_text())
 grille_material_index=next(i for i,m in enumerate(mapping) if m['texture']=='MUSTANGGT_GRILLE')
 # Official MW cars layer the regular glass shader with a separate tint shader.
 # Keep this extra material local to the MWR export; its texture is global and
@@ -25,7 +32,7 @@ donor=json.loads((ROOT/'work/donor-geometry.json').read_text())
 names={x['name'].removeprefix('MUSTANGGT_') for x in donor}
 names.update('KIT00_LEFT_SIDE_MIRROR_'+lod for lod in 'ABCDE')
 groups=defaultdict(list)
-alignment=json.loads((ROOT/'reference/alignment.json').read_text())
+alignment=json.loads((INPUT_ROOT/'reference/alignment.json').read_text())
 
 def replacement_object(name,vertices,faces,material_key,bone):
     mesh=bpy.data.meshes.new(name+'_mesh')
@@ -85,12 +92,41 @@ def cylinder(name,center,length,radius,axis,material,bone,segments=16):
 # few millimetres outside the bumper to avoid depth fighting with old surfaces.
 for i,(z,width) in enumerate(((.355,.86),(.39,.98),(.425,1.04),(.46,1.05),(.495,1.02),(.53,.92),(.565,.68))):
     box(f'CODEX_UPPER_GRILLE_BAR_{i}',(2.366,0,z),(.018,width,.01),'codex_dark','upper_grille')
+    # MW's old renderer is much more reliable when the grille has a second
+    # opaque layer behind the visible bars, equivalent to its dual-layer glass
+    # construction.  The 6 mm offset prevents depth fighting.
+    box(f'CODEX_UPPER_GRILLE_BACK_{i}',(2.360,0,z),(.012,width,.009),'codex_dark','upper_grille')
 
 # Lower grille and fog lamps.
 lower=[(-.58,.115),(-.52,.275),(.52,.275),(.58,.115),(.48,.085),(-.48,.085)]
 prism_yz('CODEX_LOWER_GRILLE_BACK',2.37,.025,lower,'codex_dark','lower_grille')
+prism_yz('CODEX_LOWER_GRILLE_REAR',2.364,.014,lower,'codex_dark','lower_grille')
 for i,z in enumerate((.12,.16,.20,.24)):
     box(f'CODEX_LOWER_GRILLE_BAR_{i}',(2.374,0,z),(.018,1.02,.009),'codex_dark','lower_grille')
+    box(f'CODEX_LOWER_GRILLE_BAR_BACK_{i}',(2.368,0,z),(.012,1.02,.008),'codex_dark','lower_grille')
+
+# In-game verification showed the thin original bars only at the perimeter of
+# the opening.  Build the grille as true 3D rectangular stock: a recessed
+# opaque backing, broad horizontal slats, then vertical ribs.  Each visible
+# element receives a second, recessed layer so the old renderer never exposes
+# the hollow interior through a culled face.
+upper_panel=[(-.57,.305),(-.535,.385),(-.44,.505),(-.27,.61),(.27,.61),(.44,.505),(.535,.385),(.57,.305)]
+prism_yz('CODEX_GRILLE_SOLID_BACKING',2.332,.060,upper_panel,'codex_dark','upper_grille')
+for i,(z,width) in enumerate(((.335,.68),(.375,.91),(.415,1.04),(.455,1.11),(.495,1.07),(.535,.95),(.575,.66))):
+    box(f'CODEX_GRILLE_SLAT_{i}',(2.402,0,z),(.045,width,.030),'codex_metal','upper_grille')
+    box(f'CODEX_GRILLE_SLAT_REAR_{i}',(2.352,0,z),(.030,width,.026),'codex_dark','upper_grille')
+for i,y in enumerate((-.43,-.29,-.145,0,.145,.29,.43)):
+    box(f'CODEX_GRILLE_RIB_{i}',(2.414,y,.455),(.046,.024,.255),'codex_metal','upper_grille')
+    box(f'CODEX_GRILLE_RIB_REAR_{i}',(2.360,y,.455),(.030,.020,.245),'codex_dark','upper_grille')
+# Five full 3D grille layers.  They are deliberately separated by 18 mm: the
+# game can cull a face in one layer without revealing the hollow radiator.
+for layer, x in enumerate((2.386, 2.368, 2.350, 2.332, 2.314)):
+    layer_material = 'codex_metal' if layer in (0, 2) else 'codex_dark'
+    prism_yz(f'CODEX_GRILLE_LAYER_BACK_{layer}',x-.012,.020,upper_panel,'codex_dark','upper_grille')
+    for i,(z,width) in enumerate(((.335,.68),(.375,.91),(.415,1.04),(.455,1.11),(.495,1.07),(.535,.95),(.575,.66))):
+        box(f'CODEX_GRILLE_LAYER_{layer}_SLAT_{i}',(x,0,z),(.024,width,.028),layer_material,'upper_grille')
+    for i,y in enumerate((-.43,-.29,-.145,0,.145,.29,.43)):
+        box(f'CODEX_GRILLE_LAYER_{layer}_RIB_{i}',(x+.004,y,.455),(.025,.022,.250),layer_material,'upper_grille')
 
 # Window surrounds on both sides, including the central pillar.
 window_outline=[(.91,.79),(.72,1.08),(-.55,1.19),(-1.46,1.04),(-1.72,.80),(.91,.79)]
@@ -124,6 +160,8 @@ targets={'KIT00_BODY':40000,'BASE':26000,'KIT00_INTERIOR':24000,
          'KIT00_RIGHT_HEADLIGHT':2500,'KIT00_RIGHT_HEADLIGHT_GLASS':2000,
          'KIT00_RIGHT_BRAKELIGHT':2000,'KIT00_RIGHT_BRAKELIGHT_GLASS':1500,
          'KIT00_FRONT_WINDOW':12000,'KIT00_REAR_WINDOW':8000}
+if os.environ.get('FUSION_LOD_TARGETS'):
+    targets.update(json.loads(os.environ['FUSION_LOD_TARGETS']))
 
 def classify(o):
     si=int(o['source_shader']); mat=mapping[si]; bone=o['dominant_bone'].lower()
@@ -187,6 +225,8 @@ for part,objects in groups.items():
         if part=='KIT00_BODY' and 'boot' in bone:return 3.0
         return detail_weight if int(o['source_shader']) in detail_shaders else 1.0
     def preserve_panel(o):
+        if os.environ.get('FUSION_DISABLE_PANEL_PRESERVE') == '1':
+            return False
         if part!='KIT00_BODY':return False
         bone=o['dominant_bone'].lower()
         if bone.startswith('codex_'):return True
@@ -221,7 +261,7 @@ for part,objects in groups.items():
             bpy.ops.object.modifier_apply(modifier=mod.name)
         # Record original shading for export after topology reduction.
         if 'source_key' in source_obj:
-            original=np.load(ROOT/'work/source-meshes'/f'{source_obj["source_key"]}.npz')['vertices']['Normal']
+            original=np.load(INPUT_ROOT/'work/source-meshes'/f'{source_obj["source_key"]}.npz')['vertices']['Normal']
             original=np.column_stack((original[:,1]/alignment['longitudinal_scale'],-original[:,0],original[:,2]))
             original/=np.maximum(np.linalg.norm(original,axis=1)[:,None],1e-8)
         else:

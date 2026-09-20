@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "count": 12,
+  "textures": [
+    {
+      "Name": "MUSTANGGT_INTERIOR",
+      "TexHash": 720622148,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 131072,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_BADGING",
+      "TexHash": 865930564,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 262144,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_KIT00_BRAKELI",
+      "TexHash": 1266521526,
+      "Width": 256,
+      "Height": 256,
+      "DataSize": 32768,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_KIT00_HEADLIG",
+      "TexHash": 1507849029,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 131072,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_MISC",
+      "TexHash": 1510007364,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 131072,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_TIRE",
+      "TexHash": 1510258892,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 174776,
+      "MipMapCount": 10,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_KIT00_BRAKELI",
+      "TexHash": 2120787832,
+      "Width": 256,
+      "Height": 256,
+      "DataSize": 32768,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_SKIN2",
+      "TexHash": 2592779679,
+      "Width": 128,
+      "Height": 128,
+      "DataSize": 8192,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_SKIN3",
+      "TexHash": 2592779680,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 262144,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_KIT00_BRAKELI",
+      "TexHash": 3237239567,
+      "Width": 64,
+      "Height": 32,
+      "DataSize": 2048,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_DRIVER",
+      "TexHash": 3378630756,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 131072,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_KIT00_HEADLIG",
+      "TexHash": 3991263038,
+      "Width": 32,
+      "Height": 32,
+      "DataSize": 1024,
+      "MipMapCount": 1,
+      "Format": 861165636
+    }
+  ]
+}

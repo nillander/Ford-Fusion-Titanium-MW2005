@@ -45,7 +45,7 @@ public class RemapCompatibilityTextures {
             string name=part.PartInfo.PartName.ToString();
             bool frontLight=name.Contains("_HEADLIGHT_");
             bool rearLight=name.Contains("_BRAKELIGHT_");
-            if(frontLight || rearLight) {
+            if((frontLight || rearLight) && false) {
                 uint solidTexture=frontLight ? 0x68EF82F9u : 0x680D9D7Au;
                 if(part.PartInfo.Shaders!=null) {
                     for(int i=0;i<part.PartInfo.Shaders.Length;i++) {

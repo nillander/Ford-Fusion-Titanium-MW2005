@@ -1,0 +1,158 @@
+[
+  {
+    "part": "KIT00_BODY_A",
+    "vertices": 13254,
+    "triangles": 14875,
+    "source_triangles": 374434
+  },
+  {
+    "part": "KIT00_BODY_B",
+    "vertices": 8295,
+    "triangles": 7437,
+    "source_triangles": 374434
+  },
+  {
+    "part": "KIT00_BODY_C",
+    "vertices": 4993,
+    "triangles": 3272,
+    "source_triangles": 374434
+  },
+  {
+    "part": "KIT00_BODY_D",
+    "vertices": 3509,
+    "triangles": 1338,
+    "source_triangles": 374434
+  },
+  {
+    "part": "KIT00_BODY_E",
+    "vertices": 3240,
+    "triangles": 975,
+    "source_triangles": 374434
+  },
+  {
+    "part": "KIT00_INTERIOR_A",
+    "vertices": 12597,
+    "triangles": 7992,
+    "source_triangles": 893659
+  },
+  {
+    "part": "KIT00_INTERIOR_B",
+    "vertices": 9447,
+    "triangles": 3996,
+    "source_triangles": 893659
+  },
+  {
+    "part": "KIT00_INTERIOR_C",
+    "vertices": 8699,
+    "triangles": 3028,
+    "source_triangles": 893659
+  },
+  {
+    "part": "KIT00_INTERIOR_D",
+    "vertices": 8699,
+    "triangles": 3028,
+    "source_triangles": 893659
+  },
+  {
+    "part": "BASE_A",
+    "vertices": 16557,
+    "triangles": 11505,
+    "source_triangles": 889440
+  },
+  {
+    "part": "BASE_B",
+    "vertices": 12452,
+    "triangles": 5751,
+    "source_triangles": 889440
+  },
+  {
+    "part": "BASE_C",
+    "vertices": 10391,
+    "triangles": 2973,
+    "source_triangles": 889440
+  },
+  {
+    "part": "BASE_D",
+    "vertices": 10391,
+    "triangles": 2973,
+    "source_triangles": 889440
+  },
+  {
+    "part": "BASE_E",
+    "vertices": 10391,
+    "triangles": 2973,
+    "source_triangles": 889440
+  },
+  {
+    "part": "KIT00_FRONT_WINDOW_A",
+    "vertices": 3712,
+    "triangles": 12992,
+    "source_triangles": 26568
+  },
+  {
+    "part": "KIT00_FRONT_WINDOW_B",
+    "vertices": 1997,
+    "triangles": 6496,
+    "source_triangles": 26568
+  },
+  {
+    "part": "KIT00_FRONT_WINDOW_C",
+    "vertices": 973,
+    "triangles": 2856,
+    "source_triangles": 26568
+  },
+  {
+    "part": "KIT00_FRONT_WINDOW_D",
+    "vertices": 449,
+    "triangles": 1166,
+    "source_triangles": 26568
+  },
+  {
+    "part": "KIT00_RIGHT_HEADLIGHT_A",
+    "vertices": 1145,
+    "triangles": 1596,
+    "source_triangles": 24032
+  },
+  {
+    "part": "KIT00_RIGHT_HEADLIGHT_B",
+    "vertices": 711,
+    "triangles": 797,
+    "source_triangles": 24032
+  },
+  {
+    "part": "KIT00_RIGHT_HEADLIGHT_C",
+    "vertices": 406,
+    "triangles": 350,
+    "source_triangles": 24032
+  },
+  {
+    "part": "KIT00_RIGHT_HEADLIGHT_D",
+    "vertices": 259,
+    "triangles": 143,
+    "source_triangles": 24032
+  },
+  {
+    "part": "KIT00_RIGHT_BRAKELIGHT_A",
+    "vertices": 756,
+    "triangles": 1297,
+    "source_triangles": 3924
+  },
+  {
+    "part": "KIT00_RIGHT_BRAKELIGHT_B",
+    "vertices": 425,
+    "triangles": 648,
+    "source_triangles": 3924
+  },
+  {
+    "part": "KIT00_RIGHT_BRAKELIGHT_C",
+    "vertices": 226,
+    "triangles": 285,
+    "source_triangles": 3924
+  },
+  {
+    "part": "KIT00_RIGHT_BRAKELIGHT_D",
+    "vertices": 107,
+    "triangles": 115,
+    "source_triangles": 3924
+  }
+]

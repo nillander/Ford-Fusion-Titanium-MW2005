@@ -19,9 +19,9 @@ Nenhum arquivo do jogo foi alterado para iniciar esta versão.
   lanternas, espelhos e aerofólio. Isso elimina a limitação estrutural do
   doador AJM3899 que contribuía para os componentes ausentes no V1.
 
-Próximo passo: portar a geometria do Fusion para os slots desse catálogo,
-preservando pneus, freios e os sólidos de iluminação/vidros do Shelby; depois
-gerar uma pasta de lançamento V2 antes de tocar nos arquivos do jogo.
+O pacote V2 foi instalado para teste em `CARS/MUSTANGGT` em 20/09/2026 após
+leitura independente da geometria e das texturas. O estado anterior do jogo
+foi copiado em `versions/v1-fusion-ajm3899/installed-game-backup/MUSTANGGT`.
 
 ## Protótipo de encaixe
 
@@ -31,3 +31,38 @@ mesclado à cópia retail do Shelby. A validação independente leu 85 peças e
 aerofólio foram retidos; luzes, vidros, carroceria e interior foram trocados
 pelo Fusion. O LOD A ficou em 142.994 triângulos, acima do alvo prático, e
 por isso este protótipo não foi instalado nem empacotado.
+
+## Pacote de teste instalado
+
+O segundo exportador reduziu o LOD A para aproximadamente 63 mil triângulos e
+mantém no Shelby os sólidos de pneus, freios, espelhos, faróis, lanternas e
+aerofólio. O BIN instalado tem SHA-256
+`96E3442D4BD8269B133DF68C360928570B69FA670B8EDEB989E6BEE81F533AA7`.
+O TPK contém a placa `NEWZERA` e tem SHA-256
+`F4C326F0075A9E2B59B1D8398469A93F9787574E70685FABA097BC3BC1825D6E`.
+
+## Lanterna traseira — correção instalada para teste
+
+O teste visual mostrou que as lanternas traseiras Shelby eram cascas finas e
+abertas: era possível enxergar o interior através delas. A troca anterior de
+shader e textura opaca foi corretamente exportada e instalada, mas não alterou
+o resultado no motor; portanto transparência de textura não era a causa única.
+
+`scripts/OpaqueRearLights.cs` agora preserva todos os sólidos existentes e:
+
+- mantém o material de lanterna com alpha de vértice 255;
+- acrescenta um refletor fechado, de seis faces e 12 triângulos, atrás de cada
+  lanterna traseira `*_BRAKELIGHT_A`;
+- não altera grade, carroceria, rodas, nem os demais LODs.
+
+O resultado foi lido independentemente pelo mwgc: 78 peças e 119.289
+triângulos. Cada lanterna traseira de LOD A passou a ter três grupos, 593
+vértices e 558 triângulos. O artefato instalado para o próximo teste é:
+
+- `release/MUSTANGGT/GEOMETRY.BIN`
+- jogo: `D:\Program Files (x86)\Electronic Arts\Need For Speed Most Wanted Black Edition\CARS\MUSTANGGT\GEOMETRY.BIN`
+- SHA-256: `2F9D6A21BB3CC7425B08C758988217D3807D026A92A8DF8585704A6B67941925`
+
+O BIN imediatamente anterior foi preservado em
+`work/game-before-rear-reflector/GEOMETRY.BIN`. A textura instalada permanece
+`8DF9EBDE632E0EAAE8A6907E7146291BD03CFC796C9B699C91B8581D12589954`.

@@ -6,7 +6,8 @@ import os
 from pathlib import Path
 from mathutils import Vector
 
-ROOT=Path(__file__).resolve().parents[1]
+PROJECT=Path(__file__).resolve().parents[1]
+ROOT=Path(os.environ.get('FUSION_RENDER_ROOT', str(PROJECT))).resolve()
 data=json.loads((ROOT/'work/compiled-geometry.json').read_text())
 bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
 materials={}
@@ -63,7 +64,7 @@ def add_part(part,translation=(0,0,0),rotate=False,preview_only=False):
 
 for p in data:
     add_part(p)
-tire=next(p for p in data if p['name']=='FORDGT_KIT00_FRONT_TIRE_A')
+tire=next(p for p in data if p['name']==os.environ.get('FUSION_RENDER_TIRE','MUSTANGGT_KIT00_FRONT_TIRE_A'))
 for x in (1.425,-1.305):
     for y in (.895,-.895):add_part(tire,(x,y,0),y>0,True)
 

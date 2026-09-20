@@ -420,3 +420,11 @@
 /preview/opaque-parts-side.png filter=lfs diff=lfs merge=lfs -text
 /work/game-backup/before-3d-opaque-parts-test-MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /work/game-backup/before-3d-opaque-parts-test-MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1-fusion-ajm3899/installed-game-backup/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1-fusion-ajm3899/installed-game-backup/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1-fusion-ajm3899/installed-game-backup/MUSTANGGT/VINYLS.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v2-mustang-shelby/preview/compiled-front.png filter=lfs diff=lfs merge=lfs -text
+/versions/v2-mustang-shelby/preview/compiled-perspective.png filter=lfs diff=lfs merge=lfs -text
+/versions/v2-mustang-shelby/preview/compiled-rear.png filter=lfs diff=lfs merge=lfs -text
+/versions/v2-mustang-shelby/preview/compiled-side.png filter=lfs diff=lfs merge=lfs -text
+/versions/v2-mustang-shelby/preview/optimized-perspective.png filter=lfs diff=lfs merge=lfs -text

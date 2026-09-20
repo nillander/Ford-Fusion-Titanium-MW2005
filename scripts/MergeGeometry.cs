@@ -16,9 +16,13 @@ public class MergeGeometry {
         foreach(RealGeometryPart original in donor) {
             var name=original.PartInfo.PartName.ToString();
             var p=newer[original.PartInfo.Hash];
-            if(p!=null) {
+            // The Shelby lighting solids have the complete retail stack of
+            // lens, reflector and housing materials.  Keep them intact rather
+            // than replacing them with a one-layer converted light mesh.
+            bool keepLayeredLighting=name.Contains("_HEADLIGHT_")||name.Contains("_BRAKELIGHT_");
+            if(p!=null && !keepLayeredLighting) {
                 result.AddPart(p);replaced++;
-            } else if(name.Contains("_TIRE_")||name.Contains("_BRAKE_")||name.Contains("_DRIVER_")||name.Contains("_KIT01_BODY_")||name.Contains("_KIT02_BODY_")) {
+            } else if(name.Contains("_TIRE_")||name.Contains("_BRAKE_")||name.Contains("_DRIVER_")||name.Contains("_SPOILER_")||name.Contains("_HEADLIGHT_")||name.Contains("_BRAKELIGHT_")||name.Contains("_SIDE_MIRROR_")||name.Contains("_KIT01_BODY_")||name.Contains("_KIT02_BODY_")) {
                 if(name.Contains("_DRIVER_")) {
                     for(int i=0;i<original.PartData.Vertices.Length;i++) {original.PartData.Vertices[i].Position.z-=.2f;original.PartData.Vertices[i].Position.x-=.15f;}
                     original.PartInfo.BoundMin.z-=.2f;original.PartInfo.BoundMax.z-=.2f;
