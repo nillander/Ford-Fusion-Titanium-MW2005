@@ -409,3 +409,8 @@
 /work/game-backup/vanilla-SLR/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /work/game-backup/vanilla-SLR/VINYLS.BIN filter=lfs diff=lfs merge=lfs -text
 /work/opaque-lights.mwr filter=lfs diff=lfs merge=lfs -text
+/preview/grille-shell-perspective.png filter=lfs diff=lfs merge=lfs -text
+/preview/shelby-perspective.png filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/before-geometric-grille-test-MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/before-shelby-painted-grille-test-MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/work/game-backup/before-shelby-painted-grille-test-MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text

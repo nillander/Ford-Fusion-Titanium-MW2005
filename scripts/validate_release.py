@@ -7,7 +7,7 @@ from merge_textures import read_pack
 ROOT=Path(__file__).resolve().parents[1]
 
 def load(path):return json.loads((ROOT/path).read_text())
-original=load('work/fordgt-geometry.json');compiled=load('work/compiled-geometry.json')
+original=load('work/donor-geometry.json');compiled=load('work/compiled-geometry.json')
 original_by_name={p['name']:p for p in original};by_name={p['name']:p for p in compiled}
 assert len(by_name)==len(compiled),'Duplicate names'
 assert original_by_name.keys()<=by_name.keys(),'Missing donor slots'
@@ -27,12 +27,12 @@ textures=load('reference/texture-independent-validation.json')
 expected_names={'MUSTANGGT_INTERIOR','MUSTANGGT_BADGING','MUSTANGGT_KIT00_BRAKELI',
                 'MUSTANGGT_LOGO','MUSTANGGT_MISC','MUSTANGGT_TIRE',
                 'MUSTANGGT_KIT00_HEADLIG','MUSTANGGT_SKIN1','MUSTANGGT_DRIVER',
-                'MUSTANGGT_RIM'}
+                'MUSTANGGT_RIM','MUSTANGGT_GRILLE'}
 assert textures['passed'] and textures['count']==len(expected_names)
 assert {t['Name'] for t in textures['textures']}==expected_names
 for path in (ROOT/'work/compiled-textures').glob('*.dds'):
     with Image.open(path) as img:img.load()
-_,tex=read_pack(ROOT/'release/FORDGT/TEXTURES.BIN')
+_,tex=read_pack(ROOT/'release/MUSTANGGT/TEXTURES.BIN')
 def binhash(s):
     h=0xffffffff
     for c in s:h=(h*33+ord(c))&0xffffffff

@@ -100,6 +100,27 @@ rim = Image.new("RGBA", (256, 256), (155, 160, 168, 255))
 save_dds(rim, out / "MUSTANGGT_RIM.dds")
 rim.save(out / "MUSTANGGT_RIM.png")
 
+# The working Shelby reference renders its grille as an opaque shell whose UVs
+# sample a painted honeycomb in MUSTANGGT_MISC.  Give the Fusion backing shell
+# an isolated copy of that pattern so it does not depend on chrome/reflection
+# and does not disturb any of the existing atlases.
+shelby_misc = ROOT / "work" / "shelby-textures" / "5A00E244.dds"
+if shelby_misc.exists():
+    grille = Image.open(shelby_misc).convert("RGBA").crop((4, 24, 112, 116))
+    grille = grille.resize((512, 512), Image.Resampling.LANCZOS)
+    grille.putalpha(255)
+else:
+    grille = Image.new("RGBA", (512, 512), (7, 8, 9, 255))
+    draw = ImageDraw.Draw(grille)
+    for row, y in enumerate(range(-12, 524, 18)):
+        shift = 12 if row % 2 else 0
+        for x in range(-24 + shift, 524, 24):
+            draw.polygon(((x, y + 6), (x + 6, y), (x + 18, y),
+                          (x + 24, y + 6), (x + 18, y + 12), (x + 6, y + 12)),
+                         outline=(58, 61, 64, 255), width=3)
+save_dds(grille, out / "MUSTANGGT_GRILLE.dds")
+grille.save(out / "MUSTANGGT_GRILLE.png")
+
 # Retain the donor wheel and driver payloads because those meshes stay in the car.
 for name, hash_name in (("MUSTANGGT_TIRE", "5A04B8CC"), ("MUSTANGGT_DRIVER", "C961D064")):
     shutil.copy2(ROOT / "work" / "compiled-textures" / f"{hash_name}.dds", out / f"{name}.dds")
@@ -137,11 +158,16 @@ for i, shader_source in enumerate(source["shaders"]):
     mapping.append({"index": i, "source": texture, "preset": preset, "shader": shader,
                     "texture": name, "uv_rect": rects.get(i)})
 
+mapping.append({"index": len(mapping), "source": "shelby_grille_bake",
+                "preset": "vehicle_mesh.sps", "shader": "DULLPLASTIC",
+                "texture": "MUSTANGGT_GRILLE", "uv_rect": None})
+
 names = [
     "MUSTANGGT_INTERIOR", "MUSTANGGT_BADGING", "MUSTANGGT_KIT00_BRAKELI",
     "MUSTANGGT_LOGO", "MUSTANGGT_MISC", "MUSTANGGT_TIRE",
     "MUSTANGGT_KIT00_HEADLIG", "MUSTANGGT_SKIN1", "MUSTANGGT_DRIVER",
     "MUSTANGGT_RIM",
+    "MUSTANGGT_GRILLE",
 ]
 config = ["[tpk]", "name=MUSTANGGT", "output=TEXTURES.BIN", ""]
 for name in names:

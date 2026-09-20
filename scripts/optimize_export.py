@@ -10,6 +10,7 @@ from mathutils.kdtree import KDTree
 ROOT=Path(__file__).resolve().parents[1]
 bpy.ops.wm.open_mainfile(filepath=str(ROOT/'blender/source-aligned.blend'))
 mapping=json.loads((ROOT/'reference/materials.json').read_text())
+grille_material_index=next(i for i,m in enumerate(mapping) if m['texture']=='MUSTANGGT_GRILLE')
 # Official MW cars layer the regular glass shader with a separate tint shader.
 # Keep this extra material local to the MWR export; its texture is global and
 # intentionally absent from the car's TPK.
@@ -43,10 +44,12 @@ def classify(o):
     if si==4:return 'KIT00_RIGHT_BRAKELIGHT'
     if si==28:return 'BASE'
     if si==16: return 'KIT00_FRONT_WINDOW' if center>-.3 else 'KIT00_REAR_WINDOW'
-    # The engine drops these meshes when they are compiled into BASE.  Store
-    # the exact 2017-dev grille geometry in the always-visible interior solid;
-    # the user prefers reducing unseen cabin detail over losing exterior trim.
-    if bone=='grade': return 'KIT00_INTERIOR'
+    # Match the working Shelby technique: keep one opaque backing shell, paint
+    # the grille into its texture and attach it to the always-visible body.
+    # The remaining source objects are overlapping chrome slats and badges;
+    # stacking them caused the old engine to drop or z-fight the whole grille.
+    if bone=='grade':
+        return 'KIT00_BODY' if o.name.endswith(('_g017','_g018')) else None
     if mat['shader']=='CARSKIN':
         # Hood and trunk are permanent panels. Accessory slots would make them
         # disappear when the player installs mirrors or a spoiler.
@@ -64,7 +67,15 @@ def classify(o):
 for o in list(bpy.data.objects):
     if 'source_shader' in o:
         part=classify(o)
-        if part is not None:groups[part].append(o)
+        if part is not None:
+            if str(o.get('dominant_bone','')).lower()=='grade':
+                grille=o.copy();grille.data=o.data.copy()
+                for slot in grille.material_slots:
+                    material=slot.material.copy();material['source_shader']=grille_material_index
+                    slot.material=material
+                grille['source_shader']=grille_material_index
+                groups[part].append(grille)
+            else:groups[part].append(o)
 
 collection=bpy.data.collections.new('MW_EXPORT'); bpy.context.scene.collection.children.link(collection)
 report=[]; export=[]
@@ -79,7 +90,7 @@ for part,objects in groups.items():
     detail_weight=2.0
     def object_weight(o):
         bone=o['dominant_bone'].lower()
-        if part=='KIT00_INTERIOR' and bone=='grade':return 4.0
+        if part=='KIT00_BODY' and bone=='grade':return 1.5
         # Hinged painted panels show collapse holes much sooner than broad body
         # panels, so reserve enough topology for their compound curved shells.
         if part=='KIT00_BODY' and 'boot' in bone:return 3.0

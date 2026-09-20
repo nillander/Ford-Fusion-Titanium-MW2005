@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "count": 10,
+  "count": 11,
   "textures": [
     {
       "Name": "MUSTANGGT_RIM",
@@ -91,6 +91,15 @@
       "DataSize": 32768,
       "MipMapCount": 1,
       "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_GRILLE",
+      "TexHash": 3496026263,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 262144,
+      "MipMapCount": 1,
+      "Format": 861165636
     }
   ]
 }

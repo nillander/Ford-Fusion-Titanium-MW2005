@@ -391,5 +391,13 @@
       0.3271484375,
       0.494140625
     ]
+  },
+  {
+    "index": 31,
+    "source": "shelby_grille_bake",
+    "preset": "vehicle_mesh.sps",
+    "shader": "DULLPLASTIC",
+    "texture": "MUSTANGGT_GRILLE",
+    "uv_rect": null
   }
 ]

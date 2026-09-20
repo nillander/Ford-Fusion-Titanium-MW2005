@@ -1,81 +1,81 @@
 [
   {
     "part": "KIT00_INTERIOR_A",
-    "vertices": 20504,
-    "triangles": 18484,
+    "vertices": 24817,
+    "triangles": 24398,
     "source_triangles": 893659
   },
   {
     "part": "KIT00_INTERIOR_B",
-    "vertices": 13639,
-    "triangles": 9242,
+    "vertices": 16069,
+    "triangles": 12199,
     "source_triangles": 893659
   },
   {
     "part": "KIT00_INTERIOR_C",
-    "vertices": 9454,
-    "triangles": 4066,
+    "vertices": 10461,
+    "triangles": 5367,
     "source_triangles": 893659
   },
   {
     "part": "KIT00_BODY_A",
-    "vertices": 26912,
-    "triangles": 39967,
-    "source_triangles": 365168
+    "vertices": 26913,
+    "triangles": 39960,
+    "source_triangles": 372790
   },
   {
     "part": "KIT00_BODY_B",
-    "vertices": 16457,
-    "triangles": 19983,
-    "source_triangles": 365168
+    "vertices": 16460,
+    "triangles": 19979,
+    "source_triangles": 372790
   },
   {
     "part": "KIT00_BODY_C",
-    "vertices": 9223,
-    "triangles": 8792,
-    "source_triangles": 365168
+    "vertices": 9230,
+    "triangles": 8791,
+    "source_triangles": 372790
   },
   {
     "part": "KIT00_BODY_D",
-    "vertices": 5060,
-    "triangles": 3597,
-    "source_triangles": 365168
+    "vertices": 5074,
+    "triangles": 3596,
+    "source_triangles": 372790
   },
   {
     "part": "KIT00_BODY_E",
-    "vertices": 3508,
+    "vertices": 3524,
     "triangles": 1598,
-    "source_triangles": 365168
+    "source_triangles": 372790
   },
   {
     "part": "BASE_A",
-    "vertices": 27791,
-    "triangles": 26051,
-    "source_triangles": 967418
+    "vertices": 27028,
+    "triangles": 26031,
+    "source_triangles": 889440
   },
   {
     "part": "BASE_B",
-    "vertices": 18690,
-    "triangles": 13025,
-    "source_triangles": 967418
+    "vertices": 18009,
+    "triangles": 13014,
+    "source_triangles": 889440
   },
   {
     "part": "BASE_C",
-    "vertices": 13037,
-    "triangles": 5731,
-    "source_triangles": 967418
+    "vertices": 12402,
+    "triangles": 5726,
+    "source_triangles": 889440
   },
   {
     "part": "BASE_D",
-    "vertices": 11102,
-    "triangles": 3109,
-    "source_triangles": 967418
+    "vertices": 10351,
+    "triangles": 2970,
+    "source_triangles": 889440
   },
   {
     "part": "BASE_E",
-    "vertices": 11102,
-    "triangles": 3109,
-    "source_triangles": 967418
+    "vertices": 10351,
+    "triangles": 2970,
+    "source_triangles": 889440
   },
   {
     "part": "KIT00_RIGHT_BRAKELIGHT_GLASS_A",
