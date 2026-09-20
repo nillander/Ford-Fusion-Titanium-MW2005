@@ -22,3 +22,12 @@ Nenhum arquivo do jogo foi alterado para iniciar esta versão.
 Próximo passo: portar a geometria do Fusion para os slots desse catálogo,
 preservando pneus, freios e os sólidos de iluminação/vidros do Shelby; depois
 gerar uma pasta de lançamento V2 antes de tocar nos arquivos do jogo.
+
+## Protótipo de encaixe
+
+O export atual do Fusion foi recompilado com o namespace `MUSTANGGT` e
+mesclado à cópia retail do Shelby. A validação independente leu 85 peças e
+247.765 triângulos em todos os LODs. Os slots do Shelby de pneus, freios e
+aerofólio foram retidos; luzes, vidros, carroceria e interior foram trocados
+pelo Fusion. O LOD A ficou em 142.994 triângulos, acima do alvo prático, e
+por isso este protótipo não foi instalado nem empacotado.
