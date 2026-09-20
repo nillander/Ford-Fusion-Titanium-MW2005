@@ -1,0 +1,27 @@
+{
+  "version": "v2-mustang-shelby",
+  "source": {
+    "source\\fusion-2017-dev": {
+      "bytes": 245623808,
+      "sha256": "88dbd730462233e7f0a6dac5d358c75c6243715a308710d8c5181cb5e5834950"
+    }
+  },
+  "donor_geometry": {
+    "donor\\ford_mustang_shelby\\MODLOADER\\ADDONS\\CARS_REPLACE\\MUSTANGGT\\GEOMETRY.BIN": {
+      "bytes": 2930816,
+      "sha256": "38b579245d653837cdb15d645111a354cc2db21aad62ca6c48276d2547d37184"
+    }
+  },
+  "donor_textures": {
+    "donor\\ford_mustang_shelby\\MODLOADER\\ADDONS\\CARS_REPLACE\\MUSTANGGT\\TEXTURES.BIN": {
+      "bytes": 659608,
+      "sha256": "b61a418e3de390176f968154b09132ce62dd26b16da708c5f869633cef0d12af"
+    }
+  },
+  "retail_geometry": {
+    "bytes": 3854208,
+    "sha256": "fb0ce1d5dc51f1a656c6b30b5f7ee36864e57667eb04c77c21f8172256dbf22f"
+  },
+  "jdlz_offset": 2816,
+  "solid_count": 78
+}

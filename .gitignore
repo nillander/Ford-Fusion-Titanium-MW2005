@@ -4,4 +4,9 @@ work/official-WHEELS.json
 work/modloader/
 work/*.bin
 work/*-geometry.json
+work/v2-shelby-geometry-check.json
+# Version snapshots retain their large generated binaries locally.  The tag,
+# manifests and human-readable status remain versioned.
+versions/*/release/**/*.BIN
+versions/*/work/
 scripts/__pycache__/
