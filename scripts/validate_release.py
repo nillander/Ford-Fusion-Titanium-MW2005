@@ -42,7 +42,7 @@ for mat in load('reference/materials.json'):
     assert explicit_hashes.get(mat['texture'],binhash(mat['texture'])) in tex
 original_refs={t for p in original for t in p['info']['Textures']}
 new_refs={t for p in compiled for t in p['info']['Textures']}
-known_global_refs={0xA532FC46,0xF68EF19F}
+known_global_refs=set()
 assert not (new_refs-set(tex)-original_refs-known_global_refs),'New unresolved texture references'
 for name,info in load('reference/input-manifest.json').items():
     with (ROOT/name).open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()==info['sha256']

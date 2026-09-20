@@ -29,7 +29,7 @@ def tree_for(pos):
     for i,p in enumerate(pos):tree.insert(p,i)
     tree.balance();return tree
 
-targets={'KIT00_BODY':40000,'BASE':26000,'KIT00_INTERIOR':18000,
+targets={'KIT00_BODY':40000,'BASE':26000,'KIT00_INTERIOR':24000,
          'KIT00_LEFT_SIDE_MIRROR':6000,'KIT00_RIGHT_SIDE_MIRROR':6000,
          'KIT00_RIGHT_HEADLIGHT':2500,'KIT00_RIGHT_HEADLIGHT_GLASS':2000,
          'KIT00_RIGHT_BRAKELIGHT':2000,'KIT00_RIGHT_BRAKELIGHT_GLASS':1500,
@@ -43,6 +43,10 @@ def classify(o):
     if si==4:return 'KIT00_RIGHT_BRAKELIGHT'
     if si==28:return 'BASE'
     if si==16: return 'KIT00_FRONT_WINDOW' if center>-.3 else 'KIT00_REAR_WINDOW'
+    # The engine drops these meshes when they are compiled into BASE.  Store
+    # the exact 2017-dev grille geometry in the always-visible interior solid;
+    # the user prefers reducing unseen cabin detail over losing exterior trim.
+    if bone=='grade': return 'KIT00_INTERIOR'
     if mat['shader']=='CARSKIN':
         # Hood and trunk are permanent panels. Accessory slots would make them
         # disappear when the player installs mirrors or a spoiler.
@@ -75,6 +79,7 @@ for part,objects in groups.items():
     detail_weight=2.0
     def object_weight(o):
         bone=o['dominant_bone'].lower()
+        if part=='KIT00_INTERIOR' and bone=='grade':return 4.0
         # Hinged painted panels show collapse holes much sooner than broad body
         # panels, so reserve enough topology for their compound curved shells.
         if part=='KIT00_BODY' and 'boot' in bone:return 3.0
