@@ -1,5 +1,12 @@
 # Fusion Titanium 2018 para MW2005
 
+Estado atual de V2 (Mustang Shelby, slot MUSTANGGT):
+[STATUS](versions/v2-mustang-shelby/STATUS.md) e
+[aprendizado sobre lanternas e faróis](versions/v2-mustang-shelby/reference/APRENDIZADO_LANTERNAS_FAROIS.md).
+Para reproduzir a correção de iluminação instalada, use
+`scripts/build_rear_lights_v2.ps1 -Install` com o jogo fechado.
+O fluxo `build.ps1` descrito abaixo pertence à compilação anterior.
+
 O projeto de transplante visual do Fusion Titanium 2018 para MW2005. O Fusion ocupa o slot MUSTANGGT e uma compilação `mwgc`+`MergeGeometry` no catálogo `donor/fordgt` ocupa o Ford GT. A SLR McLaren foi substituída pelo SLK55 AMG.
 
 ## Reconstruir

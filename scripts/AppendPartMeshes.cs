@@ -45,7 +45,7 @@ public class AppendPartMeshes {
         return list.ToArray();
     }
 
-    static RealGeometryPart Append(RealGeometryPart original, RealGeometryPart extra) {
+    public static RealGeometryPart Append(RealGeometryPart original, RealGeometryPart extra) {
         int[] textureRemap;
         int[] shaderRemap;
         original.PartInfo.Textures = AppendUnique(original.PartInfo.Textures, extra.PartInfo.Textures, out textureRemap);
