@@ -1,0 +1,74 @@
+{
+  "version": "v2-mustang-shelby-lighting-test-20260920",
+  "updated_at": "2026-09-20T21:36:35.863611-03:00",
+  "structural_validation_passed": true,
+  "in_game_tested": true,
+  "whole_vehicle_approved": false,
+  "ready_for_user_test": true,
+  "solid_count": 78,
+  "triangles_all_lods": 142491,
+  "texture_count": 16,
+  "base_a_vertices": 21135,
+  "unchanged_solids": 58,
+  "installed": [
+    {
+      "directory": "C:\\Users\\nillander\\NoDocuments\\fusion-mw2005\\versions\\v2-mustang-shelby\\release\\MUSTANGGT",
+      "files": {
+        "GEOMETRY.BIN": {
+          "sha256": "AC4DE300C521D15A596A28045987B81D37F5206DC7457C5C5444FDF0E93BC5E2",
+          "bytes": 6070272
+        },
+        "TEXTURES.BIN": {
+          "sha256": "A5A7E4EAF008BE570BEBE86A8564FB349B9778F846E79AE8229867E9CFE29782",
+          "bytes": 6328576
+        }
+      }
+    },
+    {
+      "directory": "D:\\Program Files (x86)\\Electronic Arts\\Need For Speed Most Wanted Black Edition\\CARS\\MUSTANGGT",
+      "files": {
+        "GEOMETRY.BIN": {
+          "sha256": "AC4DE300C521D15A596A28045987B81D37F5206DC7457C5C5444FDF0E93BC5E2",
+          "bytes": 6070272
+        },
+        "TEXTURES.BIN": {
+          "sha256": "A5A7E4EAF008BE570BEBE86A8564FB349B9778F846E79AE8229867E9CFE29782",
+          "bytes": 6328576
+        }
+      }
+    },
+    {
+      "directory": "D:\\Program Files (x86)\\Electronic Arts\\Need For Speed Most Wanted Black Edition\\ADDONS\\CARS_REPLACE\\MUSTANGGT",
+      "files": {
+        "GEOMETRY.BIN": {
+          "sha256": "AC4DE300C521D15A596A28045987B81D37F5206DC7457C5C5444FDF0E93BC5E2",
+          "bytes": 6070272
+        },
+        "TEXTURES.BIN": {
+          "sha256": "A5A7E4EAF008BE570BEBE86A8564FB349B9778F846E79AE8229867E9CFE29782",
+          "bytes": 6328576
+        }
+      }
+    }
+  ],
+  "observations": {
+    "rear_lights": "Filled lenses observed in garage before adding headlights; rear-only result reproduced byte-identically in final build.",
+    "headlights": "Final textured version observed from front in garage; both main lenses filled, silver detail and amber areas visible. Strong brightness remains.",
+    "evidence": "lighting-evidence/front-in-game.png",
+    "not_tested": [
+      "Dynamic braking and light response",
+      "Driving and LOD transitions",
+      "All customization combinations",
+      "Fog lights"
+    ],
+    "remaining_defects": [
+      "Pre-existing body mesh spikes and openings",
+      "Front grille and lower grille remain incomplete",
+      "Wheel assembly remains incomplete",
+      "Overall vehicle is not a finished release"
+    ]
+  },
+  "rebuild": "scripts/build_rear_lights_v2.ps1 -Install",
+  "baseline_sha256": "76C1C1BBD1DA8001D6AA7C3412C1CE9042923B7ACCEB7CEB7521FD12D208296C",
+  "rear_only_checkpoint_sha256": "6D86BC720E1C73B47E3D43F0DB6D81730365CF113C5C8884CC46EDABB79635BE"
+}

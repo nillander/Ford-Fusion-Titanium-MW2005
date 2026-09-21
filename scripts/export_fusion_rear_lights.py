@@ -23,17 +23,34 @@ source = json.loads((ROOT / 'reference/source-structure.json').read_text())
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete(use_global=False)
 
-# Use the exact opaque reflector material from the working AJM rear lamp.
-# The original donor DDS is installed by prepare_fusion_rear_tpk.py.
+# Keep the proven MW material/hash pair; the default DDS now contains a bake
+# from the Fusion 2018 source. --donor-atlas selects the prior 2010 artwork.
 MATERIAL = '0x05BC3A3C/0x4B7D95B6'
 UVS = {2: (.80, .90), 14: (.70, .40), 15: (.80, .90), 26: (.32, .09)}
 SHADERS = (2, 15, 26) if FRONT else (14, 15)
 BACKING_SHADER = 15 if FRONT else 14
 TARGETS = {2: 700, 14: 1300, 15: 600 if FRONT else 300, 26: 180}
+PROJECTION = None
+if '--donor-atlas' not in sys.argv:
+    projection_path = ROOT/'versions/v2-mustang-shelby/work/source-lamp-bake/projection.json'
+    PROJECTION = json.loads(projection_path.read_text())['regions'][END]
 
 def triangle_record(mesh, tri, offset, shader):
     order = list(tri.vertices)[::-1]
     indices = [offset + int(n) for n in order]
+    if PROJECTION:
+        frame = PROJECTION
+        x, y, w, h = frame['atlas_rect']
+        uv = []
+        for n in order:
+            p = mesh.vertices[n].co
+            position = (p.x, abs(p.y), p.z)
+            across = (np.dot(position, frame['right'])-frame['u_min'])/frame['width']
+            height = (p.z-frame['z_min'])/frame['height']
+            uv.append((x+w*float(np.clip(across, .001, .999)),
+                       y+h*(1-float(np.clip(height, .001, .999)))))
+        return struct.pack('<i4h6f', 0, *indices, 0,
+                           *(p[0] for p in uv), *(p[1] for p in uv))
     if FRONT and shader in (2, 15):
         # Project the complete silver reflector region from the native AJM
         # atlas onto both Fusion lamps. A single white texel loses all detail.

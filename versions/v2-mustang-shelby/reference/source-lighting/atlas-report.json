@@ -1,0 +1,17 @@
+{
+  "origin": "Blender renders of extracted Fusion 2018 source geometry",
+  "uses_2010_artwork": false,
+  "uses_user_generated_reference": false,
+  "texture_hash": "4B7D95B6",
+  "format": "DXT3",
+  "size": [
+    1024,
+    1024
+  ],
+  "alpha_range": [
+    255,
+    255
+  ],
+  "dds_sha256": "cb1e8a147717c870416875e458395e37db507ddcd74209c75a36d7c2f843edf2",
+  "source_sha256": "88dbd730462233e7f0a6dac5d358c75c6243715a308710d8c5181cb5e5834950"
+}

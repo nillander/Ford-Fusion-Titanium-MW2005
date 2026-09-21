@@ -1,0 +1,214 @@
+{
+  "gpu": [
+    "NVIDIA GeForce RTX 3080 Ti"
+  ],
+  "renderer": "Cycles",
+  "samples": 96,
+  "source": "source/fusion-2017-dev/fusion/dlc.rpf",
+  "regions": {
+    "front": {
+      "right": [
+        -0.6,
+        0.8,
+        0.0
+      ],
+      "outward": [
+        0.8,
+        0.6,
+        0.0
+      ],
+      "u_min": -1.0139003295898437,
+      "z_min": 0.3847671439647674,
+      "width": 0.6956689395904542,
+      "height": 0.3478344697952271,
+      "atlas_rect": [
+        0.0,
+        0.0,
+        1.0,
+        0.5
+      ],
+      "sources": [
+        {
+          "key": "main_m000_g002",
+          "source_shader": 2,
+          "triangles": 6128
+        },
+        {
+          "key": "main_m000_g003",
+          "source_shader": 2,
+          "triangles": 2576
+        },
+        {
+          "key": "fusion_exh_2_m000_g007",
+          "source_shader": 6,
+          "triangles": 6072
+        },
+        {
+          "key": "fusion_exh_2_m000_g025",
+          "source_shader": 7,
+          "triangles": 6668
+        },
+        {
+          "key": "fusion_exh_2_m000_g026",
+          "source_shader": 7,
+          "triangles": 6208
+        },
+        {
+          "key": "fusion_exh_2_m000_g027",
+          "source_shader": 7,
+          "triangles": 5892
+        },
+        {
+          "key": "fusion_exh_2_m000_g030",
+          "source_shader": 7,
+          "triangles": 624
+        },
+        {
+          "key": "fusion_exh_2_m000_g054",
+          "source_shader": 26,
+          "triangles": 2448
+        }
+      ]
+    },
+    "rear": {
+      "right": [
+        -0.6,
+        -0.8,
+        0.0
+      ],
+      "outward": [
+        -0.8,
+        0.6,
+        0.0
+      ],
+      "u_min": 0.41585727024078356,
+      "z_min": 0.5338489248752594,
+      "width": 0.7208895149230958,
+      "height": 0.3604447574615479,
+      "atlas_rect": [
+        0.0,
+        0.5,
+        1.0,
+        0.5
+      ],
+      "sources": [
+        {
+          "key": "main_m000_g012",
+          "source_shader": 4,
+          "triangles": 96
+        },
+        {
+          "key": "main_m000_g044",
+          "source_shader": 6,
+          "triangles": 3534
+        },
+        {
+          "key": "main_m000_g063",
+          "source_shader": 7,
+          "triangles": 1749
+        },
+        {
+          "key": "main_m000_g064",
+          "source_shader": 7,
+          "triangles": 4956
+        },
+        {
+          "key": "main_m000_g065",
+          "source_shader": 7,
+          "triangles": 4298
+        },
+        {
+          "key": "main_m000_g067",
+          "source_shader": 7,
+          "triangles": 834
+        },
+        {
+          "key": "main_m000_g068",
+          "source_shader": 7,
+          "triangles": 6480
+        },
+        {
+          "key": "main_m000_g069",
+          "source_shader": 7,
+          "triangles": 3798
+        },
+        {
+          "key": "main_m000_g100",
+          "source_shader": 14,
+          "triangles": 5058
+        },
+        {
+          "key": "main_m000_g101",
+          "source_shader": 14,
+          "triangles": 2402
+        },
+        {
+          "key": "main_m000_g102",
+          "source_shader": 15,
+          "triangles": 1664
+        },
+        {
+          "key": "fusion_exh_2_m000_g008",
+          "source_shader": 6,
+          "triangles": 1506
+        },
+        {
+          "key": "fusion_exh_2_m000_g009",
+          "source_shader": 6,
+          "triangles": 3166
+        },
+        {
+          "key": "fusion_exh_2_m000_g031",
+          "source_shader": 7,
+          "triangles": 4190
+        },
+        {
+          "key": "fusion_exh_2_m000_g032",
+          "source_shader": 7,
+          "triangles": 5782
+        },
+        {
+          "key": "fusion_exh_2_m000_g033",
+          "source_shader": 7,
+          "triangles": 5536
+        },
+        {
+          "key": "fusion_exh_2_m000_g034",
+          "source_shader": 7,
+          "triangles": 4324
+        },
+        {
+          "key": "fusion_exh_2_m000_g037",
+          "source_shader": 7,
+          "triangles": 642
+        },
+        {
+          "key": "fusion_exh_2_m000_g038",
+          "source_shader": 7,
+          "triangles": 5028
+        },
+        {
+          "key": "fusion_exh_2_m000_g039",
+          "source_shader": 7,
+          "triangles": 4314
+        },
+        {
+          "key": "fusion_exh_2_m000_g041",
+          "source_shader": 7,
+          "triangles": 624
+        },
+        {
+          "key": "fusion_exh_2_m000_g052",
+          "source_shader": 14,
+          "triangles": 6576
+        },
+        {
+          "key": "fusion_exh_2_m000_g055",
+          "source_shader": 15,
+          "triangles": 1792
+        }
+      ]
+    }
+  },
+  "source_sha256": "88dbd730462233e7f0a6dac5d358c75c6243715a308710d8c5181cb5e5834950"
+}

@@ -1,4 +1,4 @@
-param([switch]$Install, [switch]$RearOnly)
+param([switch]$Install, [switch]$RearOnly, [switch]$DonorAtlas, [switch]$SkipBake)
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 Push-Location $root
@@ -11,7 +11,14 @@ try {
     $out = "$v2\work\fusion-rear-lenses"
     New-Item -ItemType Directory -Force $out | Out-Null
     $csc = Join-Path $env:WINDIR 'Microsoft.NET\Framework64\v4.0.30319\csc.exe'
-    Run 'tools\blender-4.5.14-windows-x64\blender.exe' @('--background','--factory-startup','--python-exit-code','1','--python','scripts\export_fusion_rear_lights.py')
+    $blender = 'tools\blender-4.5.14-windows-x64\blender.exe'
+    if (!$DonorAtlas) {
+        if (!$SkipBake) { Run $blender @('--background','--factory-startup','--python-exit-code','1','--python','scripts\bake_source_lamp_textures.py') }
+        Run 'work\venv\Scripts\python.exe' @('scripts\pack_source_lamp_atlas.py')
+    }
+    $rearArgs = @('--background','--factory-startup','--python-exit-code','1','--python','scripts\export_fusion_rear_lights.py')
+    if ($DonorAtlas) { $rearArgs += @('--','--donor-atlas') }
+    Run $blender $rearArgs
     Run $csc @('/nologo','/r:tools\mwgc\mwgc.exe','/main:AttachRearLenses','/out:tools\mwgc\AttachRearLenses.exe','scripts\AppendPartMeshes.cs','scripts\AttachRearLenses.cs')
     Run 'tools\mwgc\mwgc.exe' @('-nowait','-xname','MUSTANGGT',"$out\fusion-rear-lenses.mwr","$out\lights.bin")
     # Use a fixed pre-attachment baseline; repeated runs must not accumulate lenses.
@@ -23,13 +30,17 @@ try {
         Copy-Item -LiteralPath "$out\rear-GEOMETRY.BIN" -Destination "$out\GEOMETRY.BIN" -Force
     } else {
         $front = "$v2\work\fusion-front-lenses"
-        Run 'tools\blender-4.5.14-windows-x64\blender.exe' @('--background','--factory-startup','--python-exit-code','1','--python','scripts\export_fusion_rear_lights.py','--','--front')
+        $frontArgs = @('--background','--factory-startup','--python-exit-code','1','--python','scripts\export_fusion_rear_lights.py','--','--front')
+        if ($DonorAtlas) { $frontArgs += '--donor-atlas' }
+        Run $blender $frontArgs
         Run 'tools\mwgc\mwgc.exe' @('-nowait','-xname','MUSTANGGT',"$front\fusion-front-lenses.mwr","$front\lights.bin")
         Run 'tools\mwgc\AttachRearLenses.exe' @("$out\rear-GEOMETRY.BIN","$front\lights.bin","$out\GEOMETRY.BIN")
     }
     Run 'tools\mwgc\InspectGeometry.exe' @("$out\GEOMETRY.BIN","$out\geometry.json")
     Run 'tools\dotnet\dotnet.exe' @('scripts\validator\bin\Release\net8.0\Validator.dll',"$out\GEOMETRY.BIN","$out\validation.json")
-    Run 'work\venv\Scripts\python.exe' @('scripts\prepare_fusion_rear_tpk.py')
+    $textureArgs = @('scripts\prepare_fusion_rear_tpk.py')
+    if ($DonorAtlas) { $textureArgs += '--donor-atlas' }
+    Run 'work\venv\Scripts\python.exe' $textureArgs
     Run 'tools\dotnet\dotnet.exe' @('scripts\validator\bin\Release\net8.0\Validator.dll',"$out\tpk\TEXTURES.BIN","$out\tpk-validation.json","$out\verified-textures")
     if ($Install) {
         $gameRoot = 'D:\Program Files (x86)\Electronic Arts\Need For Speed Most Wanted Black Edition'

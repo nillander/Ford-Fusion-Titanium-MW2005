@@ -1,5 +1,13 @@
 # Aprendizado: lanternas e faróis do Fusion 2018 no MW2005
 
+**Atualização vigente:** a imagem de 2010 foi substituída por um atlas renderizado
+das peças 3D da fonte de 2018. Veja
+[Texturas a partir da fonte de 2018](TEXTURAS_LUZES_FONTE_2018.md) para prévias,
+procedimento, hashes instalados e limites. O comando padrão de reconstrução
+agora usa esse atlas; `-DonorAtlas` seleciona o resultado histórico abaixo.
+
+O restante deste documento conserva o aprendizado da correção inicial de opacidade.
+
 Atualizado em 20/09/2026. Versão V2, catálogo Mustang Shelby, slot MUSTANGGT.
 
 ## Resultado observado

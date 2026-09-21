@@ -1,8 +1,12 @@
-"""Keep V2 textures and use AJM's native opaque rear-lamp DDS."""
+"""Keep V2 textures and install the source-baked opaque lamp atlas.
+
+--donor-atlas restores the older AJM artwork for comparison.
+"""
 import hashlib
 import json
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 from PIL import Image
 
@@ -12,16 +16,19 @@ source = v2 / 'work/opaque-rear-tpk'
 work = v2 / 'work/fusion-rear-lenses'
 out = work / 'tpk'
 out.mkdir(parents=True, exist_ok=True)
-subprocess.run([str(root / 'tools/dotnet/dotnet.exe'),
+donor_atlas = '--donor-atlas' in sys.argv
+if donor_atlas:
+    subprocess.run([str(root / 'tools/dotnet/dotnet.exe'),
                 str(root / 'scripts/validator/bin/Release/net8.0/Validator.dll'),
                 str(root / 'donor/fusion-ajm3899/MUSTANGGT/TEXTURES.BIN'),
-                str(work / 'ajm-tpk.json'), str(work / 'ajm-textures')], check=True)
+                    str(work / 'ajm-tpk.json'), str(work / 'ajm-textures')], check=True)
 catalog = json.loads((v2 / 'reference/opaque-rear-textures.json').read_text())['textures']
 lines = ['[tpk]', 'name=MUSTANGGT', 'output=TEXTURES.BIN', '']
 report = []
 for texture in catalog:
     h = texture['TexHash']
-    original = (work / 'ajm-textures' if h == 0x4B7D95B6 else source) / f'{h:08X}.dds'
+    lamp_source = work/'ajm-textures' if donor_atlas else v2/'work/source-lamp-bake'
+    original = (lamp_source if h == 0x4B7D95B6 else source) / f'{h:08X}.dds'
     target = out / f'{h:08X}.dds'
     shutil.copy2(original, target)
     if h == 0x4B7D95B6:
@@ -33,4 +40,4 @@ for texture in catalog:
 (out / 'textures.txt').write_text('\n'.join(lines), encoding='ascii')
 subprocess.run([str(root / 'tools/mwtc/mwtc.exe'), 'textures.txt'], cwd=out, check=True)
 (out / 'build-report.json').write_text(json.dumps(report, indent=2))
-print('Native rear-light TPK ready:', len(catalog), 'textures')
+print('Lamp TPK ready:', len(catalog), 'textures; donor artwork:', donor_atlas)

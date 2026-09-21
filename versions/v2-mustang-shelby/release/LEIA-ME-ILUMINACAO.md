@@ -1,9 +1,7 @@
-# Fusion 2018 V2 — teste de lanternas e faróis
+# Fusion 2018 V2 — textura da fonte 2018
 
-Esta versão foi instalada e inspecionada no jogo em 20/09/2026. Faróis principais e lanternas aparecem preenchidos nas vistas inspecionadas. O carro inteiro ainda não está finalizado: há defeitos anteriores na carroceria, grades e rodas. Iluminação dinâmica e corrida continuam pendentes.
+Os faróis e lanternas deste teste usam um atlas renderizado das malhas da fonte de 2018. O shader opaco foi mantido. Já instalado nas duas rotas MUSTANGGT deste PC. Os defeitos anteriores do restante do carro continuam pendentes; não é uma versão final.
 
-O pacote contém apenas GEOMETRY.BIN e TEXTURES.BIN atualizados. Com o jogo fechado, faça backup dos arquivos existentes e copie esses dois arquivos de MUSTANGGT para CARS/MUSTANGGT e, se houver Mod Loader, também para ADDONS/CARS_REPLACE/MUSTANGGT. Preserve VINYLS.BIN e PREVINYL.BIN existentes. Reinicie o jogo.
+Para instalar em uma cópia compatível, feche o jogo, faça backup e copie os dois BINs em MUSTANGGT para CARS/MUSTANGGT e também ADDONS/CARS_REPLACE/MUSTANGGT, se usar Mod Loader. Preserve VINYLS e PREVINYL existentes. Reinicie o jogo.
 
-A instalação deste PC já está atualizada; não é preciso copiar novamente. O catálogo permanece Mustang Shelby. V1, source/ e donor/ foram preservados.
-
-Leia reference/APRENDIZADO_LANTERNAS_FAROIS.md para diagnóstico e reprodução. reference/release-validation.json registra hashes, validações e limites do teste.
+Veja reference/TEXTURAS_LUZES_FONTE_2018.md, as prévias e release-validation.json. A versão anterior e V1 permanecem preservadas no projeto.

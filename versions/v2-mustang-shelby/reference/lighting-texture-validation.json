@@ -32,11 +32,11 @@
     {
       "Name": "MUSTANGGT_KIT00_BRAKELI",
       "TexHash": 1266521526,
-      "Width": 512,
-      "Height": 512,
-      "DataSize": 131072,
+      "Width": 1024,
+      "Height": 1024,
+      "DataSize": 1048576,
       "MipMapCount": 1,
-      "Format": 827611204
+      "Format": 861165636
     },
     {
       "Name": "MUSTANGGT_OPAQUE_PARTS",

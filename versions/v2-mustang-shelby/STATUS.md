@@ -1,5 +1,22 @@
 # Fusion Titanium 2018 — V2 Mustang Shelby
 
+**Retorno do usuário:** os desenhos de 2018 estão corretos, mas faróis e lanternas
+somem em alguns ângulos. A validação visual permanece parcial. Investigar essa
+falha e recuperar a grade frontal de referência sem reverter os avanços das luzes.
+
+## Atualização vigente: textura da fonte de 2018
+
+Faróis e lanternas agora usam um atlas renderizado das peças 3D da fonte,
+mantendo o material opaco. A frente foi vista no jogo com os dois projetores.
+A traseira exibe os novos detalhes, mas ainda apresenta interferências visuais.
+O conjunto segue disponível para teste, sem aprovação do carro completo.
+
+Veja [texturas de 2018](reference/TEXTURAS_LUZES_FONTE_2018.md).
+GEOMETRY: `F349903F7565E4BAE9A70359D0F0587C7843A56E1A4C6BD67FA8981E39F6FCC9`.
+TEXTURES: `563B585F4FBC3D0C85E22DA12E35037621040B4A0E505626BA478BD13B557CE9`.
+`scripts/build_rear_lights_v2.ps1 -Install` reproduz essa versão; `-DonorAtlas`
+recupera a aparência anterior. Os registros abaixo são históricos.
+
 Estado em 20/09/2026, 21:33: V2 recompilado e instalado nas duas rotas do jogo.
 Lanternas e faróis principais apareceram preenchidos nas vistas inspecionadas.
 O veículo completo ainda não está aprovado; permanecem defeitos anteriores
