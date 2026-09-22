@@ -1,5 +1,42 @@
 # Aprendizado: lanternas e faróis do Fusion 2018 no MW2005
 
+## 21/09/2026 — causa do desaparecimento por ângulo e correção estrutural
+
+O desaparecimento não foi causado principalmente pelo alpha nem pelo shader.
+Ao anexar quatro luzes de alta densidade a `BASE_A`, o buffer chegou a **75.687
+índices**. O último grupo começava no offset 65.667, acima de 65.535. Nenhum dos
+controles funcionais examinados ultrapassou esse limite: AJM 60.723, Shelby
+58.767 e Mustang original 16.044. Bounds, índices de vértice e winding das
+cascas estavam válidos.
+
+A correção estrutural foi devolver as 16 malhas `HEADLIGHT` e `BRAKELIGHT`
+A–D aos seus sólidos nativos do catálogo. `BASE_A` voltou a 34.515 índices.
+Cada sólido de luz recebeu também a ordem de índices oposta para renderizar os
+dois lados sem inflar o grande `BASE`. No jogo, os faróis e lanternas de 2018
+ficaram consideravelmente mais completos e estáveis. Ainda há recortes em
+alguns ângulos, portanto o resultado continua parcial.
+
+Testes isolados que não resolveram a causa:
+
+- trocar `BRAKELIGHT` por `DULLPLASTIC` mantendo a mesma malha;
+- duplicar faces enquanto as luzes ainda estavam anexadas ao `BASE`;
+- acrescentar camadas sem respeitar o limite do buffer.
+
+O estado da grade mais próximo do teste de 20/09 às 12:46 foi identificado no
+backup Blender das 12:48, SHA-256
+`996D613BF7238AF86EA8445766F220DE447A7B42126311B398725209057A6655`.
+Os cinco sólidos `KIT00_BODY_A–E` foram restaurados seletivamente; isso removeu
+as cinco grades adicionais do arquivo de 12:51 e preservou as novas luzes. A
+grade ainda não ficou preenchida no motor.
+
+A inspeção também confirmou dois retrovisores incorporados à carroceria do
+Fusion sobre os sólidos de retrovisor do Shelby. A próxima versão parte
+novamente do doador Fusion 2010 AJM e conserva somente o par do Fusion 2018. O
+AJM será reaproveitado seletivamente para grades, rodas, escape e organização
+das luzes; slots com nome de retrovisor precisam ser inspecionados porque no
+arquivo AJM alguns abrangem regiões maiores que um retrovisor. V2 fica
+preservada como checkpoint de aprendizado.
+
 **Atualização vigente:** a imagem de 2010 foi substituída por um atlas renderizado
 das peças 3D da fonte de 2018. Veja
 [Texturas a partir da fonte de 2018](TEXTURAS_LUZES_FONTE_2018.md) para prévias,
@@ -66,10 +103,9 @@ Evidência da frente da última versão instalada:
   **`0x4B7D95B6`**, extraída do TPK original. Alpha verificado em 255. Não foi
   isolada experimentalmente a contribuição de cada mudança; não atribuir o
   sucesso exclusivamente ao shader ou à quantidade de camadas.
-- Anexar as lentes a `BASE_A/B/C/D`, cujas malhas o jogo já exibe. Os 16 slots
-  antigos de farol/lanterna A–D permanecem no catálogo como triângulos mínimos,
-  evitando desenhar as lentes antigas junto com as novas. A geometria existente
-  de BASE é preservada, e os grupos adicionados têm índices remapeados.
+- O experimento inicial anexava as lentes a `BASE_A/B/C/D`; isso funcionou apenas
+  enquanto os offsets permaneceram baixos. A versão final de V2 usa novamente
+  os 16 sólidos nativos de farol/lanterna A–D para não exceder 65.535 índices.
 - Nas lanternas, amostrar vermelho em UV `(0.70, 0.40)` e claro em `(0.80, 0.90)`.
   Nos faróis, um único texel claro fez a lente parecer uma placa branca. A versão
   seguinte projeta a região de refletores prateados do atlas sobre a lente,
@@ -100,13 +136,15 @@ Com o jogo fechado, a partir da pasta do projeto:
 ```
 
 Apesar do nome histórico, o comando agora exporta **lanternas e faróis**.
-`-RearOnly` gera apenas a correção traseira. Sem `-Install`, faz a compilação e
-validação em work, sem copiar para o jogo.
+`-RearOnly` foi desativado porque pertence ao experimento antigo de anexação ao
+BASE. Sem `-Install`, o comando compila e valida em work, sem copiar para o jogo.
 
-O fluxo é `export_fusion_rear_lights.py` → mwgc → `AttachRearLenses.cs` → leitura
-independente → `prepare_fusion_rear_tpk.py` → leitura independente do TPK → backup
-e instalação nas duas rotas. O exportador Blender aceita `-- --front` para os
-faróis. `scripts/build.ps1` é um fluxo anterior e não reconstrói esta versão V2.
+O fluxo é `export_fusion_rear_lights.py` → mwgc → `ReplaceLampSolids.cs` →
+`MakeLampFacesTwoSided.cs` → restauração seletiva de BODY por
+`ReplaceBodySolids.cs` → leitura independente → `prepare_fusion_rear_tpk.py` →
+leitura independente do TPK → backup e instalação nas duas rotas. O exportador
+Blender aceita `-- --front` para os faróis. `scripts/build.ps1` é um fluxo
+anterior e não reconstrói esta versão V2.
 
 A entrada fixa é `work/fusion-rear-lenses/baseline-before-base-attachment.bin`,
 dentro de V2, SHA-256
@@ -116,10 +154,10 @@ O script interrompe se a entrada faltar ou tiver outro hash.
 
 ## Estado instalado e preservação
 
-- GEOMETRY: `AC4DE300C521D15A596A28045987B81D37F5206DC7457C5C5444FDF0E93BC5E2`.
-- TEXTURES: `A5A7E4EAF008BE570BEBE86A8564FB349B9778F846E79AE8229867E9CFE29782`.
-- Leitura independente aprovada: 78 sólidos, 142.491 triângulos somando os LODs,
-  16 texturas. BASE_A tem 21.135 vértices, abaixo do orçamento de 30.000 adotado.
+- GEOMETRY: `0DE11B06661BD8DB1905B12A2FCE4B79EEA29759C9F2A62D42CFB2446B9F23FD`.
+- TEXTURES: `563B585F4FBC3D0C85E22DA12E35037621040B4A0E505626BA478BD13B557CE9`.
+- Leitura independente aprovada: 78 sólidos, 169.359 triângulos somando os LODs,
+  16 texturas. BASE_A tem 14.173 vértices e 34.515 índices.
 - Comparação com a entrada fixa: 58 sólidos idênticos; alterações restritas a
   quatro BASE e 16 slots de iluminação. Vértices e índices preexistentes em
   BASE preservados. Grade, carroceria, rodas e placa não foram remodeladas aqui.

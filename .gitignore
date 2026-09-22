@@ -10,3 +10,8 @@ work/v2-shelby-geometry-check.json
 versions/*/release/**/*.BIN
 versions/*/work/
 scripts/__pycache__/
+# Build-time C# helpers; their sources are versioned and the build recompiles them.
+tools/mwgc/MakeLampFacesTwoSided.exe
+tools/mwgc/ProbeLampMaterial.exe
+tools/mwgc/ReplaceBodySolids.exe
+tools/mwgc/ReplaceLampSolids.exe

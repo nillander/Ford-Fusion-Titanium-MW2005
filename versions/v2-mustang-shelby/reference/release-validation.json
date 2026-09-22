@@ -1,22 +1,23 @@
 {
-  "version": "v2-mustang-shelby-source2018-lights-test",
-  "updated_at": "2026-09-21T12:48:02.474622-03:00",
+  "version": "v2-mustang-shelby-native-lights-historical-body-test",
+  "updated_at": "2026-09-21T22:20:00-03:00",
   "structural_validation_passed": true,
   "in_game_tested": true,
   "whole_vehicle_approved": false,
   "ready_for_user_test": true,
   "solid_count": 78,
-  "triangles_all_lods": 142491,
+  "triangles_all_lods": 169359,
   "texture_count": 16,
-  "base_a_vertices": 21135,
-  "unchanged_solids": 58,
+  "base_a_vertices": 14173,
+  "base_a_index_count": 34515,
+  "unchanged_solids": 57,
   "installed": [
     {
       "directory": "C:\\Users\\nillander\\NoDocuments\\fusion-mw2005\\versions\\v2-mustang-shelby\\release\\MUSTANGGT",
       "files": {
         "GEOMETRY.BIN": {
-          "sha256": "F349903F7565E4BAE9A70359D0F0587C7843A56E1A4C6BD67FA8981E39F6FCC9",
-          "bytes": 6070272
+          "sha256": "0DE11B06661BD8DB1905B12A2FCE4B79EEA29759C9F2A62D42CFB2446B9F23FD",
+          "bytes": 6197248
         },
         "TEXTURES.BIN": {
           "sha256": "563B585F4FBC3D0C85E22DA12E35037621040B4A0E505626BA478BD13B557CE9",
@@ -28,8 +29,8 @@
       "directory": "D:\\Program Files (x86)\\Electronic Arts\\Need For Speed Most Wanted Black Edition\\CARS\\MUSTANGGT",
       "files": {
         "GEOMETRY.BIN": {
-          "sha256": "F349903F7565E4BAE9A70359D0F0587C7843A56E1A4C6BD67FA8981E39F6FCC9",
-          "bytes": 6070272
+          "sha256": "0DE11B06661BD8DB1905B12A2FCE4B79EEA29759C9F2A62D42CFB2446B9F23FD",
+          "bytes": 6197248
         },
         "TEXTURES.BIN": {
           "sha256": "563B585F4FBC3D0C85E22DA12E35037621040B4A0E505626BA478BD13B557CE9",
@@ -41,8 +42,8 @@
       "directory": "D:\\Program Files (x86)\\Electronic Arts\\Need For Speed Most Wanted Black Edition\\ADDONS\\CARS_REPLACE\\MUSTANGGT",
       "files": {
         "GEOMETRY.BIN": {
-          "sha256": "F349903F7565E4BAE9A70359D0F0587C7843A56E1A4C6BD67FA8981E39F6FCC9",
-          "bytes": 6070272
+          "sha256": "0DE11B06661BD8DB1905B12A2FCE4B79EEA29759C9F2A62D42CFB2446B9F23FD",
+          "bytes": 6197248
         },
         "TEXTURES.BIN": {
           "sha256": "563B585F4FBC3D0C85E22DA12E35037621040B4A0E505626BA478BD13B557CE9",
@@ -52,9 +53,13 @@
     }
   ],
   "observations": {
-    "front": "Both front lamps visible with source dual projectors and light outline in garage.",
-    "rear": "Source clear and red details visible in garage; dark surfaces and visual interference remain in car.",
-    "evidence": "source-lighting/front-in-game.png",
+    "front": "Native lamp solids and duplicate winding make both 2018 projector assemblies substantially more stable, but defects remain at some angles.",
+    "rear": "Native lamp solids remove the BASE index overflow; clear/red details are much more complete, with remaining angular clipping on portions of a lamp.",
+    "evidence": "in-game/native-slots-twosided-front.png",
+    "additional_evidence": [
+      "in-game/native-slots-rear-angle-defect.png",
+      "in-game/historical-body-1248-front.png"
+    ],
     "offline_uv_previews": [
       "source-lighting/front-compiled-uv.png",
       "source-lighting/rear-compiled-uv.png"
@@ -66,8 +71,9 @@
     ],
     "remaining_defects": [
       "Pre-existing body mesh defects",
-      "Grilles",
+      "Front grille remains unfilled after restoring the 12:48 BODY checkpoint",
       "Wheels",
+      "Two Fusion mirrors overlap two Shelby donor mirrors",
       "Rear visual interference; appearance and intensity still subject to adjustment"
     ]
   },
@@ -81,7 +87,10 @@
   ],
   "source_unchanged": true,
   "non_lamp_dds_unchanged": 15,
-  "geometry_change_scope": "UVs only relative to previous AC4DE300 geometry; positions, normals, indices and part metadata identical",
-  "user_feedback": "2018 shape confirmed; headlights and rear lamps disappear at some camera angles. Correction remains partial.",
-  "visibility_all_angles_passed": false
+  "geometry_change_scope": "Sixteen 2018 lamp solids restored to their native catalogue slots with opposite winding; BASE_A returned to 34,515 indices. BODY A-E restored from the 20/09 12:48 Blender checkpoint.",
+  "historical_body_checkpoint_sha256": "996D613BF7238AF86EA8445766F220DE447A7B42126311B398725209057A6655",
+  "historical_grille_in_game_result": "The exact BODY checkpoint was restored, but the grille interior still did not render as intended.",
+  "user_feedback": "Lighting improved considerably but still has defects at some angles. Four mirrors are visible. User requested the next version return to the Fusion 2010 AJM donor base.",
+  "visibility_all_angles_passed": false,
+  "v2_frozen_for_v3_ajm_transition": true
 }

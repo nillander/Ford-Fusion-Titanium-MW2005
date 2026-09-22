@@ -1,8 +1,31 @@
 # Fusion Titanium 2018 — V2 Mustang Shelby
 
-**Retorno do usuário:** os desenhos de 2018 estão corretos, mas faróis e lanternas
-somem em alguns ângulos. A validação visual permanece parcial. Investigar essa
-falha e recuperar a grade frontal de referência sem reverter os avanços das luzes.
+## Checkpoint final de V2 e transição para V3 AJM
+
+V2 foi preservada após três correções estruturais: as luzes de 2018 voltaram aos
+16 sólidos nativos de farol/lanterna, receberam faces nos dois sentidos, e os
+cinco sólidos BODY foram restaurados do checkpoint Blender de 20/09 às 12:48.
+Isso reduziu `BASE_A` de 75.687 para 34.515 índices e melhorou muito as luzes no
+jogo. Ainda ocorrem recortes em alguns ângulos, e a grade não ficou preenchida.
+
+A inspeção do usuário mostrou também quatro retrovisores: dois incorporados à
+carroceria do Fusion sobre os oito sólidos A-D do Shelby que formam o outro par.
+Por decisão do usuário, a próxima versão retomará o doador Fusion 2010 AJM,
+mantendo V1 e V2 intactas. A migração deve conservar somente o par incorporado
+ao Fusion e reaproveitar seletivamente do AJM as grades, rodas, escape e a
+organização funcional da iluminação.
+
+Checkpoint V2:
+
+- GEOMETRY: `0DE11B06661BD8DB1905B12A2FCE4B79EEA29759C9F2A62D42CFB2446B9F23FD`;
+- TEXTURES: `563B585F4FBC3D0C85E22DA12E35037621040B4A0E505626BA478BD13B557CE9`;
+- 78 sólidos, 169.359 triângulos em todos os LODs;
+- pacote: `release/Fusion2018_V2_native-lights-historical-grille-test.zip`;
+- reconstrução: `scripts/build_rear_lights_v2.ps1 -Install`.
+
+O carro inteiro não está aprovado. As evidências atuais estão em
+`reference/in-game/` e a causa do estouro de índices está documentada em
+[APRENDIZADO_LANTERNAS_FAROIS.md](reference/APRENDIZADO_LANTERNAS_FAROIS.md).
 
 ## Atualização vigente: textura da fonte de 2018
 

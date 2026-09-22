@@ -12,6 +12,7 @@ try {
     New-Item -ItemType Directory -Force $out | Out-Null
     $csc = Join-Path $env:WINDIR 'Microsoft.NET\Framework64\v4.0.30319\csc.exe'
     $blender = 'tools\blender-4.5.14-windows-x64\blender.exe'
+    if ($RearOnly) { throw '-RearOnly belongs to the superseded BASE-attachment experiment and is no longer supported.' }
     if (!$DonorAtlas) {
         if (!$SkipBake) { Run $blender @('--background','--factory-startup','--python-exit-code','1','--python','scripts\bake_source_lamp_textures.py') }
         Run 'work\venv\Scripts\python.exe' @('scripts\pack_source_lamp_atlas.py')
@@ -19,23 +20,32 @@ try {
     $rearArgs = @('--background','--factory-startup','--python-exit-code','1','--python','scripts\export_fusion_rear_lights.py')
     if ($DonorAtlas) { $rearArgs += @('--','--donor-atlas') }
     Run $blender $rearArgs
-    Run $csc @('/nologo','/r:tools\mwgc\mwgc.exe','/main:AttachRearLenses','/out:tools\mwgc\AttachRearLenses.exe','scripts\AppendPartMeshes.cs','scripts\AttachRearLenses.cs')
     Run 'tools\mwgc\mwgc.exe' @('-nowait','-xname','MUSTANGGT',"$out\fusion-rear-lenses.mwr","$out\lights.bin")
     # Use a fixed pre-attachment baseline; repeated runs must not accumulate lenses.
     $baseline = "$out\baseline-before-base-attachment.bin"
     if (!(Test-Path -LiteralPath $baseline)) { throw "Missing fixed baseline: $baseline. Do not substitute an already patched release." }
     if ((Get-FileHash -LiteralPath $baseline).Hash -ne '76C1C1BBD1DA8001D6AA7C3412C1CE9042923B7ACCEB7CEB7521FD12D208296C') { throw 'Unexpected baseline hash; refusing to accumulate or replace existing geometry.' }
-    Run 'tools\mwgc\AttachRearLenses.exe' @($baseline,"$out\lights.bin","$out\rear-GEOMETRY.BIN")
-    if ($RearOnly) {
-        Copy-Item -LiteralPath "$out\rear-GEOMETRY.BIN" -Destination "$out\GEOMETRY.BIN" -Force
-    } else {
-        $front = "$v2\work\fusion-front-lenses"
-        $frontArgs = @('--background','--factory-startup','--python-exit-code','1','--python','scripts\export_fusion_rear_lights.py','--','--front')
-        if ($DonorAtlas) { $frontArgs += '--donor-atlas' }
-        Run $blender $frontArgs
-        Run 'tools\mwgc\mwgc.exe' @('-nowait','-xname','MUSTANGGT',"$front\fusion-front-lenses.mwr","$front\lights.bin")
-        Run 'tools\mwgc\AttachRearLenses.exe' @("$out\rear-GEOMETRY.BIN","$front\lights.bin","$out\GEOMETRY.BIN")
-    }
+    $front = "$v2\work\fusion-front-lenses"
+    $frontArgs = @('--background','--factory-startup','--python-exit-code','1','--python','scripts\export_fusion_rear_lights.py','--','--front')
+    if ($DonorAtlas) { $frontArgs += '--donor-atlas' }
+    Run $blender $frontArgs
+    Run 'tools\mwgc\mwgc.exe' @('-nowait','-xname','MUSTANGGT',"$front\fusion-front-lenses.mwr","$front\lights.bin")
+
+    # BASE_A exceeded 65,535 indices when all four high-detail lamps were
+    # appended.  Restore the native organization used by official cars: one
+    # solid per lamp, then duplicate winding inside those small solids only.
+    Run $csc @('/nologo','/r:tools\mwgc\mwgc.exe','/out:tools\mwgc\ReplaceLampSolids.exe','scripts\ReplaceLampSolids.cs')
+    Run $csc @('/nologo','/r:tools\mwgc\mwgc.exe','/out:tools\mwgc\MakeLampFacesTwoSided.exe','scripts\MakeLampFacesTwoSided.cs')
+    Run 'tools\mwgc\ReplaceLampSolids.exe' @($baseline,"$out\lights.bin","$front\lights.bin","$out\native-lamps.bin")
+    Run 'tools\mwgc\MakeLampFacesTwoSided.exe' @("$out\native-lamps.bin","$out\native-lamps-twosided.bin")
+
+    # The closest checkpoint to the user's partially visible grille is the
+    # 12:48 Blender backup. Replace BODY A-E only, preserving every lamp solid.
+    $historic = "$v2\work\historical-body-1248"
+    Run $blender @('--background','--factory-startup','--python-exit-code','1','--python','scripts\export_historical_body.py')
+    Run 'tools\mwgc\mwgc.exe' @('-nowait','-xname','MUSTANGGT',"$historic\historical-body.mwr","$historic\body.bin")
+    Run $csc @('/nologo','/r:tools\mwgc\mwgc.exe','/out:tools\mwgc\ReplaceBodySolids.exe','scripts\ReplaceBodySolids.cs')
+    Run 'tools\mwgc\ReplaceBodySolids.exe' @("$out\native-lamps-twosided.bin","$historic\body.bin","$out\GEOMETRY.BIN")
     Run 'tools\mwgc\InspectGeometry.exe' @("$out\GEOMETRY.BIN","$out\geometry.json")
     Run 'tools\dotnet\dotnet.exe' @('scripts\validator\bin\Release\net8.0\Validator.dll',"$out\GEOMETRY.BIN","$out\validation.json")
     $textureArgs = @('scripts\prepare_fusion_rear_tpk.py')
