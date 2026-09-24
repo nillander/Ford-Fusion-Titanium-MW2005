@@ -2,7 +2,23 @@
 
 Base: [vprime](../vprime/VPRIME.md).
 
-## V1prime-b — instalada para teste (24/09/2026)
+## V1prime-c-diag — teste de cores instalado (24/09/2026)
+
+**Resultado da V1prime-b** (`in-game/v1prime-b-front.png`): as placas ficaram limpas, mas a grade
+continua ausente mesmo com faces nos dois sentidos e em grupos no início do buffer. Com isso, orientação
+de face e posição no buffer ficam descartadas.
+
+**Diagnóstico instalado** (`variants/v1prime-c-diag`, `scripts/BuildDiag.cs`): usa cores sólidas nas
+células livres da BADGING, no lugar das texturas normais. A imagem esperada está em
+`preview/v1prime-c-diag-expected.png`.
+
+- **vermelho**: barras e anel no início de `KIT00_RIGHT_SIDE_MIRROR_A`;
+- **verde**: painel de fundo no mesmo sólido;
+- **magenta**: cópia das barras 5 mm à frente, como primeiro grupo de `BASE_A`.
+
+GEOMETRY `D1F81A65…8A71`, TEXTURES `33BB4195…9991`. Não é versão de uso, é só para o diagnóstico.
+
+## V1prime-b — placas corrigidas (release atual)
 
 GEOMETRY `C8A2D660B3A8031AA31FF9A61095F4A8A36366A520D162866B2F428E4311C5FB`,
 TEXTURES `54869AC5…E198` (inalterado). Construída a partir da V1prime-a com `scripts/BuildV1PrimeB.cs`.

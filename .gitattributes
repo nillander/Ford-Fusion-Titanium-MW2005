@@ -459,3 +459,4 @@
 /versions/vprime/release/preview/rear.png filter=lfs diff=lfs merge=lfs -text
 /versions/vprime/release/preview/side.png filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/in-game/v1prime-a-front.png filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/in-game/v1prime-b-front.png filter=lfs diff=lfs merge=lfs -text
