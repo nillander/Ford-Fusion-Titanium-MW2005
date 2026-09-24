@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "count": 10,
+  "textures": [
+    {
+      "Name": "MUSTANGGT_RIM",
+      "TexHash": 175913760,
+      "Width": 256,
+      "Height": 256,
+      "DataSize": 65536,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_INTERIOR",
+      "TexHash": 720622148,
+      "Width": 1024,
+      "Height": 1024,
+      "DataSize": 524288,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_BADGING",
+      "TexHash": 865930564,
+      "Width": 1024,
+      "Height": 1024,
+      "DataSize": 1048576,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_KIT00_BRAKELI",
+      "TexHash": 1266521526,
+      "Width": 1024,
+      "Height": 1024,
+      "DataSize": 1048576,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_LOGO",
+      "TexHash": 1509977577,
+      "Width": 1024,
+      "Height": 1024,
+      "DataSize": 524288,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_MISC",
+      "TexHash": 1510007364,
+      "Width": 1024,
+      "Height": 1024,
+      "DataSize": 524288,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_TIRE",
+      "TexHash": 1510258892,
+      "Width": 256,
+      "Height": 256,
+      "DataSize": 32768,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_KIT00_HEADLIG",
+      "TexHash": 2514377507,
+      "Width": 1024,
+      "Height": 1024,
+      "DataSize": 1048576,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_SKIN1",
+      "TexHash": 2592779678,
+      "Width": 16,
+      "Height": 16,
+      "DataSize": 256,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_DRIVER",
+      "TexHash": 3378630756,
+      "Width": 256,
+      "Height": 256,
+      "DataSize": 32768,
+      "MipMapCount": 1,
+      "Format": 827611204
+    }
+  ]
+}

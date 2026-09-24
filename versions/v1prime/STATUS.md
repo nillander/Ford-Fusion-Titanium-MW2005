@@ -2,6 +2,27 @@
 
 Base: [vprime](../vprime/VPRIME.md).
 
+## V1prime-d — texturas opacas em DXT1 (instalada, 24/09/2026)
+
+GEOMETRY igual à V1prime-b (`C8A2D660…C5FB`); TEXTURES `BF9A0842…47D8`.
+
+**O que o diagnóstico mostrou** (`in-game/v1prime-c-diag-front.png`):
+
+- o anel e o logotipo vermelhos aparecem, mas as barras vermelhas do mesmo grupo não;
+- o painel verde, que está **atrás** das barras e foi desenhado **depois** delas, cobre as barras;
+- a cópia magenta em `BASE_A`, desenhada antes e 5 mm à frente, some por baixo do vermelho e do verde.
+
+Ou seja: o que é desenhado depois cobre o que foi desenhado antes, mesmo estando atrás. Esses
+materiais **não gravam profundidade**. A causa está no formato da textura: as texturas da vprime foram
+todas regravadas como **DXT3 (com alfa)**, e o MW trata material com textura DXT3 como translúcido.
+No AJM original, `MISC`, `LOGO`, `INTERIOR` e `KIT00_BRAKELIGHT` são **DXT1**. Isso explica a grade
+(`MISC`) coberta pelo motor e pelo painel, desenhados depois, e provavelmente também os faróis e
+lanternas "vistos através do carro" nas outras versões.
+
+**Correção:** `MISC`, `LOGO` e `INTERIOR` regravadas em DXT1 (alfa descartado; eram 100 % opacas,
+exceto 0,01 % dos texels), com `scripts/dxt.py`. As texturas das luzes (`KIT00_BRAKELIGHT`/`HEADLIGHT`,
+cerca de 20 % de alfa) continuam DXT3 e ficam para o próximo passo, depois da confirmação da grade.
+
 ## V1prime-c-diag — teste de cores instalado (24/09/2026)
 
 **Resultado da V1prime-b** (`in-game/v1prime-b-front.png`): as placas ficaram limpas, mas a grade

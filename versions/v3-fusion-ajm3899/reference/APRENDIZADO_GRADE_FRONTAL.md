@@ -117,3 +117,11 @@ bounds ou alguma peça na frente das barras. Na V1prime-b a grade inteira foi pa
 de um sólido próprio, com faces nos dois sentidos, para isolar o fator orientação de face/posição no buffer.
 
 Também foi achada na placa a geometria em relevo das letras `CHAPINHA` (ver `versions/v1prime/STATUS.md`).
+
+## Atualização 24/09 — causa provável: textura DXT3 = material translúcido, sem gravar profundidade
+
+O teste de cores da V1prime-c mostrou que o que é desenhado depois cobre o que foi desenhado antes,
+mesmo estando atrás. As texturas `MISC`, `LOGO` e `INTERIOR` tinham sido regravadas em DXT3; no AJM
+original elas são DXT1. **Regra: textura de peça opaca deve ser DXT1.** Deixar DXT3 só para vidro e
+para o que realmente usa alfa. Ver `versions/v1prime/STATUS.md` (V1prime-d). A hipótese do "nome fora
+do padrão" da V3 pode ter sido, na verdade, o mesmo efeito, e precisa ser revista.
