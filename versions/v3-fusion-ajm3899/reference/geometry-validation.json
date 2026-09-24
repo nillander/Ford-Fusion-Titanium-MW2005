@@ -1,0 +1,455 @@
+{
+  "reader": "NFSTools/NFS-ModTools MostWantedSolidReader",
+  "parts": [
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_BRAKELIGHT_GLASS_A",
+      "hash": 5134898,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+      "hash": 5134899,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_BRAKELIGHT_GLASS_C",
+      "hash": 5134900,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_DRIVER_A",
+      "hash": 159790443,
+      "triangles": 1415,
+      "vertices": 1044,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_DRIVER_B",
+      "hash": 159790444,
+      "triangles": 995,
+      "vertices": 797,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_DRIVER_C",
+      "hash": 159790445,
+      "triangles": 299,
+      "vertices": 326,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_BRAKELIGHT_A",
+      "hash": 475452761,
+      "triangles": 14080,
+      "vertices": 3584,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_BRAKELIGHT_B",
+      "hash": 475452762,
+      "triangles": 7680,
+      "vertices": 1984,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_BRAKELIGHT_C",
+      "hash": 475452763,
+      "triangles": 4464,
+      "vertices": 1180,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_REAR_WINDOW_A",
+      "hash": 533198272,
+      "triangles": 1120,
+      "vertices": 8206,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_REAR_BRAKE_A",
+      "hash": 694133229,
+      "triangles": 236,
+      "vertices": 306,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_REAR_BRAKE_B",
+      "hash": 694133230,
+      "triangles": 236,
+      "vertices": 306,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_REAR_BRAKE_C",
+      "hash": 694133231,
+      "triangles": 236,
+      "vertices": 306,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_HEADLIGHT_A",
+      "hash": 760176614,
+      "triangles": 13368,
+      "vertices": 3378,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_HEADLIGHT_B",
+      "hash": 760176615,
+      "triangles": 7264,
+      "vertices": 1852,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_HEADLIGHT_C",
+      "hash": 760176616,
+      "triangles": 4176,
+      "vertices": 1080,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_HEADLIGHT_GLASS_A",
+      "hash": 903469695,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+      "hash": 903469696,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_HEADLIGHT_GLASS_C",
+      "hash": 903469697,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_FRONT_BRAKE_A",
+      "hash": 1838212172,
+      "triangles": 211,
+      "vertices": 267,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_FRONT_BRAKE_B",
+      "hash": 1838212173,
+      "triangles": 211,
+      "vertices": 267,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_FRONT_BRAKE_C",
+      "hash": 1838212174,
+      "triangles": 211,
+      "vertices": 267,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_LEFT_SIDE_MIRROR_A",
+      "hash": 1899921000,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT02_BODY_A",
+      "hash": 2032227151,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT02_BODY_B",
+      "hash": 2032227152,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT02_BODY_C",
+      "hash": 2032227153,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT02_BODY_D",
+      "hash": 2032227154,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT02_BODY_E",
+      "hash": 2032227155,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_SIDE_MIRROR_A",
+      "hash": 2265556091,
+      "triangles": 1106,
+      "vertices": 862,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_SIDE_MIRROR_B",
+      "hash": 2265556092,
+      "triangles": 316,
+      "vertices": 406,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_SIDE_MIRROR_C",
+      "hash": 2265556093,
+      "triangles": 156,
+      "vertices": 285,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_SIDE_MIRROR_D",
+      "hash": 2265556094,
+      "triangles": 86,
+      "vertices": 255,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_RIGHT_SIDE_MIRROR_E",
+      "hash": 2265556095,
+      "triangles": 62,
+      "vertices": 237,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT01_BODY_A",
+      "hash": 2363457134,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT01_BODY_B",
+      "hash": 2363457135,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT01_BODY_C",
+      "hash": 2363457136,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT01_BODY_D",
+      "hash": 2363457137,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT01_BODY_E",
+      "hash": 2363457138,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_BODY_A",
+      "hash": 2694687117,
+      "triangles": 13190,
+      "vertices": 13518,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_BODY_B",
+      "hash": 2694687118,
+      "triangles": 6808,
+      "vertices": 8569,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_BODY_C",
+      "hash": 2694687119,
+      "triangles": 2964,
+      "vertices": 4371,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_BODY_D",
+      "hash": 2694687120,
+      "triangles": 1128,
+      "vertices": 2051,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_BODY_E",
+      "hash": 2694687121,
+      "triangles": 668,
+      "vertices": 1450,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_FRONT_TIRE_A",
+      "hash": 2702330267,
+      "triangles": 2278,
+      "vertices": 2341,
+      "materials": 3
+    },
+    {
+      "name": "MUSTANGGT_KIT00_FRONT_TIRE_B",
+      "hash": 2702330268,
+      "triangles": 2278,
+      "vertices": 2341,
+      "materials": 3
+    },
+    {
+      "name": "MUSTANGGT_KIT00_FRONT_TIRE_C",
+      "hash": 2702330269,
+      "triangles": 945,
+      "vertices": 1152,
+      "materials": 3
+    },
+    {
+      "name": "MUSTANGGT_KIT00_FRONT_TIRE_D",
+      "hash": 2702330270,
+      "triangles": 368,
+      "vertices": 466,
+      "materials": 3
+    },
+    {
+      "name": "MUSTANGGT_KIT00_FRONT_TIRE_E",
+      "hash": 2702330271,
+      "triangles": 368,
+      "vertices": 466,
+      "materials": 3
+    },
+    {
+      "name": "MUSTANGGT_BASE_A",
+      "hash": 3280541011,
+      "triangles": 11497,
+      "vertices": 14173,
+      "materials": 6
+    },
+    {
+      "name": "MUSTANGGT_BASE_B",
+      "hash": 3280541012,
+      "triangles": 5743,
+      "vertices": 8242,
+      "materials": 5
+    },
+    {
+      "name": "MUSTANGGT_BASE_C",
+      "hash": 3280541013,
+      "triangles": 2965,
+      "vertices": 4665,
+      "materials": 5
+    },
+    {
+      "name": "MUSTANGGT_BASE_D",
+      "hash": 3280541014,
+      "triangles": 2965,
+      "vertices": 4665,
+      "materials": 5
+    },
+    {
+      "name": "MUSTANGGT_BASE_E",
+      "hash": 3280541015,
+      "triangles": 2965,
+      "vertices": 4665,
+      "materials": 5
+    },
+    {
+      "name": "MUSTANGGT_KIT00_SPOILER_A",
+      "hash": 3843394525,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_SPOILER_B",
+      "hash": 3843394526,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_SPOILER_C",
+      "hash": 3843394527,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_SPOILER_D",
+      "hash": 3843394528,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_SPOILER_E",
+      "hash": 3843394529,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "MUSTANGGT_KIT00_FRONT_WINDOW_A",
+      "hash": 3928065023,
+      "triangles": 12992,
+      "vertices": 7440,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_FRONT_WINDOW_B",
+      "hash": 3928065024,
+      "triangles": 6496,
+      "vertices": 4004,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_FRONT_WINDOW_C",
+      "hash": 3928065025,
+      "triangles": 2856,
+      "vertices": 1956,
+      "materials": 2
+    },
+    {
+      "name": "MUSTANGGT_KIT00_INTERIOR_A",
+      "hash": 3993644299,
+      "triangles": 7992,
+      "vertices": 10557,
+      "materials": 3
+    },
+    {
+      "name": "MUSTANGGT_KIT00_INTERIOR_B",
+      "hash": 3993644300,
+      "triangles": 3996,
+      "vertices": 6033,
+      "materials": 3
+    },
+    {
+      "name": "MUSTANGGT_KIT00_INTERIOR_C",
+      "hash": 3993644301,
+      "triangles": 3028,
+      "vertices": 4677,
+      "materials": 2
+    }
+  ],
+  "triangles": 152470,
+  "passed": true
+}

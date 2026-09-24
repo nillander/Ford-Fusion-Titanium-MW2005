@@ -429,3 +429,4 @@
 /versions/v2-mustang-shelby/preview/compiled-side.png filter=lfs diff=lfs merge=lfs -text
 /versions/v2-mustang-shelby/preview/optimized-perspective.png filter=lfs diff=lfs merge=lfs -text
 /source/1edb735f-7af9-464a-877c-d016dc051256.png filter=lfs diff=lfs merge=lfs -text
+/versions/v3-fusion-ajm3899/reference/339D0D44-badging-with-grille.dds filter=lfs diff=lfs merge=lfs -text

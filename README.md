@@ -1,5 +1,8 @@
 # Fusion Titanium 2018 para MW2005
 
+Estado atual: **V3 (base AJM3899)** — veja [versions/v3-fusion-ajm3899/STATUS.md](versions/v3-fusion-ajm3899/STATUS.md).
+V2 abaixo é histórica.
+
 Estado atual de V2 (Mustang Shelby, slot MUSTANGGT):
 [STATUS](versions/v2-mustang-shelby/STATUS.md) e
 [aprendizado sobre lanternas e faróis](versions/v2-mustang-shelby/reference/APRENDIZADO_LANTERNAS_FAROIS.md).
