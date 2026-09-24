@@ -54,6 +54,28 @@ def copy_field(database: VltDatabase, class_name: str, source_name: str, dest_na
     return dest.required_offset + field.offset, size
 
 
+def write_floats(database: VltDatabase, class_name: str, dest_name: str, field_name: str, values: list[float]) -> None:
+    class_hash = hash_name(class_name)
+    dest = database.find_collections(class_hash, hash_name(dest_name))[0]
+    field = next(item for item in database.classes[class_hash].fields if item.name_hash == hash_name(field_name))
+    size = field.length * (field.count if field.count else 1)
+    if size != len(values) * 4:
+        raise ValueError(f"{class_name}.{field_name} is {size} bytes, not {len(values)} floats")
+    struct.pack_into("<" + "f" * len(values), database.bin, dest.required_offset + field.offset, *values)
+    print(f"set {class_name}.{field_name} {dest_name} {values}")
+
+
+def smooth_cornering(database: VltDatabase) -> None:
+    """The M3 setup on this body pushes the nose. Open the steering, mostly at speed."""
+    for dest_name in DESTINATIONS:
+        write_floats(database, "tires", dest_name, "STEERING", [1.35])
+        write_floats(database, "tires", dest_name, "YAW_SPEED", [0.75])
+        write_floats(database, "tires", dest_name, "YAW_CONTROL", [0.0, 0.0, 0.25, 0.7])
+        write_floats(database, "tires", dest_name, "STATIC_GRIP", [1.65, 2.05])
+        write_floats(database, "chassis", dest_name, "SWAYBAR_STIFFNESS", [160.0, 280.0])
+        write_floats(database, "chassis", dest_name, "FRONT_WEIGHT_BIAS", [50.0])
+
+
 def backup_current() -> None:
     FUSION.mkdir(parents=True, exist_ok=True)
     for source, name in ((ATTR, "ATTRIBUTES.BIN"), (FE, "FE_ATTRIB.BIN"), (MWPS, "ATTRIBUTES.MWPS")):
@@ -137,6 +159,7 @@ def main() -> None:
     for field_name in ECAR_HANDLING:
         start, size = copy_field(database, "ecar", "bmwm3gtr", "mustanggt", field_name)
         covered.append((start, start + size))
+    smooth_cornering(database)
     handling = database.find_collections(hash_name("pvehicle"), hash_name("mustanggt"))[0]
     for optional in handling.optionals:
         if optional.name_hash == hash_name("HandlingRating"):

@@ -140,8 +140,9 @@ O detalhe das três opções e o que cada uma copia está em
 [versions/performance/PERFORMANCE.md](versions/performance/PERFORMANCE.md).
 
 A opção instalada é `slr-m3gtr`: motor, câmbio e admissão da Mercedes-Benz SLR McLaren;
-pneus, freios, chassi, massa e a reação da suspensão do BMW M3 GTR. A posição das rodas
-do Fusion permanece a do carro.
+pneus, freios, chassi, massa e a reação da suspensão do BMW M3 GTR. O acerto puro do M3
+nesse carro empurrava o bico em alta, então a direção, a rotação e a barra traseira foram
+abertas. A posição das rodas do Fusion permanece a do carro.
 
 ## 9. Próximos passos sugeridos
 

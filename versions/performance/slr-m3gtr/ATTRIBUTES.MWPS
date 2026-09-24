@@ -231,8 +231,8 @@ patch	float	bin:0x8a6c	50
 
 ## SWAYBAR_STIFFNESS; maximum pressure inside sway bar in pounds per square inch
 ## common value range is 2x200-2x450; acceleration and mass dependent
-patch	float	bin:0x8a88	275
-patch	float	bin:0x8a8c	200
+patch	float	bin:0x8a88	160
+patch	float	bin:0x8a8c	280
 
 ## ROLL_CENTER; vertical center of gravity [probably in inches]
 ## common value range is 8-10
@@ -283,7 +283,7 @@ patch	float	bin:0x8aa4	1.5
 
 ## FRONT_WEIGHT_BIAS; overall mass distribution; values from 0 to 100; 0 for max rear bias; 100 for max front bias
 ## common value range is 51-55
-patch	float	bin:0x8aac	54
+patch	float	bin:0x8aac	50
 
 ##---------------------------------------------------
 ## Node: chassis/default/mustanggt/mustanggt_top
@@ -315,8 +315,8 @@ patch	float	bin:0x9de4	50
 patch	float	bin:0x9de8	50
 
 ## SWAYBAR_STIFFNESS
-patch	float	bin:0x9e04	275
-patch	float	bin:0x9e08	200
+patch	float	bin:0x9e04	160
+patch	float	bin:0x9e08	280
 
 ## ROLL_CENTER
 patch	float	bin:0x9e0c	9
@@ -354,7 +354,7 @@ patch	float	bin:0x9e24	0.24
 patch	float	bin:0x9e20	1.5
 
 ## FRONT_WEIGHT_BIAS
-patch	float	bin:0x9e28	54
+patch	float	bin:0x9e28	50
 
 ##---------------------------------------------------
 ## Node: engine/default/mustanggt
@@ -491,8 +491,8 @@ patch	float	bin:0x22464	255
 
 ## YAW_CONTROL; self-explanatory; yaw control ratio
 ## common value range N/A since it differs per car; mass and acceleration dependent
-patch	float	bin:0x22428	0.1
-patch	float	bin:0x2242c	0.4
+patch	float	bin:0x22428	0.25
+patch	float	bin:0x2242c	0.7
 patch	float	bin:0x22430	0.6
 patch	float	bin:0x22434	1
 
@@ -508,7 +508,7 @@ patch	float	bin:0x22454	19
 
 ## YAW_SPEED; self-explanatory; rate at which car enters yaw state
 ## common value range is 0.30-0.70
-patch	float	bin:0x2246c	0.3
+patch	float	bin:0x2246c	0.75
 
 ## ASPECT_RATIO; self-explanatory; ratio of section height to section width
 ## common value range is 2x30-2x55
@@ -517,8 +517,8 @@ patch	float	bin:0x2244c	35
 
 ## STATIC_GRIP; static grip is the amount of friction the tires are able to produce when they are not spinning, though they can be rolling
 ## common value range N/A since it differs per car; mass and acceleration dependent
-patch	float	bin:0x22458	1.8
-patch	float	bin:0x2245c	2
+patch	float	bin:0x22458	1.65
+patch	float	bin:0x2245c	2.05
 
 ## GRIP_SCALE; tire grip scaling per axle
 ## common value range is 2x1.00-2x1.10
@@ -527,7 +527,7 @@ patch	float	bin:0x2243c	1
 
 ## STEERING; steering ratio; value of 1.00 means that turning steering wheel by 360 degrees will turn wheels by 36 degrees
 ## common value range is 0.90-1.10
-patch	float	bin:0x22468	1
+patch	float	bin:0x22468	1.35
 
 ##---------------------------------------------------
 ## Node: tires/default/mustanggt/mustanggt_top
@@ -538,8 +538,8 @@ patch	float	bin:0x23400	255
 patch	float	bin:0x23404	255
 
 ## YAW_CONTROL
-patch	float	bin:0x233c8	0.1
-patch	float	bin:0x233cc	0.4
+patch	float	bin:0x233c8	0.25
+patch	float	bin:0x233cc	0.7
 patch	float	bin:0x233d0	0.6
 patch	float	bin:0x233d4	1
 
@@ -552,22 +552,22 @@ patch	float	bin:0x233f0	19
 patch	float	bin:0x233f4	19
 
 ## YAW_SPEED
-patch	float	bin:0x2340c	0.3
+patch	float	bin:0x2340c	0.75
 
 ## ASPECT_RATIO
 patch	float	bin:0x233e8	35
 patch	float	bin:0x233ec	35
 
 ## STATIC_GRIP
-patch	float	bin:0x233f8	1.8
-patch	float	bin:0x233fc	2
+patch	float	bin:0x233f8	1.65
+patch	float	bin:0x233fc	2.05
 
 ## GRIP_SCALE
 patch	float	bin:0x233d8	1
 patch	float	bin:0x233dc	1
 
 ## STEERING
-patch	float	bin:0x23408	1
+patch	float	bin:0x23408	1.35
 
 ##---------------------------------------------------
 ## Node: transmission/default/mustanggt

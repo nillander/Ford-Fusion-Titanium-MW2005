@@ -18,7 +18,7 @@ aqui e não é regravada por uma nova execução.
 | --- | --- | --- |
 | `fusion-mustang` | Ford Mustang GT original do slot. Torque de fábrica até 320, corte a 6250 rpm. A versão melhorada chega a 640 no mesmo corte. | A do Mustang GT |
 | `m3gtr` | BMW M3 GTR do protagonista (`bmwm3gtr`). Torque até 283, corte a 8500 rpm. Os dois estágios usam a mesma curva, porque o M3 GTR não tem versão turbinada separada. | A do M3 GTR |
-| `slr-m3gtr` | Mercedes-Benz SLR McLaren. Torque de fábrica até 523, corte a 7000 rpm. O estágio melhorado segue a `slr_top` (até 621, mesmo corte). | A do M3 GTR |
+| `slr-m3gtr` | Mercedes-Benz SLR McLaren. Torque de fábrica até 523, corte a 7000 rpm. O estágio melhorado segue a `slr_top` (até 621, mesmo corte). | Base do M3 GTR, com a curva aberta: o acerto puro empurrava o bico em alta |
 
 A opção instalada no jogo é `slr-m3gtr`.
 
@@ -28,7 +28,8 @@ A opção instalada no jogo é `slr-m3gtr`.
 
 - da SLR, nos dois estágios: motor, câmbio e admissão (`slr` / `slr_top` para `mustanggt`, `mustanggt_top` e `mustanggt_base`);
 - do M3 GTR, nos dois estágios: pneus, freios e chassi;
-- do M3 GTR, no carro: massa, inércia (`TENSOR_SCALE`) e `HandlingRating`;
+- do M3 GTR, no carro: massa 1350 kg, inércia (`TENSOR_SCALE`) e `HandlingRating`;
+- ajuste de curva, nos dois estágios, porque o acerto puro do M3 nesse carro ficava duro de virar em alta: `STEERING` 1,35, `YAW_SPEED` 0,75, `YAW_CONTROL` `[0, 0, 0,25, 0,7]`, aderência estática 1,65 na frente e 2,05 atrás, barras 160 na frente e 280 atrás, peso dianteiro 50;
 - do M3 GTR, no `ecar`: `RideHeight`, `CamberFront`, `CamberRear`, `TireSkidWidth`, `BodyDive`, `BodySquat` e `BodyRoll`.
 
 `m3gtr` copia motor, câmbio, pneus, freios, chassi, massa, inércia, `HandlingRating` e os mesmos

@@ -1,7 +1,7 @@
 # Fusion Titanium 2018 para MW2005
 
 Estado atual: **V1prime-d aprovada no jogo** — aprendizados em [APRENDIZADOS_FUSION_MW2005.md](APRENDIZADOS_FUSION_MW2005.md). Versão: **V1prime** (a partir da vprime) — veja [versions/v1prime/STATUS.md](versions/v1prime/STATUS.md) e [versions/vprime/VPRIME.md](versions/vprime/VPRIME.md). A V3 fica em [versions/v3-fusion-ajm3899](versions/v3-fusion-ajm3899/STATUS.md).
-A performance instalada no slot MUSTANGGT é `slr-m3gtr`: potência da SLR e dirigibilidade do M3 GTR. As três opções estão em [versions/performance](versions/performance/PERFORMANCE.md).
+A performance instalada no slot MUSTANGGT é `slr-m3gtr`: potência da SLR, dirigibilidade do M3 GTR e curva aberta em alta. As três opções estão em [versions/performance](versions/performance/PERFORMANCE.md).
 V2 abaixo é histórica.
 
 Estado atual de V2 (Mustang Shelby, slot MUSTANGGT):
@@ -28,7 +28,7 @@ O script interrompe a execução quando alguma etapa retorna erro. Ele verifica 
 
 - `release/FORDGT/`: visual Fusion no slot do Ford GT, mais o exemplo FordGT-EC.
 - `versions/performance/`: as três performances do Fusion no slot MUSTANGGT. A instalada é `slr-m3gtr`.
-- `scripts/apply_m3gtr_performance.py`: grava `slr-m3gtr` no jogo (potência da SLR, dirigibilidade do M3 GTR).
+- `scripts/apply_m3gtr_performance.py`: grava `slr-m3gtr` no jogo (potência da SLR, dirigibilidade do M3 GTR, curva aberta em alta).
 - `scripts/copy_slr_stats_to_mustang.py`: copia a performance inteira da SLR para o mustanggt. Essa cópia não é nenhuma das três opções guardadas.
 - `release/LEIA-ME.md`: instalação, limites e créditos.
 - `blender/source-aligned.blend`: modelo completo importado e alinhado.
