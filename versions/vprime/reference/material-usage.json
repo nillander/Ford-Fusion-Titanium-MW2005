@@ -1,0 +1,1906 @@
+[
+  {
+    "shader": 0,
+    "source": "hybrid",
+    "mw_shader": "INTERIOR",
+    "bone": "interiorluzes",
+    "meshes": 1,
+    "vertices": 8,
+    "triangles": 4,
+    "uv_min": [
+      0.13659889996051788,
+      0.32312285900115967
+    ],
+    "uv_max": [
+      0.8623756170272827,
+      0.5283027291297913
+    ]
+  },
+  {
+    "shader": 1,
+    "source": "lcdint",
+    "mw_shader": "INTERIOR",
+    "bone": "interiorluzes",
+    "meshes": 1,
+    "vertices": 28,
+    "triangles": 32,
+    "uv_min": [
+      0.011800000444054604,
+      0.6504999995231628
+    ],
+    "uv_max": [
+      0.9833000302314758,
+      0.989300012588501
+    ]
+  },
+  {
+    "shader": 1,
+    "source": "lcdint",
+    "mw_shader": "INTERIOR",
+    "bone": "painel",
+    "meshes": 1,
+    "vertices": 4,
+    "triangles": 2,
+    "uv_min": [
+      0.5,
+      0.8138999938964844
+    ],
+    "uv_max": [
+      0.5,
+      0.9858999848365784
+    ]
+  },
+  {
+    "shader": 2,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "HEADLIGHT",
+    "bone": "luzfarol",
+    "meshes": 2,
+    "vertices": 10069,
+    "triangles": 18466,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "shader": 2,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "HEADLIGHT",
+    "bone": "headlight_l",
+    "meshes": 2,
+    "vertices": 5372,
+    "triangles": 5566,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "shader": 3,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "INTERIOR",
+    "bone": "interiorluzes",
+    "meshes": 5,
+    "vertices": 25178,
+    "triangles": 20370,
+    "uv_min": [
+      -25.770200729370117,
+      0.0
+    ],
+    "uv_max": [
+      28.680200576782227,
+      9.324100494384766
+    ]
+  },
+  {
+    "shader": 3,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "INTERIOR",
+    "bone": "steeringwheel",
+    "meshes": 1,
+    "vertices": 1618,
+    "triangles": 1225,
+    "uv_min": [
+      -0.10140000283718109,
+      0.7545999884605408
+    ],
+    "uv_max": [
+      24.57110023498535,
+      4.982500076293945
+    ]
+  },
+  {
+    "shader": 4,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "BRAKELIGHT",
+    "bone": "brakelight_m",
+    "meshes": 1,
+    "vertices": 2878,
+    "triangles": 3924,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "shader": 5,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "CARSKIN",
+    "bone": "latachassi",
+    "meshes": 9,
+    "vertices": 45315,
+    "triangles": 74694,
+    "uv_min": [
+      0.0,
+      -0.06500005722045898
+    ],
+    "uv_max": [
+      1.0219999551773071,
+      1.0
+    ]
+  },
+  {
+    "shader": 5,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "CARSKIN",
+    "bone": "parachoquefrente",
+    "meshes": 5,
+    "vertices": 24347,
+    "triangles": 41754,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.0499999523162842,
+      1.0
+    ]
+  },
+  {
+    "shader": 5,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "CARSKIN",
+    "bone": "interior_body_04",
+    "meshes": 6,
+    "vertices": 27371,
+    "triangles": 39536,
+    "uv_min": [
+      0.9237000346183777,
+      0.06449991464614868
+    ],
+    "uv_max": [
+      0.991100013256073,
+      0.09719997644424438
+    ]
+  },
+  {
+    "shader": 5,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "CARSKIN",
+    "bone": "parachoquetras",
+    "meshes": 4,
+    "vertices": 20140,
+    "triangles": 36384,
+    "uv_min": [
+      -0.0828000009059906,
+      0.0
+    ],
+    "uv_max": [
+      1.0499999523162842,
+      1.000599980354309
+    ]
+  },
+  {
+    "shader": 5,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "CARSKIN",
+    "bone": "door_pside_f",
+    "meshes": 5,
+    "vertices": 22269,
+    "triangles": 35726,
+    "uv_min": [
+      -0.0035000001080334187,
+      -0.05069994926452637
+    ],
+    "uv_max": [
+      1.0,
+      1.1074999570846558
+    ]
+  },
+  {
+    "shader": 5,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "CARSKIN",
+    "bone": "boot",
+    "meshes": 4,
+    "vertices": 20137,
+    "triangles": 34692,
+    "uv_min": [
+      0.06620000302791595,
+      0.00019997358322143555
+    ],
+    "uv_max": [
+      1.007699966430664,
+      1.0
+    ]
+  },
+  {
+    "shader": 5,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "CARSKIN",
+    "bone": "door_dside_f",
+    "meshes": 4,
+    "vertices": 20140,
+    "triangles": 32276,
+    "uv_min": [
+      -0.0035000001080334187,
+      -0.026600003242492676
+    ],
+    "uv_max": [
+      1.0,
+      1.0045000314712524
+    ]
+  },
+  {
+    "shader": 5,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "CARSKIN",
+    "bone": "door_pside_r",
+    "meshes": 3,
+    "vertices": 15103,
+    "triangles": 24772,
+    "uv_min": [
+      0.0,
+      -0.05069994926452637
+    ],
+    "uv_max": [
+      1.0,
+      1.1074999570846558
+    ]
+  },
+  {
+    "shader": 5,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "CARSKIN",
+    "bone": "door_dside_r",
+    "meshes": 3,
+    "vertices": 15104,
+    "triangles": 23998,
+    "uv_min": [
+      0.0,
+      -0.05069994926452637
+    ],
+    "uv_max": [
+      1.0,
+      1.1074999570846558
+    ]
+  },
+  {
+    "shader": 5,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "CARSKIN",
+    "bone": "bonnet",
+    "meshes": 2,
+    "vertices": 10071,
+    "triangles": 18264,
+    "uv_min": [
+      0.0,
+      -0.05069994926452637
+    ],
+    "uv_max": [
+      1.007699966430664,
+      1.1074999570846558
+    ]
+  },
+  {
+    "shader": 5,
+    "source": "vehicle_generic_smallspecmap",
+    "mw_shader": "CARSKIN",
+    "bone": "trunk_interior_04",
+    "meshes": 1,
+    "vertices": 1786,
+    "triangles": 3072,
+    "uv_min": [
+      0.07240000367164612,
+      0.008800029754638672
+    ],
+    "uv_max": [
+      0.9320000410079956,
+      0.7013000249862671
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "painel",
+    "meshes": 14,
+    "vertices": 50807,
+    "triangles": 84072,
+    "uv_min": [
+      -0.06830000132322311,
+      -0.015599966049194336
+    ],
+    "uv_max": [
+      1.6461999416351318,
+      1.0
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "interior_body_04",
+    "meshes": 6,
+    "vertices": 23103,
+    "triangles": 41076,
+    "uv_min": [
+      -0.3752000033855438,
+      0.002299964427947998
+    ],
+    "uv_max": [
+      1.001099944114685,
+      1.4890000820159912
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "trunk_interior_04",
+    "meshes": 6,
+    "vertices": 20965,
+    "triangles": 36630,
+    "uv_min": [
+      0.07240000367164612,
+      0.008800029754638672
+    ],
+    "uv_max": [
+      0.9320000410079956,
+      0.70169997215271
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "chair_00",
+    "meshes": 5,
+    "vertices": 19251,
+    "triangles": 30462,
+    "uv_min": [
+      0.0,
+      -0.024299979209899902
+    ],
+    "uv_max": [
+      1.0,
+      1.1200000047683716
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "interior_panel_64",
+    "meshes": 5,
+    "vertices": 19252,
+    "triangles": 29579,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "interior_body_19",
+    "meshes": 4,
+    "vertices": 15401,
+    "triangles": 25236,
+    "uv_min": [
+      0.00020000000949949026,
+      -0.01569998264312744
+    ],
+    "uv_max": [
+      0.9889000058174133,
+      1.1200000047683716
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "porta",
+    "meshes": 4,
+    "vertices": 15402,
+    "triangles": 25032,
+    "uv_min": [
+      0.3295000195503235,
+      0.06919991970062256
+    ],
+    "uv_max": [
+      0.9469000101089478,
+      0.18849998712539673
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "door_pside_f",
+    "meshes": 3,
+    "vertices": 11548,
+    "triangles": 20660,
+    "uv_min": [
+      0.3295000195503235,
+      0.015899956226348877
+    ],
+    "uv_max": [
+      0.9469000101089478,
+      0.3238000273704529
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "parachoquetras",
+    "meshes": 3,
+    "vertices": 11548,
+    "triangles": 20567,
+    "uv_min": [
+      0.11739999800920486,
+      0.22440004348754883
+    ],
+    "uv_max": [
+      0.9708000421524048,
+      1.0
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "latachassi",
+    "meshes": 3,
+    "vertices": 11552,
+    "triangles": 19740,
+    "uv_min": [
+      -0.03750000149011612,
+      0.2572000026702881
+    ],
+    "uv_max": [
+      1.0059000253677368,
+      1.0394999980926514
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "door_dside_r",
+    "meshes": 3,
+    "vertices": 11552,
+    "triangles": 19704,
+    "uv_min": [
+      0.5949000120162964,
+      0.015899956226348877
+    ],
+    "uv_max": [
+      0.9464000463485718,
+      0.32359999418258667
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "door_pside_r",
+    "meshes": 3,
+    "vertices": 11550,
+    "triangles": 19622,
+    "uv_min": [
+      0.0763000026345253,
+      0.015899956226348877
+    ],
+    "uv_max": [
+      0.9466000199317932,
+      0.32359999418258667
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "parachoquefrente",
+    "meshes": 3,
+    "vertices": 11551,
+    "triangles": 18863,
+    "uv_min": [
+      0.0,
+      -0.13969993591308594
+    ],
+    "uv_max": [
+      1.3708000183105469,
+      1.0
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "boot",
+    "meshes": 2,
+    "vertices": 7699,
+    "triangles": 14016,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "farol",
+    "meshes": 2,
+    "vertices": 7699,
+    "triangles": 13650,
+    "uv_min": [
+      -0.3628000319004059,
+      0.052999913692474365
+    ],
+    "uv_max": [
+      1.001099944114685,
+      0.29670000076293945
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "steeringwheel",
+    "meshes": 2,
+    "vertices": 6753,
+    "triangles": 12118,
+    "uv_min": [
+      0.01510000042617321,
+      0.07400000095367432
+    ],
+    "uv_max": [
+      0.9936000108718872,
+      0.875
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "grade",
+    "meshes": 2,
+    "vertices": 4213,
+    "triangles": 7622,
+    "uv_min": [
+      0.001500000013038516,
+      -0.06330001354217529
+    ],
+    "uv_max": [
+      0.7694000005722046,
+      0.9491999745368958
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "boot2",
+    "meshes": 1,
+    "vertices": 3849,
+    "triangles": 6690,
+    "uv_min": [
+      0.07600000500679016,
+      0.06589990854263306
+    ],
+    "uv_max": [
+      0.3304000198841095,
+      0.29649996757507324
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "door_dside_f",
+    "meshes": 1,
+    "vertices": 3850,
+    "triangles": 6518,
+    "uv_min": [
+      0.33230000734329224,
+      -0.014999985694885254
+    ],
+    "uv_max": [
+      0.9467000365257263,
+      0.6093000173568726
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "chair_20",
+    "meshes": 1,
+    "vertices": 3849,
+    "triangles": 6420,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.0,
+      1.1200000047683716
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "interior_panel_61",
+    "meshes": 1,
+    "vertices": 3854,
+    "triangles": 6327,
+    "uv_min": [
+      0.0004000000189989805,
+      0.07400000095367432
+    ],
+    "uv_max": [
+      0.9755000472068787,
+      1.0
+    ]
+  },
+  {
+    "shader": 6,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "lanterna",
+    "meshes": 1,
+    "vertices": 3849,
+    "triangles": 6040,
+    "uv_min": [
+      -0.3752000033855438,
+      0.06729996204376221
+    ],
+    "uv_max": [
+      1.001099944114685,
+      0.3064998984336853
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "grade",
+    "meshes": 12,
+    "vertices": 43721,
+    "triangles": 66996,
+    "uv_min": [
+      0.0,
+      -0.9821999073028564
+    ],
+    "uv_max": [
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "lanterna",
+    "meshes": 11,
+    "vertices": 42341,
+    "triangles": 60752,
+    "uv_min": [
+      -0.31450000405311584,
+      0.07189995050430298
+    ],
+    "uv_max": [
+      1.0125999450683594,
+      0.833299994468689
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "farol",
+    "meshes": 6,
+    "vertices": 23099,
+    "triangles": 38358,
+    "uv_min": [
+      -0.08860000967979431,
+      0.0
+    ],
+    "uv_max": [
+      1.0612000226974487,
+      1.0
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "boot",
+    "meshes": 6,
+    "vertices": 23099,
+    "triangles": 35515,
+    "uv_min": [
+      -7.2540998458862305,
+      -0.5285000801086426
+    ],
+    "uv_max": [
+      9.366100311279297,
+      3.091099977493286
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "painel",
+    "meshes": 6,
+    "vertices": 21687,
+    "triangles": 30702,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      0.9990000128746033,
+      0.954200029373169
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "interior_panel_64",
+    "meshes": 4,
+    "vertices": 15397,
+    "triangles": 26050,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "porta",
+    "meshes": 3,
+    "vertices": 11548,
+    "triangles": 21108,
+    "uv_min": [
+      0.0,
+      -0.04869997501373291
+    ],
+    "uv_max": [
+      1.0,
+      1.0226999521255493
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "boot1",
+    "meshes": 4,
+    "vertices": 15398,
+    "triangles": 20072,
+    "uv_min": [
+      0.0,
+      0.2217000126838684
+    ],
+    "uv_max": [
+      1.0,
+      0.833299994468689
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "boot3",
+    "meshes": 3,
+    "vertices": 11553,
+    "triangles": 18656,
+    "uv_min": [
+      0.08550000935792923,
+      0.07929998636245728
+    ],
+    "uv_max": [
+      0.3232000172138214,
+      0.2875000238418579
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "parachoquetras",
+    "meshes": 3,
+    "vertices": 11556,
+    "triangles": 18522,
+    "uv_min": [
+      -0.30410000681877136,
+      -7.339300155639648
+    ],
+    "uv_max": [
+      1.408400058746338,
+      1.5157999992370605
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "parachoquefrente",
+    "meshes": 3,
+    "vertices": 11549,
+    "triangles": 18386,
+    "uv_min": [
+      -0.30410000681877136,
+      -7.339300155639648
+    ],
+    "uv_max": [
+      1.408400058746338,
+      1.5157999992370605
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "steeringwheel",
+    "meshes": 3,
+    "vertices": 9398,
+    "triangles": 14324,
+    "uv_min": [
+      0.0,
+      -0.13409996032714844
+    ],
+    "uv_max": [
+      1.0,
+      1.052299976348877
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "door_pside_f",
+    "meshes": 2,
+    "vertices": 7700,
+    "triangles": 14266,
+    "uv_min": [
+      0.32910001277923584,
+      -0.03770005702972412
+    ],
+    "uv_max": [
+      1.0,
+      0.8335000276565552
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "door_dside_r",
+    "meshes": 2,
+    "vertices": 7699,
+    "triangles": 13478,
+    "uv_min": [
+      0.0,
+      -0.04869997501373291
+    ],
+    "uv_max": [
+      1.0,
+      1.0226999521255493
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "interior_body_04",
+    "meshes": 2,
+    "vertices": 7698,
+    "triangles": 13332,
+    "uv_min": [
+      -1.7441999912261963,
+      -0.08930003643035889
+    ],
+    "uv_max": [
+      1.7158000469207764,
+      1.0
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "door_pside_r",
+    "meshes": 2,
+    "vertices": 7702,
+    "triangles": 13256,
+    "uv_min": [
+      0.0,
+      -0.04869997501373291
+    ],
+    "uv_max": [
+      1.0,
+      1.0226999521255493
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "door_dside_f",
+    "meshes": 1,
+    "vertices": 3849,
+    "triangles": 7256,
+    "uv_min": [
+      0.0,
+      -0.04869997501373291
+    ],
+    "uv_max": [
+      1.0,
+      0.9896000027656555
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "chair_28",
+    "meshes": 1,
+    "vertices": 3849,
+    "triangles": 5018,
+    "uv_min": [
+      0.23990000784397125,
+      0.40449994802474976
+    ],
+    "uv_max": [
+      0.9990000128746033,
+      0.9896000027656555
+    ]
+  },
+  {
+    "shader": 7,
+    "source": "spec3",
+    "mw_shader": "CHROME",
+    "bone": "trunk_interior_04",
+    "meshes": 1,
+    "vertices": 2747,
+    "triangles": 4392,
+    "uv_min": [
+      -0.2824999988079071,
+      -0.5609999895095825
+    ],
+    "uv_max": [
+      1.4867000579833984,
+      1.2071000337600708
+    ]
+  },
+  {
+    "shader": 8,
+    "source": "azulisguru",
+    "mw_shader": "CHROME",
+    "bone": "boot",
+    "meshes": 1,
+    "vertices": 1801,
+    "triangles": 3498,
+    "uv_min": [
+      0.0,
+      1.401298464324817e-45
+    ],
+    "uv_max": [
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "shader": 8,
+    "source": "azulisguru",
+    "mw_shader": "CHROME",
+    "bone": "grade",
+    "meshes": 1,
+    "vertices": 1721,
+    "triangles": 3360,
+    "uv_min": [
+      1.401298464324817e-45,
+      1.401298464324817e-45
+    ],
+    "uv_max": [
+      1.401298464324817e-45,
+      1.401298464324817e-45
+    ]
+  },
+  {
+    "shader": 8,
+    "source": "azulisguru",
+    "mw_shader": "CHROME",
+    "bone": "interior_panel_61",
+    "meshes": 1,
+    "vertices": 377,
+    "triangles": 616,
+    "uv_min": [
+      -16.072500228881836,
+      -12.705499649047852
+    ],
+    "uv_max": [
+      0.21770000457763672,
+      0.13380002975463867
+    ]
+  },
+  {
+    "shader": 9,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "painel",
+    "meshes": 7,
+    "vertices": 35718,
+    "triangles": 60968,
+    "uv_min": [
+      -1.59660005569458,
+      -0.3338000774383545
+    ],
+    "uv_max": [
+      2.601900100708008,
+      1.6653000116348267
+    ]
+  },
+  {
+    "shader": 9,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "steeringwheel",
+    "meshes": 4,
+    "vertices": 22380,
+    "triangles": 36604,
+    "uv_min": [
+      -1.6008999347686768,
+      -0.9960999488830566
+    ],
+    "uv_max": [
+      3.238300085067749,
+      1.936500072479248
+    ]
+  },
+  {
+    "shader": 9,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "trunk_interior_04",
+    "meshes": 2,
+    "vertices": 10851,
+    "triangles": 19580,
+    "uv_min": [
+      0.07240000367164612,
+      -76.5
+    ],
+    "uv_max": [
+      81.81009674072266,
+      0.70169997215271
+    ]
+  },
+  {
+    "shader": 9,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "door_pside_r",
+    "meshes": 1,
+    "vertices": 5952,
+    "triangles": 10908,
+    "uv_min": [
+      0.9268999695777893,
+      -0.1261000633239746
+    ],
+    "uv_max": [
+      2.9460999965667725,
+      1.3696999549865723
+    ]
+  },
+  {
+    "shader": 9,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "door_dside_r",
+    "meshes": 1,
+    "vertices": 5952,
+    "triangles": 10734,
+    "uv_min": [
+      0.9268999695777893,
+      -0.1261000633239746
+    ],
+    "uv_max": [
+      2.9460999965667725,
+      1.3696999549865723
+    ]
+  },
+  {
+    "shader": 9,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "door_dside_f",
+    "meshes": 1,
+    "vertices": 5952,
+    "triangles": 10644,
+    "uv_min": [
+      0.9413000345230103,
+      -1.2256999015808105
+    ],
+    "uv_max": [
+      2.927800178527832,
+      0.6754999756813049
+    ]
+  },
+  {
+    "shader": 9,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "interior",
+    "meshes": 1,
+    "vertices": 5952,
+    "triangles": 10464,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.0,
+      0.9053999781608582
+    ]
+  },
+  {
+    "shader": 9,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "door_pside_f",
+    "meshes": 1,
+    "vertices": 5953,
+    "triangles": 10100,
+    "uv_min": [
+      0.0,
+      -1.2256999015808105
+    ],
+    "uv_max": [
+      2.927800178527832,
+      1.0
+    ]
+  },
+  {
+    "shader": 10,
+    "source": "begefoda",
+    "mw_shader": "INTERIOR",
+    "bone": "chair_18",
+    "meshes": 17,
+    "vertices": 95530,
+    "triangles": 158410,
+    "uv_min": [
+      0.0,
+      -0.3931000232696533
+    ],
+    "uv_max": [
+      1.0,
+      1.0995999574661255
+    ]
+  },
+  {
+    "shader": 10,
+    "source": "begefoda",
+    "mw_shader": "INTERIOR",
+    "bone": "interior",
+    "meshes": 10,
+    "vertices": 59517,
+    "triangles": 99964,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.031000018119812,
+      1.149899959564209
+    ]
+  },
+  {
+    "shader": 10,
+    "source": "begefoda",
+    "mw_shader": "INTERIOR",
+    "bone": "chair_20",
+    "meshes": 9,
+    "vertices": 53564,
+    "triangles": 88970,
+    "uv_min": [
+      -0.02900000289082527,
+      -0.4040999412536621
+    ],
+    "uv_max": [
+      1.0297000408172607,
+      1.0995999574661255
+    ]
+  },
+  {
+    "shader": 10,
+    "source": "begefoda",
+    "mw_shader": "INTERIOR",
+    "bone": "chair_00",
+    "meshes": 8,
+    "vertices": 47616,
+    "triangles": 78680,
+    "uv_min": [
+      -0.02900000289082527,
+      -0.0003000497817993164
+    ],
+    "uv_max": [
+      1.0297000408172607,
+      1.0
+    ]
+  },
+  {
+    "shader": 10,
+    "source": "begefoda",
+    "mw_shader": "INTERIOR",
+    "bone": "chair_11",
+    "meshes": 8,
+    "vertices": 46263,
+    "triangles": 76426,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.0,
+      1.0995999574661255
+    ]
+  },
+  {
+    "shader": 10,
+    "source": "begefoda",
+    "mw_shader": "INTERIOR",
+    "bone": "interior_panel_64",
+    "meshes": 4,
+    "vertices": 23805,
+    "triangles": 42770,
+    "uv_min": [
+      -0.289000004529953,
+      0.0
+    ],
+    "uv_max": [
+      1.2890000343322754,
+      0.8240000009536743
+    ]
+  },
+  {
+    "shader": 10,
+    "source": "begefoda",
+    "mw_shader": "INTERIOR",
+    "bone": "door_pside_r",
+    "meshes": 3,
+    "vertices": 17855,
+    "triangles": 31432,
+    "uv_min": [
+      -1.9326000213623047,
+      -0.5134000778198242
+    ],
+    "uv_max": [
+      0.9465000629425049,
+      2.2274999618530273
+    ]
+  },
+  {
+    "shader": 10,
+    "source": "begefoda",
+    "mw_shader": "INTERIOR",
+    "bone": "painel",
+    "meshes": 3,
+    "vertices": 17853,
+    "triangles": 31064,
+    "uv_min": [
+      0.5001000165939331,
+      0.06919991970062256
+    ],
+    "uv_max": [
+      0.970300018787384,
+      0.7497999668121338
+    ]
+  },
+  {
+    "shader": 10,
+    "source": "begefoda",
+    "mw_shader": "INTERIOR",
+    "bone": "door_pside_f",
+    "meshes": 3,
+    "vertices": 14831,
+    "triangles": 26070,
+    "uv_min": [
+      0.15160000324249268,
+      0.04169994592666626
+    ],
+    "uv_max": [
+      0.9465000629425049,
+      0.49619996547698975
+    ]
+  },
+  {
+    "shader": 10,
+    "source": "begefoda",
+    "mw_shader": "INTERIOR",
+    "bone": "door_dside_r",
+    "meshes": 2,
+    "vertices": 11905,
+    "triangles": 21342,
+    "uv_min": [
+      0.15160000324249268,
+      0.04169994592666626
+    ],
+    "uv_max": [
+      0.9465000629425049,
+      0.47440004348754883
+    ]
+  },
+  {
+    "shader": 10,
+    "source": "begefoda",
+    "mw_shader": "INTERIOR",
+    "bone": "porta",
+    "meshes": 2,
+    "vertices": 11902,
+    "triangles": 20614,
+    "uv_min": [
+      -0.2793000042438507,
+      -0.5820000171661377
+    ],
+    "uv_max": [
+      1.2806000709533691,
+      1.5740000009536743
+    ]
+  },
+  {
+    "shader": 10,
+    "source": "begefoda",
+    "mw_shader": "INTERIOR",
+    "bone": "door_dside_f",
+    "meshes": 1,
+    "vertices": 5951,
+    "triangles": 10750,
+    "uv_min": [
+      0.9460000395774841,
+      0.07400000095367432
+    ],
+    "uv_max": [
+      0.9464000463485718,
+      0.07419997453689575
+    ]
+  },
+  {
+    "shader": 10,
+    "source": "begefoda",
+    "mw_shader": "INTERIOR",
+    "bone": "chair_28",
+    "meshes": 1,
+    "vertices": 5952,
+    "triangles": 10544,
+    "uv_min": [
+      -0.02900000289082527,
+      -0.0003000497817993164
+    ],
+    "uv_max": [
+      1.0297000408172607,
+      1.0
+    ]
+  },
+  {
+    "shader": 11,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "porta",
+    "meshes": 1,
+    "vertices": 3158,
+    "triangles": 5792,
+    "uv_min": [
+      0.049400001764297485,
+      0.0
+    ],
+    "uv_max": [
+      1.0,
+      0.8513000011444092
+    ]
+  },
+  {
+    "shader": 11,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "painel",
+    "meshes": 1,
+    "vertices": 38,
+    "triangles": 36,
+    "uv_min": [
+      0.2574999928474426,
+      0.9872000217437744
+    ],
+    "uv_max": [
+      0.2618999779224396,
+      0.9896000027656555
+    ]
+  },
+  {
+    "shader": 14,
+    "source": "vermelho12",
+    "mw_shader": "0xa6348ee3",
+    "bone": "vidros",
+    "meshes": 2,
+    "vertices": 7703,
+    "triangles": 13152,
+    "uv_min": [
+      -0.3744000196456909,
+      0.059999942779541016
+    ],
+    "uv_max": [
+      1.0092999935150146,
+      0.31049996614456177
+    ]
+  },
+  {
+    "shader": 14,
+    "source": "vermelho12",
+    "mw_shader": "0xa6348ee3",
+    "bone": "boot4",
+    "meshes": 1,
+    "vertices": 4364,
+    "triangles": 7642,
+    "uv_min": [
+      0.07670000195503235,
+      0.06789994239807129
+    ],
+    "uv_max": [
+      0.3310999870300293,
+      0.29649996757507324
+    ]
+  },
+  {
+    "shader": 14,
+    "source": "vermelho12",
+    "mw_shader": "0xa6348ee3",
+    "bone": "boot5",
+    "meshes": 1,
+    "vertices": 4196,
+    "triangles": 7398,
+    "uv_min": [
+      0.07670000195503235,
+      0.06789994239807129
+    ],
+    "uv_max": [
+      0.3310999870300293,
+      0.29649996757507324
+    ]
+  },
+  {
+    "shader": 14,
+    "source": "vermelho12",
+    "mw_shader": "0xa6348ee3",
+    "bone": "bumper_r",
+    "meshes": 1,
+    "vertices": 2186,
+    "triangles": 4032,
+    "uv_min": [
+      0.6035000681877136,
+      0.2946000099182129
+    ],
+    "uv_max": [
+      0.9271000623703003,
+      0.729200005531311
+    ]
+  },
+  {
+    "shader": 15,
+    "source": "glassfar",
+    "mw_shader": "0xa6348ee3",
+    "bone": "vidros",
+    "meshes": 3,
+    "vertices": 9965,
+    "triangles": 15640,
+    "uv_min": [
+      0.0,
+      0.052999913692474365
+    ],
+    "uv_max": [
+      1.0,
+      0.8400999903678894
+    ]
+  },
+  {
+    "shader": 15,
+    "source": "glassfar",
+    "mw_shader": "0xa6348ee3",
+    "bone": "boot6",
+    "meshes": 1,
+    "vertices": 4363,
+    "triangles": 7244,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.0,
+      0.833299994468689
+    ]
+  },
+  {
+    "shader": 15,
+    "source": "glassfar",
+    "mw_shader": "0xa6348ee3",
+    "bone": "lente",
+    "meshes": 1,
+    "vertices": 2538,
+    "triangles": 4438,
+    "uv_min": [
+      -0.015700001269578934,
+      -3.5581002235412598
+    ],
+    "uv_max": [
+      0.8951999545097351,
+      0.9157000184059143
+    ]
+  },
+  {
+    "shader": 15,
+    "source": "glassfar",
+    "mw_shader": "0xa6348ee3",
+    "bone": "parachoquetras",
+    "meshes": 1,
+    "vertices": 4362,
+    "triangles": 4234,
+    "uv_min": [
+      -0.015700001269578934,
+      -3.5581002235412598
+    ],
+    "uv_max": [
+      1.0,
+      0.9157000184059143
+    ]
+  },
+  {
+    "shader": 15,
+    "source": "glassfar",
+    "mw_shader": "0xa6348ee3",
+    "bone": "interior_panel_15",
+    "meshes": 1,
+    "vertices": 1590,
+    "triangles": 2240,
+    "uv_min": [
+      0.0,
+      0.5
+    ],
+    "uv_max": [
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "shader": 15,
+    "source": "glassfar",
+    "mw_shader": "0xa6348ee3",
+    "bone": "porta",
+    "meshes": 1,
+    "vertices": 1195,
+    "triangles": 1700,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.0,
+      0.833299994468689
+    ]
+  },
+  {
+    "shader": 16,
+    "source": "glass",
+    "mw_shader": "0x471a1dca",
+    "bone": "vidros",
+    "meshes": 2,
+    "vertices": 4384,
+    "triangles": 8338,
+    "uv_min": [
+      0.28929999470710754,
+      0.02740001678466797
+    ],
+    "uv_max": [
+      0.9832000136375427,
+      0.25
+    ]
+  },
+  {
+    "shader": 16,
+    "source": "glass",
+    "mw_shader": "0x471a1dca",
+    "bone": "window_lf",
+    "meshes": 1,
+    "vertices": 4362,
+    "triangles": 8132,
+    "uv_min": [
+      0.32910001277923584,
+      0.017700016498565674
+    ],
+    "uv_max": [
+      0.7379000186920166,
+      0.31859999895095825
+    ]
+  },
+  {
+    "shader": 16,
+    "source": "glass",
+    "mw_shader": "0x471a1dca",
+    "bone": "windscreen",
+    "meshes": 1,
+    "vertices": 4362,
+    "triangles": 8078,
+    "uv_min": [
+      0.5,
+      0.10030001401901245
+    ],
+    "uv_max": [
+      0.9832000136375427,
+      0.75
+    ]
+  },
+  {
+    "shader": 16,
+    "source": "glass",
+    "mw_shader": "0x471a1dca",
+    "bone": "window_rr",
+    "meshes": 1,
+    "vertices": 4362,
+    "triangles": 7910,
+    "uv_min": [
+      0.3400000035762787,
+      0.017700016498565674
+    ],
+    "uv_max": [
+      0.7379000186920166,
+      0.31859999895095825
+    ]
+  },
+  {
+    "shader": 16,
+    "source": "glass",
+    "mw_shader": "0x471a1dca",
+    "bone": "window_rf",
+    "meshes": 1,
+    "vertices": 1418,
+    "triangles": 2422,
+    "uv_min": [
+      0.32910001277923584,
+      0.018000006675720215
+    ],
+    "uv_max": [
+      0.7276999950408936,
+      0.31859999895095825
+    ]
+  },
+  {
+    "shader": 18,
+    "source": "black",
+    "mw_shader": "DULLPLASTIC",
+    "bone": "hub_lf",
+    "meshes": 1,
+    "vertices": 3288,
+    "triangles": 4528,
+    "uv_min": [
+      0.506683349609375,
+      0.0133819580078125
+    ],
+    "uv_max": [
+      0.9837493896484375,
+      0.812286376953125
+    ]
+  },
+  {
+    "shader": 19,
+    "source": "spec5",
+    "mw_shader": "CHROME",
+    "bone": "placa",
+    "meshes": 2,
+    "vertices": 3150,
+    "triangles": 4516,
+    "uv_min": [
+      5.472731590270996,
+      0.1378335952758789
+    ],
+    "uv_max": [
+      13.715320587158203,
+      0.6139793395996094
+    ]
+  },
+  {
+    "shader": 20,
+    "source": "brasil mercosul",
+    "mw_shader": "LICENSEPLATE",
+    "bone": "placa",
+    "meshes": 2,
+    "vertices": 3590,
+    "triangles": 4186,
+    "uv_min": [
+      -6.496555805206299,
+      -0.5498912930488586
+    ],
+    "uv_max": [
+      2.2166454792022705,
+      1.389736533164978
+    ]
+  },
+  {
+    "shader": 21,
+    "source": "base_ptq",
+    "mw_shader": "LICENSEPLATE",
+    "bone": "placa",
+    "meshes": 2,
+    "vertices": 518,
+    "triangles": 732,
+    "uv_min": [
+      0.1381015181541443,
+      0.3448081612586975
+    ],
+    "uv_max": [
+      0.8696293830871582,
+      0.57315593957901
+    ]
+  },
+  {
+    "shader": 24,
+    "source": "azulisguru",
+    "mw_shader": "INTERIOR",
+    "bone": "interiorluzes",
+    "meshes": 1,
+    "vertices": 1598,
+    "triangles": 1616,
+    "uv_min": [
+      1.401298464324817e-45,
+      1.401298464324817e-45
+    ],
+    "uv_max": [
+      28.06209945678711,
+      9.324100494384766
+    ]
+  },
+  {
+    "shader": 25,
+    "source": "script_rt_dials_race",
+    "mw_shader": "INTERIOR",
+    "bone": "dials",
+    "meshes": 1,
+    "vertices": 81,
+    "triangles": 80,
+    "uv_min": [
+      0.041496723890304565,
+      0.15318746864795685
+    ],
+    "uv_max": [
+      0.21157655119895935,
+      0.4959510862827301
+    ]
+  },
+  {
+    "shader": 26,
+    "source": "laranjaseta",
+    "mw_shader": "0xa6348ee3",
+    "bone": "farol",
+    "meshes": 1,
+    "vertices": 2580,
+    "triangles": 4896,
+    "uv_min": [
+      0.0958000048995018,
+      0.07449996471405029
+    ],
+    "uv_max": [
+      0.1264999955892563,
+      0.19989997148513794
+    ]
+  },
+  {
+    "shader": 27,
+    "source": "vermelho",
+    "mw_shader": "INTERIOR",
+    "bone": "chair_20",
+    "meshes": 1,
+    "vertices": 1984,
+    "triangles": 3232,
+    "uv_min": [
+      0.9613000154495239,
+      0.949999988079071
+    ],
+    "uv_max": [
+      0.9615000486373901,
+      0.9501000046730042
+    ]
+  },
+  {
+    "shader": 28,
+    "source": "engine",
+    "mw_shader": "INTERIOR",
+    "bone": "motor",
+    "meshes": 3,
+    "vertices": 12928,
+    "triangles": 11891,
+    "uv_min": [
+      0.0,
+      0.0
+    ],
+    "uv_max": [
+      1.007699966430664,
+      1.0003999471664429
+    ]
+  },
+  {
+    "shader": 29,
+    "source": "grill5",
+    "mw_shader": "INTERIOR",
+    "bone": "motor",
+    "meshes": 1,
+    "vertices": 24,
+    "triangles": 20,
+    "uv_min": [
+      -26.583099365234375,
+      -12.66450023651123
+    ],
+    "uv_max": [
+      25.60070037841797,
+      15.894399642944336
+    ]
+  },
+  {
+    "shader": 30,
+    "source": "grill4",
+    "mw_shader": "INTERIOR",
+    "bone": "motor",
+    "meshes": 1,
+    "vertices": 48,
+    "triangles": 40,
+    "uv_min": [
+      -7.24370002746582,
+      -4.597899913787842
+    ],
+    "uv_max": [
+      6.261199951171875,
+      7.04040002822876
+    ]
+  }
+]

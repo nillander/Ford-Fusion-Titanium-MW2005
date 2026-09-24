@@ -1,0 +1,366 @@
+{
+  "passed": true,
+  "count": 40,
+  "textures": [
+    {
+      "Name": "MUSTANGGT_INTERIOR",
+      "TexHash": 720622148,
+      "Width": 1024,
+      "Height": 1024,
+      "DataSize": 524288,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_BADGING",
+      "TexHash": 865930564,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 262144,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_LOGO",
+      "TexHash": 1509977577,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 131072,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_MISC",
+      "TexHash": 1510007364,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 131072,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_TIRE",
+      "TexHash": 1510258892,
+      "Width": 256,
+      "Height": 256,
+      "DataSize": 32768,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_KIT00_HEADLIG",
+      "TexHash": 1788515437,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 262144,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_SKIN1",
+      "TexHash": 2592779678,
+      "Width": 16,
+      "Height": 16,
+      "DataSize": 256,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_KIT00_BRAKELI",
+      "TexHash": 3138646361,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 131072,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_DRIVER",
+      "TexHash": 3378630756,
+      "Width": 256,
+      "Height": 256,
+      "DataSize": 32768,
+      "MipMapCount": 1,
+      "Format": 827611204
+    },
+    {
+      "Name": "MUSTANGGT_F18_00",
+      "TexHash": 3417164294,
+      "Width": 1024,
+      "Height": 512,
+      "DataSize": 524288,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_01",
+      "TexHash": 3417164295,
+      "Width": 512,
+      "Height": 1024,
+      "DataSize": 524288,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_02",
+      "TexHash": 3417164296,
+      "Width": 16,
+      "Height": 16,
+      "DataSize": 256,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_03",
+      "TexHash": 3417164297,
+      "Width": 16,
+      "Height": 16,
+      "DataSize": 256,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_04",
+      "TexHash": 3417164298,
+      "Width": 16,
+      "Height": 16,
+      "DataSize": 256,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_05",
+      "TexHash": 3417164299,
+      "Width": 16,
+      "Height": 16,
+      "DataSize": 256,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_06",
+      "TexHash": 3417164300,
+      "Width": 16,
+      "Height": 16,
+      "DataSize": 256,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_07",
+      "TexHash": 3417164301,
+      "Width": 8,
+      "Height": 8,
+      "DataSize": 64,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_08",
+      "TexHash": 3417164302,
+      "Width": 8,
+      "Height": 8,
+      "DataSize": 64,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_09",
+      "TexHash": 3417164303,
+      "Width": 16,
+      "Height": 16,
+      "DataSize": 256,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_10",
+      "TexHash": 3417164327,
+      "Width": 1024,
+      "Height": 1024,
+      "DataSize": 1048576,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_11",
+      "TexHash": 3417164328,
+      "Width": 16,
+      "Height": 16,
+      "DataSize": 256,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_12",
+      "TexHash": 3417164329,
+      "Width": 16,
+      "Height": 16,
+      "DataSize": 256,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_13",
+      "TexHash": 3417164330,
+      "Width": 8,
+      "Height": 8,
+      "DataSize": 64,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_14",
+      "TexHash": 3417164331,
+      "Width": 8,
+      "Height": 8,
+      "DataSize": 64,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_15",
+      "TexHash": 3417164332,
+      "Width": 128,
+      "Height": 128,
+      "DataSize": 16384,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_16",
+      "TexHash": 3417164333,
+      "Width": 128,
+      "Height": 128,
+      "DataSize": 16384,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_17",
+      "TexHash": 3417164334,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 262144,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_18",
+      "TexHash": 3417164335,
+      "Width": 16,
+      "Height": 16,
+      "DataSize": 256,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_19",
+      "TexHash": 3417164336,
+      "Width": 4,
+      "Height": 4,
+      "DataSize": 16,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_20",
+      "TexHash": 3417164360,
+      "Width": 256,
+      "Height": 256,
+      "DataSize": 65536,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_21",
+      "TexHash": 3417164361,
+      "Width": 1024,
+      "Height": 1024,
+      "DataSize": 1048576,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_22",
+      "TexHash": 3417164362,
+      "Width": 256,
+      "Height": 256,
+      "DataSize": 65536,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_23",
+      "TexHash": 3417164363,
+      "Width": 1024,
+      "Height": 1024,
+      "DataSize": 1048576,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_24",
+      "TexHash": 3417164364,
+      "Width": 8,
+      "Height": 8,
+      "DataSize": 64,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_25",
+      "TexHash": 3417164365,
+      "Width": 1024,
+      "Height": 512,
+      "DataSize": 524288,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_26",
+      "TexHash": 3417164366,
+      "Width": 8,
+      "Height": 8,
+      "DataSize": 64,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_27",
+      "TexHash": 3417164367,
+      "Width": 8,
+      "Height": 8,
+      "DataSize": 64,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_28",
+      "TexHash": 3417164368,
+      "Width": 512,
+      "Height": 512,
+      "DataSize": 262144,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_29",
+      "TexHash": 3417164369,
+      "Width": 64,
+      "Height": 64,
+      "DataSize": 4096,
+      "MipMapCount": 1,
+      "Format": 861165636
+    },
+    {
+      "Name": "MUSTANGGT_F18_30",
+      "TexHash": 3417164393,
+      "Width": 64,
+      "Height": 64,
+      "DataSize": 4096,
+      "MipMapCount": 1,
+      "Format": 861165636
+    }
+  ]
+}

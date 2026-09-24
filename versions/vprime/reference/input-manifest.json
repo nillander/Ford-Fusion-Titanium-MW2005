@@ -1,0 +1,42 @@
+{
+  "donor\\fusion-ajm3899\\MUSTANGGT\\ATTRIBUTES.MWPS": {
+    "bytes": 21448,
+    "sha256": "1a5ae8c5ed8a7c3af2f71318089df24b4f40c6077f30c5440bc9c19ab3ceeb7c"
+  },
+  "donor\\fusion-ajm3899\\MUSTANGGT\\CAR.INI": {
+    "bytes": 89,
+    "sha256": "718bd3ac6d1bf60e631137744e1454451442ecb5007f82663b9fccdf37882f5d"
+  },
+  "donor\\fusion-ajm3899\\MUSTANGGT\\FE.MWPS": {
+    "bytes": 566,
+    "sha256": "5e60b4f0c62d6ea04263209bce42434991989113c59445884e66d57a693185b4"
+  },
+  "donor\\fusion-ajm3899\\MUSTANGGT\\GEOMETRY.BIN": {
+    "bytes": 5625344,
+    "sha256": "11e1faf08495c678bd05277e50dc11753ac9ea42161cb4f9bdaf14b2a0eec914"
+  },
+  "donor\\fusion-ajm3899\\MUSTANGGT\\SECONDARYLOGO.BIN": {
+    "bytes": 17152,
+    "sha256": "b6741166500cfd250c803d48d6aa5b9090861d8b2a5633d02636b464266f6016"
+  },
+  "donor\\fusion-ajm3899\\MUSTANGGT\\TEXTURES.BIN": {
+    "bytes": 910697,
+    "sha256": "4f15b517402251be7a5cc8ab23c870ca7057652cb246f148914d2bd7905c0119"
+  },
+  "donor\\fusion-ajm3899\\MUSTANGGT\\VINYLS.BIN": {
+    "bytes": 1986560,
+    "sha256": "1a721acee2d5d68f7cacbeaedb037c761fa178affa3072c34c18d12b703bf342"
+  },
+  "donor\\fusion-ajm3899\\readme.txt": {
+    "bytes": 254,
+    "sha256": "3dc92f408a88823401c9a1342d2dbc0541f638f178f8904181e13c67bbb70b80"
+  },
+  "source\\fusion-2017-dev\\fusion\\dlc.rpf": {
+    "bytes": 245623808,
+    "sha256": "88dbd730462233e7f0a6dac5d358c75c6243715a308710d8c5181cb5e5834950"
+  },
+  "source\\fusion-2017-dev\\leai-me.txt": {
+    "bytes": 1360,
+    "sha256": "7bc1c1eb4f8f8113db0871c0fa834a1a24a3fbe38948e99bf24aac87f9acbc84"
+  }
+}

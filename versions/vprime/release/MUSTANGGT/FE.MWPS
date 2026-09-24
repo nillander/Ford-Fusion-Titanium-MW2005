@@ -1,0 +1,20 @@
+##-------------------------------------------------------------
+## 2010 Ford Fusion SEL V6
+## Replacement for Ford Mustang GT
+## fe_attrib.bin patch script
+##--------------------------------------------------------------
+
+vpak GLOBAL\FE_ATTRIB.BIN frontend
+
+##---------------------------------------------------
+## Node: frontend/vehicles/north_america/ford/mustanggt
+##---------------------------------------------------
+
+## manufacturer
+patch	dword	bin:0xbab8	2
+
+## cost
+patch	int32	bin:0xbac4	42000
+
+## required_bl_level
+patch	int8	bin:0xbad1	9

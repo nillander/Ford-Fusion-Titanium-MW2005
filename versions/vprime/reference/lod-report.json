@@ -1,0 +1,176 @@
+[
+  {
+    "part": "KIT00_INTERIOR_A",
+    "vertices": 20504,
+    "triangles": 18484,
+    "source_triangles": 893659
+  },
+  {
+    "part": "KIT00_INTERIOR_B",
+    "vertices": 13639,
+    "triangles": 9242,
+    "source_triangles": 893659
+  },
+  {
+    "part": "KIT00_INTERIOR_C",
+    "vertices": 9454,
+    "triangles": 4066,
+    "source_triangles": 893659
+  },
+  {
+    "part": "KIT00_BODY_A",
+    "vertices": 26912,
+    "triangles": 39967,
+    "source_triangles": 365168
+  },
+  {
+    "part": "KIT00_BODY_B",
+    "vertices": 16457,
+    "triangles": 19983,
+    "source_triangles": 365168
+  },
+  {
+    "part": "KIT00_BODY_C",
+    "vertices": 9223,
+    "triangles": 8792,
+    "source_triangles": 365168
+  },
+  {
+    "part": "KIT00_BODY_D",
+    "vertices": 5060,
+    "triangles": 3597,
+    "source_triangles": 365168
+  },
+  {
+    "part": "KIT00_BODY_E",
+    "vertices": 3508,
+    "triangles": 1598,
+    "source_triangles": 365168
+  },
+  {
+    "part": "BASE_A",
+    "vertices": 27791,
+    "triangles": 26051,
+    "source_triangles": 967418
+  },
+  {
+    "part": "BASE_B",
+    "vertices": 18690,
+    "triangles": 13025,
+    "source_triangles": 967418
+  },
+  {
+    "part": "BASE_C",
+    "vertices": 13037,
+    "triangles": 5731,
+    "source_triangles": 967418
+  },
+  {
+    "part": "BASE_D",
+    "vertices": 11102,
+    "triangles": 3109,
+    "source_triangles": 967418
+  },
+  {
+    "part": "BASE_E",
+    "vertices": 11102,
+    "triangles": 3109,
+    "source_triangles": 967418
+  },
+  {
+    "part": "KIT00_RIGHT_BRAKELIGHT_GLASS_A",
+    "vertices": 1055,
+    "triangles": 1495,
+    "source_triangles": 32224
+  },
+  {
+    "part": "KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+    "vertices": 616,
+    "triangles": 747,
+    "source_triangles": 32224
+  },
+  {
+    "part": "KIT00_RIGHT_BRAKELIGHT_GLASS_C",
+    "vertices": 330,
+    "triangles": 328,
+    "source_triangles": 32224
+  },
+  {
+    "part": "KIT00_RIGHT_HEADLIGHT_GLASS_A",
+    "vertices": 1333,
+    "triangles": 1997,
+    "source_triangles": 18684
+  },
+  {
+    "part": "KIT00_RIGHT_HEADLIGHT_GLASS_B",
+    "vertices": 779,
+    "triangles": 997,
+    "source_triangles": 18684
+  },
+  {
+    "part": "KIT00_RIGHT_HEADLIGHT_GLASS_C",
+    "vertices": 380,
+    "triangles": 439,
+    "source_triangles": 18684
+  },
+  {
+    "part": "KIT00_FRONT_WINDOW_A",
+    "vertices": 6542,
+    "triangles": 23986,
+    "source_triangles": 26568
+  },
+  {
+    "part": "KIT00_FRONT_WINDOW_B",
+    "vertices": 3433,
+    "triangles": 11990,
+    "source_triangles": 26568
+  },
+  {
+    "part": "KIT00_FRONT_WINDOW_C",
+    "vertices": 1660,
+    "triangles": 5276,
+    "source_triangles": 26568
+  },
+  {
+    "part": "KIT00_REAR_WINDOW_A",
+    "vertices": 4103,
+    "triangles": 16000,
+    "source_triangles": 8312
+  },
+  {
+    "part": "KIT00_RIGHT_HEADLIGHT_A",
+    "vertices": 1691,
+    "triangles": 2495,
+    "source_triangles": 24032
+  },
+  {
+    "part": "KIT00_RIGHT_HEADLIGHT_B",
+    "vertices": 995,
+    "triangles": 1246,
+    "source_triangles": 24032
+  },
+  {
+    "part": "KIT00_RIGHT_HEADLIGHT_C",
+    "vertices": 541,
+    "triangles": 547,
+    "source_triangles": 24032
+  },
+  {
+    "part": "KIT00_RIGHT_BRAKELIGHT_A",
+    "vertices": 1106,
+    "triangles": 1996,
+    "source_triangles": 3924
+  },
+  {
+    "part": "KIT00_RIGHT_BRAKELIGHT_B",
+    "vertices": 605,
+    "triangles": 998,
+    "source_triangles": 3924
+  },
+  {
+    "part": "KIT00_RIGHT_BRAKELIGHT_C",
+    "vertices": 313,
+    "triangles": 438,
+    "source_triangles": 3924
+  }
+]

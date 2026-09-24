@@ -1,16 +1,6 @@
 # Fusion Titanium 2018 para MW2005
 
-Estado atual: **V1prime** (a partir da vprime) — veja [versions/v1prime/STATUS.md](versions/v1prime/STATUS.md) e [versions/vprime/VPRIME.md](versions/vprime/VPRIME.md). A V3 fica em [versions/v3-fusion-ajm3899](versions/v3-fusion-ajm3899/STATUS.md).
-V2 abaixo é histórica.
-
-Estado atual de V2 (Mustang Shelby, slot MUSTANGGT):
-[STATUS](versions/v2-mustang-shelby/STATUS.md) e
-[aprendizado sobre lanternas e faróis](versions/v2-mustang-shelby/reference/APRENDIZADO_LANTERNAS_FAROIS.md).
-Para reproduzir a correção de iluminação instalada, use
-`scripts/build_rear_lights_v2.ps1 -Install` com o jogo fechado.
-O fluxo `build.ps1` descrito abaixo pertence à compilação anterior.
-
-O projeto de transplante visual do Fusion Titanium 2018 para MW2005. O Fusion ocupa o slot MUSTANGGT e uma compilação `mwgc`+`MergeGeometry` no catálogo `donor/fordgt` ocupa o Ford GT. A SLR McLaren foi substituída pelo SLK55 AMG.
+Projeto de transplante visual para o donor Fusion 2010 AJM3899, slot MUSTANGGT. O escopo inicial é um candidato de teste; a instalação do jogo e a validação em corrida ficaram para depois, conforme solicitado.
 
 ## Reconstruir
 
@@ -25,8 +15,7 @@ O script interrompe a execução quando alguma etapa retorna erro. Ele verifica 
 
 ## Arquivos
 
-- `release/FORDGT/`: visual Fusion no slot do Ford GT, mais o exemplo FordGT-EC.
-- `scripts/copy_slr_stats_to_mustang.py`: copia a performance da SLR para o mustanggt.
+- `release/Fusion2018_MW2005_test-v0.1.zip`: pacote para a futura instalação de teste.
 - `release/LEIA-ME.md`: instalação, limites e créditos.
 - `blender/source-aligned.blend`: modelo completo importado e alinhado.
 - `blender/fusion-mw.blend`: cena do resultado reimportado, com materiais de prévia.

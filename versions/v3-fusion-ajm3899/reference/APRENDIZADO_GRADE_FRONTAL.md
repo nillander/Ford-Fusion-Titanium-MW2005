@@ -91,3 +91,18 @@ cria uma textura nova com outro nome.
 - Confirmar no jogo. Se a colmeia continuar invisível, a hipótese do nome cai. O próximo
   teste seria usar CHROME ou ENGINE, que o AJM usa na grade dele.
 - Friso cromado real das janelas: a V2 não tem essa peça em condição de uso.
+
+## Atualização 24/09 — grade real do GTA V na vprime (limite de 65.535 índices)
+
+Na vprime a grade exportada do GTA V fica em `BASE_A`. A moldura está no grupo 2 (`MISC`), e o
+miolo está no grupo 4 (`LOGO`). As duas texturas têm nome padrão, então o nome não é a causa aqui.
+`BASE_A` tem 78.144 índices, e os triângulos do miolo ficam depois da posição 65.535. No jogo
+aparecem só as bordas. É a mesma causa das luzes da V2.
+
+Regra que explica todas as observações até agora: **em sólido com mais de um grupo, a parte
+posterior ao índice 65.535 não é desenhada**. `KIT00_BODY_A` com um único grupo de 119.901
+índices aparece inteiro no jogo. A V1prime move o grupo 4 para `KIT00_RIGHT_SIDE_MIRROR_A`.
+Ver `versions/v1prime/STATUS.md`.
+
+Antes de mexer em material ou textura, rode `versions/v1prime/scripts/beyond.py`. Ele pinta de
+vermelho o que passa do limite.

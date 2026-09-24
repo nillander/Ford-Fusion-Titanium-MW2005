@@ -16,3 +16,4 @@ tools/mwgc/ProbeLampMaterial.exe
 tools/mwgc/ReplaceBodySolids.exe
 tools/mwgc/ReplaceLampSolids.exe
 versions/*/variants/**/*.BIN
+versions/*/release/*.zip
