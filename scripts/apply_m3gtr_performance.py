@@ -1,12 +1,11 @@
-"""Give the Fusion in the mustanggt slot the BMW M3 GTR performance.
+"""Give the Fusion in the mustanggt slot SLR power and M3 GTR drivability.
 
-Keeps the Fusion wheel positions. Copies engine, transmission, tires, brakes
-and chassis from bmwm3gtr onto mustanggt and mustanggt_top, plus the ecar
-fields that change how the car rides: ride height, camber, skid width and
-body dive, squat and roll. The hero car has no upgrade tier, so both tiers
-match it.
-The Mod Loader reapplies ATTRIBUTES.MWPS at launch, so that script is
-rewritten to the same values.
+Keeps the Fusion wheel positions. Engine, gearbox and induction come from the
+Mercedes-Benz SLR McLaren. Chassis, tires, brakes, mass, inertia and the ecar
+ride (height, camber, skid width, dive, squat, roll) come from the protagonist
+BMW M3 GTR. The hero car has no upgrade tier, so both tiers share that
+drivability. The Mod Loader reapplies ATTRIBUTES.MWPS at launch, so that
+script is rewritten to the same values.
 """
 from __future__ import annotations
 
@@ -26,10 +25,19 @@ GAME = Path(r"D:\Program Files (x86)\Electronic Arts\Need For Speed Most Wanted 
 ATTR = GAME / "GLOBAL" / "ATTRIBUTES.BIN"
 FE = GAME / "GLOBAL" / "FE_ATTRIB.BIN"
 MWPS = GAME / "ADDONS" / "CARS_REPLACE" / "MUSTANGGT" / "ATTRIBUTES.MWPS"
-FUSION = ROOT / "versions" / "performance" / "fusion-atual"
+FUSION = ROOT / "versions" / "performance" / "fusion-mustang"
 M3 = ROOT / "versions" / "performance" / "m3gtr"
+HYBRID = ROOT / "versions" / "performance" / "slr-m3gtr"
 
-CLASSES = ("engine", "transmission", "tires", "brakes", "chassis")
+POWER = (
+    ("engine", "slr", "mustanggt"),
+    ("engine", "slr_top", "mustanggt_top"),
+    ("transmission", "slr", "mustanggt"),
+    ("transmission", "slr_top", "mustanggt_top"),
+    ("induction", "slr", "mustanggt_base"),
+    ("induction", "slr_top", "mustanggt_top"),
+)
+HANDLING = ("tires", "brakes", "chassis")
 DESTINATIONS = ("mustanggt", "mustanggt_top")
 ECAR_HANDLING = ("RideHeight", "CamberFront", "CamberRear", "TireSkidWidth", "BodyDive", "BodySquat", "BodyRoll")
 PATCH_LINE = re.compile(r"^(patch\s+(\w+)\s+bin:(0x[0-9a-fA-F]+)\s+)(\S+)(\s*)$")
@@ -55,15 +63,14 @@ def backup_current() -> None:
             print("backed up", name)
 
 
-def spans_for(database: VltDatabase) -> list[tuple[int, int]]:
+def spans_for(database: VltDatabase, pairs: tuple[tuple[str, str, str], ...]) -> list[tuple[int, int]]:
     spans = []
-    for class_name in CLASSES:
-        for dest_name in DESTINATIONS:
-            found = database.find_collections(hash_name(class_name), hash_name(dest_name))
-            if not found or found[0].required_offset is None:
-                continue
-            start = found[0].required_offset
-            spans.append((start, start + database.required_size(hash_name(class_name))))
+    for class_name, _source_name, dest_name in pairs:
+        found = database.find_collections(hash_name(class_name), hash_name(dest_name))
+        if not found or found[0].required_offset is None:
+            continue
+        start = found[0].required_offset
+        spans.append((start, start + database.required_size(hash_name(class_name))))
     return spans
 
 
@@ -109,18 +116,21 @@ def main() -> None:
     database = VltDatabase(raw, vlt)
     print("before")
     report_engine(database, "mustanggt")
+    report_engine(database, "slr")
     report_engine(database, "bmwm3gtr")
 
-    for class_name in CLASSES:
-        for dest_name in DESTINATIONS:
-            copy_required(database, class_name, "bmwm3gtr", dest_name)
+    handling_pairs = tuple((class_name, "bmwm3gtr", dest_name) for class_name in HANDLING for dest_name in DESTINATIONS)
+    for class_name, source_name, dest_name in handling_pairs:
+        copy_required(database, class_name, source_name, dest_name)
+    for class_name, source_name, dest_name in POWER:
+        copy_required(database, class_name, source_name, dest_name)
     for field_name in ("MASS", "TENSOR_SCALE"):
         copy_field(database, "pvehicle", "bmwm3gtr", "mustanggt", field_name)
     copy_matching_optionals(database, "pvehicle", "bmwm3gtr", "mustanggt", {hash_name("HandlingRating")})
     for field_name in ECAR_HANDLING:
         copy_field(database, "ecar", "bmwm3gtr", "mustanggt", field_name)
 
-    covered = spans_for(database)
+    covered = spans_for(database, handling_pairs + POWER)
     mass_start, mass_size = copy_field(database, "pvehicle", "bmwm3gtr", "mustanggt", "MASS")
     scale_start, scale_size = copy_field(database, "pvehicle", "bmwm3gtr", "mustanggt", "TENSOR_SCALE")
     covered.extend(((mass_start, mass_start + mass_size), (scale_start, scale_start + scale_size)))
@@ -136,15 +146,19 @@ def main() -> None:
     print("after")
     report_engine(database, "mustanggt")
     report_engine(database, "mustanggt_top")
+    report_engine(database, "slr")
 
     text = rewrite_mwps(database, covered)
-    M3.mkdir(parents=True, exist_ok=True)
-    (M3 / "ATTRIBUTES.MWPS").write_text(text, encoding="utf-8", newline="")
+    HYBRID.mkdir(parents=True, exist_ok=True)
+    (HYBRID / "ATTRIBUTES.MWPS").write_text(text, encoding="utf-8", newline="")
     MWPS.write_text(text, encoding="utf-8", newline="")
     patch_vpak(ATTR, database, entry.bin_offset)
-    shutil.copy2(ATTR, M3 / "ATTRIBUTES.BIN")
-    shutil.copy2(FE, M3 / "FE_ATTRIB.BIN")
-    for folder in (FUSION, M3):
+    shutil.copy2(ATTR, HYBRID / "ATTRIBUTES.BIN")
+    if not (HYBRID / "FE_ATTRIB.BIN").exists():
+        shutil.copy2(FE, HYBRID / "FE_ATTRIB.BIN")
+    for folder in (FUSION, M3, HYBRID):
+        if not folder.exists():
+            continue
         for path in folder.iterdir():
             print(folder.name, path.name, hashlib.sha256(path.read_bytes()).hexdigest())
 
