@@ -3,14 +3,45 @@
 Iniciada em 23/09/2026 pelo Claude (Cowork), retomando o trabalho pausado pelo Codex.
 V1 e V2 permanecem intactas. Slot: `MUSTANGGT`.
 
+## V3b — instalada para o 2º teste (24/09/2026)
+
+Resposta ao 1º teste no jogo (V3a): retrovisores resolvidos; rodas, grade, grade do
+escape e friso cromado ausentes; faixa do vidro traseiro faltando; carroceria "degradada";
+capô pior com a inversão de faces; faróis/lanternas visíveis através do carro em alguns ângulos.
+
+**Achado principal:** o MW só desenha texturas do carro com nomes padrão
+(`INTERIOR`, `BADGING`, `LOGO`, `MISC`, `TIRE`, `SKIN1`, `DRIVER`, `KIT00_HEADLIGHT`,
+`KIT00_BRAKELIGHT`…). Tudo que usava nome próprio sumia: `MUSTANGGT_GRILLE` (grade, na V2 e
+na V3a), `MUSTANGGT_OPAQUE_PARTS` (peças 3D do Codex) e `MUSTANGGT_AJM_INTERIOR` (aros da V3a).
+
+Correções da V3b (`scripts/BuildV3b.cs`):
+
+- grade colmeia e peças de escape copiadas para o quadrante livre da folha `BADGING`
+  (`339D0D44`, atlas em `preview/v3b-badging-atlas.png`), com UVs remapeados; DULLPLASTIC;
+- descartados os prismas de moldura (flutuavam acima do teto), as barras que cobriam a
+  colmeia e os discos presos à carroceria nas rodas;
+- rodas e freios da V2 (texturas padrão), LOD E = LOD D;
+- normais da pintura recalculadas (posições soldadas a 2 mm, vinco de 45°); os 1.601
+  triângulos invertidos agora recebem normais coerentes com o novo sentido — na V3a a
+  inversão foi feita sem ajustar as normais, o que escureceu o capô;
+- faróis e lanternas com DULLPLASTIC (o shader BRAKELIGHT era o suspeito da transparência);
+- faixa central do vidro traseiro (y −0,34…−0,14) preenchida com o vidro da V1 em `REAR_WINDOW_A`.
+
+GEOMETRY `29B4A1400E9DDC333DEAA57BADA8F2D39CA688B1B130B640117D9D668D4B7DC6`,
+TEXTURES `A80DC92568448676B372E6A30A8C6A6A6F5682F97AE4087C2A798AC05699714C`,
+64 sólidos, 152.470 triângulos, 16 texturas. V3a preservada em `variants/v3a-first-test`.
+Pendente: friso cromado real das janelas (não existe como peça utilizável na V2) e novo teste no jogo.
+
+## V3a — histórico do 1º teste
+
 ## Estado
 
-- Instalada para teste em `CARS/MUSTANGGT` e `ADDONS/CARS_REPLACE/MUSTANGGT`.
+- Foi instalada para teste em `CARS/MUSTANGGT` e `ADDONS/CARS_REPLACE/MUSTANGGT`.
 - GEOMETRY: `ECBED63EAD7D996BBE246381AA796C169AD37F96A75A95605F2C4A10C99B7BBC`
 - TEXTURES: `E68F7912131F0BE59EA413E32CCF2B6E842B74579F81B9C70DBFB1F6F8FF7816`
 - Leitura independente (NFS-ModTools): 64 sólidos, 149.159 triângulos; TPK com 17 texturas.
 - Backup da instalação anterior (V2 final `0DE11B06…`/`563B585F…`) em `work/game-backup-before-v3-*`.
-- **Inspeção no jogo pendente.**
+- Testada no jogo em 24/09: ver resultado na seção V3b.
 
 ## Composição (catálogo AJM de 64 sólidos preservado, na ordem original)
 
