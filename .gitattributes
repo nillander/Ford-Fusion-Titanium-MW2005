@@ -463,3 +463,5 @@
 /versions/v1prime/in-game/v1prime-c-diag-front.png filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/in-game/v1prime-d-approved.png filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/in-game/v1prime-d-vinyl-denmark-defect.png filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-d/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-d/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
