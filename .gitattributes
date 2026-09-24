@@ -461,3 +461,4 @@
 /versions/v1prime/in-game/v1prime-a-front.png filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/in-game/v1prime-b-front.png filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/in-game/v1prime-c-diag-front.png filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/in-game/v1prime-d-approved.png filter=lfs diff=lfs merge=lfs -text

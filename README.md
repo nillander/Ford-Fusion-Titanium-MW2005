@@ -1,6 +1,6 @@
 # Fusion Titanium 2018 para MW2005
 
-Estado atual: **V1prime** (a partir da vprime) — veja [versions/v1prime/STATUS.md](versions/v1prime/STATUS.md) e [versions/vprime/VPRIME.md](versions/vprime/VPRIME.md). A V3 fica em [versions/v3-fusion-ajm3899](versions/v3-fusion-ajm3899/STATUS.md).
+Estado atual: **V1prime-d aprovada no jogo** — aprendizados em [APRENDIZADOS_FUSION_MW2005.md](APRENDIZADOS_FUSION_MW2005.md). Versão: **V1prime** (a partir da vprime) — veja [versions/v1prime/STATUS.md](versions/v1prime/STATUS.md) e [versions/vprime/VPRIME.md](versions/vprime/VPRIME.md). A V3 fica em [versions/v3-fusion-ajm3899](versions/v3-fusion-ajm3899/STATUS.md).
 V2 abaixo é histórica.
 
 Estado atual de V2 (Mustang Shelby, slot MUSTANGGT):
