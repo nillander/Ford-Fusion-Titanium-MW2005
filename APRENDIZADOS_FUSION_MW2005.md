@@ -123,7 +123,16 @@ e sim fazer o motor voltar a tratá-las como opacas.
 
 Os scripts estão em `versions/v3-fusion-ajm3899/scripts` e `versions/v1prime/scripts`.
 
-## 7. Próximos passos sugeridos
+## 7. Vinis desalinhados entre painéis (V1prime-e)
+
+- Vinis e adesivos do MW usam as **UVs do grupo de pintura (CARSKIN)**. UVs herdadas do GTA V mapeiam
+  cada painel separadamente, e o adesivo "quebra" entre a porta dianteira e a traseira.
+- Os carros originais usam um layout único: `u = 0,169·x + 0,5`, com `v` desenrolando a seção do carro
+  (laterais pela altura, teto pela largura).
+- `versions/v1prime/scripts/vinyluv.py` gera esse layout para `KIT00_BODY_A–E`, e `ApplyUV.cs` grava as
+  UVs sem mexer em mais nada.
+
+## 8. Próximos passos sugeridos
 
 - `KIT00_BRAKELIGHT` e `KIT00_HEADLIGHT` continuam DXT3 (cerca de 20 % de alfa). O teste atual aprovou
   os faróis; manter assim enquanto não houver defeito.

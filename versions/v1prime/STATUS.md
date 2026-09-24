@@ -2,6 +2,30 @@
 
 Base: [vprime](../vprime/VPRIME.md).
 
+## V1prime-e — UV de vinil contínuo entre as portas (24/09/2026)
+
+GEOMETRY `14AC2AC7…66FE`, TEXTURES iguais à V1prime-d (`BF9A0842…47D8`).
+A V1prime-d aprovada está preservada em `variants/v1prime-d-approved`.
+
+**Defeito:** um adesivo (bandeira da Dinamarca) aplicado na lateral ficava desalinhado entre a porta
+dianteira e a traseira (`in-game/v1prime-d-vinyl-denmark-defect.png`). No MW, os vinis usam as
+**coordenadas UV do grupo de pintura (CARSKIN)**. Na vprime essas UVs vinham do GTA V, com cada painel
+mapeado de um jeito, e havia salto entre as portas.
+
+**Referência:** nos carros originais do jogo (Camaro), a pintura usa um layout único:
+`u = 0,169·x + 0,5` ao longo do carro, e `v` "desenrolando" a seção transversal (lado +y em
+v ≈ 0,05–0,39, teto ≈ 0,4–0,6, lado −y em v ≈ 0,5–0,93).
+
+**Correção** (`scripts/vinyluv.py` + `scripts/ApplyUV.cs`, só nos `KIT00_BODY_A–E`):
+
+- `u = 0,169·x + 0,5`;
+- laterais: `v` pela altura (`S = ±(0,97 + 1,30 − z)`), assim as faixas ficam retas e contínuas
+  entre as portas;
+- teto, capô e porta-malas: `S = y`;
+- as duas regiões são misturadas pela normal (`|n.y|`), e `v = 0,5 − 0,2·S`.
+
+Posições, normais e todas as outras peças ficaram idênticas. Prévia do padrão de teste: `preview/vinyl-uv-v1prime-e.png`.
+
 ## V1prime-d — texturas opacas em DXT1 — APROVADA NO JOGO (24/09/2026)
 
 O usuário aprovou: vidros, janelas, rodas, cromados, grade frontal, grade do escapamento e faróis.
