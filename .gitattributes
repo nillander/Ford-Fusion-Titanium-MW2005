@@ -472,3 +472,4 @@
 /source/fusion-2016-dev/DEV[[:space:]]Version/FordFusion/car_sign_3.png filter=lfs diff=lfs merge=lfs -text
 /source/fusion-2016-dev/DEV[[:space:]]Version/FordFusion/car_sign_4.png filter=lfs diff=lfs merge=lfs -text
 /source/fusion-2016-dev/DEV[[:space:]]Version/FordFusion/car_sign_5.png filter=lfs diff=lfs merge=lfs -text
+/Screenshot_146.png filter=lfs diff=lfs merge=lfs -text
