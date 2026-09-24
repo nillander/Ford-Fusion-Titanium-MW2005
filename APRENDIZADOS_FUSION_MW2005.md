@@ -132,7 +132,18 @@ Os scripts estão em `versions/v3-fusion-ajm3899/scripts` e `versions/v1prime/sc
 - `versions/v1prime/scripts/vinyluv.py` gera esse layout para `KIT00_BODY_A–E`, e `ApplyUV.cs` grava as
   UVs sem mexer em mais nada.
 
-## 8. Próximos passos sugeridos
+## 8. Performance fica no VLT, não na carroceria
+
+Potência e dirigibilidade do Fusion estão em `GLOBAL\ATTRIBUTES.BIN` e no
+`ATTRIBUTES.MWPS` do Mod Loader. Trocar `GEOMETRY.BIN` não muda como o carro anda.
+O detalhe das três opções e o que cada uma copia está em
+[versions/performance/PERFORMANCE.md](versions/performance/PERFORMANCE.md).
+
+A opção instalada é `slr-m3gtr`: motor, câmbio e admissão da Mercedes-Benz SLR McLaren;
+pneus, freios, chassi, massa e a reação da suspensão do BMW M3 GTR. A posição das rodas
+do Fusion permanece a do carro.
+
+## 9. Próximos passos sugeridos
 
 - `KIT00_BRAKELIGHT` e `KIT00_HEADLIGHT` continuam DXT3 (cerca de 20 % de alfa). O teste atual aprovou
   os faróis; manter assim enquanto não houver defeito.

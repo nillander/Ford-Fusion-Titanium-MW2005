@@ -1,15 +1,19 @@
 # Performance do Fusion (slot MUSTANGGT)
 
-Duas opções. As duas estão nesta pasta. O jogo usa a que estiver instalada em
+O detalhe de cada opção está em [PERFORMANCE.md](PERFORMANCE.md).
+
+Três opções. O jogo usa a que estiver instalada em
 `ADDONS\CARS_REPLACE\MUSTANGGT\ATTRIBUTES.MWPS` e em `GLOBAL\ATTRIBUTES.BIN`.
+A opção instalada agora é `slr-m3gtr`: potência da SLR e dirigibilidade do M3 GTR.
 
 A posição das rodas do Fusion fica como está. Altura, cambagem e a reação da carroceria
 (mergulho, agachamento e rolagem) acompanham a dirigibilidade escolhida.
 
 | Pasta | O que é |
 | --- | --- |
-| `fusion-atual` | Potência e dirigibilidade de antes desta troca |
+| `fusion-mustang` | Potência e dirigibilidade do Ford Mustang GT original do slot |
 | `m3gtr` | Potência e dirigibilidade do BMW M3 GTR do protagonista |
+| `slr-m3gtr` | Potência da Mercedes-Benz SLR McLaren e dirigibilidade do BMW M3 GTR |
 
 Para voltar uma delas, com o jogo fechado, copie `ATTRIBUTES.MWPS` para
 `ADDONS\CARS_REPLACE\MUSTANGGT\` e `ATTRIBUTES.BIN` para `GLOBAL\`.
