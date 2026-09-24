@@ -1,7 +1,45 @@
 # Fusion Titanium 2018 — V1prime
 
-Base: [vprime](../vprime/VPRIME.md). Única mudança: a grade frontal. Estado: instalada para teste
-em 24/09/2026, nas duas rotas (`CARS/MUSTANGGT` e `ADDONS/CARS_REPLACE/MUSTANGGT`).
+Base: [vprime](../vprime/VPRIME.md).
+
+## V1prime-b — instalada para teste (24/09/2026)
+
+GEOMETRY `C8A2D660B3A8031AA31FF9A61095F4A8A36366A520D162866B2F428E4311C5FB`,
+TEXTURES `54869AC5…E198` (inalterado). Construída a partir da V1prime-a com `scripts/BuildV1PrimeB.cs`.
+A V1prime-a está preservada em `variants/v1prime-a`.
+
+### Resultado da V1prime-a no jogo (`in-game/v1prime-a-front.png`)
+
+O miolo da grade não apareceu. Os painéis pretos laterais (LOGO) passaram a aparecer, mas as barras
+horizontais continuam ausentes, e o centro mostra o fundo, visto através do carro.
+**A regra dos 65.535 índices, sozinha, não explica a grade.**
+Geometria, bounds, alpha da textura, cor de vértice e sentido das faces das barras foram conferidos
+sem o jogo e estão corretos. Nenhuma outra peça fica na frente delas.
+
+### Placa: resíduos de "CHAPINHA" removidos
+
+A placa exportada tinha as letras **CHAPINHA em relevo 3D** (`preview/vprime-plate-chapinha-geometry.png`):
+o grupo LICENSEPLATE continha a moldura, as letras (UV na área "BRASIL MERCOSUL" da BADGING) e uma
+face com buracos no formato das letras. No jogo sobravam pedaços das letras e da pintura atravessando
+a placa. Em todos os LODs e nas duas placas:
+
+- as letras foram apagadas (147 triângulos no LOD A, 129 no B, 26 no C);
+- a face furada foi trocada por uma face plana, com UV ajustado por mínimos quadrados, que mostra NEWZERA;
+- moldura e parafusos foram mantidos, e a placa foi afastada 10 mm do para-choque.
+
+### Grade: teste de faces nos dois sentidos
+
+As barras (MISC) e o painel de fundo (LOGO) na área da grade foram tirados de `BASE_A` e da V1prime-a
+e colocados como os **primeiros grupos** de `KIT00_RIGHT_SIDE_MIRROR_A`, **com faces nos dois sentidos**.
+Texturas e shaders não mudaram. Com esse teste dá para separar:
+
+- a grade aparece → o problema era orientação de face ou posição no buffer;
+- a grade continua ausente → a causa é outra (material ou profundidade), e os próximos testes serão
+  cor forçada ou shader diferente.
+
+## V1prime-a — histórico
+
+Mudança única em relação à vprime: a grade frontal.
 
 - GEOMETRY `FF39ACACC7287B63EFC51E5493B1525449CDFE47E47FD427FBAEFA9CCBC949D7`
 - TEXTURES `54869AC551D1633227170C5815C6E0B553231613AA059B94B3E84D26AA5DE198` (idêntico à vprime)

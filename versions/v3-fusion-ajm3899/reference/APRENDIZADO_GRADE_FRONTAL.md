@@ -106,3 +106,14 @@ Ver `versions/v1prime/STATUS.md`.
 
 Antes de mexer em material ou textura, rode `versions/v1prime/scripts/beyond.py`. Ele pinta de
 vermelho o que passa do limite.
+
+## Atualização 24/09 — resultado da V1prime-a (a regra dos 65.535 não bastou)
+
+Depois de mover o grupo 4 para `KIT00_RIGHT_SIDE_MIRROR_A`, os painéis pretos laterais apareceram,
+mas as barras horizontais (grupo 2 de `BASE_A`, textura `MISC`, dentro do limite de índices)
+**continuaram invisíveis**, e o centro mostra o fundo através do carro. A anel cromado, que fica no
+mesmo grupo 2, aparece. Fica descartado que a causa seja só índice, alpha da textura, cor de vértice,
+bounds ou alguma peça na frente das barras. Na V1prime-b a grade inteira foi para os primeiros grupos
+de um sólido próprio, com faces nos dois sentidos, para isolar o fator orientação de face/posição no buffer.
+
+Também foi achada na placa a geometria em relevo das letras `CHAPINHA` (ver `versions/v1prime/STATUS.md`).

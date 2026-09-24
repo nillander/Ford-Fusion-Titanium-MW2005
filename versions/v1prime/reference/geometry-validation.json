@@ -200,9 +200,9 @@
     {
       "name": "MUSTANGGT_KIT00_RIGHT_SIDE_MIRROR_A",
       "hash": 2265556091,
-      "triangles": 12631,
-      "vertices": 12986,
-      "materials": 1
+      "triangles": 15798,
+      "vertices": 15299,
+      "materials": 3
     },
     {
       "name": "MUSTANGGT_KIT00_RIGHT_SIDE_MIRROR_B",
@@ -340,22 +340,22 @@
     {
       "name": "MUSTANGGT_BASE_A",
       "hash": 3280541011,
-      "triangles": 12882,
-      "vertices": 14637,
+      "triangles": 11226,
+      "vertices": 12341,
       "materials": 4
     },
     {
       "name": "MUSTANGGT_BASE_B",
       "hash": 3280541012,
-      "triangles": 13022,
-      "vertices": 16874,
+      "triangles": 12873,
+      "vertices": 16705,
       "materials": 6
     },
     {
       "name": "MUSTANGGT_BASE_C",
       "hash": 3280541013,
-      "triangles": 5728,
-      "vertices": 8312,
+      "triangles": 5695,
+      "vertices": 8267,
       "materials": 5
     },
     {
@@ -450,6 +450,6 @@
       "materials": 3
     }
   ],
-  "triangles": 236056,
+  "triangles": 237385,
   "passed": true
 }
