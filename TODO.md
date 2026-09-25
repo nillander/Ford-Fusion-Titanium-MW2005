@@ -1,6 +1,7 @@
-# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-d)
+# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-g)
 
-Ponto de partida seguro: `versions/checkpoint-v1prime-d` (GEOMETRY `C8A2D660…`, TEXTURES `BF9A0842…`).
+Ponto de partida seguro: `versions/checkpoint-v1prime-g` (GEOMETRY `EE2FFBAB…`, TEXTURES `BF9A0842…`).
+Checkpoint anterior: `versions/checkpoint-v1prime-d` (GEOMETRY `C8A2D660…`).
 Toda tarefa deve partir dele. Depois de pronta, testar **abrindo o jogo com o save ZHABES (que tem o
 adesivo da Dinamarca)** antes de ser dada como concluída.
 
@@ -25,10 +26,10 @@ carroceria inteira e pode fechar o jogo.
   substitua o capô padrão e apareça no carro.
 - [ ] **7. Suavidade da carroceria na traseira.** Corrigir os relevos e irregularidades perto do vidro
   traseiro (coluna C e tampa), sem alterar a UV da pintura.
-- [ ] **8. Portas: deformação dos adesivos.** As UVs da pintura dão um salto entre a porta dianteira e a
-  traseira. A tentativa V1prime-e, que refez as UVs da carroceria inteira, fez o jogo fechar na abertura.
-  Nova abordagem: mudança mínima, só na ilha UV da porta traseira, alinhando-a à da dianteira. Testar
-  com o save antes de instalar como versão.
+- [x] **8. Portas: deformação dos adesivos.** Concluído em 25/09 (V1prime-g, GEOMETRY `EE2FFBAB…`),
+  aprovado no jogo com o adesivo da Dinamarca (`versions/v1prime/in-game/v1prime-g-vinyl-denmark-ok.png`).
+  O mapa da pintura nas laterais foi endireitado com uma correção suave; o resto do carro ficou idêntico.
+  Ver `versions/v1prime/variants/v1prime-g-door-uv/LEIA-ME.md`.
 - [ ] **9. Refino dos encaixes da carroceria.** Perto das junções aparecem manchas negras, um
   escurecimento da pintura. O para-lama dianteiro fica escuro na conexão com o para-choque, o farol
   e a porta. A hipótese é que triângulos e retângulos da geometria não se encontram e deixam fresta

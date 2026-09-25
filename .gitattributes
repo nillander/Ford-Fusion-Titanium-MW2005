@@ -473,3 +473,6 @@
 /source/fusion-2016-dev/DEV[[:space:]]Version/FordFusion/car_sign_4.png filter=lfs diff=lfs merge=lfs -text
 /source/fusion-2016-dev/DEV[[:space:]]Version/FordFusion/car_sign_5.png filter=lfs diff=lfs merge=lfs -text
 /Screenshot_146.png filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-g/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-g/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/in-game/v1prime-g-vinyl-denmark-ok.png filter=lfs diff=lfs merge=lfs -text
