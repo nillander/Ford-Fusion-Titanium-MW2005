@@ -1,7 +1,7 @@
-# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-s)
+# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-u)
 
-Ponto de partida seguro: `versions/checkpoint-v1prime-s` (GEOMETRY `2F66D3D2…`, TEXTURES `BF9A0842…`).
-Checkpoints anteriores: `checkpoint-v1prime-q` (`DD6212A8…`), `checkpoint-v1prime-p` (`B1375C52…`), `checkpoint-v1prime-l` (`695DC7F7…`), `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
+Ponto de partida seguro: `versions/checkpoint-v1prime-u` (GEOMETRY `CD41C016…`, TEXTURES `BF9A0842…`).
+Checkpoints anteriores: `checkpoint-v1prime-s` (`2F66D3D2…`), `checkpoint-v1prime-q` (`DD6212A8…`), `checkpoint-v1prime-p` (`B1375C52…`), `checkpoint-v1prime-l` (`695DC7F7…`), `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
 Toda tarefa deve partir dele. Depois de pronta, testar **abrindo o jogo com o save ZHABES (que tem o
 adesivo da Dinamarca)** antes de ser dada como concluída.
 
@@ -30,17 +30,18 @@ carroceria inteira e pode fechar o jogo.
 - [x] **6. Capô da loja.** Concluído em 25/09 (V1prime-s, GEOMETRY `2F66D3D2…`), aprovado no jogo. Capô
   separado da carroceria em `KIT00_HOOD_A–D`; criados os 17 capôs da loja `STYLExx_HOOD_A–D` (capô do
   Fusion + detalhes dos capôs do GTO). Ver `versions/v1prime/variants/v1prime-s-hoods/LEIA-ME.md`.
-- [ ] **7. Suavidade da carroceria na traseira.** Corrigir os relevos e irregularidades perto do vidro
-  traseiro (coluna C e tampa), sem alterar a UV da pintura.
+- [x] **7. Suavidade da carroceria na traseira.** Concluído em 25/09 (V1prime-u, GEOMETRY `CD41C016…`),
+  aprovado no jogo. Os riscos eram frestas na pele da coluna C mostrando o interior escuro: camada de
+  fundo pintada 4 mm sob a pele + normais suavizadas. Ver `versions/v1prime/variants/v1prime-u-rear-backing/LEIA-ME.md`.
 - [x] **8. Portas: deformação dos adesivos.** Concluído em 25/09 (V1prime-g, GEOMETRY `EE2FFBAB…`),
   aprovado no jogo com o adesivo da Dinamarca (`versions/v1prime/in-game/v1prime-g-vinyl-denmark-ok.png`).
   O mapa da pintura nas laterais foi endireitado com uma correção suave; o resto do carro ficou idêntico.
   Ver `versions/v1prime/variants/v1prime-g-door-uv/LEIA-ME.md`.
-- [ ] **9. Refino dos encaixes da carroceria.** Perto das junções aparecem manchas negras, um
+- [ ] **9. Refino dos encaixes da carroceria.** *(Adiado a pedido do usuário em 25/09; candidato a usar a camada de fundo da V1prime-u.)* Perto das junções aparecem manchas negras, um
   escurecimento da pintura. O para-lama dianteiro fica escuro na conexão com o para-choque, o farol
   e a porta. A hipótese é que triângulos e retângulos da geometria não se encontram e deixam fresta
   ou normal errada; conferir na carroceria inteira, começando por `Screenshot_146.png`, e polir só
-  o encaixe, sem refazer a UV da pintura.
+  o encaixe, sem refazer a UV da pintura. Nos veículos do jogo é como se a lataria inteira fosse uma peça única, veja em `Screenshot_147.png`
 - [ ] **10. Rodas originais do GTA.** Construir aro e pneu a partir de `source/fusion-2017-dev`
   e montar `KIT00_FRONT_TIRE_A–E`. O aro 18 é a roda padrão do Fusion e o tamanho mínimo:
   o jogo deve aceitar rodas de 18 até 22 polegadas.

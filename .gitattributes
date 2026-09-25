@@ -500,3 +500,7 @@
 /versions/checkpoint-v1prime-s/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/checkpoint-v1prime-s/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/variants/v1prime-s-hoods/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-u/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-u/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-t-rear-smooth/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-u-rear-backing/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
