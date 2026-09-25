@@ -487,3 +487,9 @@
 /versions/checkpoint-v1prime-l/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/variants/v1prime-k-sharkfin/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/variants/v1prime-l-sharkfin-body/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-p/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-p/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-m-emblems/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-n-emblems-ford/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-o-emblems-ford/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-p-emblems-ford/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text

@@ -1,7 +1,7 @@
-# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-l)
+# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-p)
 
-Ponto de partida seguro: `versions/checkpoint-v1prime-l` (GEOMETRY `695DC7F7…`, TEXTURES `BF9A0842…`).
-Checkpoints anteriores: `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
+Ponto de partida seguro: `versions/checkpoint-v1prime-p` (GEOMETRY `B1375C52…`, TEXTURES `BF9A0842…`).
+Checkpoints anteriores: `checkpoint-v1prime-l` (`695DC7F7…`), `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
 Toda tarefa deve partir dele. Depois de pronta, testar **abrindo o jogo com o save ZHABES (que tem o
 adesivo da Dinamarca)** antes de ser dada como concluída.
 
@@ -21,8 +21,9 @@ carroceria inteira e pode fechar o jogo.
 - [x] **3. Antena.** Concluído em 25/09 (V1prime-l, GEOMETRY `695DC7F7…`), aprovado no jogo. Antena
   para-raios removida; antena tubarão arredondada de 196 × 96 × 61 mm no grupo da pintura (cor do carro).
   Ver `versions/v1prime/variants/v1prime-l-sharkfin-body/LEIA-ME.md`.
-- [ ] **4. Emblemas da tampa traseira.** Refazer `FUSION` (lado esquerdo) e `TITANIUM` (lado direito),
-  que se deformaram e perderam o formato.
+- [x] **4. Emblemas da tampa traseira.** Concluído em 25/09 (V1prime-p, GEOMETRY `B1375C52…`), aprovado
+  no jogo. Letras do GTA removidas; FUSION (168 mm) e TITANIUM (181 mm) traçados das imagens oficiais,
+  cromados, 2,5 mm em relevo. Ver `versions/v1prime/variants/v1prime-p-emblems-ford/LEIA-ME.md`.
 - [ ] **5. Entradas de ar no teto.** Ao escolher uma entrada de ar na loja, ela não aparece no teto.
   Corrigir para que as opções possam ser instaladas e fiquem visíveis.
 - [ ] **6. Capô da loja.** Permitir trocar o capô pelos itens da loja, de forma que a peça escolhida
