@@ -27,7 +27,7 @@ carroceria inteira e pode fechar o jogo.
 - [x] **5. Entradas de ar no teto.** Concluído em 25/09 (V1prime-q, GEOMETRY `DD6212A8…`), aprovado no
   jogo. Criado o ponto de fixação `ROOF_SCOOP` (`90C81258`), que o doador não tinha, em x 0,300 / z 1,207 m,
   inclinado 6,5°. Ver `versions/v1prime/variants/v1prime-q-roof-scoop/LEIA-ME.md`.
-- [ ] **6. Capô da loja.** Permitir trocar o capô pelos itens da loja, de forma que a peça escolhida
+- [ ] **6. Capô da loja.** *(Em teste no jogo: V1prime-r, GEOMETRY `D2E9DB80…`: capô separado em `KIT00_HOOD_A–D` e criados os 17 capôs da loja `STYLExx_HOOD_A–D` (detalhes adaptados dos capôs do GTO). Ver `versions/v1prime/variants/v1prime-r-hoods/LEIA-ME.md`.)* Permitir trocar o capô pelos itens da loja, de forma que a peça escolhida
   substitua o capô padrão e apareça no carro.
 - [ ] **7. Suavidade da carroceria na traseira.** Corrigir os relevos e irregularidades perto do vidro
   traseiro (coluna C e tampa), sem alterar a UV da pintura.
@@ -43,7 +43,7 @@ carroceria inteira e pode fechar o jogo.
 - [ ] **10. Rodas originais do GTA.** Construir aro e pneu a partir de `source/fusion-2017-dev`
   e montar `KIT00_FRONT_TIRE_A–E`. O aro 18 é a roda padrão do Fusion e o tamanho mínimo:
   o jogo deve aceitar rodas de 18 até 22 polegadas.
-- [ ] **11. Kits de carroceria na loja.** Instalar um dos 2 kits disponíveis faz a carroceria inteira
+- [ ] **11. Kits de carroceria na loja.** Instalar um dos 2 kits disponíveis na loja faz a carroceria inteira
   sumir. Construir modelos para esses kits: pode ser uma réplica da carroceria padrão, diferente na
   peça instalada mas igual na forma, para a loja aceitar o kit sem apagar o carro. Alguns carros de adversários gerados aleatóriamente acabam aplicando kits de carroceria e são exibidos de forma invisível quebrando a imersão do jogo
 - [ ] **12. Refazer os vidros.** Anteriormente, adicionamos multiplas camadas de vidro para tentar melhorar
