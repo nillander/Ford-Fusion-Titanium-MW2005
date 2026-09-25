@@ -493,3 +493,6 @@
 /versions/v1prime/variants/v1prime-n-emblems-ford/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/variants/v1prime-o-emblems-ford/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/variants/v1prime-p-emblems-ford/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-q/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-q/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-q-roof-scoop/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
