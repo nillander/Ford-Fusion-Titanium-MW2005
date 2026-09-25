@@ -1,7 +1,7 @@
-# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-z3)
+# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-z8)
 
-Ponto de partida seguro: `versions/checkpoint-v1prime-z3` (GEOMETRY `8D9BE4F9…`, TEXTURES `EEBB0B83…`, ATTRIBUTES.MWPS `3BE53CF9…`, SECONDARYLOGO.BIN `E4721014…`).
-Checkpoints anteriores: `checkpoint-v1prime-z2` (`B12D0E90…`), `checkpoint-v1prime-y` (`A8DA8897…`), `checkpoint-v1prime-u` (`CD41C016…`), `checkpoint-v1prime-s` (`2F66D3D2…`), `checkpoint-v1prime-q` (`DD6212A8…`), `checkpoint-v1prime-p` (`B1375C52…`), `checkpoint-v1prime-l` (`695DC7F7…`), `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
+Ponto de partida seguro: `versions/checkpoint-v1prime-z8` (GEOMETRY `FC6C27FA…`, TEXTURES `EEBB0B83…`, ATTRIBUTES.MWPS `3BE53CF9…`, SECONDARYLOGO.BIN `E4721014…`).
+Checkpoints anteriores: `checkpoint-v1prime-z3` (`8D9BE4F9…`), `checkpoint-v1prime-z2` (`B12D0E90…`), `checkpoint-v1prime-y` (`A8DA8897…`), `checkpoint-v1prime-u` (`CD41C016…`), `checkpoint-v1prime-s` (`2F66D3D2…`), `checkpoint-v1prime-q` (`DD6212A8…`), `checkpoint-v1prime-p` (`B1375C52…`), `checkpoint-v1prime-l` (`695DC7F7…`), `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
 Toda tarefa deve partir dele. Depois de pronta, testar **abrindo o jogo com o save ZHABES (que tem o
 adesivo da Dinamarca)** antes de ser dada como concluída.
 
@@ -37,7 +37,7 @@ carroceria inteira e pode fechar o jogo.
   aprovado no jogo com o adesivo da Dinamarca (`versions/v1prime/in-game/v1prime-g-vinyl-denmark-ok.png`).
   O mapa da pintura nas laterais foi endireitado com uma correção suave; o resto do carro ficou idêntico.
   Ver `versions/v1prime/variants/v1prime-g-door-uv/LEIA-ME.md`.
-- [ ] **9. Refino dos encaixes da carroceria.** *(Em teste no jogo: V1prime-z8 — frente do lado do motorista (+y) espelhada do passageiro, peças escuras removidas do vão do capô e piso pintado sob o capô; lábio inferior do para-choque dianteiro ainda ondulado (malha original); ver `versions/v1prime/variants/v1prime-z8-fender-hoodgap/LEIA-ME.md`. A z7 foi descartada: espelhou o lado errado.)* Perto das junções aparecem manchas negras, um
+- [x] **9. Refino dos encaixes da carroceria.** *(Aprovado no jogo: V1prime-z8 — camada de fundo pintada, frente do motorista espelhada do passageiro, vão do capô fechado; ver `versions/v1prime/variants/v1prime-z8-fender-hoodgap/LEIA-ME.md`.)* Perto das junções aparecem manchas negras, um
   escurecimento da pintura. O para-lama dianteiro fica escuro na conexão com o para-choque, o farol
   e a porta. A hipótese é que triângulos e retângulos da geometria não se encontram e deixam fresta
   ou normal errada; conferir na carroceria inteira, começando por `Screenshot_146.png`, e polir só
@@ -46,7 +46,7 @@ carroceria inteira e pode fechar o jogo.
   lida do `fusion_hi.yft`, toda em metal usinado (tom médio, textura DXT1); aro 18" via `RIM_SIZE` 18 e
   `ASPECT_RATIO` 40 (mesmo diâmetro de pneu). O MW só tem rodas de loja de 17 a 20" e não oferece escolha
   de tamanho. Ver `versions/v1prime/variants/v1prime-v-gta-wheel/`, `-w-rim18/`, `-x-wheel-uniform/`, `-y-wheel-darker/`.
-- [ ] **11. Kits de carroceria na loja.** *(Em teste no jogo: V1prime-z7, kits "Street" e "Race" encaixados nos para-choques.)* Instalar um dos 2 kits disponíveis na loja faz a carroceria inteira
+- [x] **11. Kits de carroceria na loja.** *(Aprovado no jogo: V1prime-z8, kits "Street" e "Race" encaixados nos para-choques.)* Instalar um dos 2 kits disponíveis na loja faz a carroceria inteira
   sumir. Construir modelos para esses kits: pode ser uma réplica da carroceria padrão, diferente na
   peça instalada mas igual na forma, para a loja aceitar o kit sem apagar o carro. Alguns carros de adversários gerados aleatóriamente acabam aplicando kits de carroceria e são exibidos de forma invisível quebrando a imersão do jogo
 - [x] **12. Refazer os vidros.** *(Aprovado no jogo: V1prime-z, uma camada WINDSHIELD por janela; ver `versions/v1prime/variants/v1prime-z-glass-handling-logo/LEIA-ME.md`.)* Anteriormente, adicionamos multiplas camadas de vidro para tentar melhorar
@@ -54,20 +54,21 @@ carroceria inteira e pode fechar o jogo.
   perdemos a visibilidade interna do veículo, acredito que esse problema poderia ter sido solucionado de outra forma
   deveria ser um problema de textura incorreta assim como tivemos nas lanternas e faróis.
 - [x] **13. Dirigibilidade.** *(Aprovado no jogo: V1prime-z2, chassi, peso e aderência do Mustang GT; ver `versions/v1prime/variants/v1prime-z2-handling-logo/LEIA-ME.md`.)* Está muito sensível para fazer curvas, um leve toque no direcional faz o veículo girar. Procure um veículo compatível grande que tenha boa dirigibilidade
-- [ ] **14. Suavidade no veículo.** *(Em teste no jogo: V1prime-z8, junto com o item 9.)* Vide item 8, existem ondulações no veículo, principalmente entre peças de encaixe, como entre o paralamas e portas, ou entre portas e parachoques, já foi ajustado anteriormente o encaixe de uma porta com a outra, mas ainda é necessário um refino completo no veículo para trazer uma suavidade por completo, de forma que comporte-se como os outros veículos, parecendo ser quase uma peça única
+- [x] **14. Suavidade no veículo.** *(Aprovado no jogo: V1prime-z8, junto com o item 9.)* Vide item 8, existem ondulações no veículo, principalmente entre peças de encaixe, como entre o paralamas e portas, ou entre portas e parachoques, já foi ajustado anteriormente o encaixe de uma porta com a outra, mas ainda é necessário um refino completo no veículo para trazer uma suavidade por completo, de forma que comporte-se como os outros veículos, parecendo ser quase uma peça única
 - [x] **15. Identidade visual.** *(Aprovado no jogo: V1prime-z3, logo menor com espaço nas laterais; ver `versions/v1prime/variants/v1prime-z3-logo-nitro/LEIA-ME.md`.)* Trocar o logotipo "FUSION" exibido nas telas do jogo (ex.: "Meus carros",
   canto superior direito) pelo logo de `assets/nao-usar/ford-fusion-seeklogo.png`.
 - [x] **16. Chama do nitro.** *(Aprovado no jogo: V1prime-z3, pontos LEFT/RIGHT_EXHAUST no centro das saídas; ver `versions/v1prime/variants/v1prime-z3-logo-nitro/LEIA-ME.md`.)* O efeito de nitro/NOS exibe fogo saindo do escapamento, mas não está
   alinhado com a saída do escapamento do Fusion.
 - [ ] **17. Câmera interna.** *(Não resolvido: a câmera "capô" parece ficar dentro da entrada de ar do teto instalada; falta descobrir onde o jogo define essa posição. Testar sem a entrada de ar do teto.)* Na visualização pela câmera de dentro do veículo não aparece textura,
   só alguns itens pretos.
-- [ ] **18. Adesivos (vinis) que não aparecem.** *(Em teste no jogo: V1prime-z7; ver `versions/v1prime/variants/v1prime-z7-fixes/LEIA-ME.md`.)* Os adesivos de porta, do para-brisa dianteiro, do para-brisa
+- [x] **18. Adesivos (vinis) que não aparecem.** *(Aprovado no jogo: V1prime-z8, peças DECAL_* trazidas do GTO; ver `versions/v1prime/variants/v1prime-z6-final-refine/LEIA-ME.md`.)* Os adesivos de porta, do para-brisa dianteiro, do para-brisa
   traseiro e os números de porta não são exibidos.
-- [ ] **19. Novos kits de carroceria.** *(Em teste no jogo: V1prime-z7; ver `versions/v1prime/variants/v1prime-z7-fixes/LEIA-ME.md`.)* Gerar kits baseados em outros kits do jogo para ter mais uma opção
+- [x] **19. Novos kits de carroceria.** *(Aprovado no jogo: V1prime-z8, kits "Street" e "Race".)* Gerar kits baseados em outros kits do jogo para ter mais uma opção
   de customização (hoje os kits 01 e 02 são cópias da carroceria padrão).
-- [ ] **20. Galeria de imagens do projeto (último item).** Salvar todas as imagens usadas no projeto e vistas
+- [x] **20. Galeria de imagens do projeto (último item).** *(Feita em `docs/imagens-projeto/`, 18 etapas, 289 imagens.)* Salvar todas as imagens usadas no projeto e vistas
   pelo Claude num diretório organizado, com README explicando cada etapa (antes/depois da suavidade, renders 3D
   para mapear peças, antena tubarão etc.). *(Feito até a V1prime-z7 em `docs/imagens-projeto/`, 17 etapas, 265 imagens; completar se houver novos ajustes.)*
 
-Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005_v1prime-z8.zip` (visual, performance e
-dirigibilidade da V1prime-z8; os zips `-z5`, `-z6` e `-z7` anteriores podem ser apagados).
+Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005_v1prime-z8.zip` (versão aprovada; visual, performance e dirigibilidade).
+Os zips `-z5`, `-z6` e `-z7` anteriores podem ser apagados.
+- [ ] **21. Parte de baixo do para-choque dianteiro.** *(Em teste no jogo: V1prime-z9; ver `versions/v1prime/variants/v1prime-z9-front-lip/LEIA-ME.md`.)* Última peça com marcas pretas depois da V1prime-z8.
