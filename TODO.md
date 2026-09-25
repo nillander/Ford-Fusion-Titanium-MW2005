@@ -1,7 +1,7 @@
-# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-g)
+# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-i)
 
-Ponto de partida seguro: `versions/checkpoint-v1prime-g` (GEOMETRY `EE2FFBAB…`, TEXTURES `BF9A0842…`).
-Checkpoint anterior: `versions/checkpoint-v1prime-d` (GEOMETRY `C8A2D660…`).
+Ponto de partida seguro: `versions/checkpoint-v1prime-i` (GEOMETRY `CD799ED4…`, TEXTURES `BF9A0842…`).
+Checkpoints anteriores: `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
 Toda tarefa deve partir dele. Depois de pronta, testar **abrindo o jogo com o save ZHABES (que tem o
 adesivo da Dinamarca)** antes de ser dada como concluída.
 
@@ -12,8 +12,9 @@ com o jogo fechado, nas duas rotas, conferindo o SHA-256.
 A ordem vai do menor deslocamento de uma peça já existente até a geometria que reexporta a
 carroceria inteira e pode fechar o jogo.
 
-- [ ] **1. Altura do aerofólio.** O aerofólio está um pouco alto demais. Abaixar só um pouco, sem
-  mudar o formato.
+- [x] **1. Altura do aerofólio.** Concluído em 25/09 (V1prime-i, GEOMETRY `CD799ED4…`), aprovado no jogo.
+  O "aerofólio" é a asa da loja: o ponto de fixação `SPOILER` (herdado do Mustang) estava 8 cm acima
+  da tampa e foi para x −2,150 / z 0,868 m. Ver `versions/v1prime/variants/v1prime-i-spoiler-mount/LEIA-ME.md`.
 - [ ] **2. Brake light.** A luz de freio está na tampa traseira. Mover para cima, no início (topo) do vidro
   traseiro.
 - [ ] **3. Antena.** Remover a antena tipo para-raios do teto (em `BASE_A`, perto de x ≈ −1,06 m)
@@ -41,3 +42,7 @@ carroceria inteira e pode fechar o jogo.
 - [ ] **11. Kits de carroceria na loja.** Instalar um dos 2 kits disponíveis faz a carroceria inteira
   sumir. Construir modelos para esses kits: pode ser uma réplica da carroceria padrão, diferente na
   peça instalada mas igual na forma, para a loja aceitar o kit sem apagar o carro.
+- [ ] **12. Refazer os vidros.** Anteriormente, adicionamos multiplas camadas de vidro para tentar melhorar
+  a visualização dos vidros do veículo, isso fez os insufilmes (películas do vidro) aparecerem mas por outro lado
+  perdemos a visibilidade interna do veículo, acredito que esse problema poderia ter sido solucionado de outra forma
+  deveria ser um problema de textura incorreta assim como tivemos nas lanternas e faróis.

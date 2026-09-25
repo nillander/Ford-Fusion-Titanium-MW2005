@@ -476,3 +476,7 @@
 /versions/checkpoint-v1prime-g/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/checkpoint-v1prime-g/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/in-game/v1prime-g-vinyl-denmark-ok.png filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-i/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-i/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-h-spoiler/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-i-spoiler-mount/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
