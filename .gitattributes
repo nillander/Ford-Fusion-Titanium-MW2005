@@ -510,3 +510,6 @@
 /versions/v1prime/variants/v1prime-v-gta-wheel/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/variants/v1prime-x-wheel-uniform/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/variants/v1prime-y-wheel-darker/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-z2/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-z2/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-z-glass-handling-logo/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
