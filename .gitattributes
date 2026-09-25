@@ -528,3 +528,4 @@
 /versions/v1prime/variants/v1prime-z8-fender-hoodgap/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/checkpoint-v1prime-z8/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/checkpoint-v1prime-z8/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-z9-front-lip/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text

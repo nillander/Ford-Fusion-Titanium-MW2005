@@ -101,3 +101,9 @@ Suas capturas do teste da z7. Lado do motorista (+y, onde fica o `KIT00_DRIVER`)
 peças escuras no vão entre capô e para-choque (`hoodfront`: azul = peça escura da base) e o vão fechado
 (`hf`), tentativas no lábio inferior do para-choque que foram descartadas (`lip*`), e simulações de câmera
 em perspectiva usadas para procurar a posição da câmera "capô" (`cams`). Resultado V1prime-z8.
+
+## 18-parachoque-inferior (25/09)
+Investigação das marcas pretas na parte de baixo do para-choque dianteiro: vistas de frente/baixo com carroceria
+branca e demais peças pretas ou coloridas (`lower`), a malha original em perfil e de frente mostrando os
+triângulos grandes dobrados (`lipgeo_*`), render com luz vinda de cima como no jogo antes/depois (`gl_*`,
+`g3_*`, `g4_*`, `c3`, `c4`, `gl_cmp*`) e reflexo em faixas (`sl_*`, `sb_*`, `s3_*`, `slcmp`). Resultado V1prime-z9.
