@@ -497,3 +497,6 @@
 /versions/checkpoint-v1prime-q/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/variants/v1prime-q-roof-scoop/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/variants/v1prime-r-hoods/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-s/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-s/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-s-hoods/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text

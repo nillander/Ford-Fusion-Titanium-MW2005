@@ -1,7 +1,7 @@
-# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-q)
+# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-s)
 
-Ponto de partida seguro: `versions/checkpoint-v1prime-q` (GEOMETRY `DD6212A8…`, TEXTURES `BF9A0842…`).
-Checkpoints anteriores: `checkpoint-v1prime-p` (`B1375C52…`), `checkpoint-v1prime-l` (`695DC7F7…`), `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
+Ponto de partida seguro: `versions/checkpoint-v1prime-s` (GEOMETRY `2F66D3D2…`, TEXTURES `BF9A0842…`).
+Checkpoints anteriores: `checkpoint-v1prime-q` (`DD6212A8…`), `checkpoint-v1prime-p` (`B1375C52…`), `checkpoint-v1prime-l` (`695DC7F7…`), `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
 Toda tarefa deve partir dele. Depois de pronta, testar **abrindo o jogo com o save ZHABES (que tem o
 adesivo da Dinamarca)** antes de ser dada como concluída.
 
@@ -27,8 +27,9 @@ carroceria inteira e pode fechar o jogo.
 - [x] **5. Entradas de ar no teto.** Concluído em 25/09 (V1prime-q, GEOMETRY `DD6212A8…`), aprovado no
   jogo. Criado o ponto de fixação `ROOF_SCOOP` (`90C81258`), que o doador não tinha, em x 0,300 / z 1,207 m,
   inclinado 6,5°. Ver `versions/v1prime/variants/v1prime-q-roof-scoop/LEIA-ME.md`.
-- [ ] **6. Capô da loja.** *(Em teste no jogo: V1prime-r, GEOMETRY `D2E9DB80…`: capô separado em `KIT00_HOOD_A–D` e criados os 17 capôs da loja `STYLExx_HOOD_A–D` (detalhes adaptados dos capôs do GTO). Ver `versions/v1prime/variants/v1prime-r-hoods/LEIA-ME.md`.)* Permitir trocar o capô pelos itens da loja, de forma que a peça escolhida
-  substitua o capô padrão e apareça no carro.
+- [x] **6. Capô da loja.** Concluído em 25/09 (V1prime-s, GEOMETRY `2F66D3D2…`), aprovado no jogo. Capô
+  separado da carroceria em `KIT00_HOOD_A–D`; criados os 17 capôs da loja `STYLExx_HOOD_A–D` (capô do
+  Fusion + detalhes dos capôs do GTO). Ver `versions/v1prime/variants/v1prime-s-hoods/LEIA-ME.md`.
 - [ ] **7. Suavidade da carroceria na traseira.** Corrigir os relevos e irregularidades perto do vidro
   traseiro (coluna C e tampa), sem alterar a UV da pintura.
 - [x] **8. Portas: deformação dos adesivos.** Concluído em 25/09 (V1prime-g, GEOMETRY `EE2FFBAB…`),
