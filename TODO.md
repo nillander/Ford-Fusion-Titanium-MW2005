@@ -1,7 +1,7 @@
-# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-i)
+# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-j)
 
-Ponto de partida seguro: `versions/checkpoint-v1prime-i` (GEOMETRY `CD799ED4…`, TEXTURES `BF9A0842…`).
-Checkpoints anteriores: `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
+Ponto de partida seguro: `versions/checkpoint-v1prime-j` (GEOMETRY `97803AD8…`, TEXTURES `BF9A0842…`).
+Checkpoints anteriores: `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
 Toda tarefa deve partir dele. Depois de pronta, testar **abrindo o jogo com o save ZHABES (que tem o
 adesivo da Dinamarca)** antes de ser dada como concluída.
 
@@ -15,8 +15,9 @@ carroceria inteira e pode fechar o jogo.
 - [x] **1. Altura do aerofólio.** Concluído em 25/09 (V1prime-i, GEOMETRY `CD799ED4…`), aprovado no jogo.
   O "aerofólio" é a asa da loja: o ponto de fixação `SPOILER` (herdado do Mustang) estava 8 cm acima
   da tampa e foi para x −2,150 / z 0,868 m. Ver `versions/v1prime/variants/v1prime-i-spoiler-mount/LEIA-ME.md`.
-- [ ] **2. Brake light.** A luz de freio está na tampa traseira. Mover para cima, no início (topo) do vidro
-  traseiro.
+- [x] **2. Brake light.** Concluído em 25/09 (V1prime-j, GEOMETRY `97803AD8…`), aprovado no jogo.
+  O ponto `CENTRE_BRAKELIGHT` (herdado do Mustang, na tampa) foi para x −1,170 / z 1,172 m, no topo do
+  vidro traseiro. Ver `versions/v1prime/variants/v1prime-j-centre-brakelight/LEIA-ME.md`.
 - [ ] **3. Antena.** Remover a antena tipo para-raios do teto (em `BASE_A`, perto de x ≈ −1,06 m)
   e colocar uma antena tubarão na mesma posição.
 - [ ] **4. Emblemas da tampa traseira.** Refazer `FUSION` (lado esquerdo) e `TITANIUM` (lado direito),

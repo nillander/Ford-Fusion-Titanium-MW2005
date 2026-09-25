@@ -480,3 +480,6 @@
 /versions/checkpoint-v1prime-i/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/variants/v1prime-h-spoiler/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/variants/v1prime-i-spoiler-mount/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-j/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/checkpoint-v1prime-j/MUSTANGGT/TEXTURES.BIN filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-j-centre-brakelight/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
