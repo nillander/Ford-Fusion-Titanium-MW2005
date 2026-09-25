@@ -71,4 +71,4 @@ carroceria inteira e pode fechar o jogo.
 
 Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005_v1prime-z8.zip` (versão aprovada; visual, performance e dirigibilidade).
 Os zips `-z5`, `-z6` e `-z7` anteriores podem ser apagados.
-- [ ] **21. Parte de baixo do para-choque dianteiro.** *(Em teste no jogo: V1prime-z9; ver `versions/v1prime/variants/v1prime-z9-front-lip/LEIA-ME.md`.)* Última peça com marcas pretas depois da V1prime-z8.
+- [ ] **21. Parte de baixo do para-choque dianteiro.** *(Em teste no jogo: V1prime-z10 — parte de baixo refeita numa superfície única, sem o degrau do meio; ver `versions/v1prime/variants/v1prime-z10-front-lip/LEIA-ME.md`. A z9 melhorou mas deixou marcas nas laterais e o relevo no meio.)* Última peça com marcas pretas depois da V1prime-z8.
