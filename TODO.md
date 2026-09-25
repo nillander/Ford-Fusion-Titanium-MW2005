@@ -1,7 +1,7 @@
-# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-j)
+# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-l)
 
-Ponto de partida seguro: `versions/checkpoint-v1prime-j` (GEOMETRY `97803AD8…`, TEXTURES `BF9A0842…`).
-Checkpoints anteriores: `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
+Ponto de partida seguro: `versions/checkpoint-v1prime-l` (GEOMETRY `695DC7F7…`, TEXTURES `BF9A0842…`).
+Checkpoints anteriores: `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
 Toda tarefa deve partir dele. Depois de pronta, testar **abrindo o jogo com o save ZHABES (que tem o
 adesivo da Dinamarca)** antes de ser dada como concluída.
 
@@ -18,8 +18,9 @@ carroceria inteira e pode fechar o jogo.
 - [x] **2. Brake light.** Concluído em 25/09 (V1prime-j, GEOMETRY `97803AD8…`), aprovado no jogo.
   O ponto `CENTRE_BRAKELIGHT` (herdado do Mustang, na tampa) foi para x −1,170 / z 1,172 m, no topo do
   vidro traseiro. Ver `versions/v1prime/variants/v1prime-j-centre-brakelight/LEIA-ME.md`.
-- [ ] **3. Antena.** Remover a antena tipo para-raios do teto (em `BASE_A`, perto de x ≈ −1,06 m)
-  e colocar uma antena tubarão na mesma posição.
+- [x] **3. Antena.** Concluído em 25/09 (V1prime-l, GEOMETRY `695DC7F7…`), aprovado no jogo. Antena
+  para-raios removida; antena tubarão arredondada de 196 × 96 × 61 mm no grupo da pintura (cor do carro).
+  Ver `versions/v1prime/variants/v1prime-l-sharkfin-body/LEIA-ME.md`.
 - [ ] **4. Emblemas da tampa traseira.** Refazer `FUSION` (lado esquerdo) e `TITANIUM` (lado direito),
   que se deformaram e perderam o formato.
 - [ ] **5. Entradas de ar no teto.** Ao escolher uma entrada de ar na loja, ela não aparece no teto.
@@ -47,3 +48,5 @@ carroceria inteira e pode fechar o jogo.
   a visualização dos vidros do veículo, isso fez os insufilmes (películas do vidro) aparecerem mas por outro lado
   perdemos a visibilidade interna do veículo, acredito que esse problema poderia ter sido solucionado de outra forma
   deveria ser um problema de textura incorreta assim como tivemos nas lanternas e faróis.
+- [ ] **13. Dirigibilidade.** Está muito sensível para fazer curvas, um leve toque no direcional faz o veículo girar. Procure um veículo compatível grande que tenha boa dirigibilidade
+- [ ] **14. Suavidade no veículo.** Vide item 8, existem ondulações no veículo, principalmente entre peças de encaixe, como entre o paralamas e portas, ou entre portas e parachoques, já foi ajustado anteriormente o encaixe de uma porta com a outra, mas ainda é necessário um refino completo no veículo para trazer uma suavidade por completo, de forma que comporte-se como os outros veículos, parecendo ser quase uma peça única
