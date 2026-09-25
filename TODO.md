@@ -37,7 +37,7 @@ carroceria inteira e pode fechar o jogo.
   aprovado no jogo com o adesivo da Dinamarca (`versions/v1prime/in-game/v1prime-g-vinyl-denmark-ok.png`).
   O mapa da pintura nas laterais foi endireitado com uma correção suave; o resto do carro ficou idêntico.
   Ver `versions/v1prime/variants/v1prime-g-door-uv/LEIA-ME.md`.
-- [ ] **9. Refino dos encaixes da carroceria.** *(Em teste no jogo: V1prime-z4; ver `versions/v1prime/variants/v1prime-z4-smooth-kits/LEIA-ME.md`.)* Perto das junções aparecem manchas negras, um
+- [ ] **9. Refino dos encaixes da carroceria.** *(Em teste no jogo: V1prime-z5, refino com camada de fundo em toda a carroceria; ver `versions/v1prime/variants/v1prime-z5-backing-details/LEIA-ME.md`. Base: V1prime-z4.)* Perto das junções aparecem manchas negras, um
   escurecimento da pintura. O para-lama dianteiro fica escuro na conexão com o para-choque, o farol
   e a porta. A hipótese é que triângulos e retângulos da geometria não se encontram e deixam fresta
   ou normal errada; conferir na carroceria inteira, começando por `Screenshot_146.png`, e polir só
@@ -46,7 +46,7 @@ carroceria inteira e pode fechar o jogo.
   lida do `fusion_hi.yft`, toda em metal usinado (tom médio, textura DXT1); aro 18" via `RIM_SIZE` 18 e
   `ASPECT_RATIO` 40 (mesmo diâmetro de pneu). O MW só tem rodas de loja de 17 a 20" e não oferece escolha
   de tamanho. Ver `versions/v1prime/variants/v1prime-v-gta-wheel/`, `-w-rim18/`, `-x-wheel-uniform/`, `-y-wheel-darker/`.
-- [ ] **11. Kits de carroceria na loja.** *(Em teste no jogo: V1prime-z4; ver `versions/v1prime/variants/v1prime-z4-smooth-kits/LEIA-ME.md`.)* Instalar um dos 2 kits disponíveis na loja faz a carroceria inteira
+- [ ] **11. Kits de carroceria na loja.** *(Em teste no jogo desde a V1prime-z4, kits = cópia da carroceria; ver `versions/v1prime/variants/v1prime-z4-smooth-kits/LEIA-ME.md`.)* Instalar um dos 2 kits disponíveis na loja faz a carroceria inteira
   sumir. Construir modelos para esses kits: pode ser uma réplica da carroceria padrão, diferente na
   peça instalada mas igual na forma, para a loja aceitar o kit sem apagar o carro. Alguns carros de adversários gerados aleatóriamente acabam aplicando kits de carroceria e são exibidos de forma invisível quebrando a imersão do jogo
 - [x] **12. Refazer os vidros.** *(Aprovado no jogo: V1prime-z, uma camada WINDSHIELD por janela; ver `versions/v1prime/variants/v1prime-z-glass-handling-logo/LEIA-ME.md`.)* Anteriormente, adicionamos multiplas camadas de vidro para tentar melhorar
@@ -54,10 +54,21 @@ carroceria inteira e pode fechar o jogo.
   perdemos a visibilidade interna do veículo, acredito que esse problema poderia ter sido solucionado de outra forma
   deveria ser um problema de textura incorreta assim como tivemos nas lanternas e faróis.
 - [x] **13. Dirigibilidade.** *(Aprovado no jogo: V1prime-z2, chassi, peso e aderência do Mustang GT; ver `versions/v1prime/variants/v1prime-z2-handling-logo/LEIA-ME.md`.)* Está muito sensível para fazer curvas, um leve toque no direcional faz o veículo girar. Procure um veículo compatível grande que tenha boa dirigibilidade
-- [ ] **14. Suavidade no veículo.** *(Em teste no jogo: V1prime-z4; ver `versions/v1prime/variants/v1prime-z4-smooth-kits/LEIA-ME.md`.)* Vide item 8, existem ondulações no veículo, principalmente entre peças de encaixe, como entre o paralamas e portas, ou entre portas e parachoques, já foi ajustado anteriormente o encaixe de uma porta com a outra, mas ainda é necessário um refino completo no veículo para trazer uma suavidade por completo, de forma que comporte-se como os outros veículos, parecendo ser quase uma peça única
+- [ ] **14. Suavidade no veículo.** *(Em teste no jogo: V1prime-z5, refino com camada de fundo em toda a carroceria; ver `versions/v1prime/variants/v1prime-z5-backing-details/LEIA-ME.md`. Base: V1prime-z4.)* Vide item 8, existem ondulações no veículo, principalmente entre peças de encaixe, como entre o paralamas e portas, ou entre portas e parachoques, já foi ajustado anteriormente o encaixe de uma porta com a outra, mas ainda é necessário um refino completo no veículo para trazer uma suavidade por completo, de forma que comporte-se como os outros veículos, parecendo ser quase uma peça única
 - [x] **15. Identidade visual.** *(Aprovado no jogo: V1prime-z3, logo menor com espaço nas laterais; ver `versions/v1prime/variants/v1prime-z3-logo-nitro/LEIA-ME.md`.)* Trocar o logotipo "FUSION" exibido nas telas do jogo (ex.: "Meus carros",
   canto superior direito) pelo logo de `assets/nao-usar/ford-fusion-seeklogo.png`.
 - [x] **16. Chama do nitro.** *(Aprovado no jogo: V1prime-z3, pontos LEFT/RIGHT_EXHAUST no centro das saídas; ver `versions/v1prime/variants/v1prime-z3-logo-nitro/LEIA-ME.md`.)* O efeito de nitro/NOS exibe fogo saindo do escapamento, mas não está
   alinhado com a saída do escapamento do Fusion.
 - [ ] **17. Câmera interna.** Na visualização pela câmera de dentro do veículo não aparece textura,
   só alguns itens pretos.
+- [ ] **18. Adesivos (vinis) que não aparecem.** Os adesivos de porta, do para-brisa dianteiro, do para-brisa
+  traseiro e os números de porta não são exibidos.
+- [ ] **19. Novos kits de carroceria.** Gerar kits baseados em outros kits do jogo para ter mais uma opção
+  de customização (hoje os kits 01 e 02 são cópias da carroceria padrão).
+- [ ] **20. Galeria de imagens do projeto (último item).** Salvar todas as imagens usadas no projeto e vistas
+  pelo Claude num diretório organizado, com README explicando cada etapa (antes/depois da suavidade, renders 3D
+  para mapear peças, antena tubarão etc.). *(Feito até a V1prime-z5 em `docs/imagens-projeto/`; completar ao
+  terminar os demais itens.)*
+
+Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005_v1prime-z5.zip` (visual, performance e
+dirigibilidade da V1prime-z5; gerar de novo ao fechar os itens pendentes).

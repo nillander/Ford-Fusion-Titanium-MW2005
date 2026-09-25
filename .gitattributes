@@ -518,3 +518,5 @@
 /versions/v1prime/variants/v1prime-z3-logo-nitro/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /Screenshot_147.png filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/variants/v1prime-z4-smooth-kits/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/release/Fusion2018_AWD_MW2005_v1prime-z5.zip filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-z5-backing-details/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
