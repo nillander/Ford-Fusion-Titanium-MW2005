@@ -1,0 +1,34 @@
+{
+  "ATTRIBUTES.MWPS": {
+    "bytes": 21448,
+    "sha256": "1a5ae8c5ed8a7c3af2f71318089df24b4f40c6077f30c5440bc9c19ab3ceeb7c"
+  },
+  "CAR.INI": {
+    "bytes": 89,
+    "sha256": "718bd3ac6d1bf60e631137744e1454451442ecb5007f82663b9fccdf37882f5d"
+  },
+  "FE.MWPS": {
+    "bytes": 566,
+    "sha256": "5e60b4f0c62d6ea04263209bce42434991989113c59445884e66d57a693185b4"
+  },
+  "GEOMETRY.BIN": {
+    "bytes": 9211904,
+    "sha256": "af3726eb6b24a894d56a4f4a6ef9c296eb8036e4da0d6f2bdb516aeb4d6f694c"
+  },
+  "SECONDARYLOGO.BIN": {
+    "bytes": 17152,
+    "sha256": "b6741166500cfd250c803d48d6aa5b9090861d8b2a5633d02636b464266f6016"
+  },
+  "SECONDARYLOGO.BIN.pre-fusion-titanium.bak": {
+    "bytes": 17152,
+    "sha256": "b6741166500cfd250c803d48d6aa5b9090861d8b2a5633d02636b464266f6016"
+  },
+  "TEXTURES.BIN": {
+    "bytes": 6425600,
+    "sha256": "54869ac551d1633227170c5815c6e0b553231613aa059b94b3e84d26aa5de198"
+  },
+  "VINYLS.BIN": {
+    "bytes": 1986560,
+    "sha256": "1a721acee2d5d68f7cacbeaedb037c761fa178affa3072c34c18d12b703bf342"
+  }
+}

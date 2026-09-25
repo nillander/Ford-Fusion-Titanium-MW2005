@@ -1,0 +1,1659 @@
+{
+  "reader": "NFSTools/NFS-ModTools MostWantedSolidReader",
+  "parts": [
+    {
+      "name": "FORDGT_BASE_A",
+      "hash": 1644949663,
+      "triangles": 26048,
+      "vertices": 28021,
+      "materials": 6
+    },
+    {
+      "name": "FORDGT_BASE_B",
+      "hash": 1644949664,
+      "triangles": 13022,
+      "vertices": 16874,
+      "materials": 6
+    },
+    {
+      "name": "FORDGT_BASE_C",
+      "hash": 1644949665,
+      "triangles": 5728,
+      "vertices": 8312,
+      "materials": 5
+    },
+    {
+      "name": "FORDGT_BASE_D",
+      "hash": 1644949666,
+      "triangles": 3106,
+      "vertices": 4913,
+      "materials": 5
+    },
+    {
+      "name": "FORDGT_DECAL_FRONT_WINDOW_WIDE_MEDIUM_A",
+      "hash": 1853982436,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_DECAL_REAR_WINDOW_WIDE_MEDIUM_A",
+      "hash": 240812677,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_BODY_A",
+      "hash": 2229456345,
+      "triangles": 39967,
+      "vertices": 27743,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_BODY_B",
+      "hash": 2229456346,
+      "triangles": 19983,
+      "vertices": 17658,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_BODY_C",
+      "hash": 2229456347,
+      "triangles": 8792,
+      "vertices": 10334,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_BODY_D",
+      "hash": 2229456348,
+      "triangles": 3597,
+      "vertices": 5059,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_BODY_E",
+      "hash": 2229456349,
+      "triangles": 1598,
+      "vertices": 2634,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_FRONTLEFT_A",
+      "hash": 1089690669,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_FRONTLEFT_B",
+      "hash": 1089690670,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_FRONTLEFT_C",
+      "hash": 1089690671,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_FRONTRIGHT_A",
+      "hash": 916212256,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_FRONTRIGHT_B",
+      "hash": 916212257,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_FRONTRIGHT_C",
+      "hash": 916212258,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_FRONT_A",
+      "hash": 663918786,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_FRONT_B",
+      "hash": 663918787,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_FRONT_C",
+      "hash": 663918788,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_REARLEFT_A",
+      "hash": 2752955982,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_REARLEFT_B",
+      "hash": 2752955983,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_REARLEFT_C",
+      "hash": 2752955984,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_REARRIGHT_A",
+      "hash": 4264360033,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_REARRIGHT_B",
+      "hash": 4264360034,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_REARRIGHT_C",
+      "hash": 4264360035,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_REAR_A",
+      "hash": 343677539,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_REAR_B",
+      "hash": 343677540,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DAMAGE0_REAR_C",
+      "hash": 343677541,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DECAL_LEFT_DOOR_RECT_MEDIUM_A",
+      "hash": 518060046,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DECAL_LEFT_QUARTER_RECT_MEDIUM_A",
+      "hash": 1353461118,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DECAL_RIGHT_DOOR_RECT_MEDIUM_A",
+      "hash": 170980993,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DECAL_RIGHT_QUARTER_RECT_MEDIUM_A",
+      "hash": 958561041,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DRIVER_A",
+      "hash": 329620663,
+      "triangles": 1415,
+      "vertices": 1044,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DRIVER_C",
+      "hash": 329620665,
+      "triangles": 299,
+      "vertices": 326,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_BRAKE_A",
+      "hash": 2544941848,
+      "triangles": 412,
+      "vertices": 422,
+      "materials": 2
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_BRAKE_B",
+      "hash": 2544941849,
+      "triangles": 91,
+      "vertices": 103,
+      "materials": 2
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_BRAKE_C",
+      "hash": 2544941850,
+      "triangles": 75,
+      "vertices": 85,
+      "materials": 2
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_LEFT_WINDOW_A",
+      "hash": 2405719957,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_LEFT_WINDOW_B",
+      "hash": 2405719958,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_LEFT_WINDOW_C",
+      "hash": 2405719959,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_LEFT_WINDOW_D",
+      "hash": 2405719960,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_RIGHT_WINDOW_A",
+      "hash": 104233032,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_RIGHT_WINDOW_B",
+      "hash": 104233033,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_RIGHT_WINDOW_C",
+      "hash": 104233034,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_RIGHT_WINDOW_D",
+      "hash": 104233035,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_TIRE_A",
+      "hash": 4025251559,
+      "triangles": 1888,
+      "vertices": 1924,
+      "materials": 2
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_TIRE_B",
+      "hash": 4025251560,
+      "triangles": 1630,
+      "vertices": 1688,
+      "materials": 2
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_TIRE_C",
+      "hash": 4025251561,
+      "triangles": 1293,
+      "vertices": 1326,
+      "materials": 2
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_TIRE_D",
+      "hash": 4025251562,
+      "triangles": 48,
+      "vertices": 50,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_WINDOW_A",
+      "hash": 1480340555,
+      "triangles": 23986,
+      "vertices": 12872,
+      "materials": 2
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_WINDOW_B",
+      "hash": 1480340556,
+      "triangles": 11990,
+      "vertices": 6878,
+      "materials": 2
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_WINDOW_C",
+      "hash": 1480340557,
+      "triangles": 5276,
+      "vertices": 3326,
+      "materials": 2
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_WINDOW_D",
+      "hash": 1480340558,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_HOOD_A",
+      "hash": 2464641141,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_HOOD_B",
+      "hash": 2464641142,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_HOOD_C",
+      "hash": 2464641143,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_HOOD_D",
+      "hash": 2464641144,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_INTERIOR_A",
+      "hash": 4255160151,
+      "triangles": 18484,
+      "vertices": 20334,
+      "materials": 3
+    },
+    {
+      "name": "FORDGT_KIT00_INTERIOR_B",
+      "hash": 4255160152,
+      "triangles": 9242,
+      "vertices": 12074,
+      "materials": 3
+    },
+    {
+      "name": "FORDGT_KIT00_INTERIOR_C",
+      "hash": 4255160153,
+      "triangles": 4066,
+      "vertices": 6137,
+      "materials": 3
+    },
+    {
+      "name": "FORDGT_KIT00_INTERIOR_D",
+      "hash": 4255160154,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_BRAKELIGHT_A",
+      "hash": 2075656818,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_BRAKELIGHT_GLASS_A",
+      "hash": 630011403,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_BRAKELIGHT_GLASS_B",
+      "hash": 630011404,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_BRAKELIGHT_GLASS_C",
+      "hash": 630011405,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_BRAKELIGHT_GLASS_D",
+      "hash": 630011406,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_HEADLIGHT_A",
+      "hash": 1849871839,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_HEADLIGHT_B",
+      "hash": 1849871840,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_HEADLIGHT_C",
+      "hash": 1849871841,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_HEADLIGHT_D",
+      "hash": 1849871842,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_HEADLIGHT_GLASS_A",
+      "hash": 2354061112,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_HEADLIGHT_GLASS_B",
+      "hash": 2354061113,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_HEADLIGHT_GLASS_C",
+      "hash": 2354061114,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_HEADLIGHT_GLASS_D",
+      "hash": 2354061115,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_SIDE_MIRROR_A",
+      "hash": 3532682420,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_SIDE_MIRROR_B",
+      "hash": 3532682421,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_SIDE_MIRROR_C",
+      "hash": 3532682422,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_LEFT_SIDE_MIRROR_D",
+      "hash": 3532682423,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_REAR_BRAKE_A",
+      "hash": 2017054521,
+      "triangles": 473,
+      "vertices": 538,
+      "materials": 2
+    },
+    {
+      "name": "FORDGT_KIT00_REAR_BRAKE_B",
+      "hash": 2017054522,
+      "triangles": 88,
+      "vertices": 100,
+      "materials": 2
+    },
+    {
+      "name": "FORDGT_KIT00_REAR_BRAKE_C",
+      "hash": 2017054523,
+      "triangles": 72,
+      "vertices": 82,
+      "materials": 2
+    },
+    {
+      "name": "FORDGT_KIT00_REAR_WINDOW_A",
+      "hash": 1239927948,
+      "triangles": 16000,
+      "vertices": 8206,
+      "materials": 2
+    },
+    {
+      "name": "FORDGT_KIT00_REAR_WINDOW_B",
+      "hash": 1239927949,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_REAR_WINDOW_C",
+      "hash": 1239927950,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_REAR_WINDOW_D",
+      "hash": 1239927951,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_BRAKELIGHT_A",
+      "hash": 2108214181,
+      "triangles": 1996,
+      "vertices": 1109,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_BRAKELIGHT_GLASS_A",
+      "hash": 2869614974,
+      "triangles": 1495,
+      "vertices": 1292,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+      "hash": 2869614975,
+      "triangles": 747,
+      "vertices": 825,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_BRAKELIGHT_GLASS_C",
+      "hash": 2869614976,
+      "triangles": 328,
+      "vertices": 473,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_BRAKELIGHT_GLASS_D",
+      "hash": 2869614977,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_HEADLIGHT_A",
+      "hash": 2111159474,
+      "triangles": 2495,
+      "vertices": 1651,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_HEADLIGHT_B",
+      "hash": 2111159475,
+      "triangles": 1246,
+      "vertices": 929,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_HEADLIGHT_C",
+      "hash": 2111159476,
+      "triangles": 547,
+      "vertices": 459,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_HEADLIGHT_D",
+      "hash": 2111159477,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_HEADLIGHT_GLASS_A",
+      "hash": 2552078411,
+      "triangles": 1997,
+      "vertices": 1350,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+      "hash": 2552078412,
+      "triangles": 997,
+      "vertices": 791,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_HEADLIGHT_GLASS_C",
+      "hash": 2552078413,
+      "triangles": 439,
+      "vertices": 392,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_HEADLIGHT_GLASS_D",
+      "hash": 2552078414,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_SIDE_MIRROR_A",
+      "hash": 312108103,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_SIDE_MIRROR_B",
+      "hash": 312108104,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_SIDE_MIRROR_C",
+      "hash": 312108105,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_SIDE_MIRROR_D",
+      "hash": 312108106,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_SPOILER_A",
+      "hash": 857857193,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_SPOILER_B",
+      "hash": 857857194,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_SPOILER_C",
+      "hash": 857857195,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_BODY_A",
+      "hash": 1898226362,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_BODY_B",
+      "hash": 1898226363,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_BODY_C",
+      "hash": 1898226364,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_BODY_D",
+      "hash": 1898226365,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_BODY_E",
+      "hash": 1898226366,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_FRONTLEFT_A",
+      "hash": 2449495726,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_FRONTLEFT_B",
+      "hash": 2449495727,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_FRONTLEFT_C",
+      "hash": 2449495728,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_FRONTRIGHT_A",
+      "hash": 2840106177,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_FRONTRIGHT_B",
+      "hash": 2840106178,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_FRONTRIGHT_C",
+      "hash": 2840106179,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_FRONT_A",
+      "hash": 3127671491,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_FRONT_B",
+      "hash": 3127671492,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_FRONT_C",
+      "hash": 3127671493,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_REARLEFT_A",
+      "hash": 1883108527,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_REARLEFT_B",
+      "hash": 1883108528,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_REARLEFT_C",
+      "hash": 1883108529,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_REARRIGHT_A",
+      "hash": 1329197794,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_REARRIGHT_B",
+      "hash": 1329197795,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_REARRIGHT_C",
+      "hash": 1329197796,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_REAR_A",
+      "hash": 548487236,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_REAR_B",
+      "hash": 548487237,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DAMAGE0_REAR_C",
+      "hash": 548487238,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DECAL_LEFT_DOOR_RECT_MEDIUM_A",
+      "hash": 3953510351,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DECAL_LEFT_QUARTER_RECT_MEDIUM_A",
+      "hash": 2296148383,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DECAL_RIGHT_DOOR_RECT_MEDIUM_A",
+      "hash": 1871691362,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT01_DECAL_RIGHT_QUARTER_RECT_MEDIUM_A",
+      "hash": 2002469714,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_BODY_A",
+      "hash": 1566996379,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_BODY_B",
+      "hash": 1566996380,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_BODY_C",
+      "hash": 1566996381,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_BODY_D",
+      "hash": 1566996382,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_BODY_E",
+      "hash": 1566996383,
+      "triangles": 4,
+      "vertices": 8,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_FRONTLEFT_A",
+      "hash": 3809300783,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_FRONTLEFT_B",
+      "hash": 3809300784,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_FRONTLEFT_C",
+      "hash": 3809300785,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_FRONTRIGHT_A",
+      "hash": 469032802,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_FRONTRIGHT_B",
+      "hash": 469032803,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_FRONTRIGHT_C",
+      "hash": 469032804,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_FRONT_A",
+      "hash": 1296456900,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_FRONT_B",
+      "hash": 1296456901,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_FRONT_C",
+      "hash": 1296456902,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_REARLEFT_A",
+      "hash": 1013261072,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_REARLEFT_B",
+      "hash": 1013261073,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_REARLEFT_C",
+      "hash": 1013261074,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_REARRIGHT_A",
+      "hash": 2689002851,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_REARRIGHT_B",
+      "hash": 2689002852,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_REARRIGHT_C",
+      "hash": 2689002853,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_REAR_A",
+      "hash": 753296933,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_REAR_B",
+      "hash": 753296934,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DAMAGE0_REAR_C",
+      "hash": 753296935,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DECAL_LEFT_DOOR_RECT_MEDIUM_A",
+      "hash": 3093993360,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DECAL_LEFT_QUARTER_RECT_MEDIUM_A",
+      "hash": 3238835648,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DECAL_RIGHT_DOOR_RECT_MEDIUM_A",
+      "hash": 3572401731,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT02_DECAL_RIGHT_QUARTER_RECT_MEDIUM_A",
+      "hash": 3046378387,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE02_HOOD_A",
+      "hash": 485239520,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE02_HOOD_B",
+      "hash": 485239521,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE02_HOOD_C",
+      "hash": 485239522,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE02_HOOD_D",
+      "hash": 485239523,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE03_HOOD_A",
+      "hash": 154009537,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE03_HOOD_B",
+      "hash": 154009538,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE03_HOOD_C",
+      "hash": 154009539,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE03_HOOD_D",
+      "hash": 154009540,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE04_HOOD_A",
+      "hash": 4117746850,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE04_HOOD_B",
+      "hash": 4117746851,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE04_HOOD_C",
+      "hash": 4117746852,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE04_HOOD_D",
+      "hash": 4117746853,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE05_HOOD_A",
+      "hash": 3786516867,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE05_HOOD_B",
+      "hash": 3786516868,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE05_HOOD_C",
+      "hash": 3786516869,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE05_HOOD_D",
+      "hash": 3786516870,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE06_HOOD_A",
+      "hash": 3455286884,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE06_HOOD_B",
+      "hash": 3455286885,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE06_HOOD_C",
+      "hash": 3455286886,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE06_HOOD_D",
+      "hash": 3455286887,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE07_HOOD_A",
+      "hash": 3124056901,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE07_HOOD_B",
+      "hash": 3124056902,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE07_HOOD_C",
+      "hash": 3124056903,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE07_HOOD_D",
+      "hash": 3124056904,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE09_HOOD_A",
+      "hash": 2461596935,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE09_HOOD_B",
+      "hash": 2461596936,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE09_HOOD_C",
+      "hash": 2461596937,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE09_HOOD_D",
+      "hash": 2461596938,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE10_HOOD_A",
+      "hash": 3102011935,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE10_HOOD_B",
+      "hash": 3102011936,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE10_HOOD_C",
+      "hash": 3102011937,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE10_HOOD_D",
+      "hash": 3102011938,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE13_HOOD_A",
+      "hash": 2108321986,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE13_HOOD_B",
+      "hash": 2108321987,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE13_HOOD_C",
+      "hash": 2108321988,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE13_HOOD_D",
+      "hash": 2108321989,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE16_HOOD_A",
+      "hash": 1114632037,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE16_HOOD_B",
+      "hash": 1114632038,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE16_HOOD_C",
+      "hash": 1114632039,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE16_HOOD_D",
+      "hash": 1114632040,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE17_HOOD_A",
+      "hash": 783402054,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE17_HOOD_B",
+      "hash": 783402055,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE17_HOOD_C",
+      "hash": 783402056,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE17_HOOD_D",
+      "hash": 783402057,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE20_HOOD_A",
+      "hash": 761357088,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE20_HOOD_B",
+      "hash": 761357089,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE20_HOOD_C",
+      "hash": 761357090,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE20_HOOD_D",
+      "hash": 761357091,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE21_HOOD_A",
+      "hash": 430127105,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE21_HOOD_B",
+      "hash": 430127106,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE21_HOOD_C",
+      "hash": 430127107,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE21_HOOD_D",
+      "hash": 430127108,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE23_HOOD_A",
+      "hash": 4062634435,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE23_HOOD_B",
+      "hash": 4062634436,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE23_HOOD_C",
+      "hash": 4062634437,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE23_HOOD_D",
+      "hash": 4062634438,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE26_HOOD_A",
+      "hash": 3068944486,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE26_HOOD_B",
+      "hash": 3068944487,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE26_HOOD_C",
+      "hash": 3068944488,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE26_HOOD_D",
+      "hash": 3068944489,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE31_HOOD_A",
+      "hash": 2384439554,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE31_HOOD_B",
+      "hash": 2384439555,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE31_HOOD_C",
+      "hash": 2384439556,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE31_HOOD_D",
+      "hash": 2384439557,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE32_HOOD_A",
+      "hash": 2053209571,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE32_HOOD_B",
+      "hash": 2053209572,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE32_HOOD_C",
+      "hash": 2053209573,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_STYLE32_HOOD_D",
+      "hash": 2053209574,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_DRIVER_B",
+      "hash": 329620664,
+      "triangles": 995,
+      "vertices": 797,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_BRAKELIGHT_B",
+      "hash": 2108214182,
+      "triangles": 998,
+      "vertices": 607,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_BRAKELIGHT_C",
+      "hash": 2108214183,
+      "triangles": 438,
+      "vertices": 309,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_RIGHT_SIDE_MIRROR_E",
+      "hash": 312108107,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_FRONT_TIRE_E",
+      "hash": 4025251563,
+      "triangles": 48,
+      "vertices": 50,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_BASE_E",
+      "hash": 1644949667,
+      "triangles": 3106,
+      "vertices": 4913,
+      "materials": 5
+    },
+    {
+      "name": "FORDGT_KIT00_SPOILER_D",
+      "hash": 857857196,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    },
+    {
+      "name": "FORDGT_KIT00_SPOILER_E",
+      "hash": 857857197,
+      "triangles": 1,
+      "vertices": 3,
+      "materials": 1
+    }
+  ],
+  "triangles": 236764,
+  "passed": true
+}

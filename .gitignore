@@ -17,3 +17,6 @@ tools/mwgc/ReplaceBodySolids.exe
 tools/mwgc/ReplaceLampSolids.exe
 versions/*/variants/**/*.BIN
 versions/*/release/*.zip
+
+# Temporários da sessão com o Claude (apagar à mão)
+_to_delete/

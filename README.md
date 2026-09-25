@@ -1,15 +1,15 @@
 # Fusion Titanium 2018 para MW2005
 
-Estado atual: **V1prime-d aprovada no jogo** — aprendizados em [APRENDIZADOS_FUSION_MW2005.md](APRENDIZADOS_FUSION_MW2005.md). Versão: **V1prime** (a partir da vprime) — veja [versions/v1prime/STATUS.md](versions/v1prime/STATUS.md) e [versions/vprime/VPRIME.md](versions/vprime/VPRIME.md). A V3 fica em [versions/v3-fusion-ajm3899](versions/v3-fusion-ajm3899/STATUS.md).
-A performance instalada no slot MUSTANGGT é `slr-m3gtr`: potência da SLR, dirigibilidade do M3 GTR e curva aberta em alta. As três opções estão em [versions/performance](versions/performance/PERFORMANCE.md).
-V2 abaixo é histórica.
+**Versão final: V1prime-z10** (aprovada no jogo em 25/09/2026).
 
-Estado atual de V2 (Mustang Shelby, slot MUSTANGGT):
-[STATUS](versions/v2-mustang-shelby/STATUS.md) e
-[aprendizado sobre lanternas e faróis](versions/v2-mustang-shelby/reference/APRENDIZADO_LANTERNAS_FAROIS.md).
-Para reproduzir a correção de iluminação instalada, use
-`scripts/build_rear_lights_v2.ps1 -Install` com o jogo fechado.
-O fluxo `build.ps1` descrito abaixo pertence à compilação anterior.
+- Release única: [`release/Fusion2018_AWD_MW2005.zip`](release/) — instalação e créditos em [release/LEIA-ME.md](release/LEIA-ME.md).
+- Lista do que foi feito e aprovado: [TODO.md](TODO.md).
+- Aprendizados técnicos: [APRENDIZADOS_FUSION_MW2005.md](APRENDIZADOS_FUSION_MW2005.md) e os LEIA-ME de cada etapa em
+  [versions/v1prime/variants/](versions/v1prime/variants/) e [versions/](versions/LEIA-ME.md).
+- Galeria de imagens do projeto, etapa por etapa: [docs/imagens-projeto/](docs/imagens-projeto/README.md).
+- Primeira release de teste (v0.1, histórica): [docs/historico/release-v0.1/](docs/historico/release-v0.1/LEIA-ME.md).
+
+O conteúdo abaixo descreve o fluxo das versões anteriores (v0.1–v3) e fica como histórico.
 
 O projeto de transplante visual do Fusion Titanium 2018 para MW2005. O Fusion ocupa o slot MUSTANGGT e uma compilação `mwgc`+`MergeGeometry` no catálogo `donor/fordgt` ocupa o Ford GT. A SLR McLaren foi substituída pelo SLK55 AMG.
 
@@ -26,11 +26,10 @@ O script interrompe a execução quando alguma etapa retorna erro. Ele verifica 
 
 ## Arquivos
 
-- `release/FORDGT/`: visual Fusion no slot do Ford GT, mais o exemplo FordGT-EC.
 - `versions/performance/`: as três performances do Fusion no slot MUSTANGGT. A instalada é `slr-m3gtr`.
 - `scripts/apply_m3gtr_performance.py`: grava `slr-m3gtr` no jogo (potência da SLR, dirigibilidade do M3 GTR, curva aberta em alta).
 - `scripts/copy_slr_stats_to_mustang.py`: copia a performance inteira da SLR para o mustanggt. Essa cópia não é nenhuma das três opções guardadas.
-- `release/LEIA-ME.md`: instalação, limites e créditos.
+- `release/LEIA-ME.md`: instalação, limites e créditos da versão final.
 - `blender/source-aligned.blend`: modelo completo importado e alinhado.
 - `blender/fusion-mw.blend`: cena do resultado reimportado, com materiais de prévia.
 - `preview/compiled-*.png`: quatro vistas geradas a partir do BIN compilado.

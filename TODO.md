@@ -1,7 +1,7 @@
-# TODO — Fusion Titanium 2018 (base: checkpoint V1prime-z8)
+# TODO — Fusion Titanium 2018 (versão final: V1prime-z10)
 
-Ponto de partida seguro: `versions/checkpoint-v1prime-z8` (GEOMETRY `FC6C27FA…`, TEXTURES `EEBB0B83…`, ATTRIBUTES.MWPS `3BE53CF9…`, SECONDARYLOGO.BIN `E4721014…`).
-Checkpoints anteriores: `checkpoint-v1prime-z3` (`8D9BE4F9…`), `checkpoint-v1prime-z2` (`B12D0E90…`), `checkpoint-v1prime-y` (`A8DA8897…`), `checkpoint-v1prime-u` (`CD41C016…`), `checkpoint-v1prime-s` (`2F66D3D2…`), `checkpoint-v1prime-q` (`DD6212A8…`), `checkpoint-v1prime-p` (`B1375C52…`), `checkpoint-v1prime-l` (`695DC7F7…`), `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
+Versão final: `release/Fusion2018_AWD_MW2005.zip` (V1prime-z10, GEOMETRY `BB90B702…`, TEXTURES `EEBB0B83…`, ATTRIBUTES.MWPS `3BE53CF9…`, SECONDARYLOGO.BIN `E4721014…`); ver `versions/checkpoint-v1prime-z10/LEIA-ME.md`.
+Checkpoints anteriores (binários só no histórico do git, pelas tags): `checkpoint-v1prime-z8` (`FC6C27FA…`), `checkpoint-v1prime-z3` (`8D9BE4F9…`), `checkpoint-v1prime-z2` (`B12D0E90…`), `checkpoint-v1prime-y` (`A8DA8897…`), `checkpoint-v1prime-u` (`CD41C016…`), `checkpoint-v1prime-s` (`2F66D3D2…`), `checkpoint-v1prime-q` (`DD6212A8…`), `checkpoint-v1prime-p` (`B1375C52…`), `checkpoint-v1prime-l` (`695DC7F7…`), `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
 Toda tarefa deve partir dele. Depois de pronta, testar **abrindo o jogo com o save ZHABES (que tem o
 adesivo da Dinamarca)** antes de ser dada como concluída.
 
@@ -69,6 +69,5 @@ carroceria inteira e pode fechar o jogo.
   pelo Claude num diretório organizado, com README explicando cada etapa (antes/depois da suavidade, renders 3D
   para mapear peças, antena tubarão etc.). *(Feito até a V1prime-z7 em `docs/imagens-projeto/`, 17 etapas, 265 imagens; completar se houver novos ajustes.)*
 
-Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005_v1prime-z8.zip` (versão aprovada; visual, performance e dirigibilidade).
-Os zips `-z5`, `-z6` e `-z7` anteriores podem ser apagados.
-- [ ] **21. Parte de baixo do para-choque dianteiro.** *(Em teste no jogo: V1prime-z10 — parte de baixo refeita numa superfície única, sem o degrau do meio; ver `versions/v1prime/variants/v1prime-z10-front-lip/LEIA-ME.md`. A z9 melhorou mas deixou marcas nas laterais e o relevo no meio.)* Última peça com marcas pretas depois da V1prime-z8.
+Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005.zip` (versão final, única release).
+- [x] **21. Parte de baixo do para-choque dianteiro.** *(Aprovado no jogo: V1prime-z10 — superfície única, sem o degrau do meio; ver `versions/v1prime/variants/v1prime-z10-front-lip/LEIA-ME.md`.)* Última peça com marcas pretas depois da V1prime-z8.
