@@ -77,3 +77,12 @@ Suas capturas marcadas em vermelho. Detector de frestas por profundidade (`gap*`
 cobertura da camada de fundo (`cat`: verde novo, azul já existente, roxo/vermelho sem fundo),
 carroceria branca com o resto preto para ver o que aparece pelas frestas (`thru4` = z4, `thru5` = z5,
 `t4_*`/`t5_*`, `crop_*`, `cmp_*`), e o reflexo em faixas final (`nrm5`). Resultado V1prime-z5.
+
+## 15-refino-final-camera-adesivos-kits (25/09, itens 9, 14, 17, 18 e 19)
+Suas capturas marcadas (para-lama junto ao farol, lateral traseira, lábios dos para-choques). Reflexo em faixas
+antes/depois da subdivisão curva da pele e da suavização leve das posições (`r5` = z5, `r6` só subdivisão,
+`r7` = subdivisão + suavização; comparações `r56_*`, `r57_*`), zoom do para-lama e capô (`f_g5b`, `f_g7`,
+`f57`, `hood7`). Peças de adesivo novas coloridas por espaço de adesivo (`decals`: porta, números, lateral
+traseira, faixas do para-brisa e do vidro traseiro). Os três kits lado a lado (`kits`: KIT00 de fábrica,
+KIT01 "Street" com lábio, saias e lábio traseiro, KIT02 "Race" com splitter, saias maiores e difusor com aletas).
+Resultado V1prime-z6.
