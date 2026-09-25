@@ -86,3 +86,11 @@ antes/depois da subdivisão curva da pele e da suavização leve das posições 
 traseira, faixas do para-brisa e do vidro traseiro). Os três kits lado a lado (`kits`: KIT00 de fábrica,
 KIT01 "Street" com lábio, saias e lábio traseiro, KIT02 "Race" com splitter, saias maiores e difusor com aletas).
 Resultado V1prime-z6.
+
+## 16-ajustes-pos-teste-z6 (25/09)
+Suas 7 capturas do teste da z6 (kits flutuando, para-choque inferior, para-lamas, frestas do capô, emblema Ford,
+visão de dentro). Texturas conferidas para achar o texel preto e o cromado (`tex_*`, `texs2`, `misc_cur`),
+emblema Ford com letras e aro prata e fundo preto (`badge`), para-lamas dos dois lados antes/depois do
+espelhamento (`fp*`, `fm*`, `fpm*`, `f4`), carroceria e capô separados para achar os recortes (`hc*`, `sep`),
+lábio inferior do para-choque antes/depois (`lip*`), piso pintado sob o contorno do capô (`hoodgap`: branco =
+carroceria/capô, preto = demais peças) e os kits encaixados nos para-choques (`kits2`). Resultado V1prime-z7.
