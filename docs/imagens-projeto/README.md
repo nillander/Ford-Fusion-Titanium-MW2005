@@ -94,3 +94,10 @@ emblema Ford com letras e aro prata e fundo preto (`badge`), para-lamas dos dois
 espelhamento (`fp*`, `fm*`, `fpm*`, `f4`), carroceria e capô separados para achar os recortes (`hc*`, `sep`),
 lábio inferior do para-choque antes/depois (`lip*`), piso pintado sob o contorno do capô (`hoodgap`: branco =
 carroceria/capô, preto = demais peças) e os kits encaixados nos para-choques (`kits2`). Resultado V1prime-z7.
+
+## 17-para-lamas-e-vao-do-capo (25/09)
+Suas capturas do teste da z7. Lado do motorista (+y, onde fica o `KIT00_DRIVER`) comparado com o passageiro
+(`sides`: mostra que o lado ruim era o do motorista), tentativas no para-lama (`k1cmp`, `pk1`, `p8`),
+peças escuras no vão entre capô e para-choque (`hoodfront`: azul = peça escura da base) e o vão fechado
+(`hf`), tentativas no lábio inferior do para-choque que foram descartadas (`lip*`), e simulações de câmera
+em perspectiva usadas para procurar a posição da câmera "capô" (`cams`). Resultado V1prime-z8.

@@ -524,3 +524,5 @@
 /versions/v1prime/variants/v1prime-z6-final-refine/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
 /release/Fusion2018_AWD_MW2005_v1prime-z7.zip filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/variants/v1prime-z7-fixes/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
+/release/Fusion2018_AWD_MW2005_v1prime-z8.zip filter=lfs diff=lfs merge=lfs -text
+/versions/v1prime/variants/v1prime-z8-fender-hoodgap/MUSTANGGT/GEOMETRY.BIN filter=lfs diff=lfs merge=lfs -text
