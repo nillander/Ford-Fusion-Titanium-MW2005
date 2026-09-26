@@ -76,7 +76,7 @@ Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005.zip` (versão final
 
 Um item por vez, do mais simples ao mais difícil. Avisar para testar no jogo antes de seguir.
 O zip `release/Fusion2012_FWD_MW2005.zip` ainda tem a geometria anterior (`2D4AF358…`) e só será refeito
-quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `6B5A6327…` (item 1, aprovado).
+quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `B8EF17BC…` (itens 30 e 31, aprovados).
 
 - [x] **22. Marca e nome (item 8).** Aprovado no jogo em 26/09. O jogo mostrava "temp350" porque o Mod Loader
   procura `SECONDARY_LOGO_COBALTSS_1` (hash `623849E1`). Logo do 2018 com esse hash. Ver `CONTINUACAO-FUSION2012.md` seção 4.6.
@@ -98,8 +98,16 @@ quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `6B5A6327�
 - [ ] **29. Lataria em volta dos faróis (item 4).** *(Capturas de referência em
   `versions/fusion2012-fwd/reference/item4-lataria/`.)* Faróis estão certos; há deformação no encaixe com o capô, o paralama
   e o para-choque.
-- [ ] **30. Faróis de milha redondos e mais à frente.** O farol de milha do 2012 é totalmente circular: tirar a
+- [x] **30. Faróis de milha redondos e mais à frente.** O farol de milha do 2012 é totalmente circular: tirar a
   "perninha" (ponta da peça que avança sobre o para-choque). A peça está afundada no para-choque: trazer um pouco
-  para a frente.
-- [ ] **31. Logotipo Ford da tampa do porta-malas em prata.** O oval da frente (para-choque) está certo nos dois
-  Fusions (2018 e 2012); na tampa traseira a escrita "Ford" tem de ser prata, como na frente.
+  para a frente. *(Aprovado no jogo em 26/09: GEOMETRY `9ED9B105…`. A "perninha" era um triângulo
+  solto do Mondeo 35 cm atrás; peça avançada +0,8 cm (ponta interna) a +2,0 cm (externa); base do aro cromado, que descia
+  ~6 mm abaixo da moldura ("calo"), subida até a borda; ver `scripts/fog30.py`.)*
+- [x] **31. Logotipo Ford da tampa do porta-malas em prata.** O oval da frente (para-choque) está certo nos dois
+  Fusions (2018 e 2012); na tampa traseira a escrita "Ford" tem de ser prata, como na frente. *(Aprovado no jogo em 26/09,
+  instalado nos dois: 2012 GEOMETRY `B8EF17BC…` (inclui o item 30), 2018 GEOMETRY `2F612825…`
+  (z10 + só este ajuste; o zip do 2018 ainda tem `BB90B702…`). A escrita e o aro usavam o preto da borda da
+  textura MISC; agora usam o prata da frente, e o fundo a área preta da frente. Ver `scripts/logo31.py`.)*
+- [ ] **32. Revisão da parte inferior do para-choque dianteiro.** A borda de baixo do para-choque (lábio sob a grade
+  inferior e os faróis de milha, de um canto ao outro) ficou degradada: facetas, dentes e manchas escuras de
+  sombreado ao longo de toda a largura. Captura: `versions/fusion2012-fwd/reference/item4-lataria/6-parachoque-inferior-degradado.png`.

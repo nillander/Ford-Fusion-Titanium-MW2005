@@ -19,13 +19,13 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 | Texturas (`TEXTURES.BIN`) | Refeita em 26/09 (bug do mwtc, ver seção 4) |
 | Performance (`ATTRIBUTES.MWPS`, `FE.MWPS`) | Pronta |
 | Instalação no jogo | Feita (CARS/COBALTSS e ADDONS/CARS_REPLACE/COBALTSS); backup do Cobalt em `_backup_COBALTSS_vanilla` |
-| **Teste no jogo** | 4º teste: o carro abre. Item 8 (logo FUSION / nome) e item 7 (tampa) aprovados em 26/09. Item 6 (para-choque traseiro) aprovado em 26/09. Item 1 (grade inferior + encaixe do para-choque, GEOMETRY `6B5A6327…`) aprovado em 26/09 |
+| **Teste no jogo** | 4º teste: o carro abre. Item 8 (logo FUSION / nome) e item 7 (tampa) aprovados em 26/09. Item 6 (para-choque traseiro) aprovado em 26/09. Item 1 (grade inferior, `6B5A6327…`) aprovado em 26/09 (commit `8fdfab2d`). Itens 30 (faróis de milha) e 31 (logotipo da tampa) aprovados em 26/09 (`B8EF17BC…`). Próximo: item 27 |
 | Git | Item 8 no commit inicial da branch. Item 7 (tampa, GEOMETRY `C159D615…`) no commit seguinte. O zip ainda tem `2D4AF358…` |
 
 ### Arquivos instalados agora (SHA-256)
 | Arquivo | SHA-256 |
 | --- | --- |
-| GEOMETRY.BIN (CARS e ADDONS) | `6B5A63272599318285D13DC5A63557489BDFAFA42ED40BEDA6C59C9607FD2BBF` (item 1 aprovado; 1ª versão do item 1 = `022AD2FB…` em `work/c2012-stage/item1/`; item 6 aprovado = `A0F66D69…` em `work/c2012-stage/item6/`; o zip ainda tem `2D4AF358…`) |
+| GEOMETRY.BIN (CARS e ADDONS) | `B8EF17BC660A09DB1B41CB848AD66EC8E2D77E92658095536CBDA5C848854304` (itens 30+31, aprovados; só item 30 = `9ED9B105…` em `work/c2012-stage/item30/`; item 1 aprovado = `6B5A6327…` em `work/c2012-stage/item1b/`; 1ª versão do item 1 = `022AD2FB…` em `work/c2012-stage/item1/`; item 6 aprovado = `A0F66D69…` em `work/c2012-stage/item6/`; o zip ainda tem `2D4AF358…`) |
 | TEXTURES.BIN (CARS e ADDONS) | `0DCF3F4984E2F07B68D5FC2C6F58111E01F86E6BC9B7029215B5C9A56C45920C` |
 | ATTRIBUTES.MWPS | `744596F4A3E34A49BD83982C7D9C9294328004BAD40156B5F126A3C643C3A8D5` |
 | FE.MWPS | `91B557D2B3368A09C695D104F289FD5D6C6C5AA21C03BACB43A22F5B4C7740E9` |
@@ -36,17 +36,29 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 Documentação e scripts: `versions/fusion2012-fwd/` (LEIA-ME, `scripts/`, `preview/`).
 Diagnóstico pronto (não instalado): `versions/fusion2012-fwd/diag-z10-no-slot-cobalt/` (geometria 2018 no slot COBALTSS).
 
-## 3. Próximo passo: testar o item 1
-Itens 8 (logo), 7 (tampa) e 6 (para-choque traseiro) aprovados no jogo em 26/09 (item 6 no commit `eb4fe508`).
-Item 1 (grade inferior) feito e instalado, **aguardando teste**. Aprovado → commit e item 2 (TODO 26; conferir se
-o item 1 já resolveu o vazio sob os faróis de milha). Reprovado → voltar a `work/c2012-stage/item6/GEOMETRY.BIN`.
-Commit: a pasta do projeto precisa de permissão de apagar (o git cria e apaga travas em `.git`); `git add` normal
-pode demorar demais no repositório; o commit do item 6 foi feito com `hash-object`/`update-index --cacheinfo`/
-`write-tree`/`commit-tree`/`update-ref`. Lista completa em `TODO.md` (itens 24–29).
+## 3. Próximo passo: item 27 (cor interna das lanternas); depois 28, 29 e 32
+Itens 30 e 31 aprovados no jogo em 26/09. Item 32 (novo): revisão da borda inferior do para-choque dianteiro.
 
-Se o jogo voltar a fechar ou a mostrar "temp350", o histórico abaixo ainda vale:
-- **Ainda fecha:** instalar o diagnóstico (seção 5) para separar geometria x slot/texturas/MWPS.
-- **Ainda "Temp 350" mas não fecha:** o logo — ver seção 4.6 (a regra que ficou aprovada).
+**Item 31 (logotipo Ford da tampa, nos dois Fusions):** o oval traseiro (BASE_A–E, textura `<CARRO>_MISC`) tinha a
+escrita e o aro com UV (0,0) = borda preta da textura, e o fundo com UV (0,34; 0), na borda (preto e cinza
+alternando). Agora escrita e aro usam a célula prata (0,17; 0,25) e o fundo e a base a área preta (0,88; 0,75),
+iguais ao oval da frente. Só os 8 bytes de UV mudam (`scripts/logo31.py`; patches em `work/c2012-stage/item31/`).
+Instalado: 2012 `B8EF17BC…` (sobre o item 30) e **2018 (MUSTANGGT) `2F612825…`** (sobre a z10 `BB90B702…`; o zip
+`release/Fusion2018_AWD_MW2005.zip` ainda não foi refeito). Voltar o 2018: reinstalar a GEOMETRY do zip da z10.
+
+Itens 8, 7, 6 e 1 aprovados em 26/09 (item 2 resolvido junto com o 1). Item 30 (faróis de milha sem a "perninha",
+mais à frente) feito e instalado, **aguardando teste**. Aprovado → commit e item 31 (logotipo Ford prata na tampa do
+porta-malas). Reprovado → voltar a `work/c2012-stage/item1b/GEOMETRY.BIN`.
+- Item 30 (`scripts/fog30.py`): a "perninha" era um triângulo solto de 120 cm² do Mondeo a x≈1,87 m, 35 cm atrás
+  do para-choque, visível porque o furo da lataria seguia a silhueta da peça inteira; removido com os pedacinhos
+  (≤8 triângulos) que escapavam do aro. A peça (z < 0,35 em KIT00_LEFT/RIGHT_HEADLIGHT_A–D) gira em torno do eixo
+  vertical e avança +0,8 cm na ponta interna e +2,0 cm na externa: a borda da moldura ficou 1,3–2,7 cm atrás da
+  lataria (antes 1,8–3,8). O "calo" embaixo do aro (base do aro cromado ~6 mm abaixo da borda inferior da
+  moldura, |y| 0,645–0,69) foi subido até a borda. Ordem do build: `fog30.py` sobre a geometria do item 6 → AddParts2 → dump →
+  `grille1.py` (o furo usa a silhueta nova) → AddParts2.
+- Commit: a pasta do projeto precisa de permissão de apagar (o git cria e apaga travas em `.git`); `git add` normal
+  pode demorar demais no repositório; os commits dos itens 6 e 1 foram feitos com `hash-object`/
+  `update-index --cacheinfo`/`write-tree`/`commit-tree`/`update-ref`.
 
 ## 4. O que deu errado no 1º teste e o que foi corrigido
 ### 4.1 Travamento ao selecionar (causa provável, corrigida)

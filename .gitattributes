@@ -537,3 +537,4 @@
 /release/Fusion2018_AWD_MW2005.zip filter=lfs diff=lfs merge=lfs -text
 /release/Fusion2012_FWD_MW2005.zip filter=lfs diff=lfs merge=lfs -text
 /versions/fusion2012-fwd/reference/item4-lataria/4-teste-item1-lado1.png filter=lfs diff=lfs merge=lfs -text
+/versions/fusion2012-fwd/reference/item4-lataria/6-parachoque-inferior-degradado.png filter=lfs diff=lfs merge=lfs -text
