@@ -59,7 +59,7 @@ carroceria inteira e pode fechar o jogo.
   canto superior direito) pelo logo de `assets/nao-usar/ford-fusion-seeklogo.png`.
 - [x] **16. Chama do nitro.** *(Aprovado no jogo: V1prime-z3, pontos LEFT/RIGHT_EXHAUST no centro das saídas; ver `versions/v1prime/variants/v1prime-z3-logo-nitro/LEIA-ME.md`.)* O efeito de nitro/NOS exibe fogo saindo do escapamento, mas não está
   alinhado com a saída do escapamento do Fusion.
-- [ ] **17. Câmera interna.** *(Não resolvido: a câmera "capô" parece ficar dentro da entrada de ar do teto instalada; falta descobrir onde o jogo define essa posição. Testar sem a entrada de ar do teto.)* Na visualização pela câmera de dentro do veículo não aparece textura,
+- [ ] **17. Câmera interna (Fusion 2018 e 2012).** *(Não resolvido: a câmera "capô" parece ficar dentro da entrada de ar do teto instalada; falta descobrir onde o jogo define essa posição. Testar sem a entrada de ar do teto.)* Na visualização pela câmera de dentro do veículo não aparece textura,
   só alguns itens pretos.
 - [x] **18. Adesivos (vinis) que não aparecem.** *(Aprovado no jogo: V1prime-z8, peças DECAL_* trazidas do GTO; ver `versions/v1prime/variants/v1prime-z6-final-refine/LEIA-ME.md`.)* Os adesivos de porta, do para-brisa dianteiro, do para-brisa
   traseiro e os números de porta não são exibidos.
@@ -126,3 +126,10 @@ quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `E3914698�
   `KIT00_REAR_BRAKE_A–C` usam a textura `<CARRO>_INTERIOR` (UV u 0,47–0,72 / v 0,27–0,52 e u 0,21–0,27 / v 0,57–0,73),
   que hoje é o atlas do interior do Fusion. Correção: usar a textura oficial de disco e pinça de outro carro do jogo.
   Captura: `versions/fusion2012-fwd/reference/item4-lataria/7-freio-textura-multimidia.png`.
+- [ ] **34. Fusion 2018: carro incompleto na seleção de carreira, nas cutscenes e com o Razor.** O Fusion 2018
+  substitui o Mustang GT, que é o carro do Razor. Na tela "Menu da Carreira", nas cutscenes e quando o Razor pilota o
+  carro numa corrida, a lataria e várias peças não aparecem: só se vê o interior, as rodas e a estrutura. No carro do
+  jogador tudo aparece. Hipótese a conferir: nesses casos o jogo monta o carro com a configuração de fábrica do Razor
+  (kit de carroceria, capô, aerofólio e outras peças da loja que o Mustang dele usa), e alguma dessas peças não existe
+  no GEOMETRY.BIN do Fusion. Capturas: `versions/v1prime/in-game/2018-carreira-menu-partes-faltando.png` e
+  `versions/v1prime/in-game/2018-razor-corrida-partes-faltando.png`.
