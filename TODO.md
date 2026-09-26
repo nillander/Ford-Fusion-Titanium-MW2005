@@ -76,7 +76,7 @@ Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005.zip` (versão final
 
 Um item por vez, do mais simples ao mais difícil. Avisar para testar no jogo antes de seguir.
 O zip `release/Fusion2012_FWD_MW2005.zip` ainda tem a geometria anterior (`2D4AF358…`) e só será refeito
-quando os itens abaixo estiverem aprovados. Instalado agora (26/09, teste dos itens 33, 36, 37 e 38): pacote `work/c2012-stage/pacote-26-09c/` — 2012 GEOMETRY `BD51BA28…`/TEXTURES `39505AD5…`; 2018 GEOMETRY `2A26C393…`/TEXTURES `13E45A9D…` (o 2018 é o mesmo do `pacote-26-09b/`). Anterior aprovado: `pacote-26-09/`.
+quando os itens abaixo estiverem aprovados. Instalado agora (26/09, teste dos itens 33, 36/36b, 37, 38 e 39): pacote `work/c2012-stage/pacote-26-09d/` — 2012 GEOMETRY `260F59AF…`/TEXTURES `39505AD5…`; 2018 GEOMETRY `B4D1BDDE…`/TEXTURES `13E45A9D…` (itens 36b e 39). Antes: `pacote-26-09c/` — 2012 GEOMETRY `BD51BA28…`/TEXTURES `39505AD5…`; 2018 GEOMETRY `2A26C393…`/TEXTURES `13E45A9D…` (o 2018 é o mesmo do `pacote-26-09b/`). Anterior aprovado: `pacote-26-09/`.
 
 - [x] **22. Marca e nome (item 8).** Aprovado no jogo em 26/09. O jogo mostrava "temp350" porque o Mod Loader
   procura `SECONDARY_LOGO_COBALTSS_1` (hash `623849E1`). Logo do 2018 com esse hash. Ver `CONTINUACAO-FUSION2012.md` seção 4.6.
@@ -160,6 +160,7 @@ quando os itens abaixo estiverem aprovados. Instalado agora (26/09, teste dos it
   V1prime-l). Captura: `versions/fusion2012-fwd/reference/item4-lataria/8-antena-tubarao-traseira.png`.
   *(26/09: instalado para teste — pacote `work/c2012-stage/pacote-26-09b/`. Ponta cônica achatada num plano vertical (x −1,095), "V" de baixo fechado até o teto, antena recuada 1,7 cm; `scripts/fin36.py`.)*
   *(26/09, teste no jogo: a traseira ficou reta, mas aparece uma divisão em "V" no fundo da antena; tem de ser toda lisa. Imagem `versions/fusion2012-fwd/reference/teste-26-09c/antena-divisao.png`.)*
+  *(26/09, instalado para teste — `pacote-26-09d`: a borda de baixo da face achatada é uma linha quebrada e o triângulo reto do fin36 deixava frestas finas entre os dois (era a divisão). A parte de baixo da face é preenchida por uma faixa de quadriláteros coluna a coluna (2 mm), do teto até 1,5 mm acima da borda real, no mesmo plano, com a mesma normal/UV/cor. 2012 e 2018, BODY A e B dos kits. `scripts/fin39.py`; prévia `versions/fusion2012-fwd/preview/antena-item36b.png`.)*
 - [ ] **37. Faróis do 2012 ainda para dentro da lataria.** Mesmo depois do item 29 os faróis continuam afundados em
   relação à lataria em volta. Pode ser preciso aumentar um pouco o tamanho deles, como foi feito nas lanternas (item 28,
   `scripts/scale28.py`), além de trazê-los para fora. Ordem combinada em 26/09: 33, 36, 37, 17.
@@ -177,3 +178,4 @@ quando os itens abaixo estiverem aprovados. Instalado agora (26/09, teste dos it
   `pacote-26-09c`) a ponta de fora da lanterna, na lateral/para-lama traseiro, continua afundada: a lataria forma uma aba
   em volta e a lanterna fica recuada. Imagens `versions/fusion2012-fwd/reference/teste-26-09c/lanterna-lateral-1.png` e
   `lanterna-lateral-2.png`.
+  *(26/09, instalado para teste — `pacote-26-09d`: medido por fatias em x, a lente ficava 1,3–3 cm para dentro da borda da lataria (bordas de cima e de baixo do buraco) na parte lateral (x −2,15 a −1,80). Lanterna inteira (lente e interior, LODs A–D) deslocada para fora em y, fatia a fatia, até 1 mm da borda, suavizado em x e com rampa na quina de trás (x −2,20 a −2,14; a parte de trás não se move). Folga final 0–3 mm. `scripts/tail39.py` + `slice39.py`; prévia `versions/fusion2012-fwd/preview/lanternas-item39.png` (em cima antes, embaixo depois).)*
