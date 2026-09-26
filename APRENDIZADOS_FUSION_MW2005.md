@@ -185,7 +185,38 @@ abertas. A posição das rodas do Fusion permanece a do carro.
 - `git add` pode travar neste repositório (pasta montada, sem permissão de apagar travas em `.git`). Com permissão de
   apagar, fazer o commit por `hash-object` / `update-index --cacheinfo` / `write-tree` / `commit-tree` / `update-ref`.
 
-## 11. Próximos passos sugeridos
+## 11. Kits exclusivos dos carros prontos, cintas e peças afundadas (26/09, tarde)
+
+**Carros prontos do jogo (Razor, cutscenes, Menu da Carreira).**
+- Ficam em `GLOBAL/GLOBALB.BUN`, bloco `0x00030220`: registros de 0x290 bytes; modelo em +0x08, nome em +0x28 e as
+  peças como bin-hash (`h = h*33 + c`, início 0xFFFFFFFF) a partir de +0x60. Para saber o que um preset usa, gerar os
+  hashes de nomes candidatos (`<CARRO>_BODY_KITnn`, `<CARRO>_STYLEnn_HOOD` …) e comparar.
+- `RAZORMUSTANG` e `OPM_MUSTANG_VERSION2` usam MUSTANGGT **KIT04** + capô STYLE04; `BL8` usa **KIT05**; `CS_CAR_14`
+  usa COBALTSS **KIT04**. Kit que não existe no GEOMETRY.BIN = carroceria invisível nessas cenas. Todo carro de
+  substituição precisa ter os kits que os presets do slot usam (peças `<CARRO>_KITnn_BODY_A–E`; as demais peças caem no
+  KIT00).
+
+**Kit de carroceria não pode ser vazio**: o kit troca a carroceria inteira. Kit "simples" = cópia do KIT00 + um grupo
+extra (ex.: cinta de reboque) com textura e shader próprios. Cada kit a mais custa uma carroceria inteira em tamanho.
+
+**Textura nova sem refazer o TPK**: desenhar numa área livre de uma textura DXT1 que o carro já tem e gravar os blocos
+DXT1 direto no TEXTURES.BIN (mesmo tamanho). Antes, provar que nenhum triângulo usa a área (caixa das UVs por
+triângulo, não só vértices). Localizar os dados pela textura inteira (`find` dos bytes completos): o começo de uma
+textura (blocos pretos) se repete em outras. Encoder DXT1 em numpy: `scripts/strap_tex.py`.
+- UV em face de frente: a câmera olha para −x; y positivo fica à direita de quem olha. Texto sai espelhado se u
+  crescer com y.
+- Fonte japonesa: a nuvem tem Noto Sans/Serif CJK em `/usr/share/fonts/opentype/noto` (GitHub/npm de fontes bloqueados).
+
+**Peças afundadas (lanternas e faróis)**: medir em cortes transversais no plano da peça (normal média da lente) e
+comparar com a lataria em volta. Lanterna: escala no eixo cilíndrico da traseira (maior sem mudar a profundidade).
+Farol: deslocamento ao longo da normal, com valor próprio em cima (capô) e embaixo (para-choque) em cada fatia.
+Frestas que sobram: raster da lente + lataria no plano da peça e pele pintada 8 mm para dentro nas manchas vazias
+(fica escondida onde a lataria cobre). Grade de pixels dá borda em escada: usar contorno suavizado + Delaunay.
+
+**Lábio do para-choque com camadas cruzadas**: apagar a pele antiga da faixa e pôr uma superfície regrada lisa (perfil
+reta a(y)+b(y)·z ajustado ao ponto mais externo, suavizado em y).
+
+## 12. Próximos passos sugeridos
 
 - `KIT00_BRAKELIGHT` e `KIT00_HEADLIGHT` continuam DXT3 (cerca de 20 % de alfa). O teste atual aprovou
   os faróis; manter assim enquanto não houver defeito.

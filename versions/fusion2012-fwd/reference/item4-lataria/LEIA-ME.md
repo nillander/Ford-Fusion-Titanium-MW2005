@@ -10,6 +10,7 @@ Capturas do jogo enviadas pelo usuário em 26/09, depois do item 1 (grade inferi
 | `4-teste-item1-lado1.png` | 1ª versão do item 1 (`022AD2FB…`): deformações no canto, sob o farol de milha e no lábio inferior |
 | `6-parachoque-inferior-degradado.png` | Versão `B8EF17BC…`: borda inferior do para-choque dianteiro degradada (item 32) |
 | `7-freio-textura-multimidia.png` | Roda da loja: discos e pinças com a textura da multimídia (item 33, 2012 e 2018) |
+| `8-antena-tubarao-traseira.png` | Antena tubarão vista de trás: base cônica, deveria ser reta a 90° (item 36) |
 | `5-teste-item1-lado2-fresta-farol.png` | Mesma versão, outro lado; também marca a fresta embaixo do farol principal (item 4) |
 
 Fotos do Fusion 2013 real (grade inferior e faróis de milha): `../fotos-2013/`.

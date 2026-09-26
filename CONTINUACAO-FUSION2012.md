@@ -36,7 +36,10 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 Documentação e scripts: `versions/fusion2012-fwd/` (LEIA-ME, `scripts/`, `preview/`).
 Diagnóstico pronto (não instalado): `versions/fusion2012-fwd/diag-z10-no-slot-cobalt/` (geometria 2018 no slot COBALTSS).
 
-## 3. Próximo passo: item 28 (tamanho das lanternas); depois 29, 32 e 33
+## 3. Próximo passo: testar o pacote `work/c2012-stage/pacote-26-09/` (itens 28, 29, 32, 34, 35; 2012 e 2018)
+Instalado para teste em 26/09 às 17h30 (as quatro pastas conferidas por SHA-256). Instruções e riscos (tamanho da GEOMETRY) no `LEIA-ME.md` do pacote.
+Depois: 33 (freios), 36 (antena), 17 (câmera interna).
+
 Item 27 aprovado no jogo em 26/09 (v4). Lições desta rodada: `APRENDIZADOS_FUSION_MW2005.md`, seção 10.
 
 **Teste da v3:** manchas pretas/vermelho escuro no anel e o miolo da parte da tampa "tampado" enquanto o da parte
