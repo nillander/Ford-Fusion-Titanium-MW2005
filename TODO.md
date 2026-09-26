@@ -76,7 +76,7 @@ Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005.zip` (versão final
 
 Um item por vez, do mais simples ao mais difícil. Avisar para testar no jogo antes de seguir.
 O zip `release/Fusion2012_FWD_MW2005.zip` ainda tem a geometria anterior (`2D4AF358…`) e só será refeito
-quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `E3914698…` (item 27, aprovado). Instalado e aprovado (26/09): pacote `work/c2012-stage/pacote-26-09/` — 2012 GEOMETRY `EFA7DB3F…`/TEXTURES `5DF8CDC0…`; 2018 GEOMETRY `945F9CC7…`/TEXTURES `D8036183…`.
+quando os itens abaixo estiverem aprovados. Instalado agora (26/09, teste dos itens 33, 36, 37 e 38): pacote `work/c2012-stage/pacote-26-09c/` — 2012 GEOMETRY `BD51BA28…`/TEXTURES `39505AD5…`; 2018 GEOMETRY `2A26C393…`/TEXTURES `13E45A9D…` (o 2018 é o mesmo do `pacote-26-09b/`). Anterior aprovado: `pacote-26-09/`.
 
 - [x] **22. Marca e nome (item 8).** Aprovado no jogo em 26/09. O jogo mostrava "temp350" porque o Mod Loader
   procura `SECONDARY_LOGO_COBALTSS_1` (hash `623849E1`). Logo do 2018 com esse hash. Ver `CONTINUACAO-FUSION2012.md` seção 4.6.
@@ -129,6 +129,7 @@ quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `E3914698�
   `KIT00_REAR_BRAKE_A–C` usam a textura `<CARRO>_INTERIOR` (UV u 0,47–0,72 / v 0,27–0,52 e u 0,21–0,27 / v 0,57–0,73),
   que hoje é o atlas do interior do Fusion. Correção: usar a textura oficial de disco e pinça de outro carro do jogo.
   Captura: `versions/fusion2012-fwd/reference/item4-lataria/7-freio-textura-multimidia.png`.
+  *(26/09: instalado para teste — pacote `work/c2012-stage/pacote-26-09b/`. Freios trocados pelos do Pontiac GTO do jogo, escala 1,15: disco com a textura global ROTOR1 (GLOBALB.BUN) e pinça com o recorte das pinças do GTO_MISC gravado numa área livre do <CARRO>_MISC; `scripts/brakes33.py`.)*
 - [x] **34. Fusion 2018: carro incompleto na seleção de carreira, nas cutscenes e com o Razor.** O Fusion 2018
   substitui o Mustang GT, que é o carro do Razor. Na tela "Menu da Carreira", nas cutscenes e quando o Razor pilota o
   carro numa corrida, a lataria e várias peças não aparecem: só se vê o interior, as rodas e a estrutura. No carro do
@@ -157,3 +158,22 @@ quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `E3914698�
 - [ ] **36. Antena tubarão: traseira reta (Fusion 2012 e 2018).** Vista de trás, a base da antena é arredondada/cônica;
   deve terminar num corte reto, a 90° com o teto. A antena é a do item 3 (grupo da pintura em `KIT00_BODY`, criada na
   V1prime-l). Captura: `versions/fusion2012-fwd/reference/item4-lataria/8-antena-tubarao-traseira.png`.
+  *(26/09: instalado para teste — pacote `work/c2012-stage/pacote-26-09b/`. Ponta cônica achatada num plano vertical (x −1,095), "V" de baixo fechado até o teto, antena recuada 1,7 cm; `scripts/fin36.py`.)*
+  *(26/09, teste no jogo: a traseira ficou reta, mas aparece uma divisão em "V" no fundo da antena; tem de ser toda lisa. Imagem `versions/fusion2012-fwd/reference/teste-26-09c/antena-divisao.png`.)*
+- [ ] **37. Faróis do 2012 ainda para dentro da lataria.** Mesmo depois do item 29 os faróis continuam afundados em
+  relação à lataria em volta. Pode ser preciso aumentar um pouco o tamanho deles, como foi feito nas lanternas (item 28,
+  `scripts/scale28.py`), além de trazê-los para fora. Ordem combinada em 26/09: 33, 36, 37, 17.
+  *(26/09: instalado para teste — pacote `work/c2012-stage/pacote-26-09b/`. Farol aumentado 3 % para o lado da grade e 6 % para baixo; a ponta de fora e a borda de cima ficaram iguais porque, maiores, atravessavam o paralama/capô; `scripts/hl37.py`.)*
+  *(26/09, 2ª versão — pacote `work/c2012-stage/pacote-26-09c/`: pedido "maiores e mais para fora". Farol inteiro (lente e interior, LODs A–D) aumentado 10 % por igual no plano da lente e levado 1 cm para fora ao longo da normal da lente; as peças da carcaça que sobram fora do contorno da lente aumentada (e atravessavam paralama/capô) são removidas. `scripts/hl37.py` com `1.10 1.10 0.010 sym`; prévia `versions/fusion2012-fwd/preview/farois-item37b.png` (em cima antes, embaixo depois).)*
+- [ ] **38. Tampa do porta-malas entre as lanternas deformada (2012).** Depois do conserto das lanternas o espaço
+  entre uma lanterna e a outra ficou deformado. Diagnóstico: a lataria da tampa não foi alterada nos itens 27/28, mas as
+  lanternas aumentadas (item 28) avançaram 1,5 cm para o centro, e as paredes do rebaixo da lataria passaram a
+  atravessar a lente vermelha perto das pontas internas (manchas verdes/da cor do carro dentro da lanterna).
+  *(26/09: instalado para teste — pacote `work/c2012-stage/pacote-26-09c/`. Triângulos da lataria que ficam na frente da
+  lente, a menos de 2 cm dela, removidos (a lente cobre a área); faixa da tampa entre as lanternas suavizada em x
+  (Taubin, vinco e bordas fixos) com normais recalculadas; KIT00/01/02/04/05 BODY A–E. `scripts/lid38.py`; prévia
+  `versions/fusion2012-fwd/preview/tampa-item38.png` (em cima antes, embaixo depois).)*
+- [ ] **39. Lanternas do 2012 ainda para dentro da carroceria (vista de trás/lado).** No teste de 26/09 (pacote
+  `pacote-26-09c`) a ponta de fora da lanterna, na lateral/para-lama traseiro, continua afundada: a lataria forma uma aba
+  em volta e a lanterna fica recuada. Imagens `versions/fusion2012-fwd/reference/teste-26-09c/lanterna-lateral-1.png` e
+  `lanterna-lateral-2.png`.
