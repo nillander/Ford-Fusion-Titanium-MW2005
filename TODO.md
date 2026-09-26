@@ -133,3 +133,12 @@ quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `E3914698�
   (kit de carroceria, capô, aerofólio e outras peças da loja que o Mustang dele usa), e alguma dessas peças não existe
   no GEOMETRY.BIN do Fusion. Capturas: `versions/v1prime/in-game/2018-carreira-menu-partes-faltando.png` e
   `versions/v1prime/in-game/2018-razor-corrida-partes-faltando.png`.
+- [ ] **35. Kits de carroceria = carro de fábrica + cinta de reboque (Fusion 2012 e 2018).** Em vez dos kits atuais
+  (saias laterais maiores e uma faixa nos para-choques), os kits "Street" e "Race" passam a ser a carroceria de fábrica
+  com uma cinta de reboque no para-choque dianteiro (ideia: uma cinta diferente em cada kit; o Race pode ter também a
+  traseira). O kit não pode ficar vazio: no MW o kit troca a carroceria inteira (KIT01/KIT02_BODY_A–E), e sem lataria o
+  carro some (antigo item 11). A cinta precisa de textura própria (senão sai na cor da pintura) e de um grupo próprio na
+  peça; soma poucas centenas de vértices (KIT02_BODY_A do 2012 está em 63.887 de 65.535; voltar à carroceria de
+  fábrica libera espaço). Referências em `reference/cintas-reboque/`: cinta preta com 大吉大利 em vermelho e cinta
+  vermelha com 出入平安 em branco, suporte triangular preto; posição como na foto da cinta laranja (não usar a marca
+  "R Racing" dela).
