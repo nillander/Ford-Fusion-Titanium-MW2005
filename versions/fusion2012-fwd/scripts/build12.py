@@ -3,6 +3,7 @@ import json
 from graft import *
 from partmesh import PartMesh, clip_tris
 from atlas import cell_uv
+from lidfix import apply as lidfix_apply
 import struct
 G=pickle.load(open('/home/claude/c12/grafts_A.pkl','rb'))
 TEX_A=0x95DE5B23   # <CAR>_KIT00_HEADLIGHT_OFF  -> opaque DXT1 atlas (lamp internals)
@@ -117,6 +118,7 @@ def edit_body(n):
         P,N,UV,I=cluster(*PATCH,{'A':0.003,'B':0.004,'C':0.008,'D':0.015,'E':0.03}[L])
         o=pm.add_verts(P,N,UV,0xFFFFFFFF); g['F']=np.r_[g['F'],I+o]
         break
+    lidfix_apply(pm,True)     # item 7: trunk lid without the 2018 bar lip
     return pm
 if __name__=='__main__':
     recs=[]; report=[]

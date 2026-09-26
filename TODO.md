@@ -71,3 +71,24 @@ carroceria inteira e pode fechar o jogo.
 
 Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005.zip` (versão final, única release).
 - [x] **21. Parte de baixo do para-choque dianteiro.** *(Aprovado no jogo: V1prime-z10 — superfície única, sem o degrau do meio; ver `versions/v1prime/variants/v1prime-z10-front-lip/LEIA-ME.md`.)* Última peça com marcas pretas depois da V1prime-z8.
+
+## Fusion 2012 FWD (slot COBALTSS)
+
+Um item por vez, do mais simples ao mais difícil. Avisar para testar no jogo antes de seguir.
+O zip `release/Fusion2012_FWD_MW2005.zip` ainda tem a geometria anterior (`2D4AF358…`) e só será refeito
+quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `C159D615…`.
+
+- [x] **22. Marca e nome (item 8).** Aprovado no jogo em 26/09. O jogo mostrava "temp350" porque o Mod Loader
+  procura `SECONDARY_LOGO_COBALTSS_1` (hash `623849E1`). Logo do 2018 com esse hash. Ver `CONTINUACAO-FUSION2012.md` seção 4.6.
+- [x] **23. Tampa do porta-malas (item 7).** Aprovado no jogo em 26/09 (GEOMETRY `C159D615…`). A faixa clara/escura
+  era a aba do friso cromado do 2018, inclinada e com frestas; ficou reta do vinco até a moldura da placa, sombreado
+  uniforme, frestas fechadas por trás. O vinco de uma lanterna à outra permanece. Ver `versions/fusion2012-fwd/scripts/lidfix.py`
+  e `versions/fusion2012-fwd/preview/tampa-item7.png`.
+- [ ] **24. Para-choque traseiro (item 6).** Pequena deformação no canto inferior, no meio.
+- [ ] **25. Grade preta frontal inferior (item 1).** Não conecta os dois faróis de milha. Conferir com as fotos de referência.
+- [ ] **26. Vazio abaixo dos faróis de milha (item 2).** Preencher esse espaço no para-choque.
+- [ ] **27. Cor interna das lanternas (item 5).** A parte na tampa do porta-malas precisa da mesma cor e das mesmas
+  camadas da parte externa (para-choque/carroceria).
+- [ ] **28. Tamanho das lanternas traseiras (item 3).** Estão menores que o nicho; aumentar até encaixarem.
+- [ ] **29. Lataria em volta dos faróis (item 4).** Faróis estão certos; há deformação no encaixe com o capô, o paralama
+  e o para-choque.

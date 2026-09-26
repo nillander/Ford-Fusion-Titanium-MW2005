@@ -19,13 +19,13 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 | Texturas (`TEXTURES.BIN`) | Refeita em 26/09 (bug do mwtc, ver seção 4) |
 | Performance (`ATTRIBUTES.MWPS`, `FE.MWPS`) | Pronta |
 | Instalação no jogo | Feita (CARS/COBALTSS e ADDONS/CARS_REPLACE/COBALTSS); backup do Cobalt em `_backup_COBALTSS_vanilla` |
-| **Teste no jogo** | 1º teste: "Temp 350" + fechou. 2º teste (TPK corrigido): **carro aparece**, mas o logo era o do Cobalt. 3º teste (logo `A1CE36B0`): o jogo passou a **fechar ao abrir, antes do menu**. Revertido o logo e aplicado o logo FUSION direto no FRONTEND (seção 4.5); aguardando teste |
-| Git | Nada commitado desta etapa |
+| **Teste no jogo** | 4º teste: o carro abre. Item 8 (logo FUSION / nome) e item 7 (tampa) aprovados em 26/09. Próximo: item 6 |
+| Git | Item 8 no commit inicial da branch. Item 7 (tampa, GEOMETRY `C159D615…`) no commit seguinte. O zip ainda tem `2D4AF358…` |
 
 ### Arquivos instalados agora (SHA-256)
 | Arquivo | SHA-256 |
 | --- | --- |
-| GEOMETRY.BIN (CARS e ADDONS) | `2D4AF3586B18C54A23EA1F67C2EBD37948779978A0DECE4318A1EABB8D836DF4` |
+| GEOMETRY.BIN (CARS e ADDONS) | `C159D615B0EC92930FEA69B65A0C9542AB7F8EA9A4FD628E23A384A6176E3DE9` (item 7; o zip ainda tem a anterior `2D4AF358…`) |
 | TEXTURES.BIN (CARS e ADDONS) | `0DCF3F4984E2F07B68D5FC2C6F58111E01F86E6BC9B7029215B5C9A56C45920C` |
 | ATTRIBUTES.MWPS | `744596F4A3E34A49BD83982C7D9C9294328004BAD40156B5F126A3C643C3A8D5` |
 | FE.MWPS | `91B557D2B3368A09C695D104F289FD5D6C6C5AA21C03BACB43A22F5B4C7740E9` |
@@ -36,12 +36,13 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 Documentação e scripts: `versions/fusion2012-fwd/` (LEIA-ME, `scripts/`, `preview/`).
 Diagnóstico pronto (não instalado): `versions/fusion2012-fwd/diag-z10-no-slot-cobalt/` (geometria 2018 no slot COBALTSS).
 
-## 3. Próximo passo: 2º teste no jogo
-Pedir ao usuário para abrir o jogo (Mod Loader, save ZHABES) e selecionar o "Ford Fusion 2012 FWD".
-- **Abriu:** conferir luzes dos dois lados (as peças `KIT00_LEFT_*` são novas neste carro), tampa sem cromado,
-  faróis de milha, freio/luzes acesas, FWD, logo FUSION e nome. Depois: commit, galeria de imagens, TODO item 22.
+## 3. Próximo passo: item 6
+Item 8 (logo) e item 7 (tampa) aprovados no jogo em 26/09. Retomar pela deformação no canto inferior do meio
+do para-choque traseiro. Um item por vez; avisar para testar. Lista completa em `TODO.md` (itens 24–29).
+
+Se o jogo voltar a fechar ou a mostrar "temp350", o histórico abaixo ainda vale:
 - **Ainda fecha:** instalar o diagnóstico (seção 5) para separar geometria x slot/texturas/MWPS.
-- **Ainda "Temp 350" mas não fecha:** o logo — ver seção 4.2.
+- **Ainda "Temp 350" mas não fecha:** o logo — ver seção 4.6 (a regra que ficou aprovada).
 
 ## 4. O que deu errado no 1º teste e o que foi corrigido
 ### 4.1 Travamento ao selecionar (causa provável, corrigida)
@@ -97,7 +98,14 @@ Nome em texto: o Mod Loader responde à string `CARNAME_<manufacturer>_<internal
 ## 4.7 Lista de correções pedidas após o 4º teste (um item por vez, avisar para testar)
 Carro abriu e apareceu. Pendências (ordem: mais simples primeiro):
 8. Nome/logo "temp350" → **feito (4.6), aprovado no jogo**.
-7. Tampa do porta-malas: remendo da faixa cromada ruim → deixar liso/uniforme, só a tampa.
+7. Tampa do porta-malas: remendo da faixa cromada ruim → **feito, aprovado no jogo em 26/09** (GEOMETRY `C159D615…`;
+   anterior guardada em `work/c2012-stage/pre-item7/GEOMETRY.BIN` = `2D4AF358…`). Causa: o 2018 tem, sob o vinco
+   (z≈0,776), uma aba inclinada para fora/baixo até z≈0,73 onde ficava o friso, com normais para baixo e uma
+   fresta aberta no vinco (buraco já existente na z10) e na base da aba. `scripts/lidfix.py` (chamado em
+   `build12.py:edit_body`, todas as carrocerias/LODs): puxa a aba para o plano do 2012 (reto do vinco para baixo,
+   inclinação 0,07 como no Mondeo), normais do plano, normais das fileiras de cima da tampa inferior sem a
+   influência da prateleira, e duas faixas de pintura 3–4 mm atrás do plano cobrindo as frestas.
+   Build rápido sem refazer enxertos: `scripts/run12b.sh` e depois `Retarget2.cs` (MUSTANGGT→COBALTSS).
 6. Deformação no para-choque traseiro, canto inferior no meio.
 1. Grade preta inferior não deve ligar os dois faróis de milha (ver fotos de referência 2013).
 2. Vazio abaixo dos faróis de milha no para-choque → preencher.

@@ -2,6 +2,12 @@
 
 **Versão final: V1prime-z10** (aprovada no jogo em 25/09/2026).
 
+**Fusion 2012 FWD (novo, 25/09/2026):** substitui o Chevrolet Cobalt SS (slot `COBALTSS`, carro inicial). Mesma
+carroceria da V1prime-z10 com faróis, lanternas (sem a faixa cromada do porta-malas) e faróis de milha do 2012,
+tração dianteira e motor do Cobalt +20 %. Release: [`release/Fusion2012_FWD_MW2005.zip`](release/); detalhes em
+[versions/fusion2012-fwd/LEIA-ME.md](versions/fusion2012-fwd/LEIA-ME.md). Logo e tampa do porta-malas aprovados
+no jogo em 26/09; as outras correções de lataria estão em [TODO.md](TODO.md). O zip ainda não inclui a tampa corrigida.
+
 - Release única: [`release/Fusion2018_AWD_MW2005.zip`](release/) — instalação e créditos em [release/LEIA-ME.md](release/LEIA-ME.md).
 - Lista do que foi feito e aprovado: [TODO.md](TODO.md).
 - Aprendizados técnicos: [APRENDIZADOS_FUSION_MW2005.md](APRENDIZADOS_FUSION_MW2005.md) e os LEIA-ME de cada etapa em
