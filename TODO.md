@@ -76,7 +76,7 @@ Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005.zip` (versão final
 
 Um item por vez, do mais simples ao mais difícil. Avisar para testar no jogo antes de seguir.
 O zip `release/Fusion2012_FWD_MW2005.zip` ainda tem a geometria anterior (`2D4AF358…`) e só será refeito
-quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `E3914698…` (item 27, aprovado). Instalado para teste (26/09, 17h30): pacote `work/c2012-stage/pacote-26-09/` — 2012 GEOMETRY `EFA7DB3F…`/TEXTURES `5DF8CDC0…`; 2018 GEOMETRY `945F9CC7…`/TEXTURES `D8036183…`.
+quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `E3914698…` (item 27, aprovado). Instalado e aprovado (26/09): pacote `work/c2012-stage/pacote-26-09/` — 2012 GEOMETRY `EFA7DB3F…`/TEXTURES `5DF8CDC0…`; 2018 GEOMETRY `945F9CC7…`/TEXTURES `D8036183…`.
 
 - [x] **22. Marca e nome (item 8).** Aprovado no jogo em 26/09. O jogo mostrava "temp350" porque o Mod Loader
   procura `SECONDARY_LOGO_COBALTSS_1` (hash `623849E1`). Logo do 2018 com esse hash. Ver `CONTINUACAO-FUSION2012.md` seção 4.6.
@@ -104,12 +104,12 @@ quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `E3914698�
   Mondeo no miolo da tampa trocada por um fundo branco com o formato da lente transparente; pontos pretos no anel →
   vermelho. Só a lente da tampa é copiada (|y| < 0,576): a primeira montagem pegou pedacinhos da ponta da lente
   externa que apareciam dentro do miolo externo.)*
-- [ ] **28. Tamanho das lanternas traseiras (item 3).** Estão menores que o nicho; aumentar até encaixarem.
-  *(26/09: instalado para teste em 26/09 às 17h30 — pacote `work/c2012-stage/pacote-26-09/`: 4 % mais comprida, 3 % mais alta; `scripts/scale28.py`.)*
-- [ ] **29. Lataria em volta dos faróis (item 4).** *(Capturas de referência em
+- [x] **28. Tamanho das lanternas traseiras (item 3).** Estão menores que o nicho; aumentar até encaixarem.
+  *(26/09: aprovado no jogo em 26/09 — pacote `work/c2012-stage/pacote-26-09/`: 4 % mais comprida, 3 % mais alta; `scripts/scale28.py`.)*
+- [x] **29. Lataria em volta dos faróis (item 4).** *(Capturas de referência em
   `versions/fusion2012-fwd/reference/item4-lataria/`.)* Faróis estão certos; há deformação no encaixe com o capô, o paralama
   e o para-choque.
-  *(26/09: instalado para teste em 26/09 às 17h30 — pacote `work/c2012-stage/pacote-26-09/`: faróis trazidos para fora até o nível da lataria (`hl29.py`), frestas das pontas fechadas (`hlfill.py`); sobra um triângulo escuro pequeno embaixo do meio do farol.)*
+  *(26/09: aprovado no jogo em 26/09 — pacote `work/c2012-stage/pacote-26-09/`: faróis trazidos para fora até o nível da lataria (`hl29.py`), frestas das pontas fechadas (`hlfill.py`); sobra um triângulo escuro pequeno embaixo do meio do farol.)*
 - [x] **30. Faróis de milha redondos e mais à frente.** O farol de milha do 2012 é totalmente circular: tirar a
   "perninha" (ponta da peça que avança sobre o para-choque). A peça está afundada no para-choque: trazer um pouco
   para a frente. *(Aprovado no jogo em 26/09: GEOMETRY `9ED9B105…`. A "perninha" era um triângulo
@@ -120,16 +120,16 @@ quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `E3914698�
   instalado nos dois: 2012 GEOMETRY `B8EF17BC…` (inclui o item 30), 2018 GEOMETRY `2F612825…`
   (z10 + só este ajuste; o zip do 2018 ainda tem `BB90B702…`). A escrita e o aro usavam o preto da borda da
   textura MISC; agora usam o prata da frente, e o fundo a área preta da frente. Ver `scripts/logo31.py`.)*
-- [ ] **32. Revisão da parte inferior do para-choque dianteiro.** A borda de baixo do para-choque (lábio sob a grade
+- [x] **32. Revisão da parte inferior do para-choque dianteiro.** A borda de baixo do para-choque (lábio sob a grade
   inferior e os faróis de milha, de um canto ao outro) ficou degradada: facetas, dentes e manchas escuras de
   sombreado ao longo de toda a largura. Captura: `versions/fusion2012-fwd/reference/item4-lataria/6-parachoque-inferior-degradado.png`.
-  *(26/09: instalado para teste em 26/09 às 17h30 — pacote `work/c2012-stage/pacote-26-09/`: lábio refeito liso de |y| 0 a 0,70; `scripts/lip32.py`.)*
+  *(26/09: aprovado no jogo em 26/09 — pacote `work/c2012-stage/pacote-26-09/`: lábio refeito liso de |y| 0 a 0,70; `scripts/lip32.py`.)*
 - [ ] **33. Freios com a textura da multimídia (Fusion 2012 e 2018).** Com uma roda da loja (raios abertos) os discos e
   as pinças de freio aparecem com a textura da tela da multimídia. Causa: as peças `KIT00_FRONT_BRAKE_A–C` e
   `KIT00_REAR_BRAKE_A–C` usam a textura `<CARRO>_INTERIOR` (UV u 0,47–0,72 / v 0,27–0,52 e u 0,21–0,27 / v 0,57–0,73),
   que hoje é o atlas do interior do Fusion. Correção: usar a textura oficial de disco e pinça de outro carro do jogo.
   Captura: `versions/fusion2012-fwd/reference/item4-lataria/7-freio-textura-multimidia.png`.
-- [ ] **34. Fusion 2018: carro incompleto na seleção de carreira, nas cutscenes e com o Razor.** O Fusion 2018
+- [x] **34. Fusion 2018: carro incompleto na seleção de carreira, nas cutscenes e com o Razor.** O Fusion 2018
   substitui o Mustang GT, que é o carro do Razor. Na tela "Menu da Carreira", nas cutscenes e quando o Razor pilota o
   carro numa corrida, a lataria e várias peças não aparecem: só se vê o interior, as rodas e a estrutura. No carro do
   jogador tudo aparece. Hipótese a conferir: nesses casos o jogo monta o carro com a configuração de fábrica do Razor
@@ -143,8 +143,8 @@ quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `E3914698�
   COBALTSS **KIT04**. O Fusion só tem KIT00–02 → a lataria some. Correção: criar KIT04 e KIT05 (carroceria de fábrica +
   cinta) nos dois carros. Capturas: `versions/v1prime/in-game/2018-carreira-menu-partes-faltando.png` e
   `versions/v1prime/in-game/2018-razor-corrida-partes-faltando.png`.
-  *(26/09: KIT04 e KIT05 criados (2012 e 2018), instalados para teste em 26/09 às 17h30 — pacote `work/c2012-stage/pacote-26-09/`.)*
-- [ ] **35. Kits de carroceria = carro de fábrica + cinta de reboque (Fusion 2012 e 2018).** Em vez dos kits atuais
+  *(26/09: KIT04 e KIT05 criados (2012 e 2018), aprovados no jogo em 26/09 — pacote `work/c2012-stage/pacote-26-09/`.)*
+- [x] **35. Kits de carroceria = carro de fábrica + cinta de reboque (Fusion 2012 e 2018).** Em vez dos kits atuais
   (saias laterais maiores e uma faixa nos para-choques), os kits "Street" e "Race" passam a ser a carroceria de fábrica
   com uma cinta de reboque no para-choque dianteiro (ideia: uma cinta diferente em cada kit; o Race pode ter também a
   traseira). O kit não pode ficar vazio: no MW o kit troca a carroceria inteira (KIT01/KIT02_BODY_A–E), e sem lataria o
@@ -153,7 +153,7 @@ quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `E3914698�
   fábrica libera espaço). Referências em `reference/cintas-reboque/`: cinta preta com 大吉大利 em vermelho e cinta
   vermelha com 出入平安 em branco, suporte triangular preto; posição como na foto da cinta laranja (não usar a marca
   "R Racing" dela).
-  *(26/09: instalado para teste em 26/09 às 17h30 — pacote `work/c2012-stage/pacote-26-09/`: KIT01 cinta preta, KIT02 vermelha, nos dois carros; `scripts/kits35.py`, `strap_tex.py`.)*
+  *(26/09: aprovado no jogo em 26/09 — pacote `work/c2012-stage/pacote-26-09/`: KIT01 cinta preta, KIT02 vermelha, nos dois carros; `scripts/kits35.py`, `strap_tex.py`.)*
 - [ ] **36. Antena tubarão: traseira reta (Fusion 2012 e 2018).** Vista de trás, a base da antena é arredondada/cônica;
   deve terminar num corte reto, a 90° com o teto. A antena é a do item 3 (grupo da pintura em `KIT00_BODY`, criada na
   V1prime-l). Captura: `versions/fusion2012-fwd/reference/item4-lataria/8-antena-tubarao-traseira.png`.
