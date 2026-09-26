@@ -31,7 +31,7 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 | FE.MWPS | `91B557D2B3368A09C695D104F289FD5D6C6C5AA21C03BACB43A22F5B4C7740E9` |
 | CAR.INI | `A94EEB1DA890A0CECEEB3DE333AC2A6D33F2D3EF9E4D146203981DA7E5B2D867` |
 | SECONDARYLOGO.BIN | `7FBFE6CAD5D86975448498C34E2DF0F3970AC4622E15C5BA1ABE67DB01D1700D` (logo do 2018, hash `623849E1` = `SECONDARY_LOGO_COBALTSS_1`) |
-| Release `release/Fusion2012_FWD_MW2005.zip` (26/09, pacote-26-09d) | `64583DB2EEDC27B5A4733E4991C6201CA6257900DE2BEDFE0C509B19D1373216`; 2018: `release/Fusion2018_AWD_MW2005.zip` `C82DDF338454BEE01E3C48C5CFFA5742CF261969C1D5B2171828888085FC2764` |
+| Release `release/Fusion2012_FWD_MW2005.zip` (26/09, pacote-26-09e) | `97D58FA789C1E3CB98DBE59695CB51B8CC9AF96D7AB26BAB3B9235B57D45B522`; 2018: `release/Fusion2018_AWD_MW2005.zip` `C82DDF338454BEE01E3C48C5CFFA5742CF261969C1D5B2171828888085FC2764` |
 
 Documentação e scripts: `versions/fusion2012-fwd/` (LEIA-ME, `scripts/`, `preview/`).
 Diagnóstico pronto (não instalado): `versions/fusion2012-fwd/diag-z10-no-slot-cobalt/` (geometria 2018 no slot COBALTSS).
@@ -279,3 +279,5 @@ suavização da faixa) → `fin39.py` (fundo da antena) → `tail39.py` (ponta l
 só em `work/` (sem commit). Quando aprovado: marcar os itens no TODO, depois item 17 e, por fim, refazer os dois zips.
 
 ZIPs de `release/` refeitos em 26/09 com o `pacote-26-09d` (itens 33, 36 e 38 aprovados; 37 e 39 aguardando teste — se mudarem, refazer os zips). Montagem em `work/zipbuild/z12` e `z18`.
+
+Itens 37 (faróis girados 1,5°, `hl40.py`) e 39 (lanternas, cisalhamento da borda de cima, `tail40.py`) aprovados no jogo em 26/09; zip do 2012 refeito com o `pacote-26-09e` (GEOMETRY `2E4408AA…`). O 2018 continua com o `pacote-26-09d`.

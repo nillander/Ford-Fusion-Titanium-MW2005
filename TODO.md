@@ -76,7 +76,7 @@ Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005.zip` (versão final
 
 Um item por vez, do mais simples ao mais difícil. Avisar para testar no jogo antes de seguir.
 O zip `release/Fusion2012_FWD_MW2005.zip` ainda tem a geometria anterior (`2D4AF358…`) e só será refeito
-quando os itens abaixo estiverem aprovados. Instalado agora e nos ZIPs de `release/` (26/09; itens 33, 36 e 38 aprovados, 37 e 39 aguardando teste): pacote `work/c2012-stage/pacote-26-09d/` — 2012 GEOMETRY `260F59AF…`/TEXTURES `39505AD5…`; 2018 GEOMETRY `B4D1BDDE…`/TEXTURES `13E45A9D…` (itens 36b e 39). Antes: `pacote-26-09c/` — 2012 GEOMETRY `BD51BA28…`/TEXTURES `39505AD5…`; 2018 GEOMETRY `2A26C393…`/TEXTURES `13E45A9D…` (o 2018 é o mesmo do `pacote-26-09b/`). Anterior aprovado: `pacote-26-09/`.
+quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (26/09, tudo aprovado): 2012 `pacote-26-09e/` — GEOMETRY `2E4408AA…`/TEXTURES `39505AD5…`; 2018 `pacote-26-09d/` — GEOMETRY `B4D1BDDE…`/TEXTURES `13E45A9D…` — 2012 GEOMETRY `260F59AF…`/TEXTURES `39505AD5…`; 2018 GEOMETRY `B4D1BDDE…`/TEXTURES `13E45A9D…` (itens 36b e 39). Antes: `pacote-26-09c/` — 2012 GEOMETRY `BD51BA28…`/TEXTURES `39505AD5…`; 2018 GEOMETRY `2A26C393…`/TEXTURES `13E45A9D…` (o 2018 é o mesmo do `pacote-26-09b/`). Anterior aprovado: `pacote-26-09/`.
 
 - [x] **22. Marca e nome (item 8).** Aprovado no jogo em 26/09. O jogo mostrava "temp350" porque o Mod Loader
   procura `SECONDARY_LOGO_COBALTSS_1` (hash `623849E1`). Logo do 2018 com esse hash. Ver `CONTINUACAO-FUSION2012.md` seção 4.6.
@@ -163,11 +163,13 @@ quando os itens abaixo estiverem aprovados. Instalado agora e nos ZIPs de `relea
   *(26/09, teste no jogo: a traseira ficou reta, mas aparece uma divisão em "V" no fundo da antena; tem de ser toda lisa. Imagem `versions/fusion2012-fwd/reference/teste-26-09c/antena-divisao.png`.)*
   *(26/09, instalado para teste — `pacote-26-09d`: a borda de baixo da face achatada é uma linha quebrada e o triângulo reto do fin36 deixava frestas finas entre os dois (era a divisão). A parte de baixo da face é preenchida por uma faixa de quadriláteros coluna a coluna (2 mm), do teto até 1,5 mm acima da borda real, no mesmo plano, com a mesma normal/UV/cor. 2012 e 2018, BODY A e B dos kits. `scripts/fin39.py`; prévia `versions/fusion2012-fwd/preview/antena-item36b.png`.)*
   *(Aprovado no jogo em 26/09, pacote `pacote-26-09d`.)*
-- [ ] **37. Faróis do 2012 ainda para dentro da lataria.** Mesmo depois do item 29 os faróis continuam afundados em
+- [x] **37. Faróis do 2012 ainda para dentro da lataria.** Mesmo depois do item 29 os faróis continuam afundados em
   relação à lataria em volta. Pode ser preciso aumentar um pouco o tamanho deles, como foi feito nas lanternas (item 28,
   `scripts/scale28.py`), além de trazê-los para fora. Ordem combinada em 26/09: 33, 36, 37, 17.
   *(26/09: instalado para teste — pacote `work/c2012-stage/pacote-26-09b/`. Farol aumentado 3 % para o lado da grade e 6 % para baixo; a ponta de fora e a borda de cima ficaram iguais porque, maiores, atravessavam o paralama/capô; `scripts/hl37.py`.)*
   *(26/09, 2ª versão — pacote `work/c2012-stage/pacote-26-09c/`: pedido "maiores e mais para fora". Farol inteiro (lente e interior, LODs A–D) aumentado 10 % por igual no plano da lente e levado 1 cm para fora ao longo da normal da lente; as peças da carcaça que sobram fora do contorno da lente aumentada (e atravessavam paralama/capô) são removidas. `scripts/hl37.py` com `1.10 1.10 0.010 sym`; prévia `versions/fusion2012-fwd/preview/farois-item37b.png` (em cima antes, embaixo depois).)*
+  *(26/09, teste no jogo: faróis deslocados — ponta de trás (paralama) para fora e ponta da frente (grade) para dentro. 3ª versão, instalada para teste (`pacote-26-09e`): farol girado 1,5° em torno do eixo vertical da lente, pivô 12 cm do centro para o lado da grade: ponta de trás entra 11 mm, ponta da frente sai 5 mm. `scripts/hl40.py`, medida com `hlmeas.py`; prévia `versions/fusion2012-fwd/preview/farois-item37c.png` (em cima antes, embaixo depois).)*
+  *(Aprovado no jogo em 26/09, pacote `pacote-26-09e`.)*
 - [x] **38. Tampa do porta-malas entre as lanternas deformada (2012).** Depois do conserto das lanternas o espaço
   entre uma lanterna e a outra ficou deformado. Diagnóstico: a lataria da tampa não foi alterada nos itens 27/28, mas as
   lanternas aumentadas (item 28) avançaram 1,5 cm para o centro, e as paredes do rebaixo da lataria passaram a
@@ -177,8 +179,16 @@ quando os itens abaixo estiverem aprovados. Instalado agora e nos ZIPs de `relea
   (Taubin, vinco e bordas fixos) com normais recalculadas; KIT00/01/02/04/05 BODY A–E. `scripts/lid38.py`; prévia
   `versions/fusion2012-fwd/preview/tampa-item38.png` (em cima antes, embaixo depois).)*
   *(Aprovado no jogo em 26/09, pacote `pacote-26-09d`.)*
-- [ ] **39. Lanternas do 2012 ainda para dentro da carroceria (vista de trás/lado).** No teste de 26/09 (pacote
+- [x] **39. Lanternas do 2012 ainda para dentro da carroceria (vista de trás/lado).** No teste de 26/09 (pacote
   `pacote-26-09c`) a ponta de fora da lanterna, na lateral/para-lama traseiro, continua afundada: a lataria forma uma aba
   em volta e a lanterna fica recuada. Imagens `versions/fusion2012-fwd/reference/teste-26-09c/lanterna-lateral-1.png` e
   `lanterna-lateral-2.png`.
   *(26/09, instalado para teste — `pacote-26-09d`: medido por fatias em x, a lente ficava 1,3–3 cm para dentro da borda da lataria (bordas de cima e de baixo do buraco) na parte lateral (x −2,15 a −1,80). Lanterna inteira (lente e interior, LODs A–D) deslocada para fora em y, fatia a fatia, até 1 mm da borda, suavizado em x e com rampa na quina de trás (x −2,20 a −2,14; a parte de trás não se move). Folga final 0–3 mm. `scripts/tail39.py` + `slice39.py`; prévia `versions/fusion2012-fwd/preview/lanternas-item39.png` (em cima antes, embaixo depois).)*
+  *(26/09, teste no jogo: ainda para dentro — aba da lataria acima da ponta de fora. Medido por fatias: a borda de BAIXO da lente já estava no nível da lataria, mas a de CIMA ficava 3–4,5 cm para dentro (a lente "olhava" para cima). 2ª versão, instalada para teste (`pacote-26-09e`): cisalhamento em y pela altura (0 na borda de baixo, gap − 3 mm na de cima), x −2,21 → −1,70 com rampa na quina; folga final da borda de cima 1–4 mm. `scripts/tail40.py` + `tailtb.py`; prévia `versions/fusion2012-fwd/preview/lanternas-item39b.png` (render em perspectiva, `persp.py`; em cima antes, embaixo depois).)*
+  *(Aprovado no jogo em 26/09, pacote `pacote-26-09e`.)*
+- [ ] **40. Para-brisa com "duas faixas faltando" (2012; conferir no 2018).** Visto de frente, o para-brisa mostra duas
+  faixas verticais mais claras (imagem `versions/fusion2012-fwd/reference/teste-26-09e/para-brisa-faixas.png`).
+  Análise de 26/09: a malha do para-brisa (`KIT00_FRONT_WINDOW_A`, grupo 7B220DDF) não tem buracos nem normais
+  trocadas vista de fora; as faixas coincidem com os dois bancos da frente (couro claro, `KIT00_INTERIOR_A`, 6BCF3825)
+  vistos através do vidro escuro — prévia `versions/fusion2012-fwd/preview/para-brisa-bancos.png`. Aguardando decisão:
+  escurecer os bancos/interior ou o vidro.
