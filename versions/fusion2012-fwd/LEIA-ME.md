@@ -7,7 +7,7 @@ capôs e kits da loja, adesivos, antena, placa NEWZERA, emblemas, logo FUSION) �
 | Arquivo | SHA-256 |
 | --- | --- |
 | GEOMETRY.BIN (no zip) | `2D4AF3586B18C54A23EA1F67C2EBD37948779978A0DECE4318A1EABB8D836DF4` |
-| GEOMETRY.BIN (instalada, item 6 aprovado) | `A0F66D6903EDF7DC6A73836CDBED17BA4A86AF57BA1448396B2A6242F19A5F3A` |
+| GEOMETRY.BIN (instalada, item 1 aprovado) | `6B5A63272599318285D13DC5A63557489BDFAFA42ED40BEDA6C59C9607FD2BBF` |
 | TEXTURES.BIN | `0DCF3F4984E2F07B68D5FC2C6F58111E01F86E6BC9B7029215B5C9A56C45920C` |
 | ATTRIBUTES.MWPS | `744596F4A3E34A49BD83982C7D9C9294328004BAD40156B5F126A3C643C3A8D5` |
 
@@ -25,6 +25,9 @@ capôs e kits da loja, adesivos, antena, placa NEWZERA, emblemas, logo FUSION) �
   **Para-choque traseiro (item 6, aprovado em 26/09):** o triângulo escuro no canto inferior do meio era a normal
   da face de baixo num vértice do vinco usado pela face traseira (já vinha da z10); `scripts/fix6.py` + `apply6.py`.
   Brake light central, refletores do para-choque e luzes do painel do 2018 foram mantidos.
+- **Grade inferior (item 1, aprovado em 26/09):** trapézio como no 2013, terminando antes dos faróis de milha; o
+  para-choque em volta do farol de milha e até o canto foi refeito com uma superfície lisa ajustada à lataria
+  (`scripts/grille1.py`), o que também fechou o nicho baixo do 2018. Fotos de referência em `reference/fotos-2013/`.
 - **Faróis de milha:** nicho trapezoidal preto + farol redondo com aro cromado na posição do 2012; o nicho baixo do
   2018 ficou fechado (preto, sem a peça de LED).
 - **Encaixe na lataria:** a pele do 2018 é recortada exatamente no contorno das peças novas (triângulos subdivididos e

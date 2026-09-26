@@ -19,13 +19,13 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 | Texturas (`TEXTURES.BIN`) | Refeita em 26/09 (bug do mwtc, ver seção 4) |
 | Performance (`ATTRIBUTES.MWPS`, `FE.MWPS`) | Pronta |
 | Instalação no jogo | Feita (CARS/COBALTSS e ADDONS/CARS_REPLACE/COBALTSS); backup do Cobalt em `_backup_COBALTSS_vanilla` |
-| **Teste no jogo** | 4º teste: o carro abre. Item 8 (logo FUSION / nome) e item 7 (tampa) aprovados em 26/09. Item 6 (para-choque traseiro) aprovado em 26/09. **Item 1 instalado (GEOMETRY `022AD2FB…`), aguardando teste** |
+| **Teste no jogo** | 4º teste: o carro abre. Item 8 (logo FUSION / nome) e item 7 (tampa) aprovados em 26/09. Item 6 (para-choque traseiro) aprovado em 26/09. Item 1 (grade inferior + encaixe do para-choque, GEOMETRY `6B5A6327…`) aprovado em 26/09 |
 | Git | Item 8 no commit inicial da branch. Item 7 (tampa, GEOMETRY `C159D615…`) no commit seguinte. O zip ainda tem `2D4AF358…` |
 
 ### Arquivos instalados agora (SHA-256)
 | Arquivo | SHA-256 |
 | --- | --- |
-| GEOMETRY.BIN (CARS e ADDONS) | `022AD2FB3BFD28B67569CCECC23BA3F6EC6D79595E237F04798230CBA73CD7F1` (item 1, a testar; item 6 aprovado = `A0F66D69…` em `work/c2012-stage/item6/`; o zip ainda tem `2D4AF358…`) |
+| GEOMETRY.BIN (CARS e ADDONS) | `6B5A63272599318285D13DC5A63557489BDFAFA42ED40BEDA6C59C9607FD2BBF` (item 1 aprovado; 1ª versão do item 1 = `022AD2FB…` em `work/c2012-stage/item1/`; item 6 aprovado = `A0F66D69…` em `work/c2012-stage/item6/`; o zip ainda tem `2D4AF358…`) |
 | TEXTURES.BIN (CARS e ADDONS) | `0DCF3F4984E2F07B68D5FC2C6F58111E01F86E6BC9B7029215B5C9A56C45920C` |
 | ATTRIBUTES.MWPS | `744596F4A3E34A49BD83982C7D9C9294328004BAD40156B5F126A3C643C3A8D5` |
 | FE.MWPS | `91B557D2B3368A09C695D104F289FD5D6C6C5AA21C03BACB43A22F5B4C7740E9` |
@@ -120,8 +120,8 @@ Carro abriu e apareceu. Pendências (ordem: mais simples primeiro):
    independente OK, 175 peças). Patch em `work/c2012-stage/item6/item6-patch.json` (offsets sobre `C159D615…`).
    Não está em `build12.py`: num rebuild, rodar `apply6.py <bin> <dump> <saída>` depois do `Retarget2.cs`.
    Prévia: `versions/fusion2012-fwd/preview/parachoque-traseiro-item6.png`.
-1. Grade preta inferior não deve ligar os dois faróis de milha (ver fotos de referência 2013) → **feito em 26/09,
-   aguardando teste** (GEOMETRY `022AD2FB…`, em `work/c2012-stage/item1/`; anterior = `item6/` `A0F66D69…`).
+1. Grade preta inferior não deve ligar os dois faróis de milha (ver fotos de referência 2013) → **feito, aprovado
+   no jogo em 26/09** (GEOMETRY `022AD2FB…`, em `work/c2012-stage/item1/`; anterior = `item6/` `A0F66D69…`).
    `scripts/grille1.py` (roda sobre o dump da geometria instalada e grava com `AddParts2.cs`; ida e volta do
    AddParts2 sem mudanças é byte a byte idêntica): a grade termina em |y| = 0,40 (z 0,08) → 0,46 (z 0,19), ponta
    inclinada como no 2013; triângulos pretos além disso recortados (`clip_tris`) em RIGHT_SIDE_MIRROR_A e BASE_B–E.
@@ -130,6 +130,18 @@ Carro abriu e apareceu. Pendências (ordem: mais simples primeiro):
    furo no contorno do farol de milha (moldura preta ~5 mm), parede de 4 cm na ponta da grade. Isso também fechou o
    nicho baixo antigo do 2018 sob o farol de milha (ver item 2). Vértices: KIT02_BODY_A 65.397 (limite 65.535).
    Prévia: `versions/fusion2012-fwd/preview/grade-inferior-item1.png`.
+   **Teste de 26/09:** conceito aprovado (grade e farol de milha), mas o encaixe do para-choque ficou deformado:
+   degrau na borda sob o farol de milha, quina externa do nicho com lascas/frestas, lábio inferior facetado.
+   **Refino (GEOMETRY `6B5A6327…`, em `work/c2012-stage/item1b/`), aprovado no jogo em 26/09.** Só lataria; faróis intactos.
+   - Causa do degrau: a superfície ajustada usava amostras em z 0,0805, logo acima da prateleira horizontal do
+     lábio (z 0,08), e acertava a parte de trás (~10 cm atrás da borda). Agora amostra a borda do lábio em z 0,074.
+   - Todo o contorno do nicho (y > 0,5, até z 0,30) é refeito com a superfície ajustada: a pele antiga ali (aba do
+     enxerto 2012, paredes do nicho baixo do 2018, restos de recorte) é apagada (~3.100 triângulos no LOD A).
+   - Furo = silhueta do farol de milha vista de frente, suavizada, 3 mm para fora; malha com pontos a cada 5 mm no
+     contorno + grade interna, Delaunay com teste de dentro/fora em polígonos (pacote `triangle` indisponível).
+   - Paredes de 3 cm no contorno do nicho e de 4 cm na ponta da grade.
+   - Lábio inferior (z < 0,095): normais recalculadas pela média das faces vizinhas do mesmo lado (sombreado liso).
+   - Vértices: KIT02_BODY_A 63.887. Prévia: `versions/fusion2012-fwd/preview/parachoque-farol-milha-item1b.png`.
 2. Vazio abaixo dos faróis de milha no para-choque → preencher.
 5. Parte interna das lanternas (tampa) com cor/camadas diferentes da parte externa.
 3. Lanternas traseiras menores que o nicho → aumentar até encaixar.

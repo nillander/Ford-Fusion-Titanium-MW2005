@@ -76,7 +76,7 @@ Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005.zip` (versão final
 
 Um item por vez, do mais simples ao mais difícil. Avisar para testar no jogo antes de seguir.
 O zip `release/Fusion2012_FWD_MW2005.zip` ainda tem a geometria anterior (`2D4AF358…`) e só será refeito
-quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `022AD2FB…` (item 1, a testar).
+quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `6B5A6327…` (item 1, aprovado).
 
 - [x] **22. Marca e nome (item 8).** Aprovado no jogo em 26/09. O jogo mostrava "temp350" porque o Mod Loader
   procura `SECONDARY_LOGO_COBALTSS_1` (hash `623849E1`). Logo do 2018 com esse hash. Ver `CONTINUACAO-FUSION2012.md` seção 4.6.
@@ -87,12 +87,19 @@ quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `022AD2FB�
 - [x] **24. Para-choque traseiro (item 6).** Pequena deformação no canto inferior, no meio. *(Aprovado no jogo em 26/09:
   GEOMETRY `A0F66D69…`. Normais do vinco inferior do centro trocadas pela da face traseira; ver
   `versions/fusion2012-fwd/scripts/fix6.py` e `preview/parachoque-traseiro-item6.png`.)*
-- [ ] **25. Grade preta frontal inferior (item 1).** Não conecta os dois faróis de milha. Conferir com as fotos de referência.
-  *(Feito em 26/09, instalado, aguardando teste: GEOMETRY `022AD2FB…`. Grade trapezoidal terminando antes dos faróis de
+- [x] **25. Grade preta frontal inferior (item 1).** Não conecta os dois faróis de milha. Conferir com as fotos de referência.
+  *(Aprovado no jogo em 26/09, com o encaixe do para-choque refinado: GEOMETRY `6B5A6327…`. Grade trapezoidal terminando antes dos faróis de
   milha, lataria pintada no vão; ver `versions/fusion2012-fwd/scripts/grille1.py` e `preview/grade-inferior-item1.png`.)*
-- [ ] **26. Vazio abaixo dos faróis de milha (item 2).** Preencher esse espaço no para-choque.
+- [x] **26. Vazio abaixo dos faróis de milha (item 2).** Preencher esse espaço no para-choque. *(Resolvido junto com o item 1:
+  a lataria refeita em volta do farol de milha fechou o nicho baixo do 2018.)*
 - [ ] **27. Cor interna das lanternas (item 5).** A parte na tampa do porta-malas precisa da mesma cor e das mesmas
   camadas da parte externa (para-choque/carroceria).
 - [ ] **28. Tamanho das lanternas traseiras (item 3).** Estão menores que o nicho; aumentar até encaixarem.
-- [ ] **29. Lataria em volta dos faróis (item 4).** Faróis estão certos; há deformação no encaixe com o capô, o paralama
+- [ ] **29. Lataria em volta dos faróis (item 4).** *(Capturas de referência em
+  `versions/fusion2012-fwd/reference/item4-lataria/`.)* Faróis estão certos; há deformação no encaixe com o capô, o paralama
   e o para-choque.
+- [ ] **30. Faróis de milha redondos e mais à frente.** O farol de milha do 2012 é totalmente circular: tirar a
+  "perninha" (ponta da peça que avança sobre o para-choque). A peça está afundada no para-choque: trazer um pouco
+  para a frente.
+- [ ] **31. Logotipo Ford da tampa do porta-malas em prata.** O oval da frente (para-choque) está certo nos dois
+  Fusions (2018 e 2012); na tampa traseira a escrita "Ford" tem de ser prata, como na frente.
