@@ -144,7 +144,48 @@ pneus, freios, chassi, massa e a reação da suspensão do BMW M3 GTR. O acerto 
 nesse carro empurrava o bico em alta, então a direção, a rotação e a barra traseira foram
 abertas. A posição das rodas do Fusion permanece a do carro.
 
-## 9. Próximos passos sugeridos
+## 10. Fusion 2012 FWD: lições dos ajustes de 26/09 (itens 6, 1, 30, 31 e 27)
+
+**Validar como o jogo desenha, não como o render desenha.**
+- O jogo não desenha o verso das faces nas peças do carro. Um render que desenha as duas faces esconde buracos:
+  as lanternas pareciam perfeitas no render e, no jogo, tinham manchas pretas e vermelho-escuro. Conferir sempre com
+  descarte de faces de costas e um fundo de cor berrante (magenta) onde não há nada: `scripts/rtc.py`.
+- Sombreado com normal por vértice mostra "amassados" que a forma não tem. Render de conferência com subdivisão
+  e normais interpoladas (tipo Gouraud): `gr.py` (em `c12`).
+- Um "amassado" no jogo pode ser só normal errada: no para-choque traseiro (item 6), um vértice do vinco inferior
+  tinha a normal da face de baixo e sombreava um triângulo da face traseira de escuro. Troca só da normal (12 bytes).
+
+**Lanternas e faróis.**
+- Interior de lanterna não cobre toda a lente: pelas frestas aparece o preto da carroceria. Solução robusta: um fundo
+  com a forma exata da lente, 6 mm para dentro ao longo da normal dela, na cor desejada (vermelho atrás da lente
+  vermelha, branco atrás da transparente). Mais de 6 mm abre frestas onde duas lentes se encontram.
+- Peças do GTA podem vir com faces viradas para dentro do carro (normal +x na traseira): ficam escuras ou somem.
+  Olhar o sinal da normal média por peça soldada e desvirar (ordem dos vértices e normais).
+- Cores sólidas: usar o centro de uma célula uniforme do atlas. UV exatamente na borda de uma célula (0 ou 0,34)
+  alterna entre a cor da célula e a linha preta entre células (oval da tampa "chiado", item 31).
+- Triângulos soltos do modelo de origem, longe da peça (ex.: 35 cm atrás), entram na silhueta usada para recortar a
+  lataria e abrem "perninhas" no furo (item 30). Filtrar por componente conexa e profundidade antes de usar a silhueta.
+
+**Lataria nova sobre a pele antiga (item 1).**
+- Para fechar ou refazer uma área do para-choque: ajustar uma superfície lisa (polinômio em y,z) à lataria em volta,
+  com amostras só onde a lataria é boa. Cuidado com prateleiras horizontais: amostrar logo acima de uma prateleira
+  acerta a parte de trás dela (a borda nova ficou 10 cm atrás da borda real).
+- Não cobrir a pele antiga: apagar os triângulos dela dentro da área refeita (senão sobram lascas e frestas).
+- Contorno limpo: pontos densos ao longo do contorno (5 mm) + grade interna e Delaunay, com teste dentro/fora em
+  polígonos exatos. Máscara de pixels dá serrilhado. O pacote `triangle` não instala nesta nuvem.
+- Paredes curtas (3–4 cm) no contorno de furos e na ponta da grade evitam ver o vazio por trás em ângulo.
+- Limite de vértices: KIT01/02_BODY_A ficam perto de 65.535; apagar o que fica escondido libera espaço.
+
+**Fluxo de trabalho.**
+- `AddParts2.cs` sem mudanças devolve o arquivo byte a byte igual: dá para editar peças no Python e regravar só elas.
+- Mudanças só de normal/UV: gravar os bytes direto no BIN (vértice = pos 12, normal 12, cor 4, UV 8) e mandar um patch
+  JSON pequeno para o computador (arquivos acima de 20 MB não passam direto; dividir em partes e juntar lá).
+- Instalar só com o jogo fechado: com o jogo aberto, `ADDONS/CARS_REPLACE` fica travado e só `CARS` é atualizado.
+  O Mod Loader lê `ADDONS`, então o teste mostra a versão antiga. Sempre conferir o SHA-256 nas duas pastas.
+- `git add` pode travar neste repositório (pasta montada, sem permissão de apagar travas em `.git`). Com permissão de
+  apagar, fazer o commit por `hash-object` / `update-index --cacheinfo` / `write-tree` / `commit-tree` / `update-ref`.
+
+## 11. Próximos passos sugeridos
 
 - `KIT00_BRAKELIGHT` e `KIT00_HEADLIGHT` continuam DXT3 (cerca de 20 % de alfa). O teste atual aprovou
   os faróis; manter assim enquanto não houver defeito.

@@ -19,13 +19,13 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 | Texturas (`TEXTURES.BIN`) | Refeita em 26/09 (bug do mwtc, ver seção 4) |
 | Performance (`ATTRIBUTES.MWPS`, `FE.MWPS`) | Pronta |
 | Instalação no jogo | Feita (CARS/COBALTSS e ADDONS/CARS_REPLACE/COBALTSS); backup do Cobalt em `_backup_COBALTSS_vanilla` |
-| **Teste no jogo** | 4º teste: o carro abre. Item 8 (logo FUSION / nome) e item 7 (tampa) aprovados em 26/09. Item 6 (para-choque traseiro) aprovado em 26/09. Item 1 (grade inferior, `6B5A6327…`) aprovado em 26/09 (commit `8fdfab2d`). Itens 30 (faróis de milha) e 31 (logotipo da tampa) aprovados em 26/09 (`B8EF17BC…`). Próximo: item 27 |
+| **Teste no jogo** | 4º teste: o carro abre. Item 8 (logo FUSION / nome) e item 7 (tampa) aprovados em 26/09. Item 6 (para-choque traseiro) aprovado em 26/09. Item 1 (grade inferior, `6B5A6327…`) aprovado em 26/09 (commit `8fdfab2d`). Itens 30 e 31 aprovados em 26/09 (commit `9a873d9b`). Item 27 (lanternas, v4 `E3914698…`) aprovado em 26/09. Próximo: item 28 |
 | Git | Item 8 no commit inicial da branch. Item 7 (tampa, GEOMETRY `C159D615…`) no commit seguinte. O zip ainda tem `2D4AF358…` |
 
 ### Arquivos instalados agora (SHA-256)
 | Arquivo | SHA-256 |
 | --- | --- |
-| GEOMETRY.BIN (CARS e ADDONS) | `B8EF17BC660A09DB1B41CB848AD66EC8E2D77E92658095536CBDA5C848854304` (itens 30+31, aprovados; só item 30 = `9ED9B105…` em `work/c2012-stage/item30/`; item 1 aprovado = `6B5A6327…` em `work/c2012-stage/item1b/`; 1ª versão do item 1 = `022AD2FB…` em `work/c2012-stage/item1/`; item 6 aprovado = `A0F66D69…` em `work/c2012-stage/item6/`; o zip ainda tem `2D4AF358…`) |
+| GEOMETRY.BIN (CARS e ADDONS) | `E3914698050B207AFA10DC0B4B03B47DDE4AD3135B0A1052DE2D319968A28E3E` (item 27 v4, aprovado, em `work/c2012-stage/item27e/`; v3 = `C9B61E4B…` em `item27d/`; v2 = `8C3E936A…` em `item27b/`; v1 = `628F0560…`; itens 30+31 aprovados = `B8EF17BC…`; só item 30 = `9ED9B105…` em `work/c2012-stage/item30/`; item 1 aprovado = `6B5A6327…` em `work/c2012-stage/item1b/`; 1ª versão do item 1 = `022AD2FB…` em `work/c2012-stage/item1/`; item 6 aprovado = `A0F66D69…` em `work/c2012-stage/item6/`; o zip ainda tem `2D4AF358…`) |
 | TEXTURES.BIN (CARS e ADDONS) | `0DCF3F4984E2F07B68D5FC2C6F58111E01F86E6BC9B7029215B5C9A56C45920C` |
 | ATTRIBUTES.MWPS | `744596F4A3E34A49BD83982C7D9C9294328004BAD40156B5F126A3C643C3A8D5` |
 | FE.MWPS | `91B557D2B3368A09C695D104F289FD5D6C6C5AA21C03BACB43A22F5B4C7740E9` |
@@ -36,7 +36,30 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 Documentação e scripts: `versions/fusion2012-fwd/` (LEIA-ME, `scripts/`, `preview/`).
 Diagnóstico pronto (não instalado): `versions/fusion2012-fwd/diag-z10-no-slot-cobalt/` (geometria 2018 no slot COBALTSS).
 
-## 3. Próximo passo: item 27 (cor interna das lanternas); depois 28, 29 e 32
+## 3. Próximo passo: item 28 (tamanho das lanternas); depois 29, 32 e 33
+Item 27 aprovado no jogo em 26/09 (v4). Lições desta rodada: `APRENDIZADOS_FUSION_MW2005.md`, seção 10.
+
+**Teste da v3:** manchas pretas/vermelho escuro no anel e o miolo da parte da tampa "tampado" enquanto o da parte
+externa ficava vazado. Causa das manchas: o interior das lanternas não cobre toda a área da lente; pelas frestas
+aparecem as peças pretas da carroceria (confirmado renderizando com descarte de faces de costas, como no jogo:
+`scripts/rtc.py`, fundo magenta = nada desenhado). **v4** (`scripts/tail27d.py`, sobre a v2): além da remoção da caixa
+e do preto→vermelho, cópia de todas as lentes (_GLASS) 6 mm para dentro, ao longo da normal da lente, como fundo:
+vermelho (0,25; 0,75) atrás da lente vermelha e branco (0,5625; 0,6875) atrás da transparente, nas duas partes.
+**Teste da v1 (26/09):** melhorou, mas a parte da tampa ficava escura e sem as camadas. Pedido do usuário: anel
+externo em lente vermelha viva, miolo em lente branca uniforme (aletas desnecessárias), tampa e lateral idênticas.
+**v2** (`scripts/tail27b.py`, sobre a v1 via AddParts2): faces do interior da tampa viradas para +x (dentro do carro)
+desviradas, com as normais; anel → vermelho sólido (0,25; 0,75) nas duas partes; miolo (fundo laranja, moldura prata,
+área da ré) → branco sólido (0,5625; 0,6875); aletas e barra horizontal removidas (peças finas soltas no miolo).
+**Teste da v2:** ficou uma "caixa" no miolo da tampa e pontos pretos no anel. **v3** (`scripts/tail27c.py`): peças
+da antiga luz de ré do Mondeo no miolo da tampa (|y| 0,44–0,586, z 0,672–0,75) removidas; no lugar, cópia da lente
+transparente da tampa (célula (0,81; 0,56) da peça _GLASS, só triângulos com |y| < 0,576) 12 mm para dentro, com UV branco; toda célula preta
+(0,5625; 0,5625) restante no interior das lanternas → vermelho (0,25; 0,75).
+**Item 27** (`scripts/tail27.py`, patch em `work/c2012-stage/item27/`, sobre `B8EF17BC…`): na tampa (|y| < 0,585) o
+interior das peças KIT00_LEFT/RIGHT_BRAKELIGHT_A–D usava a célula preta (0,562; 0,562) do atlas HEADLIGHT_OFF. O anel
+em "C" (peça soldada com ≥6 cm de altura, fora do contorno) → célula vermelha sólida (0,8125; 0,6875) = (173,8,8); a
+área da luz de ré (|y| ≥ 0,44, z 0,675–0,75) → prata (0,6875; 0,5625), a mesma da moldura da parte externa. Nos LODs
+C/D anel e contorno são uma peça só: os vértices pretos dela ficam vermelhos. Voltar: geometria `B8EF17BC…`
+(reaplicar o patch do item 31 sobre `work/c2012-stage/item30/GEOMETRY.BIN`, ou `work/c2012-stage/item31/GEOMETRY-2012.BIN`).
 Itens 30 e 31 aprovados no jogo em 26/09. Item 32 (novo): revisão da borda inferior do para-choque dianteiro.
 
 **Item 31 (logotipo Ford da tampa, nos dois Fusions):** o oval traseiro (BASE_A–E, textura `<CARRO>_MISC`) tinha a

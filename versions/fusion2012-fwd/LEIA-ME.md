@@ -7,7 +7,7 @@ capôs e kits da loja, adesivos, antena, placa NEWZERA, emblemas, logo FUSION) �
 | Arquivo | SHA-256 |
 | --- | --- |
 | GEOMETRY.BIN (no zip) | `2D4AF3586B18C54A23EA1F67C2EBD37948779978A0DECE4318A1EABB8D836DF4` |
-| GEOMETRY.BIN (instalada, itens 30 e 31 aprovados) | `B8EF17BC660A09DB1B41CB848AD66EC8E2D77E92658095536CBDA5C848854304` |
+| GEOMETRY.BIN (instalada, item 27 aprovado) | `E3914698050B207AFA10DC0B4B03B47DDE4AD3135B0A1052DE2D319968A28E3E` |
 | TEXTURES.BIN | `0DCF3F4984E2F07B68D5FC2C6F58111E01F86E6BC9B7029215B5C9A56C45920C` |
 | ATTRIBUTES.MWPS | `744596F4A3E34A49BD83982C7D9C9294328004BAD40156B5F126A3C643C3A8D5` |
 
@@ -28,6 +28,9 @@ capôs e kits da loja, adesivos, antena, placa NEWZERA, emblemas, logo FUSION) �
 - **Grade inferior (item 1, aprovado em 26/09):** trapézio como no 2013, terminando antes dos faróis de milha; o
   para-choque em volta do farol de milha e até o canto foi refeito com uma superfície lisa ajustada à lataria
   (`scripts/grille1.py`), o que também fechou o nicho baixo do 2018. Fotos de referência em `reference/fotos-2013/`.
+- **Lanternas (item 27, aprovado em 26/09):** anel em lente vermelha e miolo em lente branca, iguais na tampa e na
+  lateral; sem as aletas e a caixa da luz de ré do Mondeo; fundo vermelho/branco 6 mm atrás de cada lente
+  (`scripts/tail27d.py`, sobre `tail27b.py`).
 - **Faróis de milha (item 30):** sem a "perninha" (triângulo solto do Mondeo), sem o calo sob o aro, 0,8–2,0 cm mais
   à frente (`scripts/fog30.py`).
 - **Logotipo da tampa (item 31, também no 2018):** escrita e aro prata e fundo preto, como na frente (`scripts/logo31.py`).

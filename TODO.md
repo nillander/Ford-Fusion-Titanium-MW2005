@@ -76,7 +76,7 @@ Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005.zip` (versão final
 
 Um item por vez, do mais simples ao mais difícil. Avisar para testar no jogo antes de seguir.
 O zip `release/Fusion2012_FWD_MW2005.zip` ainda tem a geometria anterior (`2D4AF358…`) e só será refeito
-quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `B8EF17BC…` (itens 30 e 31, aprovados).
+quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `E3914698…` (item 27, aprovado).
 
 - [x] **22. Marca e nome (item 8).** Aprovado no jogo em 26/09. O jogo mostrava "temp350" porque o Mod Loader
   procura `SECONDARY_LOGO_COBALTSS_1` (hash `623849E1`). Logo do 2018 com esse hash. Ver `CONTINUACAO-FUSION2012.md` seção 4.6.
@@ -92,8 +92,18 @@ quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `B8EF17BC�
   milha, lataria pintada no vão; ver `versions/fusion2012-fwd/scripts/grille1.py` e `preview/grade-inferior-item1.png`.)*
 - [x] **26. Vazio abaixo dos faróis de milha (item 2).** Preencher esse espaço no para-choque. *(Resolvido junto com o item 1:
   a lataria refeita em volta do farol de milha fechou o nicho baixo do 2018.)*
-- [ ] **27. Cor interna das lanternas (item 5).** A parte na tampa do porta-malas precisa da mesma cor e das mesmas
-  camadas da parte externa (para-choque/carroceria).
+- [x] **27. Cor interna das lanternas (item 5).** A parte na tampa do porta-malas precisa da mesma cor e das mesmas
+  camadas da parte externa (para-choque/carroceria). *(Aprovado no jogo em 26/09, v4: GEOMETRY `E3914698…` (`scripts/tail27d.py`). v4 = v2 `8C3E936A…` +
+  caixa da luz de ré removida + preto→vermelho + fundo atrás de cada lente, nas duas partes (vermelho atrás da vermelha,
+  branco atrás da transparente, 6 mm para dentro): o interior não cobria toda a lente e o preto da carroceria aparecia
+  pelas frestas; o miolo externo ficava vazado. Histórico:
+  Pedido: anel externo em lente vermelha viva e miolo em lente branca uniforme, sem aletas, idênticos na tampa e na
+  lateral. As faces do interior da tampa estavam viradas para dentro do carro (ficavam escuras no jogo): desviradas.
+  Anel = vermelho sólido do atlas nas duas partes; miolo = branco sólido; aletas e barra cromada removidas. Ver
+  `scripts/tail27b.py` (a v1, só UV, é `scripts/tail27.py`). v3 (`scripts/tail27c.py`): caixa da luz de ré do
+  Mondeo no miolo da tampa trocada por um fundo branco com o formato da lente transparente; pontos pretos no anel →
+  vermelho. Só a lente da tampa é copiada (|y| < 0,576): a primeira montagem pegou pedacinhos da ponta da lente
+  externa que apareciam dentro do miolo externo.)*
 - [ ] **28. Tamanho das lanternas traseiras (item 3).** Estão menores que o nicho; aumentar até encaixarem.
 - [ ] **29. Lataria em volta dos faróis (item 4).** *(Capturas de referência em
   `versions/fusion2012-fwd/reference/item4-lataria/`.)* Faróis estão certos; há deformação no encaixe com o capô, o paralama
@@ -111,3 +121,8 @@ quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `B8EF17BC�
 - [ ] **32. Revisão da parte inferior do para-choque dianteiro.** A borda de baixo do para-choque (lábio sob a grade
   inferior e os faróis de milha, de um canto ao outro) ficou degradada: facetas, dentes e manchas escuras de
   sombreado ao longo de toda a largura. Captura: `versions/fusion2012-fwd/reference/item4-lataria/6-parachoque-inferior-degradado.png`.
+- [ ] **33. Freios com a textura da multimídia (Fusion 2012 e 2018).** Com uma roda da loja (raios abertos) os discos e
+  as pinças de freio aparecem com a textura da tela da multimídia. Causa: as peças `KIT00_FRONT_BRAKE_A–C` e
+  `KIT00_REAR_BRAKE_A–C` usam a textura `<CARRO>_INTERIOR` (UV u 0,47–0,72 / v 0,27–0,52 e u 0,21–0,27 / v 0,57–0,73),
+  que hoje é o atlas do interior do Fusion. Correção: usar a textura oficial de disco e pinça de outro carro do jogo.
+  Captura: `versions/fusion2012-fwd/reference/item4-lataria/7-freio-textura-multimidia.png`.
