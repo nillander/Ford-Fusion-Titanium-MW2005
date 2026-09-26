@@ -19,13 +19,13 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 | Texturas (`TEXTURES.BIN`) | Refeita em 26/09 (bug do mwtc, ver seção 4) |
 | Performance (`ATTRIBUTES.MWPS`, `FE.MWPS`) | Pronta |
 | Instalação no jogo | Feita (CARS/COBALTSS e ADDONS/CARS_REPLACE/COBALTSS); backup do Cobalt em `_backup_COBALTSS_vanilla` |
-| **Teste no jogo** | 4º teste: o carro abre. Item 8 (logo FUSION / nome) e item 7 (tampa) aprovados em 26/09. Item 6 (para-choque traseiro, GEOMETRY `A0F66D69…`) aprovado em 26/09. Próximo: item 1 |
+| **Teste no jogo** | 4º teste: o carro abre. Item 8 (logo FUSION / nome) e item 7 (tampa) aprovados em 26/09. Item 6 (para-choque traseiro) aprovado em 26/09. **Item 1 instalado (GEOMETRY `022AD2FB…`), aguardando teste** |
 | Git | Item 8 no commit inicial da branch. Item 7 (tampa, GEOMETRY `C159D615…`) no commit seguinte. O zip ainda tem `2D4AF358…` |
 
 ### Arquivos instalados agora (SHA-256)
 | Arquivo | SHA-256 |
 | --- | --- |
-| GEOMETRY.BIN (CARS e ADDONS) | `A0F66D6903EDF7DC6A73836CDBED17BA4A86AF57BA1448396B2A6242F19A5F3A` (item 6, aprovado; antes do item 6 = `C159D615…` em `work/c2012-stage/item7/`; o zip ainda tem `2D4AF358…`) |
+| GEOMETRY.BIN (CARS e ADDONS) | `022AD2FB3BFD28B67569CCECC23BA3F6EC6D79595E237F04798230CBA73CD7F1` (item 1, a testar; item 6 aprovado = `A0F66D69…` em `work/c2012-stage/item6/`; o zip ainda tem `2D4AF358…`) |
 | TEXTURES.BIN (CARS e ADDONS) | `0DCF3F4984E2F07B68D5FC2C6F58111E01F86E6BC9B7029215B5C9A56C45920C` |
 | ATTRIBUTES.MWPS | `744596F4A3E34A49BD83982C7D9C9294328004BAD40156B5F126A3C643C3A8D5` |
 | FE.MWPS | `91B557D2B3368A09C695D104F289FD5D6C6C5AA21C03BACB43A22F5B4C7740E9` |
@@ -36,9 +36,13 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 Documentação e scripts: `versions/fusion2012-fwd/` (LEIA-ME, `scripts/`, `preview/`).
 Diagnóstico pronto (não instalado): `versions/fusion2012-fwd/diag-z10-no-slot-cobalt/` (geometria 2018 no slot COBALTSS).
 
-## 3. Próximo passo: item 1
-Itens 8 (logo), 7 (tampa) e 6 (para-choque traseiro) aprovados no jogo em 26/09. Próximo: item 1 (TODO 25), grade
-preta inferior que não deve ligar os dois faróis de milha. Um item por vez; avisar para testar. Lista completa em `TODO.md` (itens 24–29).
+## 3. Próximo passo: testar o item 1
+Itens 8 (logo), 7 (tampa) e 6 (para-choque traseiro) aprovados no jogo em 26/09 (item 6 no commit `eb4fe508`).
+Item 1 (grade inferior) feito e instalado, **aguardando teste**. Aprovado → commit e item 2 (TODO 26; conferir se
+o item 1 já resolveu o vazio sob os faróis de milha). Reprovado → voltar a `work/c2012-stage/item6/GEOMETRY.BIN`.
+Commit: a pasta do projeto precisa de permissão de apagar (o git cria e apaga travas em `.git`); `git add` normal
+pode demorar demais no repositório; o commit do item 6 foi feito com `hash-object`/`update-index --cacheinfo`/
+`write-tree`/`commit-tree`/`update-ref`. Lista completa em `TODO.md` (itens 24–29).
 
 Se o jogo voltar a fechar ou a mostrar "temp350", o histórico abaixo ainda vale:
 - **Ainda fecha:** instalar o diagnóstico (seção 5) para separar geometria x slot/texturas/MWPS.
@@ -116,7 +120,16 @@ Carro abriu e apareceu. Pendências (ordem: mais simples primeiro):
    independente OK, 175 peças). Patch em `work/c2012-stage/item6/item6-patch.json` (offsets sobre `C159D615…`).
    Não está em `build12.py`: num rebuild, rodar `apply6.py <bin> <dump> <saída>` depois do `Retarget2.cs`.
    Prévia: `versions/fusion2012-fwd/preview/parachoque-traseiro-item6.png`.
-1. Grade preta inferior não deve ligar os dois faróis de milha (ver fotos de referência 2013).
+1. Grade preta inferior não deve ligar os dois faróis de milha (ver fotos de referência 2013) → **feito em 26/09,
+   aguardando teste** (GEOMETRY `022AD2FB…`, em `work/c2012-stage/item1/`; anterior = `item6/` `A0F66D69…`).
+   `scripts/grille1.py` (roda sobre o dump da geometria instalada e grava com `AddParts2.cs`; ida e volta do
+   AddParts2 sem mudanças é byte a byte idêntica): a grade termina em |y| = 0,40 (z 0,08) → 0,46 (z 0,19), ponta
+   inclinada como no 2013; triângulos pretos além disso recortados (`clip_tris`) em RIGHT_SIDE_MIRROR_A e BASE_B–E.
+   O vão até o canto é fechado com pele pintada no grupo da pintura das carrocerias KIT00/01/02, LODs A–E:
+   superfície ajustada (polinômio em y,z; resíduo mediano 1 mm) à lataria em volta da abertura, 3 mm para dentro,
+   furo no contorno do farol de milha (moldura preta ~5 mm), parede de 4 cm na ponta da grade. Isso também fechou o
+   nicho baixo antigo do 2018 sob o farol de milha (ver item 2). Vértices: KIT02_BODY_A 65.397 (limite 65.535).
+   Prévia: `versions/fusion2012-fwd/preview/grade-inferior-item1.png`.
 2. Vazio abaixo dos faróis de milha no para-choque → preencher.
 5. Parte interna das lanternas (tampa) com cor/camadas diferentes da parte externa.
 3. Lanternas traseiras menores que o nicho → aumentar até encaixar.
