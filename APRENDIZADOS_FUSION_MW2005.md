@@ -216,7 +216,41 @@ Frestas que sobram: raster da lente + lataria no plano da peça e pele pintada 8
 **Lábio do para-choque com camadas cruzadas**: apagar a pele antiga da faixa e pôr uma superfície regrada lisa (perfil
 reta a(y)+b(y)·z ajustado ao ponto mais externo, suavizado em y).
 
-## 12. Próximos passos sugeridos
+## 12. Freios, antena, faróis/lanternas e tampa (26/09, noite — itens 33, 36–39)
+
+**Disco e pinça de freio com textura errada (33)**: as peças de freio do modelo apontavam para a textura da multimídia.
+Solução: trocar `KIT00_FRONT/REAR_BRAKE_A–C` pelas do Pontiac GTO do jogo (escala 1,15 em x/z, −1,2 cm em z). Disco usa
+a textura global `ROTOR1` (0x7811C146, em `GLOBALB.BUN`, não precisa estar no TPK do carro); pinça usa o recorte das
+pinças do `GTO_MISC` copiado em DXT1 para uma área livre do `<CARRO>_MISC` e as UVs remapeadas (`scripts/brakes33.py`).
+
+**Achatar uma peça num plano deixa frestas (36/36b)**: ao levar a ponta cônica da antena para um plano vertical, a borda
+de baixo da face virou uma linha quebrada; o triângulo reto que fechava o "V" até o teto deixava frestas finas
+entre os dois, e no jogo isso aparece como uma divisão. Para tapar, não usar um triângulo grande: preencher coluna a
+coluna (2 mm) do teto até um pouco *acima* da borda real, no mesmo plano e com a mesma normal/UV/cor (sobreposição
+coplanar idêntica não aparece). Ao medir a borda, excluir o próprio remendo antigo. Pele do 2018 tem outro hash de
+textura (0x9A8AAD9E; 2012 = 0xB637F71F) — scripts de lataria devem aceitar os dois.
+
+**Peça aumentada atravessa a lataria (37, 38)**: faróis aumentados (10 % no plano da lente, 1 cm para fora pela normal)
+passavam a carcaça por dentro do paralama/capô → remover os triângulos da carcaça fora do contorno da lente
+aumentada. Lanternas aumentadas (item 28) passaram a cortar as paredes do rebaixo da tampa → remover os triângulos
+da lataria que ficam na frente da lente a menos de 2 cm dela (a lente cobre). O usuário vê isso como "tampa
+deformada" mesmo sem a tampa ter mudado: sempre comparar a malha da lataria antes/depois (hash das posições dos
+triângulos) antes de mexer nela.
+
+**Peça "para dentro" na lateral (39)**: medir por fatias em x a distância entre o ponto mais externo da lente e a borda
+da lataria logo acima e logo abaixo do buraco; deslocar a peça inteira (lente + interior, todos os LODs) em y pelo
+que falta, suavizado em x e com rampa onde a parte já está certa (`scripts/slice39.py`, `tail39.py`). Empurrar pela
+normal da lente ajudou pouco: a borda da lataria fica em outra direção.
+
+**Renderizador ortográfico (`rast`)**: o plano de corte próximo passa pelo `center` da vista; com zoom alto e centro na
+peça, tudo que está entre a peça e a câmera some e parece que se vê o carro por dentro. Pôr o centro 1 m à frente
+na direção da câmera. Peças `DECAL_*` aparecem cinza (textura de vinil fora do TPK): ignorar ou tirar da seleção.
+
+**Jogo aberto**: a cópia para CARS/ADDONS pode até dar certo com o jogo aberto, mas o jogo só lê na próxima vez que
+carrega o carro; quando o usuário estiver jogando, preparar o pacote em `work/c2012-stage/pacote-*/` e só instalar
+quando ele pedir.
+
+## 13. Próximos passos sugeridos
 
 - `KIT00_BRAKELIGHT` e `KIT00_HEADLIGHT` continuam DXT3 (cerca de 20 % de alfa). O teste atual aprovou
   os faróis; manter assim enquanto não houver defeito.

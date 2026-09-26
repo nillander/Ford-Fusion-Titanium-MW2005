@@ -19,7 +19,7 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 | Texturas (`TEXTURES.BIN`) | Refeita em 26/09 (bug do mwtc, ver seção 4) |
 | Performance (`ATTRIBUTES.MWPS`, `FE.MWPS`) | Pronta |
 | Instalação no jogo | Feita (CARS/COBALTSS e ADDONS/CARS_REPLACE/COBALTSS); backup do Cobalt em `_backup_COBALTSS_vanilla` |
-| **Teste no jogo** | 4º teste: o carro abre. Item 8 (logo FUSION / nome) e item 7 (tampa) aprovados em 26/09. Item 6 (para-choque traseiro) aprovado em 26/09. Item 1 (grade inferior, `6B5A6327…`) aprovado em 26/09 (commit `8fdfab2d`). Itens 30 e 31 aprovados em 26/09 (commit `9a873d9b`). Item 27 (lanternas, v4 `E3914698…`) aprovado em 26/09. Próximo: item 28 |
+| **Teste no jogo** | 4º teste: o carro abre. Item 8 (logo FUSION / nome) e item 7 (tampa) aprovados em 26/09. Item 6 (para-choque traseiro) aprovado em 26/09. Item 1 (grade inferior, `6B5A6327…`) aprovado em 26/09 (commit `8fdfab2d`). Itens 30 e 31 aprovados em 26/09 (commit `9a873d9b`). Item 27 (lanternas, v4 `E3914698…`) aprovado em 26/09. Pacote `pacote-26-09` aprovado (28, 29, 32, 34, 35). Instalado para teste: `pacote-26-09d` (33, 36/36b, 37, 38, 39). Depois: item 17 (câmera interna) |
 | Git | Item 8 no commit inicial da branch. Item 7 (tampa, GEOMETRY `C159D615…`) no commit seguinte. O zip ainda tem `2D4AF358…` |
 
 ### Arquivos instalados agora (SHA-256)
@@ -264,3 +264,16 @@ Para voltar à versão 2012: reinstalar a partir de `release/Fusion2012_FWD_MW20
 - Recortar a pele com triângulos grandes deixa dentes; subdividir só onde a borda cruza e cortar linearmente.
 - UV exatamente em 0/1 dá volta para o outro lado do atlas; recuar as UVs dentro de cada quadrante.
 - Créditos: o Mondeo (Humster3D / BritishGamer88) pede "não redistribuir sem permissão"; o zip é para uso pessoal.
+
+## 4. Pacote `work/c2012-stage/pacote-26-09d/` — instalado para teste em 26/09 (itens 33, 36/36b, 37, 38, 39)
+
+| Carro | GEOMETRY | TEXTURES | Na nuvem (build) |
+|---|---|---|---|
+| 2012 | `260F59AF…` | `39505AD5…` | `build/geom_39t.bin`, `build/T12_33.BIN` |
+| 2018 | `B4D1BDDE…` | `13E45A9D…` | `build/geom_39_18.bin`, `build/T10_33.BIN` |
+
+Cadeia 2012: `36_12` → `hl37.py 1.10 1.10 0.010 sym` (faróis) → `lid38.py` (lataria na frente da lente da tampa +
+suavização da faixa) → `fin39.py` (fundo da antena) → `tail39.py` (ponta lateral das lanternas). Cadeia 2018:
+`36_18` → `fin39.py`. Scripts em `versions/fusion2012-fwd/scripts/`; prévias em `versions/fusion2012-fwd/preview/`
+(`farois-item37b`, `tampa-item38`, `antena-item36b`, `lanternas-item39`). Commit dos docs/scripts feito; binários ficam
+só em `work/` (sem commit). Quando aprovado: marcar os itens no TODO, depois item 17 e, por fim, refazer os dois zips.
