@@ -76,7 +76,7 @@ Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005.zip` (versão final
 
 Um item por vez, do mais simples ao mais difícil. Avisar para testar no jogo antes de seguir.
 O zip `release/Fusion2012_FWD_MW2005.zip` ainda tem a geometria anterior (`2D4AF358…`) e só será refeito
-quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `C159D615…`.
+quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `A0F66D69…` (item 6, aprovado).
 
 - [x] **22. Marca e nome (item 8).** Aprovado no jogo em 26/09. O jogo mostrava "temp350" porque o Mod Loader
   procura `SECONDARY_LOGO_COBALTSS_1` (hash `623849E1`). Logo do 2018 com esse hash. Ver `CONTINUACAO-FUSION2012.md` seção 4.6.
@@ -84,7 +84,9 @@ quando os itens abaixo estiverem aprovados. Instalado agora: GEOMETRY `C159D615�
   era a aba do friso cromado do 2018, inclinada e com frestas; ficou reta do vinco até a moldura da placa, sombreado
   uniforme, frestas fechadas por trás. O vinco de uma lanterna à outra permanece. Ver `versions/fusion2012-fwd/scripts/lidfix.py`
   e `versions/fusion2012-fwd/preview/tampa-item7.png`.
-- [ ] **24. Para-choque traseiro (item 6).** Pequena deformação no canto inferior, no meio.
+- [x] **24. Para-choque traseiro (item 6).** Pequena deformação no canto inferior, no meio. *(Aprovado no jogo em 26/09:
+  GEOMETRY `A0F66D69…`. Normais do vinco inferior do centro trocadas pela da face traseira; ver
+  `versions/fusion2012-fwd/scripts/fix6.py` e `preview/parachoque-traseiro-item6.png`.)*
 - [ ] **25. Grade preta frontal inferior (item 1).** Não conecta os dois faróis de milha. Conferir com as fotos de referência.
 - [ ] **26. Vazio abaixo dos faróis de milha (item 2).** Preencher esse espaço no para-choque.
 - [ ] **27. Cor interna das lanternas (item 5).** A parte na tampa do porta-malas precisa da mesma cor e das mesmas

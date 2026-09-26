@@ -7,7 +7,7 @@ capôs e kits da loja, adesivos, antena, placa NEWZERA, emblemas, logo FUSION) �
 | Arquivo | SHA-256 |
 | --- | --- |
 | GEOMETRY.BIN (no zip) | `2D4AF3586B18C54A23EA1F67C2EBD37948779978A0DECE4318A1EABB8D836DF4` |
-| GEOMETRY.BIN (instalada, item 7 aprovado) | `C159D615B0EC92930FEA69B65A0C9542AB7F8EA9A4FD628E23A384A6176E3DE9` |
+| GEOMETRY.BIN (instalada, item 6 aprovado) | `A0F66D6903EDF7DC6A73836CDBED17BA4A86AF57BA1448396B2A6242F19A5F3A` |
 | TEXTURES.BIN | `0DCF3F4984E2F07B68D5FC2C6F58111E01F86E6BC9B7029215B5C9A56C45920C` |
 | ATTRIBUTES.MWPS | `744596F4A3E34A49BD83982C7D9C9294328004BAD40156B5F126A3C643C3A8D5` |
 
@@ -22,6 +22,8 @@ capôs e kits da loja, adesivos, antena, placa NEWZERA, emblemas, logo FUSION) �
   da tampa do porta-malas, de uma lanterna à outra, foi removida**, com as aletas e a moldura das lanternas 2018.
   Aprovado no jogo em 26/09 (item 7): a aba inclinada onde o friso encaixava sombreava como uma faixa; ficou reta
   do vinco até a moldura da placa, com as frestas fechadas por trás (`scripts/lidfix.py`). O vinco permanece.
+  **Para-choque traseiro (item 6, aprovado em 26/09):** o triângulo escuro no canto inferior do meio era a normal
+  da face de baixo num vértice do vinco usado pela face traseira (já vinha da z10); `scripts/fix6.py` + `apply6.py`.
   Brake light central, refletores do para-choque e luzes do painel do 2018 foram mantidos.
 - **Faróis de milha:** nicho trapezoidal preto + farol redondo com aro cromado na posição do 2012; o nicho baixo do
   2018 ficou fechado (preto, sem a peça de LED).

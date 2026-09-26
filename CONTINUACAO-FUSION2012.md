@@ -19,13 +19,13 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 | Texturas (`TEXTURES.BIN`) | Refeita em 26/09 (bug do mwtc, ver seção 4) |
 | Performance (`ATTRIBUTES.MWPS`, `FE.MWPS`) | Pronta |
 | Instalação no jogo | Feita (CARS/COBALTSS e ADDONS/CARS_REPLACE/COBALTSS); backup do Cobalt em `_backup_COBALTSS_vanilla` |
-| **Teste no jogo** | 4º teste: o carro abre. Item 8 (logo FUSION / nome) e item 7 (tampa) aprovados em 26/09. Próximo: item 6 |
+| **Teste no jogo** | 4º teste: o carro abre. Item 8 (logo FUSION / nome) e item 7 (tampa) aprovados em 26/09. Item 6 (para-choque traseiro, GEOMETRY `A0F66D69…`) aprovado em 26/09. Próximo: item 1 |
 | Git | Item 8 no commit inicial da branch. Item 7 (tampa, GEOMETRY `C159D615…`) no commit seguinte. O zip ainda tem `2D4AF358…` |
 
 ### Arquivos instalados agora (SHA-256)
 | Arquivo | SHA-256 |
 | --- | --- |
-| GEOMETRY.BIN (CARS e ADDONS) | `C159D615B0EC92930FEA69B65A0C9542AB7F8EA9A4FD628E23A384A6176E3DE9` (item 7; o zip ainda tem a anterior `2D4AF358…`) |
+| GEOMETRY.BIN (CARS e ADDONS) | `A0F66D6903EDF7DC6A73836CDBED17BA4A86AF57BA1448396B2A6242F19A5F3A` (item 6, aprovado; antes do item 6 = `C159D615…` em `work/c2012-stage/item7/`; o zip ainda tem `2D4AF358…`) |
 | TEXTURES.BIN (CARS e ADDONS) | `0DCF3F4984E2F07B68D5FC2C6F58111E01F86E6BC9B7029215B5C9A56C45920C` |
 | ATTRIBUTES.MWPS | `744596F4A3E34A49BD83982C7D9C9294328004BAD40156B5F126A3C643C3A8D5` |
 | FE.MWPS | `91B557D2B3368A09C695D104F289FD5D6C6C5AA21C03BACB43A22F5B4C7740E9` |
@@ -36,9 +36,9 @@ Leia antes: `APRENDIZADOS_FUSION_MW2005.md` (lições do 2018) e `versions/fusio
 Documentação e scripts: `versions/fusion2012-fwd/` (LEIA-ME, `scripts/`, `preview/`).
 Diagnóstico pronto (não instalado): `versions/fusion2012-fwd/diag-z10-no-slot-cobalt/` (geometria 2018 no slot COBALTSS).
 
-## 3. Próximo passo: item 6
-Item 8 (logo) e item 7 (tampa) aprovados no jogo em 26/09. Retomar pela deformação no canto inferior do meio
-do para-choque traseiro. Um item por vez; avisar para testar. Lista completa em `TODO.md` (itens 24–29).
+## 3. Próximo passo: item 1
+Itens 8 (logo), 7 (tampa) e 6 (para-choque traseiro) aprovados no jogo em 26/09. Próximo: item 1 (TODO 25), grade
+preta inferior que não deve ligar os dois faróis de milha. Um item por vez; avisar para testar. Lista completa em `TODO.md` (itens 24–29).
 
 Se o jogo voltar a fechar ou a mostrar "temp350", o histórico abaixo ainda vale:
 - **Ainda fecha:** instalar o diagnóstico (seção 5) para separar geometria x slot/texturas/MWPS.
@@ -106,7 +106,16 @@ Carro abriu e apareceu. Pendências (ordem: mais simples primeiro):
    inclinação 0,07 como no Mondeo), normais do plano, normais das fileiras de cima da tampa inferior sem a
    influência da prateleira, e duas faixas de pintura 3–4 mm atrás do plano cobrindo as frestas.
    Build rápido sem refazer enxertos: `scripts/run12b.sh` e depois `Retarget2.cs` (MUSTANGGT→COBALTSS).
-6. Deformação no para-choque traseiro, canto inferior no meio.
+6. Deformação no para-choque traseiro, canto inferior no meio → **feito, aprovado no jogo em 26/09** (GEOMETRY
+   `A0F66D69…`, em `work/c2012-stage/item6/`; anterior = `item7/` `C159D615…`). Causa (já existia na z10): no vinco
+   inferior do para-choque (z≈0,258, x≈−2,36), o vértice do centro (y=0, lado −y) tinha a normal da face de baixo
+   (−0,29; 0; −0,96) e é usado por um triângulo de 16 cm² da face traseira → triângulo escuro parecendo amassado.
+   `scripts/fix6.py`: nas carrocerias (todos os kits/LODs), região x<−2,28, |y|<0,35, z 0,22–0,36, vértices usados
+   por faces traseiras (nx<−0,85) cuja normal difere >40° da média dessas faces recebem essa média. 45 normais
+   (15 por kit: A, B, C). `scripts/apply6.py` grava só os 12 bytes de cada normal no BIN (tamanho igual; leitura
+   independente OK, 175 peças). Patch em `work/c2012-stage/item6/item6-patch.json` (offsets sobre `C159D615…`).
+   Não está em `build12.py`: num rebuild, rodar `apply6.py <bin> <dump> <saída>` depois do `Retarget2.cs`.
+   Prévia: `versions/fusion2012-fwd/preview/parachoque-traseiro-item6.png`.
 1. Grade preta inferior não deve ligar os dois faróis de milha (ver fotos de referência 2013).
 2. Vazio abaixo dos faróis de milha no para-choque → preencher.
 5. Parte interna das lanternas (tampa) com cor/camadas diferentes da parte externa.
