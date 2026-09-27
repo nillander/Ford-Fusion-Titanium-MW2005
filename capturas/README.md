@@ -1,8 +1,8 @@
 # Capturas dos Fusion no Most Wanted 2005
 
 Imagens feitas no jogo, separadas por veículo. A galeria reúne registros de apresentação e de testes;
-nem toda captura representa exatamente os arquivos da release v2.3. Para conferir o estado publicado,
-veja as [notas da v2.3](../release/NOTAS-v2.3.md).
+nem toda captura representa exatamente os arquivos da release v2.4. Para conferir o estado publicado,
+veja as [notas da v2.4](../release/NOTAS-v2.4.md).
 
 | Fusion 2012 FWD (`COBALTSS`) | Fusion Titanium 2018 AWD (`MUSTANGGT`) |
 | --- | --- |

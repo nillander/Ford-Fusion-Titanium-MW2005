@@ -2,21 +2,21 @@
 
 Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os antigos `CONTINUACAO-CODEX.md`
 (2018, V1prime) e `CONTINUACAO-FUSION2012.md`. Leia também `docs/APRENDIZADOS.md` (lições, com imagens),
-`docs/TODO.md` (itens 1–46) e `versions/fusion2012-fwd/LEIA-ME.md`.
+`docs/TODO.md` (itens 1–48) e `versions/fusion2012-fwd/LEIA-ME.md`.
 
-**Comece pela seção 3: a v2.3 foi publicada e todos os itens (1–46) estão fechados.** As seções 4 em diante registram a
+**Comece pela seção 3: a v2.4 foi publicada e todos os itens (1–48) estão fechados.** As seções 4 em diante registram a
 construção e os testes antigos; números de versão e caminhos de nuvem nelas são históricos, não o estado instalado.
 
 ## 1. O projeto
 - **Fusion 2018 AWD** no slot `MUSTANGGT` (Ford Mustang GT) e **Fusion 2012 FWD** no slot `COBALTSS` (Cobalt SS,
   carro inicial). O 2012 é o 2018 com faróis, lanternas e faróis de milha do modelo 2012 (Mondeo 2016 do GTA V,
   de Humster3D, portado por BritishGamer88).
-- Branch `main`, tag única `v2.3`; remoto `git@github.com:nillander/nfsmw-ford-fusion-titanium.git`
+- Branch `main`, tag única `v2.4`; remoto `git@github.com:nillander/nfsmw-ford-fusion-titanium.git`
   (SSH). O usuário quer **uma única tag e uma única release**, sempre da última versão. Não publicar o teste
   atual dos faróis sem pedido/aprovação. Commits, quando solicitados, como `Nillander Alarcão <nillander@live.com>`.
-- Release **v2.3**: `release/Fusion2012_FWD_MW2005.zip` e `release/Fusion2018_AWD_MW2005.zip`.
+- Release **v2.4**: `release/Fusion2012_FWD_MW2005.zip` e `release/Fusion2018_AWD_MW2005.zip`.
   Cada ZIP abre na pasta com seu nome e inclui `instalar.bat`, `ADDONS`, `CARS`, `CREDITOS`, `LEIA-ME.md` e
-  `SHA256SUMS.txt`. Notas em `release/NOTAS-v2.3.md` (para-choque e faróis do 2012, chapa da grade, cinta preta).
+  `SHA256SUMS.txt`. Notas em `release/NOTAS-v2.4.md` (cinco cintas nos kits; faróis e para-choque do 2012; chapa da grade).
 
 ## 2. Como trabalhar com o usuário
 - Responder em **pt-BR**. **Um item por vez**; ao terminar, instalar no jogo e **parar para ele testar**.
@@ -27,16 +27,21 @@ construção e os testes antigos; números de versão e caminhos de nuvem nelas 
 - Git no PC: `git add` pode travar — usar `hash-object -w` / `update-index --cacheinfo` / `write-tree` /
   `commit-tree` / `update-ref`, com as linhas `Co-Authored-By`/`Claude-Session` no fim da mensagem.
 
-## 3. Estado atual em 27/09/2026 — v2.3 publicada
+## 3. Estado atual em 27/09/2026 — v2.4 publicada
 
-Instalado no jogo = conteúdo dos ZIPs da v2.3 (2012: pacote `work/c2012-stage/pacote-27-09m-parachoque-farol/`;
-2018: `pacote-27-09l-farois57-cinta/`; montagem dos ZIPs em `work/zipbuild/v2.3-pacotes/`):
+Instalado no jogo = conteúdo dos ZIPs da v2.4 (pacote `work/c2012-stage/pacote-27-09o-cintas5/`, montagem dos ZIPs
+em `work/zipbuild/v2.4-pacotes/`):
 
 | Carro | GEOMETRY.BIN | TEXTURES.BIN | ZIP |
 | --- | --- | --- | --- |
-| 2012 (COBALTSS) | `12F99EE65681A7AEB8A0554D9BA7CAB9CE4DB4E6050A63D0FA7CB7D7E71C25BC` | `C969CB98…` (v2.1) | `4D2DA5F30456565F05C29E5C96686B569E6329388890E2C9E5A718D8F109545D` |
-| 2018 (MUSTANGGT) | `EDDE6EE9B5D2FC30F78A6B4317E4FF10F6911D5EC3272EA068EB61C41264DA90` | `854CFB77…` (v2.1) | `80F232F0FBEF1CB4AFA46E77E6F85AE78FAA4F03DDDBC2264A654204D526B8A5` |
+| 2012 (COBALTSS) | `643E5E4A7DEFC67E82FF3FFDF381C2F5BC0E854EB7201369EC64E9C36F075583` | `26E9ADDEAA435A98AB5CE8D6CCEE9C695B49A03147C892B0DB8842412E954A6E` | `4E499260D8B8C326EF0B3E7B5AF9B8EA80A21C76FCEEC02CE5DC28DD8C3359F0` |
+| 2018 (MUSTANGGT) | `4E950229DC116F8ACF3D79C1F2EDD5CFE93E68042D6FA6A1CC76EE09B9671C4E` | `F7C6C9F386CB1E8A347ACD704D235F59A6D45AA7FDF1AD5657279C9F0F69B648` | `B2C307C8479CF1B84E8A73B7B948C82EA1EC22A43ED294B01B2473E43EE32667` |
 
+- **Cintas (item 48, v2.4)**: `kits48.py` monta KIT01–KIT05 a partir do `KIT00_BODY` (todos os LODs) com a cinta
+  do kit na dianteira (y −0,33, z 0,148 → −0,03, só na parte preta) e na traseira (y +0,405, z 0,215 → 0,015);
+  KIT03 recebe os decalques do KIT01. `tex48.py` grava as cinco texturas (64×256) no atlas das cintas: 2012
+  `KIT00_HEADLIGHT_OFF` x 512–831 / y 768; 2018 `LOGO` x 768–1023 / y 0 e x 768 / y 256. Entrada: v2.3
+  (2012 `12F99EE6…`, 2018 `EDDE6EE9…`).
 - **Faróis do 2012 (candidato 57, `versions/fusion2012-fwd/scripts/hl59.py`)**: em vez de novos remendos, a pintura
   das carrocerias numa faixa de até 7,5 cm da lente é **projetada** numa superfície lisa. Parametrização radial a
   partir de um ponto dentro do carro (`hl58maps.py`: (s,t) = 0,7·(azimute, elevação), altura = raio; acompanha a

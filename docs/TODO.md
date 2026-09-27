@@ -272,3 +272,18 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   (em `BASE_A–E`) que fecha a visão para dentro do carro por baixo do farol. Cinta preta larga mantida.
   193 peças, 1.441.090 triângulos. Prévia `preview/parachoque-farol-item46.png`.)*
   *(27/09: aprovado no jogo ("ficou perfeito") e publicado na **v2.3**: 2012 GEOMETRY `12F99EE6…`; 2018 igual à v2.2.)*
+- [x] **47. Cintas de reboque sem repetição entre os kits (2012 e 2018).** Pedido de 27/09: KIT00 fábrica sem cinta;
+  KIT01/KIT02 dianteira preta/vermelha; KIT03/KIT04 traseira preta/vermelha, do lado esquerdo, por dentro do
+  escapamento, presa na faixa preta; KIT05 dianteira e traseira laranja com texto preto. Sem kits novos: só os seis
+  que o jogo já tem para o slot (o KIT03 existia no Cobalt e no Mustang originais e faltava no Fusion).
+  *(27/09, instalado para teste — `work/c2012-stage/pacote-27-09n-kits-cintas/`: 2012 GEOMETRY `A065ACDD…` /
+  TEXTURES `A62F9A5D…`, 2018 GEOMETRY `B52C25E6…` / TEXTURES `DC88390E…`; anteriores em `backup/`.
+  `kits46.py` (traseira: y +0,42, z 0,215 → 0,015, 1 cm atrás do para-choque; KIT03 com os decalques do KIT01) e
+  `tex46.py` (cinta laranja 一路顺风 em área livre do atlas). Prévia `preview/kits-cintas-item47.png`.)*
+  *(Substituído pelo item 48.)*
+- [x] **48. Cinco cintas diferentes, uma por kit (2012 e 2018).** Pedido de 27/09: KIT01–KIT05 com cintas distintas, cada
+  uma na dianteira (lado direito) e na traseira (lado esquerdo): preta/vermelho, vermelha/branco, laranja/preto, azul
+  com F B I amarelo e zebrada preta e amarela; dianteira baixada para ficar só na parte preta do para-choque; traseira
+  1,5 cm mais longe do escapamento. *(`kits48.py`, `tex48.py`; pacote `work/c2012-stage/pacote-27-09o-cintas5/`:
+  2012 GEOMETRY `643E5E4A…` / TEXTURES `26E9ADDE…`, 2018 GEOMETRY `4E950229…` / TEXTURES `F7C6C9F3…`. Publicado na
+  **v2.4**. Prévias `preview/kits-cintas-item48.png` e `cintas-item48.png`.)*
