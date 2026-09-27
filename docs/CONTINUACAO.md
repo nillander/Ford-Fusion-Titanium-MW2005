@@ -2,16 +2,21 @@
 
 Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os antigos `CONTINUACAO-CODEX.md`
 (2018, V1prime) e `CONTINUACAO-FUSION2012.md`. Leia também `docs/APRENDIZADOS.md` (lições, com imagens),
-`docs/TODO.md` (itens 1–42) e `versions/fusion2012-fwd/LEIA-ME.md`.
+`docs/TODO.md` (itens 1–44) e `versions/fusion2012-fwd/LEIA-ME.md`.
+
+**Comece pela seção 3: o trabalho voltou a ficar ativo após a v2.1.** As seções 4 em diante registram a
+construção e os testes antigos; números de versão e caminhos de nuvem nelas são históricos, não o estado instalado.
 
 ## 1. O projeto
 - **Fusion 2018 AWD** no slot `MUSTANGGT` (Ford Mustang GT) e **Fusion 2012 FWD** no slot `COBALTSS` (Cobalt SS,
   carro inicial). O 2012 é o 2018 com faróis, lanternas e faróis de milha do modelo 2012 (Mondeo 2016 do GTA V; o
   usuário tem permissão de redistribuição).
-- Branch única `main` e tag única `v2.0`. Remoto `git@github.com:nillander/nfsmw-ford-fusion-titanium.git`
-  (SSH). **Nunca dar push**: o usuário publica. Commits como `Nillander Alarcão <nillander@live.com>`.
-- Release **v2.0** publicada no GitHub: `release/Fusion2012_FWD_MW2005.zip` e `release/Fusion2018_AWD_MW2005.zip`.
-  Cada zip abre numa pasta com o nome do arquivo e traz `instalar.bat`. Notas em `release/NOTAS-v2.0.md`.
+- Branch `main`, tag local única `v2.1`; remoto `git@github.com:nillander/nfsmw-ford-fusion-titanium.git`
+  (SSH). O usuário quer **uma única tag e uma única release**, sempre da última versão. Não publicar o teste
+  atual dos faróis sem pedido/aprovação. Commits, quando solicitados, como `Nillander Alarcão <nillander@live.com>`.
+- Release **v2.1**: `release/Fusion2012_FWD_MW2005.zip` e `release/Fusion2018_AWD_MW2005.zip`.
+  Cada ZIP abre na pasta com seu nome e inclui `instalar.bat`, `ADDONS`, `CARS`, `CREDITOS`, `LEIA-ME.md` e
+  `SHA256SUMS.txt`. Notas em `release/NOTAS-v2.1.md`. É a correção das placas, **não** dos faróis.
 
 ## 2. Como trabalhar com o usuário
 - Responder em **pt-BR**. **Um item por vez**; ao terminar, instalar no jogo e **parar para ele testar**.
@@ -22,23 +27,98 @@ Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os
 - Git no PC: `git add` pode travar — usar `hash-object -w` / `update-index --cacheinfo` / `write-tree` /
   `commit-tree` / `update-ref`, com as linhas `Co-Authored-By`/`Claude-Session` no fim da mensagem.
 
-## 3. Estado em 27/09/2026 — trabalho finalizado
-O usuário deu o trabalho por finalizado. Todos os itens do `docs/TODO.md` estão fechados (1–42).
+## 3. Estado atual em 27/09/2026 — teste dos faróis do 2012 pendente
 
-| Carro | Instalado no jogo = release v2.0 |
+Os itens 1–42 foram encerrados na v2.0. Depois, a v2.1 corrigiu as placas **dianteiras e traseiras dos dois
+carros**: removeu a antiga moldura preta 3D texturizada, que flutuava atrás da placa; a borda preta com cantos
+arredondados agora pertence à própria placa. **Preservar** a faixa azul Mercosul e a bandeira do Brasil. O texto
+“Mercosul” na moldura descartada não era necessário. Depois de corrigir os ZIPs para conter a pasta-raiz de cada
+carro e `instalar.bat`, a v2.1 foi publicada. Hashes dos ZIPs locais: 2012
+`B47B3C372345C331DD847D022494B9B3AEEBD613B6CDC9975B64EA68A1BBE0DF`; 2018
+`AC372B2D4B81F724977B08B3D1683CFE69ADC19D653599D21C3031CAC079A4A5`.
+
+**Trabalho ainda aberto:** encaixe dos faróis dianteiros do Fusion **2012** na lataria (capô, paralamas e
+para-choque). As capturas do usuário estão preservadas em `docs/imagens-projeto/19-fusion2012-e-refino/usuario/`,
+com nomes `teste-27-09-v21--*` e `teste-27-09-c55--*`. Vermelho e amarelo são anotações do usuário, não partes
+da textura do carro. Distinção espacial essencial: a seção **laranja é a ponta externa/traseira**, junto ao
+paralama; a **branca é a ponta interna/dianteira**, junto à grade. O usuário disse que o farol na ponta branca
+já encaixa; ali há um **buraco triangular escuro** e saliências na **lataria**, não motivo para mover a luz inteira.
+Também há um volume irregular acima da seção laranja. Em capturas anteriores, a seção laranja encaixava menos,
+mas a última rodada marcou apenas os pontos restantes.
+
+O **candidato 56 dos faróis**, ainda **não aprovado visualmente**, está instalado **com a chapa da grade** do
+item 43, que foi aprovada separadamente no jogo. Estado verificado nas duas rotas de cada slot:
+
+| Rota relativa ao jogo | Arquivo |
 | --- | --- |
-| 2012 (COBALTSS) | `pacote-27-09b`: GEOMETRY `0D618738…`, TEXTURES `39505AD5…` |
-| 2018 (MUSTANGGT) | `pacote-27-09b`: GEOMETRY `EFA07989…`, TEXTURES `13E45A9D…` |
+| `CARS/COBALTSS/GEOMETRY.BIN` e `ADDONS/CARS_REPLACE/COBALTSS/GEOMETRY.BIN` | SHA-256 `3872FCE73D04BE73AB2AF75FC72E332C1EDDE560C28080B5202D90F286340413` |
+| `CARS/MUSTANGGT/GEOMETRY.BIN` e `ADDONS/CARS_REPLACE/MUSTANGGT/GEOMETRY.BIN` | SHA-256 `89700BC74AEAD99139AAE94DF44FF1F4B513AA3A0FCE0F4064B19ECD41ACCDCC` (chapa aprovada) |
 
-Zips: `release/Fusion2012_FWD_MW2005.zip` `69D7BC6A…`, `release/Fusion2018_AWD_MW2005.zip` `939EB20C…`
-(montagem em `work/zipbuild/z12` e `z18`: cada pasta vira `<nome do zip>/` dentro do zip, junto com
-`release/instalar.bat`).
+Jogo em `D:\Program Files (x86)\Electronic Arts\Need For Speed Most Wanted Black Edition`;
+repositório em `C:\Users\nillander\NoDocuments\fusion-mw2005`. Pacote instalado no 2012:
+`work/c2012-stage/pacote-27-09k-farois56-grade/2012/GEOMETRY.BIN`. O 56 puro, **sem chapa**, permanece em
+`work/c2012-stage/headlight56-full.BIN` (SHA-256
+`41711104EE4C9BF76A1C71CE5F5F5AB9FBBD87F78D9D44D5CD8456EFD78BB73E`);
+o candidato 55 anterior era `2ECEC047386FBF07E70F0B920EB9C024FD94C874E8051B0A7E010898C1254F30`.
+As texturas não foram alteradas nesta rodada. A chapa da grade fica no `BASE_A–E`, enquanto os ajustes dos
+faróis ficam no `BODY`/`HOOD`; por isso foram combinados sem deslocar as luzes. O BIN combinado tem 193 peças
+e 1.437.081 triângulos. Não confundir a aprovação da chapa com a aprovação dos faróis.
 
-Pacotes anteriores em `work/c2012-stage/` (cada um com `SHA256SUMS.txt`): `pacote-26-09`, `-26-09d`, `-26-09e`,
-`-27-09`, `-27-09b` (final).
+**O que mudou no 56:** a partir do `headlight55-base-full.dump`, `work/hl54.py` com perfil `last-points`
+ampliou a suavização topológica da pele pintada sobre a seção laranja e junto à ponta branca;
+`work/hl49.py` suavizou as normais; `work/hl56_patch.py` criou uma cobertura pintada **só na região
+interna e inferior** (`inner-lower` em `work/hl46.py`), evitando refazer a faixa larga que havia criado um calombo.
+São 112 vértices adicionais no `KIT00_BODY_A`; o maior `BODY_A` está em 64.908 de 65.535 vértices.
+O validador independente leu o BIN: **193 peças, 1.426.695 triângulos**.
+Prévia `work/c2012-stage/headlight56-full-side.png`; mapa de lacunas `headlight56-gap.png`.
+O render offline apresenta magenta por texturas incompletas e não reproduz os reflexos do jogo; julgar pelos
+prints no jogo. O mapa de lacunas é uma aproximação no plano da lente, não prova de que todo pixel magenta é
+um buraco visível.
 
-**Se voltar a mexer:** ainda há riscos finos na lateral traseira que parecem costuras da malha original (ver
-APRENDIZADOS seção 13); o `BODY_A` do 2012 está a ~1.100 vértices do limite.
+**Próximo passo:** receber o teste/prints do usuário para os faróis do candidato 56 combinado. Não afirmar que o encaixe está perfeito
+sem essa verificação. Se persistir algum ponto, mexer apenas na região indicada, preparar novo BIN, validar,
+verificar que `speed.exe` está fechado, fazer backup e instalar **nas duas rotas** com conferência SHA-256. Parar
+para o usuário testar. **Não fazer commit, push, tag ou release da geometria pendente** até pedido/aprovação.
+O repositório tem muitos arquivos modificados/não rastreados de trabalho anterior; não limpar nem incluir
+indiscriminadamente. Em `docs/TODO.md`, os itens 1–42 são históricos/fechados; a chapa do 43 teve aprovação
+visual, e os faróis do 44 ainda aguardam teste/aprovação.
+
+### 3.1 Capturas para comparar e reprodução técnica
+
+| Captura preservada em `docs/imagens-projeto/19-fusion2012-e-refino/usuario/` | Leitura |
+| --- | --- |
+| `teste-27-09-v21--farol-marcado-esquerdo.png` e `--farol-marcado-direito.png` | Deformações extensas iniciais em volta das duas luzes. |
+| `teste-27-09-v21--encaixe-seta-laranja-1.png` e `--encaixe-seta-laranja-2.png` | Pior encaixe original junto à ponta externa laranja. |
+| `teste-27-09-v21--calombo-ponta-branca.png` e `--saliencias-amarelas.png` | Calombo interno e saliências superiores/inferiores; não deslocar a ponta branca. |
+| `teste-27-09-c55--buraco-triangular-interno.png` | Vão escuro na ponta branca junto à grade, após o candidato 55. |
+| `teste-27-09-c55--saliencias-externa-interna.png` | Os últimos volumes irregulares marcados em amarelo. |
+
+Arquivos de construção em `work/c2012-stage/`:
+
+1. `headlight55-base-full.{BIN,dump}`: base já com cobertura da região **externa** e avanço local de 3 mm
+   da ponta externa da luz (`work/hl46.py`), sem mover a ponta branca.
+2. `headlight56-fair.spec` / `.BIN` / `.dump`: `work/hl54.py` no perfil `last-points`, aplicado a BODY de
+   KIT00/01/02/04/05, LODs A–E.
+3. `headlight56-norm.spec` / `.BIN` / `.dump`: `work/hl49.py`, normais de BODY e HOOD.
+4. `headlight56-full.spec` / `.BIN` / `.dump`: `work/hl56_patch.py`, pequena cobertura interna inferior.
+   `work/hl46.py` fornece `bridge(..., region='inner-lower')`; a máscara só considera a fração interna
+   `<0,21` da largura da lente e a metade inferior do plano. Não alterar o modo `outer` ao refinar isso.
+
+No Windows local, definir `PYTHONPATH` como
+`work;versions\fusion2012-fwd\scripts;versions\v3-fusion-ajm3899\scripts` e usar
+`work/venv/Scripts/python.exe`. Cada `.spec` é aplicado ao BIN da etapa anterior com:
+
+```powershell
+pwsh -NoProfile -File work/run_mw_local.ps1 -Source versions/fusion2012-fwd/scripts/AddParts2.cs <entrada.BIN> <patch.spec> <saida.BIN>
+pwsh -NoProfile -File work/run_mw_local.ps1 -Source versions/v3-fusion-ajm3899/scripts/Dump.cs <saida.BIN> <saida.dump>
+& 'C:\Program Files\dotnet\dotnet.exe' scripts/validator/bin/Release/net8.0/Validator.dll <saida.BIN> <validacao.json>
+```
+
+Não usar `dotnet` sem caminho: nesta máquina ele encontra primeiro o runtime x86 sem .NET 8. Revalidar sempre
+o limite de 65.535 vértices por peça. `work/render_headlight.py` e `work/librast.so` produzem a prévia sob WSL;
+`versions/fusion2012-fwd/scripts/hlgap.py` produz o mapa de lacunas. Os testes intermediários `hl47.py`,
+`hl48.py`, `hl52.py` e `hl53.py` produziram sulcos escuros ou expuseram buracos ao empurrar/apagar a pele;
+não tomá-los como base. A cobertura interna larga do 46 gerou calombo, motivo do recorte pequeno no 56.
 
 ## 4. Cadeia de geometria (nuvem, `/home/claude/c12/build`)
 - **2012**: `36_12` → `hl37.py 1.10 1.10 0.010 sym` → `lid38.py` → `fin39.py` → `tail39.py` → `hl40.py 1.5 0.12`
@@ -240,4 +320,3 @@ Carro abriu e apareceu. Pendências (ordem: mais simples primeiro):
 3. Maior peça com 64.543 vértices (KIT02_BODY_A), no limite; a z10 tinha no máximo 57.995.
 4. `ATTRIBUTES.MWPS`: gerado por `perf12.py` (offsets dos nós cobaltss calculados pelo VLT). Para testar, remover o
    arquivo da pasta ADDONS temporariamente.
-

@@ -308,3 +308,33 @@ parecem costuras da malha original. Ficam para a próxima rodada.
 - `KIT00_BRAKELIGHT` e `KIT00_HEADLIGHT` continuam DXT3 (cerca de 20 % de alfa). O teste atual aprovou
   os faróis; manter assim enquanto não houver defeito.
 - O vidro dos faróis (grupo 5 antigo de `BASE_A`) foi deixado fora na V1prime; pode ser reavaliado.
+
+## 15. Rodada posterior à v2.1 — contorno dos faróis do 2012 (27/09)
+
+A v2.1 corrigiu as placas dos dois carros, mas **não** encerrou o ajuste da frente do 2012. A sequência
+de capturas do usuário refinou o diagnóstico: a ponta **laranja** é externa, junto ao paralama, e era onde
+o farol estava mais recuado; a ponta **branca** é interna, junto à grade, e a luz nela já encaixava. As
+marcas restantes são sobretudo na **lataria**, não motivo para transladar a luz inteira.
+
+![Deformações assinaladas](imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09-v21--saliencias-amarelas.png)
+![Buraco triangular após o candidato 55](imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09-c55--buraco-triangular-interno.png)
+![Volumes restantes](imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09-c55--saliencias-externa-interna.png)
+
+- Aproximar a ponta externa da luz e preencher frestas da lataria (`hl46.py`) ajudou, mas uma cobertura
+  interna larga criou um novo calombo; no 55, a cobertura foi limitada à parte externa, deixando o
+  triângulo escuro junto à grade.
+- Empurrar a pele radialmente (`hl47.py`), ajustá-la como uma superfície quadrática (`hl48.py`), apagar
+  faces redundantes (`hl52.py`) ou aproximar a pele do capô (`hl53.py`) gerou sulcos ou expôs buracos na
+  prévia. Não reutilizar essas variantes como resultado aprovado.
+- Suavização da **malha conectada** da pintura (`hl54.py`, Laplaciano com bordas preservadas) e das
+  normais (`hl49.py`) foi a alternativa mais estável. O 56 ampliou o raio da suavização e adicionou uma
+  cobertura pintada somente sob a ponta branca (`hl56_patch.py`). Isso é uma **hipótese instalada para
+  teste**, não uma correção visualmente aprovada.
+- A máscara de `hlgap.py` projeta a malha no plano da lente e descarta superfícies mais profundas que
+  3,5 cm; suas manchas magenta não equivalem automaticamente a buracos visíveis. A prévia em
+  `work/render_headlight.py` também usa texturas incompletas. A comparação decisiva é dentro do jogo,
+  com capturas nos mesmos ângulos do usuário.
+
+Estado instalado e passos de reprodução: `docs/CONTINUACAO.md`, seção 3. O teste local agora combina o
+candidato 56 dos faróis com a chapa da grade já aprovada; a release v2.1 permanece separada até a
+aprovação visual dos faróis.

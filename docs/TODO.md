@@ -1,5 +1,9 @@
 # TODO — Fusion Titanium 2018 (versão final: V1prime-z10)
 
+**Atualização de 27/09/2026:** o cabeçalho e os hashes a seguir são históricos. O estado da release v2.1 e
+do teste atual do Fusion 2012 está em `docs/CONTINUACAO.md`, seção 3. A chapa do item 43 foi aprovada
+visualmente; os faróis do item 44 ainda aguardam confirmação no jogo.
+
 Versão final: `release/Fusion2018_AWD_MW2005.zip` (V1prime-z10, GEOMETRY `BB90B702…`, TEXTURES `EEBB0B83…`, ATTRIBUTES.MWPS `3BE53CF9…`, SECONDARYLOGO.BIN `E4721014…`); ver `versions/v1prime/checkpoints/checkpoint-v1prime-z10/LEIA-ME.md`.
 Checkpoints anteriores (binários só no histórico do git; o commit de cada um está em `versions/LEIA-ME.md`): `checkpoint-v1prime-z8` (`FC6C27FA…`), `checkpoint-v1prime-z3` (`8D9BE4F9…`), `checkpoint-v1prime-z2` (`B12D0E90…`), `checkpoint-v1prime-y` (`A8DA8897…`), `checkpoint-v1prime-u` (`CD41C016…`), `checkpoint-v1prime-s` (`2F66D3D2…`), `checkpoint-v1prime-q` (`DD6212A8…`), `checkpoint-v1prime-p` (`B1375C52…`), `checkpoint-v1prime-l` (`695DC7F7…`), `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
 Toda tarefa deve partir dele. Depois de pronta, testar **abrindo o jogo com o save ZHABES (que tem o
@@ -216,3 +220,25 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   volta fechados com pele pintada (`hlfill.py`, máscara da lente sem furos). Prévias `preview/refino-item42-*.png` e
   `farois-item42.png`. Pendente: alguns riscos finos na lateral traseira são costuras da malha original.)*
   *(27/09: o usuário deu o trabalho por finalizado; itens 41 e 42 encerrados e incluídos na release v2.0 — pacote `pacote-27-09b`.)*
+
+- [x] **43. Chapa preta atrás da grade superior (2012 e 2018).** Pela grade cromada via-se o interior do carro (bancos
+  de couro claro, `<CARRO>_INTERIOR`). *(27/09, instalado para teste — `work/c2012-stage/pacote-27-09j-grade-chapa/`:
+  2012 GEOMETRY `5D110F4D…` (sobre `headlight55-full` `2ECEC047…`), 2018 `89700BC7…` (sobre `pacote-27-09e` `66B89F30…`);
+  texturas iguais. Grupo novo em `BASE_A–E` (vale para todos os kits), textura `<CARRO>_LOGO` em área preta sólida
+  (UV 0,1; 0,45): superfície x = 2,296 − 0,304·y², 12 mm atrás da face de trás das barras, contorno = abertura da
+  lataria + 2,5 cm escondidos atrás da lataria (fora dos faróis). `versions/fusion2012-fwd/scripts/plate_grille.py`
+  (+ `gmap.py`); prévias `versions/fusion2012-fwd/preview/grade-chapa-2012.png` e `-2018.png`.)*
+
+- [ ] **44. Encaixe final dos faróis dianteiros do Fusion 2012 após a v2.1.** Corrigir as saliências da lataria
+  acima da ponta externa laranja e junto à ponta interna branca, além do buraco triangular escuro entre esta
+  ponta e a grade. Não deslocar o farol inteiro: a ponta branca já encaixa. Candidato 56 instalado para teste
+  nas duas rotas `COBALTSS` em 27/09; ainda aguarda avaliação no jogo pelo usuário. Geometria
+  `41711104EE4C9BF76A1C71CE5F5F5AB9FBBD87F78D9D44D5CD8456EFD78BB73E`;
+  `work/c2012-stage/pacote-27-09j-ultimos-pontos-farois/`. Capturas preservadas em
+  `docs/imagens-projeto/19-fusion2012-e-refino/usuario/`; procedimento e contexto em
+  `docs/CONTINUACAO.md`, seção 3. Este candidato não inclui a chapa do item 43. Não fazer release
+  nem marcar concluído sem aprovação visual.
+  *(27/09: chapa da grade aprovada no jogo pelo usuário (testada sobre o 55). Como a instalação dela tinha sobrescrito o
+  candidato 56 dos faróis, foi montado e instalado o 56 + chapa: `work/c2012-stage/pacote-27-09k-farois56-grade/`,
+  2012 GEOMETRY `3872FCE7…` (193 peças, 1.437.081 triângulos; o 56 só altera BODY e a chapa só altera BASE_A–E).
+  Backup do que estava instalado (55 + chapa, `5D110F4D…`) em `backup/`. Faróis do 56 aguardando teste no jogo.)*
