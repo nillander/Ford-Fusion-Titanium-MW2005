@@ -149,7 +149,7 @@ O pedido inicial, em [docs/historico/demanda-inicial.md](docs/historico/demanda-
 | Quando | O que ficou |
 | --- | --- |
 | 19–23/09 | Tentativas v1 (catálogo AJM), v2 (Mustang Shelby) e v3 (reconstrução). A v2 duplicava retrovisor; a v3 escurecia o capô ao inverter faces sem recalcular normais. A base escolhida foi o backup **vprime** de 20/09 |
-| 24/09 | **V1prime-a–d.** Placa sem as letras 3D "CHAPINHA", grade devolvida ao ficar opaca em DXT1. Aprovada no jogo: vidros, rodas, cromados, grade, faróis |
+| 24/09 | **V1prime-a–d.** Grade devolvida ao ficar opaca em DXT1. Aprovada no jogo: vidros, rodas, cromados, grade, faróis |
 | 24–25/09 | **V1prime-e–z10**, um item por vez: UV de vinil, aerofólio, brake light, antena tubarão, emblemas FUSION / TITANIUM, entrada de ar do teto, 17 capôs, camada de fundo na coluna C, roda de 20 raios em aro 18, kits, vidro de uma camada, dirigibilidade, logo, nitro nas saídas, suavidade e o lábio do para-choque |
 | 26/09 | **Fusion 2012.** Luzes do `oracle_hi.yft` enxertadas na z10, slot `COBALTSS`. Logo, tampa, grade inferior, lanternas, faróis de milha, freios, kits com cinta, antena reta, KIT04/KIT05 |
 | 27/09 | **v2.0**, os dois carros. Em seguida a **v2.1**, só as placas. A geometria da z10 do 2018 foi a origem do port para o Underground 2 |
@@ -172,15 +172,11 @@ O doador de estrutura é o Fusion 2010 de AJM3899: 64 sólidos, marcadores, shad
 | --- | --- |
 | ![Frente do modelo de origem, por peça](docs/imagens-projeto/00-renders-iniciais/08-perspectiva-frente-pecas-por-cor.png) | ![Trechos da vprime acima do limite de índices](versions/v1prime/preview/vprime-index-over-65535-red.png) |
 
-A primeira compilação está descrita em [versions/vprime/README.md](versions/vprime/README.md): extração do RPF, alinhamento no Blender (`scripts/build_scene.py`), `mwgc` para o `GEOMETRY.BIN`, transplante dos sólidos e marcadores do doador, TPK com `mwtc`. O `scripts/build.ps1` que ficou no repositório grava essa compilação no slot de teste `FORDGT`. O BIN da v2.1 é a cadeia de patches seguinte, da vprime até a z10, um por variante em `versions/v1prime/variants/`.
+A primeira compilação está descrita em [versions/vprime/README.md](versions/vprime/README.md): extração do RPF, alinhamento no Blender (`scripts/build_scene.py`), `mwgc` para o `GEOMETRY.BIN`, transplante dos sólidos e marcadores de `donor/fusion-ajm3899`, TPK com `mwtc`. O BIN da v2.1 é a cadeia de patches seguinte, da vprime até a z10, um por variante em `versions/v1prime/variants/`.
 
-O que a compilação ainda entregava errado, e o que foi refeito na geometria:
+**UV da pintura.** A UV do GTA mapeava cada porta sozinha. `vinyluv.py` + `ApplyUV.cs` gravaram `u = 0,169·x + 0,5` só nos `KIT00_BODY_A–E`.
 
-| Placa com as letras CHAPINHA em relevo | UV da pintura, contínua entre os painéis |
-| --- | --- |
-| ![Face furada e as letras 3D que atravessavam a placa](versions/v1prime/preview/vprime-plate-chapinha-geometry.png) | ![Grade de teste na UV da V1prime-e](versions/v1prime/preview/vinyl-uv-v1prime-e.png) |
-
-As letras 3D saíram (147 triângulos no LOD A) e a face furada virou um plano com UV de `NEWZERA`. A UV do GTA mapeava cada porta sozinha; `vinyluv.py` + `ApplyUV.cs` gravaram `u = 0,169·x + 0,5` só nos `KIT00_BODY_A–E`.
+![Grade de teste na UV da V1prime-e](versions/v1prime/preview/vinyl-uv-v1prime-e.png)
 
 | Roda do doador e a roda lida do `fusion_hi.yft` | Normais da pele, antes e depois |
 | --- | --- |
