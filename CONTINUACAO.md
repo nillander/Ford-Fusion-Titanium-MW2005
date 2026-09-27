@@ -10,8 +10,8 @@ Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os
   usuário tem permissão de redistribuição).
 - Branch `fusion2012-fwd` (a `main` está inteira dentro dela). Remoto `git@github.com:nillander/nfsmw-ford-fusion-titanium.git`
   (SSH). **Nunca dar push**: o usuário publica. Commits como `Nillander Alarcão <nillander@live.com>`.
-- Release **v2.0** (tag local, não publicada): `release/Fusion2012_FWD_MW2005.zip` (`C5F730B9…`) e
-  `release/Fusion2018_AWD_MW2005.zip` (`5A441A85…`); notas em `release/NOTAS-v2.0.md`. Comandos de publicação
+- Release **v2.0**: `release/Fusion2012_FWD_MW2005.zip` (`69D7BC6A…`) e
+  `release/Fusion2018_AWD_MW2005.zip` (`939EB20C…`). Cada zip abre numa pasta com o nome do arquivo e traz `instalar.bat`. Notas em `release/NOTAS-v2.0.md`. Comandos de publicação
   (`git push`, `gh release create`) ficam com o usuário.
 
 ## 2. Como trabalhar com o usuário
@@ -31,7 +31,7 @@ O usuário deu o trabalho por finalizado. Todos os itens do TODO.md estão fecha
 | 2012 (COBALTSS) | `pacote-27-09b`: GEOMETRY `0D618738…`, TEXTURES `39505AD5…` |
 | 2018 (MUSTANGGT) | `pacote-27-09b`: GEOMETRY `EFA07989…`, TEXTURES `13E45A9D…` |
 
-Zips: `release/Fusion2012_FWD_MW2005.zip` `C5F730B9…`, `release/Fusion2018_AWD_MW2005.zip` `5A441A85…`
+Zips: `release/Fusion2012_FWD_MW2005.zip` `69D7BC6A…`, `release/Fusion2018_AWD_MW2005.zip` `939EB20C…`
 (montagem em `work/zipbuild/z12` e `z18`). Tag local `v2.0`; publicação fica com o usuário:
 `git push origin fusion2012-fwd`, `git push origin v2.0` (com `-f` se a tag antiga já tiver sido enviada) e
 `gh release create v2.0 release/Fusion2012_FWD_MW2005.zip release/Fusion2018_AWD_MW2005.zip --notes-file release/NOTAS-v2.0.md`.

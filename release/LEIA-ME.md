@@ -22,9 +22,9 @@ Substitui o **Ford Mustang GT** (slot `MUSTANGGT`). Versão de 27/09/2026.
   pasta `ADDONS`.
 
 ## Instalação
-1. Feche o jogo e faça backup das pastas `CARS/MUSTANGGT` e `ADDONS/CARS_REPLACE/MUSTANGGT` (se existir).
-2. Copie as pastas `ADDONS` e `CARS` deste ZIP para a pasta do jogo, substituindo os arquivos.
-3. Abra o jogo pelo Mod Loader. O carro aparece no lugar do Mustang GT.
+1. Extraia o ZIP. Ele abre numa pasta com o mesmo nome do arquivo.
+2. Feche o jogo e execute `instalar.bat` nessa pasta. O script copia `ADDONS` e `CARS` para o jogo.
+3. Abra o jogo pelo Mod Loader. O Fusion 2018 aparece no lugar do Mustang GT. O Fusion 2012, no lugar do Cobalt SS.
 
 Para desinstalar, restaure o backup do passo 1. Confira os arquivos com `SHA256SUMS.txt`
 (ex.: `certutil -hashfile GEOMETRY.BIN SHA256` no Windows).
@@ -39,7 +39,7 @@ Arquivos para distribuir (27/09/2026):
 
 | ZIP | Carro | SHA-256 |
 |---|---|---|
-| `Fusion2012_FWD_MW2005.zip` | Ford Fusion 2012 FWD (slot COBALTSS) | `C5F730B95CA538BC2E1A87B95489FC2229CF57E601A0123D81806C060E5E653B` |
-| `Fusion2018_AWD_MW2005.zip` | Ford Fusion Titanium 2018 AWD (slot MUSTANGGT) | `5A441A852EBF901CD1CF5E58CD2B1B89E0C4D7DE532648347CD86A6A424B9ED3` |
+| `Fusion2012_FWD_MW2005.zip` | Ford Fusion 2012 FWD (slot COBALTSS) | `69D7BC6A5218B20FE23CB0649EE9E6232821A1D5B25BAE176F0BCECA8E8109F9` |
+| `Fusion2018_AWD_MW2005.zip` | Ford Fusion Titanium 2018 AWD (slot MUSTANGGT) | `939EB20C13FF91648868D148EA760746E8F1D609EEC87FA7F134DFF26F8D593E` |
 
 `SHA256SUMS-conteudo.txt` lista os arquivos de dentro dos dois ZIPs. O LEIA-ME de cada carro está dentro do seu ZIP.
