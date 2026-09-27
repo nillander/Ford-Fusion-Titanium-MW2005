@@ -169,9 +169,27 @@ O doador de estrutura é o Fusion 2010 de AJM3899: 64 sólidos, marcadores, shad
 | --- | --- |
 | ![Peças do Fusion 2010 usado como estrutura](docs/imagens-projeto/01-diagnostico-do-modelo/0923-2105-ajm_parts.png) | ![Peças do Fusion 2018 lidas do GTA](docs/imagens-projeto/00-renders-iniciais/06-lateral-pecas-por-cor.png) |
 
-| Frente do mesmo modelo | O que passava de 65.535 índices, em vermelho |
+| Frente do mesmo modelo | Traseira, cada peça numa cor | Capô aberto, rodas em vermelho |
+| --- | --- | --- |
+| ![Frente do modelo de origem, por peça](docs/imagens-projeto/00-renders-iniciais/08-perspectiva-frente-pecas-por-cor.png) | ![Traseira do GTA, por peça](docs/imagens-projeto/00-renders-iniciais/07-perspectiva-traseira-pecas-por-cor.png) | ![Lateral com o capô aberto](docs/imagens-projeto/00-renders-iniciais/05-lateral-capo-aberto.png) |
+
+| Frente pintada | O que passava de 65.535 índices, em vermelho |
 | --- | --- |
-| ![Frente do modelo de origem, por peça](docs/imagens-projeto/00-renders-iniciais/08-perspectiva-frente-pecas-por-cor.png) | ![Trechos da vprime acima do limite de índices](versions/v1prime/preview/vprime-index-over-65535-red.png) |
+| ![Frente pintada do modelo de origem](docs/imagens-projeto/00-renders-iniciais/02-frente.png) | ![Trechos da vprime acima do limite de índices](versions/v1prime/preview/vprime-index-over-65535-red.png) |
+
+**v2 e v3.** A v2, no catálogo Shelby, desenhava um segundo par de retrovisores. A v3a invertia faces sem recalcular as normais, e o capô ficava escuro. Um triângulo da reconstrução saía do teto. As luzes da v2 estavam num sólido que já passava de 65.535 índices: amarelo e ciano são faróis e lanternas.
+
+| Capô escuro na v3a | Triângulo fora da carroceria |
+| --- | --- |
+| ![v3a com faces invertidas, frente e traseira](docs/imagens-projeto/01-diagnostico-do-modelo/0923-2118-v3a_flipped.png) | ![Triângulo espetado saindo do teto](docs/imagens-projeto/01-diagnostico-do-modelo/0923-2114-spike.png) |
+
+![Faróis e lanternas da v2 em oito vistas](docs/imagens-projeto/01-diagnostico-do-modelo/0923-2110-v2_lamps.png)
+
+**Grade ainda em DXT3.** A folha `MISC` não gravava profundidade. No jogo o miolo sumia e o interior aparecia no lugar das barras. A malha da grade é a colmeia; no atlas, o branco é a região que cada textura cobre.
+
+| Na garagem | Malha da grade | Cobertura das texturas |
+| --- | --- | --- |
+| ![Grade vazia, com o interior à mostra](docs/imagens-projeto/02-lanternas-grade-e-normais/0923-2128-enviada-pelo-usuario-4389fc22.jpg) | ![Textura da colmeia](docs/imagens-projeto/02-lanternas-grade-e-normais/0923-2130-grille_tex.png) | ![Atlas com a cobertura em branco](docs/imagens-projeto/02-lanternas-grade-e-normais/0923-2132-occ.png) |
 
 A primeira compilação está descrita em [versions/vprime/README.md](versions/vprime/README.md): extração do RPF, alinhamento no Blender (`scripts/build_scene.py`), `mwgc` para o `GEOMETRY.BIN`, transplante dos sólidos e marcadores de `donor/fusion-ajm3899`, TPK com `mwtc`. O BIN da v2.1 é a cadeia de patches seguinte, da vprime até a z10, um por variante em `versions/v1prime/variants/`.
 
@@ -179,11 +197,23 @@ A primeira compilação está descrita em [versions/vprime/README.md](versions/v
 
 ![Grade de teste na UV da V1prime-e](versions/v1prime/preview/vinyl-uv-v1prime-e.png)
 
+O quadriculado amarelo é o mesmo teste na malha inteira. Em cima, a UV do GTA, cada painel no seu mapa. Embaixo, as linhas seguem de uma porta à outra. No jogo a faixa quebrava nessa coluna.
+
+| UV na carroceria | Faixa quebrada na garagem |
+| --- | --- |
+| ![UV do GTA em cima e a UV contínua embaixo](docs/imagens-projeto/04-adesivos-nas-portas/0923-2245-vinyl_uv_cmp.png) | ![Faixa interrompida entre as portas](docs/imagens-projeto/05-aerofolio-e-brake-light/0924-2234-enviada-pelo-usuario-08c54d2c.jpg) |
+
 | Roda do doador e a roda lida do `fusion_hi.yft` | Normais da pele, antes e depois |
 | --- | --- |
 | ![Cinco raios do doador em cima, vinte raios do Fusion embaixo](versions/v1prime/variants/v1prime-v-gta-wheel/v1prime-v-roda.png) | ![Reflexo facetado na z0 e a pele suavizada na z6](versions/v1prime/variants/v1prime-z4-smooth-kits/suavidade-antes-depois.png) |
 
-A roda de 20 raios entra no lugar da roda do Fusion 2010. O diâmetro acompanha aro 18 e perfil 40, que é o que a loja do MW oferece. A suavidade veio de recalcular as normais na vizinhança, e de uma camada pintada 4 mm sob a pele, que tampa a fresta da coluna C e das junções. Na cobertura, verde é camada nova, azul é fundo que já existia, roxo e vermelho são o que ainda ficava aberto.
+A roda de 20 raios entra no lugar da roda do Fusion 2010. O `fusion_hi.yft` chega partido em sólidos (calota, leque de raios, aro, pneu). O diâmetro acompanha aro 18 e perfil 40, que é o que a loja do MW oferece.
+
+| Sólidos da roda do GTA | Doador de cinco raios e a roda de vinte, em várias vistas |
+| --- | --- |
+| ![Roda separada nos sólidos W1 a W8](docs/imagens-projeto/10-rodas-gta/0925-0021-wparts.png) | ![Cinco raios em cima, vinte raios no meio e embaixo](docs/imagens-projeto/10-rodas-gta/0925-0023-wheel_cmp.jpg) |
+
+A suavidade veio de recalcular as normais na vizinhança, e de uma camada pintada 4 mm sob a pele, que tampa a fresta da coluna C e das junções. Na cobertura, verde é camada nova, azul é fundo que já existia, roxo e vermelho são o que ainda ficava aberto. O reflexo listrado exagera a normal: a z0 ainda mostra a faceta de cada triângulo; a z2 já acompanha o painel.
 
 | Camada de fundo sob a pele | Lábio do para-choque, z9 em cima e z10 embaixo |
 | --- | --- |
@@ -193,15 +223,21 @@ Os 17 capôs da loja são o capô do Fusion com o detalhe de cada `STYLE` do GTO
 
 ![Amostra dos capôs da loja sobre o capô do Fusion](versions/v1prime/variants/v1prime-s-hoods/v1prime-s-capos.png)
 
+A malha do capô, isolada. Na borda do `STYLE07`, a fileira de cima é o capô padrão, a do meio é a V1prime-r (a borda entortava) e a de baixo é a V1prime-s, já alinhada ao padrão.
+
+| Capô em malha de arame | Borda do STYLE07, antes e depois |
+| --- | --- |
+| ![Capô visto de cima e de lado](docs/imagens-projeto/08-entradas-de-ar-e-capo/0924-2345-hood.png) | ![Padrão, V1prime-r e V1prime-s na borda do capô](docs/imagens-projeto/08-entradas-de-ar-e-capo/0924-2354-hoodedge.png) |
+
 Pontos de montagem gravados nessa malha, e herdados pelo 2012: aerofólio em x −2,150 / z 0,868, brake light central em x −1,170 / z 1,172, entrada de ar do teto em x 0,300 / z 1,207 (inclinação 6,5°), nitro no centro das saídas do para-choque. O doador não tinha o ponto `ROOF_SCOOP`.
 
-O acervo inteiro, em ordem de trabalho, está em [docs/imagens-projeto/](docs/imagens-projeto/README.md). Cada pasta é uma etapa; o que segue é a captura que fecha o diagnóstico.
+O acervo inteiro, em ordem de trabalho, está em [docs/imagens-projeto/](docs/imagens-projeto/README.md). Cada pasta é uma etapa. O que segue é o diagnóstico de cada uma, com a captura que fecha o passo.
 
-**Grade e normais.** O miolo da grade sumia com a textura em DXT3. O mapa de peças separa barras, anel e painel; o render listrado exagera a normal errada da v3, corrigida na v3b.
+**Grade e normais.** O mapa de peças separa barras, anel e painel. O teste de cores sólidas mostra qual sólido o jogo desenha quando a profundidade não é gravada. O render listrado exagera a normal errada da v3, corrigida na v3b.
 
-| Peças da grade | Normais da v3b |
-| --- | --- |
-| ![Barras, anel e painel da grade em cores separadas](docs/imagens-projeto/03-v1prime-placas-grade-e-pecas/0923-2159-vp_grille_parts.png) | ![Normais recalculadas na carroceria da v3b](docs/imagens-projeto/02-lanternas-grade-e-normais/0923-2135-v3b_normals.png) |
+| Peças da grade | Cores sólidas nas barras | Normais da v3b |
+| --- | --- | --- |
+| ![Barras, anel e painel da grade em cores separadas](docs/imagens-projeto/03-v1prime-placas-grade-e-pecas/0923-2159-vp_grille_parts.png) | ![Barras pintadas de amarelo, vermelho e azul](docs/imagens-projeto/03-v1prime-placas-grade-e-pecas/0923-2216-partcmp.png) | ![Normais recalculadas na carroceria da v3b](docs/imagens-projeto/02-lanternas-grade-e-normais/0923-2135-v3b_normals.png) |
 
 **Adesivo entre as portas.** A faixa de teste quebra na coluna B com a UV do GTA e segue reta depois da V1prime-g. Em cima, a UV antiga; embaixo, a contínua.
 
@@ -219,25 +255,45 @@ O acervo inteiro, em ordem de trabalho, está em [docs/imagens-projeto/](docs/im
 | --- | --- |
 | ![Máscaras de FUSION e TITANIUM](docs/imagens-projeto/07-emblemas-fusion-titanium/0924-2318-masks.png) | ![Emblemas 3D ao lado da placa NEWZERA](docs/imagens-projeto/07-emblemas-fusion-titanium/0924-2320-emb3.png) |
 
-**Coluna C.** O risco escuro era fresta: por ela aparecia o interior. A camada pintada por baixo fecha o vão. À esquerda, a fresta; à direita, o fundo.
+**Traseira e coluna C.** A tampa facetada foi suavizada antes de fechar o vão. No close, a esquerda é a pele em azul e a direita é a malha da mesma coluna. A camada pintada por baixo fecha o vão.
 
-![Coluna C antes e depois da camada de fundo](docs/imagens-projeto/09-traseira-e-coluna-c/0925-0012-backing_cmp.png)
+| Tampa, antes e depois | Coluna C, pele e o vão | Fresta fechada |
+| --- | --- | --- |
+| ![Tampa suavizada em cima e a facetada embaixo](docs/imagens-projeto/09-traseira-e-coluna-c/0924-2359-rear_cmp.png) | ![Coluna C em azul e a malha do vão](docs/imagens-projeto/09-traseira-e-coluna-c/0925-0008-cpillar.png) | ![Coluna C antes e depois da camada de fundo](docs/imagens-projeto/09-traseira-e-coluna-c/0925-0012-backing_cmp.png) |
 
-**Vidros.** Cada janela tinha duas camadas, e a cópia escondia o interior. Ficou uma camada `WINDSHIELD` por janela, com a textura de vidro daquela posição, para o insulfilme da loja pegar.
+![Traseira facetada à esquerda e a pele suavizada à direita](docs/imagens-projeto/comparacoes/traseira-antes-depois.png)
+
+**Vidros e o logo da tampa.** Cada janela tinha duas camadas, e a cópia escondia o interior. Ficou uma camada `WINDSHIELD` por janela, com a textura de vidro daquela posição, para o insulfilme da loja pegar. O logo `FUSION` da z3 ficou menor, com margem nas laterais, para a palavra caber na tampa.
 
 | As duas camadas, separadas | Cada janela com a textura da sua posição |
 | --- | --- |
 | ![Vidros duplicados, grupo 0 e grupo 1](docs/imagens-projeto/11-vidros-e-logotipo/0925-0038-glass_layers.png) | ![Para-brisa, laterais e vidro traseiro em cores diferentes](docs/imagens-projeto/11-vidros-e-logotipo/0925-0040-glass_new.png) |
 
+![Logo FUSION da z3, com margem dos dois lados](docs/imagens-projeto/11-vidros-e-logotipo/0925-0105-logo-previa-z3.png)
+
 **Nitro.** Os pontos `LEFT_EXHAUST` e `RIGHT_EXHAUST` (vermelho) estavam fora das saídas. Os novos (amarelo) ficam no centro de cada ponteira.
 
 ![Planta do para-choque com os pontos de nitro antigos e novos](docs/imagens-projeto/12-chama-do-nitro/0925-0107-nitro.png)
 
-**Frestas e vão do capô.** Com a carroceria branca e o resto preto, o que aparece no fundo é buraco. No vão do capô, branco é lataria ou capô; a fenda preta é o que o jogo mostrava escuro.
+**Reflexo, bordas abertas e frestas.** A z0 ainda lê cada triângulo. A z2 acompanha o painel. As linhas vermelhas são as bordas da malha que ficaram abertas. No teste de profundidade o fundo vermelho marca abertura; na cobertura, verde é camada nova, azul é fundo que já existia, roxo e vermelho são o que ainda ficava aberto.
 
-| Carroceria branca na z5, fundo azul onde não há pele | Vão entre capô e grade |
+| Reflexo da z0 | Reflexo da z2 |
 | --- | --- |
-| ![Teste de fresta com a pele isolada](docs/imagens-projeto/14-frestas-e-refino/0925-0149-thru5.png) | ![Capô e carroceria em branco, o restante em preto](docs/imagens-projeto/16-ajustes-pos-teste-z6/0925-0908-hoodgap.png) |
+| ![Lateral facetada, antes da suavização](docs/imagens-projeto/13-suavidade-e-kits/0925-0119-z0.png) | ![A mesma lateral depois da suavização](docs/imagens-projeto/13-suavidade-e-kits/0925-0119-z2.png) |
+
+| Bordas abertas da malha | Onde a camada de fundo cobre a pele |
+| --- | --- |
+| ![Contorno vermelho das arestas sem vizinho](docs/imagens-projeto/13-suavidade-e-kits/0925-0120-cracks.png) | ![Verde, azul, roxo e vermelho na traseira](docs/imagens-projeto/14-frestas-e-refino/0925-0148-cat.png) |
+
+**Frestas e vão do capô.** Com a carroceria branca e o resto preto, o que aparece no fundo é buraco. No vão do capô, branco é lataria ou capô; a fenda preta é o que o jogo mostrava escuro. Azul, no close do vão, é a peça escura da base.
+
+| Fundo vermelho nas aberturas da z5 | Carroceria branca, fundo azul onde não há pele | Vão entre capô e grade |
+| --- | --- | --- |
+| ![Pele da z5 sobre fundo vermelho](docs/imagens-projeto/14-frestas-e-refino/0925-0148-gap5.png) | ![Teste de fresta com a pele isolada](docs/imagens-projeto/14-frestas-e-refino/0925-0149-thru5.png) | ![Capô e carroceria em branco, o restante em preto](docs/imagens-projeto/16-ajustes-pos-teste-z6/0925-0908-hoodgap.png) |
+
+| Porta, antes e depois | Peça escura no vão do capô |
+| --- | --- |
+| ![Fresta da porta em cima e a lateral fechada embaixo](docs/imagens-projeto/comparacoes/frestas-lateral-antes-depois.png) | ![Azul da base entre o capô e a grade](docs/imagens-projeto/17-para-lamas-e-vao-do-capo/0925-0939-hoodfront.png) |
 
 **Adesivos da loja e kits.** As peças `DECAL_*` trazidas do GTO cobrem porta, números e as faixas do para-brisa e do vidro traseiro. Os kits da z6 ainda eram saias e lábios; na v2.1 viraram a carroceria de fábrica com a cinta de reboque.
 
@@ -245,9 +301,29 @@ O acervo inteiro, em ordem de trabalho, está em [docs/imagens-projeto/](docs/im
 | --- | --- |
 | ![Porta, números e faixas de vidro mapeados na malha](docs/imagens-projeto/15-refino-final-camera-adesivos-kits/0925-0216-decals.png) | ![KIT00, Street e Race na mesma vista](docs/imagens-projeto/15-refino-final-camera-adesivos-kits/0925-0219-kits.jpg) |
 
-**Para-lama do motorista.** O lado +Y, onde fica o `KIT00_DRIVER`, era o que amassava. A z8 espelhou a pele boa do passageiro e fechou o vão do capô.
+**Para-lama do motorista.** Os dois lados da z6, com o reflexo listrado: o amassado estava no lado do motorista (`KIT00_DRIVER`, +Y). A z8 espelhou a pele boa do passageiro e fechou o vão do capô. A z6 também levou a subdivisão curva da pele.
 
-![Para-lama do motorista, z7 à esquerda e z8 à direita](docs/imagens-projeto/comparacoes/para-lama-motorista-z7-z8.png)
+| Os dois para-lamas da z6 | z7 à esquerda, z8 à direita |
+| --- | --- |
+| ![Para-lama do motorista e o do passageiro](docs/imagens-projeto/17-para-lamas-e-vao-do-capo/0925-0936-sides.jpg) | ![Para-lama do motorista, z7 à esquerda e z8 à direita](docs/imagens-projeto/comparacoes/para-lama-motorista-z7-z8.png) |
+
+![Pele da z6 nos dois lados, depois da subdivisão](docs/imagens-projeto/15-refino-final-camera-adesivos-kits/0925-0210-r7.jpg)
+
+**Kits encostados no para-choque e o emblema Ford.** Na z6 as saias ainda flutuavam. Na z7 o lábio, a saia e o difusor encostam na lataria. O emblema da grade ficou com letras e aro em cromado e o fundo preto.
+
+| Kits soltos e kits encostados | Emblema Ford |
+| --- | --- |
+| ![Frente e traseira, antes em cima e depois embaixo](docs/imagens-projeto/16-ajustes-pos-teste-z6/0925-0910-kits2.png) | ![Letras e aro cromados no fundo preto](docs/imagens-projeto/comparacoes/emblema-ford.png) |
+
+**Lábio inferior.** As marcas pretas debaixo do para-choque eram triângulos grandes dobrados, visíveis com a lataria branca e o resto preto. O perfil da malha original mostra a dobra; a luz de cima, como no jogo, desenha a ondulação na faixa clara. Os cortes em vários Y são o lábio antes da superfície única da z9.
+
+| Lataria branca, o resto preto | Perfil dos triângulos dobrados |
+| --- | --- |
+| ![Para-choque inferior em várias vistas](docs/imagens-projeto/18-parachoque-inferior/0925-0958-lower.png) | ![Vista de frente e perfil do lábio original](docs/imagens-projeto/18-parachoque-inferior/0925-1000-lipgeo_orig.png) |
+
+| Luz de cima, no lábio | Cortes do lábio antes da z9 |
+| --- | --- |
+| ![Faixa clara ondulada sob o para-choque](docs/imagens-projeto/18-parachoque-inferior/0925-0959-gl_cmp.png) | ![Seções de y = 0 a y = 0,83](docs/imagens-projeto/comparacoes/secoes-antes-z9.png) |
 
 ### Fusion 2012
 
