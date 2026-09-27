@@ -229,7 +229,7 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   lataria + 2,5 cm escondidos atrás da lataria (fora dos faróis). `versions/fusion2012-fwd/scripts/plate_grille.py`
   (+ `gmap.py`); prévias `versions/fusion2012-fwd/preview/grade-chapa-2012.png` e `-2018.png`.)*
 
-- [ ] **44. Encaixe final dos faróis dianteiros do Fusion 2012 após a v2.1.** Corrigir as saliências da lataria
+- [x] **44. Encaixe final dos faróis dianteiros do Fusion 2012 após a v2.1.** Corrigir as saliências da lataria
   acima da ponta externa laranja e junto à ponta interna branca, além do buraco triangular escuro entre esta
   ponta e a grade. Não deslocar o farol inteiro: a ponta branca já encaixa. Candidato 56 instalado para teste
   nas duas rotas `COBALTSS` em 27/09; ainda aguarda avaliação no jogo pelo usuário. Geometria
@@ -242,3 +242,25 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   candidato 56 dos faróis, foi montado e instalado o 56 + chapa: `work/c2012-stage/pacote-27-09k-farois56-grade/`,
   2012 GEOMETRY `3872FCE7…` (193 peças, 1.437.081 triângulos; o 56 só altera BODY e a chapa só altera BASE_A–E).
   Backup do que estava instalado (55 + chapa, `5D110F4D…`) em `backup/`. Faróis do 56 aguardando teste no jogo.)*
+  - [x] **44 (cont.). Candidato 57 — nova abordagem.** Teste de 27/09 do candidato 56 (junto com a chapa
+  da grade): ainda havia calombos na ponta interna (junto à grade), sob o farol e acima da seção laranja.
+  *(27/09, instalado para teste — `work/c2012-stage/pacote-27-09l-farois57-cinta/`: 2012 GEOMETRY `FC59A72A…` (sobre
+  `3872FCE7…`, que está em `backup/2012/`). Em vez de remendos sobrepostos: parametrização radial a partir de um ponto
+  dentro do carro (`hl58maps.py`, acompanha a quina frente→lado→capô); superfície alvo = lataria antiga filtrada
+  (mediana 5×5 + gaussiana de 1,5 cm, sem a lente) numa faixa de até 7,5 cm da lente, fora do capô e da grade
+  (`hl57solve.py`); os vértices da pintura das carrocerias (todos os kits, LODs A–E) perto da superfície são projetados
+  nela (mesma topologia, sem costura, transição de 3,6 cm) com normais do campo liso; pele de fundo 1,5 mm abaixo em
+  `BASE_A–E` tapa os buracos (`hl59.py` com `WIN_IN=0.07 WIN_OUT=0.08 CAP=0 RW=0 EXCL=5 EXH=1 R=0.075 BLEND=12 SIG=0.015`).
+  Farol e capô não foram movidos. 193 peças, 1.437.336 triângulos. Prévia `versions/fusion2012-fwd/preview/farois-item57.png`
+  (esquerda antes, direita depois).)*
+- [x] **45. Cinta de reboque preta mais larga (2012 e 2018).** A preta parecia mais estreita que a vermelha (geometria e
+  textura eram iguais, 5 cm; o fundo escuro se confunde com a grade preta). *(27/09, instalado para teste no mesmo pacote:
+  cinta preta dos kits KIT01/KIT05 30 % mais larga (6,5 cm), vermelha igual; `strap_wide.py`; 2018 GEOMETRY `EDDE6EE9…`
+  (sobre `89700BC7…`, em `backup/2018/`). Prévia `preview/cinta-preta-larga.png`.)*
+  *(27/09: itens 43, 44 (candidato 57) e 45 aprovados no jogo ("está quase perfeito") e publicados na **v2.2**: 2012
+  GEOMETRY `FC59A72A…`, 2018 `EDDE6EE9…`, texturas iguais às da v2.1. Capturas do teste em
+  `docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09-c57--*.png`.)*
+- [ ] **46. Para-choque encaixando na parte de baixo do farol (2012).** Pedido de 27/09 após a v2.2: a borda de cima do
+  para-choque deve encostar na parte de baixo do farol (hoje aparece a faixa escura da carcaça entre os dois, sob o
+  farol e junto à ponta interna). Capturas `teste-27-09-c57--parachoque-sob-farol-marcado.png` e
+  `teste-27-09-c57--parachoque-ponta-interna-marcado.png` (marcações em amarelo do usuário).
