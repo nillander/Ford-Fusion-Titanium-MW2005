@@ -330,4 +330,14 @@ A v2.1 está aprovada na garagem, na cidade e nas cenas que usam KIT04/KIT05.
 
 ## Créditos
 
-Modelo 2018 no GTA V: AND1V79, com conversão e texturas disponibilizadas por Gabriel Lima. Faróis, lanternas e faróis de milha do 2012: Ford Mondeo Saloon de Humster3D, portado ao GTA V por BritishGamer88. Base no Most Wanted (Fusion 2010): Marcelo Castro (AJM3899), com peças de FOX, Porsche4ever e AJ Lethal. Conversão para o MW 2005: Nillander Alarcão, com Claude. Os textos de cada pacote estão em `CREDITOS/` dentro do ZIP.
+Modelo 2018 no GTA V: AND1V79, com conversão e texturas disponibilizadas por Gabriel Lima. Faróis, lanternas e faróis de milha do 2012: Ford Mondeo Saloon de Humster3D, portado ao GTA V por BritishGamer88. Base no Most Wanted (Fusion 2010): Marcelo Castro (AJM3899), com peças de FOX, Porsche4ever e AJ Lethal. Conversão para o MW 2005: Nillander Alarcão. A parte de cada agente oficial está em [Contribuidores](#contribuidores). Os textos de cada pacote estão em `CREDITOS/` dentro do ZIP.
+
+## Contribuidores
+
+A conversão é de Nillander Alarcão. Três agentes oficiais entraram em etapas diferentes. No git, o Claude Code assina `Claude Opus 5.5 <noreply@anthropic.com>` e o Cursor assina `Cursor <cursoragent@cursor.com>`. O ChatGPT entrou como agente Codex (`Codex <noreply@openai.com>`); os commits dessa etapa estão no histórico sem trailer de coautor.
+
+| Agente | O que ficou neste repositório |
+| --- | --- |
+| **Claude Code** | A partir da V3, um defeito por vez, medido na malha: grade opaca em DXT1, limite de 65.535 índices, kits que a IA e o Razor pedem, UV de vinil contínua, Fusion 2012 no slot `COBALTSS`, releases v2.0 e v2.1. O encaixe dos faróis do 2012 na lataria continua em teste local, fora dos ZIPs. |
+| **ChatGPT** | O começo: transplantar a carroceria nova para um carro doador que já abre no jogo. O plano está em [docs/historico/demanda-inicial.md](docs/historico/demanda-inicial.md); a release v0.1 seguiu esse fluxo. |
+| **Cursor** | Em 20/09, slot, grade 3D e cromado das tentativas v1 e v2. Em 24/09, a UV reta das portas na V1prime. Em 27/09, a documentação reunida numa estrutura só. O port aprovado no Underground 2 está no repositório `fusion-nfsu2`. |
