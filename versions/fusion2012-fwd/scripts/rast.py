@@ -1,5 +1,5 @@
 import ctypes,numpy as np,os
-_L=ctypes.CDLL(os.path.join(os.path.dirname(os.path.abspath(__file__)),'librast.so'))
+_L=ctypes.CDLL(os.environ.get('MW_RASTER_LIBRARY',os.path.join(os.path.dirname(os.path.abspath(__file__)),'librast.so')))
 def _p(a,t): return a.ctypes.data_as(ctypes.POINTER(t))
 def view(az,el):
     a=np.radians(az); e=np.radians(el)

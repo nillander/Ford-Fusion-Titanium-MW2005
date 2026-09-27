@@ -11,8 +11,8 @@ from scipy.ndimage import binary_dilation,distance_transform_edt
 from scipy.interpolate import RBFInterpolator
 from scipy.spatial import Delaunay,cKDTree
 SKIN=0xB637F71F
-def patch_geom(d,K=3):
-    n,a,b,c0=d['frame']; u0,v0,nu,nv=d['grid']; gap=d['gap']&~d['lens']&(distance_transform_edt(~d['lens'])*RES<0.025)
+def patch_geom(d,K=3,maxdist=0.025):
+    n,a,b,c0=d['frame']; u0,v0,nu,nv=d['grid']; gap=d['gap']&~d['lens']&(distance_transform_edt(~d['lens'])*RES<maxdist)
     Bh=d['Bh']; ring=binary_dilation(gap,iterations=4)&~gap&~np.isnan(Bh)
     rv,ru=np.nonzero(ring); Q=np.c_[u0+(ru+0.5)*RES,v0+(rv+0.5)*RES]
     if len(Q)<10: return None
