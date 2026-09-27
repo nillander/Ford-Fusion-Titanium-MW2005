@@ -1,5 +1,5 @@
 """Cinco cintas de reboque (64×256 cada, DXT1) gravadas numa área livre do atlas das cintas:
- 1 preta com 大吉大利 vermelho   2 vermelha com 出入平安 branco   3 laranja com 一路顺风 preto
+ 1 preta com 大吉大利 vermelho   2 vermelha com 出入平安 branco   3 laranja com 読めば尺八 preto
  4 azul com F B I amarelo (uma letra embaixo da outra)   5 zebrada preta e amarela (fita de contenção), sem texto
 2012 (<CARRO>_KIT00_HEADLIGHT_OFF): x 512, 576, 640, 704, 768 na linha y 768.
 2018 (<CARRO>_LOGO): x 768, 832, 896, 960 na linha y 0 e x 768 na linha y 256.
@@ -24,7 +24,7 @@ def zebra(W=64,H=256,period=64):
     return Image.fromarray(a)
 def designs():
     return [strap((18,18,18),(205,20,20),'大吉大利'),strap((190,18,18),(245,240,235),'出入平安'),
-            strap((235,118,18),(15,12,10),'一路顺风'),fbi(),zebra()]
+            strap((235,118,18),(15,12,10),'読めば尺八',size=40,step=46,y0=12),fbi(),zebra()]
 def patch(texbin,ddsfile,car,out):
     b=bytearray(open(texbin,'rb').read()); d=open(ddsfile,'rb').read(); off=b.find(d[128:]); assert off>0 and b.count(d[128:])==1
     W=int.from_bytes(d[16:20],'little'); assert int.from_bytes(d[84:88],'little')==0x31545844

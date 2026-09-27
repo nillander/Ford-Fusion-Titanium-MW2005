@@ -1,7 +1,7 @@
 """Kits de carroceria com cintas de reboque (Fusion 2012 e 2018): os seis kits que o jogo já tem para o slot
 (KIT00–KIT05; o KIT03 existia no carro original e faltava no Fusion). KIT00 sem cinta; KIT01–KIT05 com uma cinta
 diferente cada (tex48.py), na dianteira (lado direito) e na traseira (lado esquerdo):
-  KIT01 preta/vermelho 大吉大利  KIT02 vermelha/branco 出入平安  KIT03 laranja/preto 一路顺风
+  KIT01 preta/vermelho 大吉大利  KIT02 vermelha/branco 出入平安  KIT03 laranja/preto 読めば尺八
   KIT04 azul/amarelo F B I      KIT05 zebrada preta e amarela
 Dianteira: y −0,33, z 0,148 → −0,03 (suporte até 0,183: só na parte preta do para-choque), 1 cm à frente.
 Traseira: y +0,405, por dentro do escapamento, presa na faixa preta (z 0,215) → 0,015, 1 cm atrás.

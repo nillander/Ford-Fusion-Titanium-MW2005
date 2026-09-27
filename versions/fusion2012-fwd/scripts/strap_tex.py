@@ -6,18 +6,18 @@ Costuras claras nas bordas; texto na fonte Noto Sans CJK JP Black."""
 import numpy as np
 from PIL import Image,ImageDraw,ImageFont,ImageFilter
 FONT='/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc'
-def strap(bg,fg,txt,W=64,H=256):
+def strap(bg,fg,txt,W=64,H=256,size=44,step=54,y0=24):
     im=Image.new('RGB',(W,H),bg); d=ImageDraw.Draw(im)
     # woven texture
     a=np.asarray(im).astype(float); yy=np.arange(H)[:,None,None]; a*=1+0.06*((yy%4)<2); im=Image.fromarray(np.clip(a,0,255).astype(np.uint8)); d=ImageDraw.Draw(im)
     st=tuple(min(255,int(c*0.6+100)) for c in bg)
     for x in (3,W-4): 
         for y in range(4,H-4,6): d.line([(x,y),(x,y+3)],fill=st)
-    f=ImageFont.truetype(FONT,44,index=0)
-    y=24
+    f=ImageFont.truetype(FONT,size,index=0)
+    y=y0
     for ch in txt:
         bb=d.textbbox((0,0),ch,font=f); w=bb[2]-bb[0]
-        d.text(((W-w)/2-bb[0],y-bb[1]),ch,font=f,fill=fg); y+=54
+        d.text(((W-w)/2-bb[0],y-bb[1]),ch,font=f,fill=fg); y+=step
     return im
 def atlas_patch():
     s1=strap((18,18,18),(205,20,20),'大吉大利'); s2=strap((190,18,18),(245,240,235),'出入平安')

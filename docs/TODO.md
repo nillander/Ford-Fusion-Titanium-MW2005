@@ -287,3 +287,7 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   1,5 cm mais longe do escapamento. *(`kits48.py`, `tex48.py`; pacote `work/c2012-stage/pacote-27-09o-cintas5/`:
   2012 GEOMETRY `643E5E4A…` / TEXTURES `26E9ADDE…`, 2018 GEOMETRY `4E950229…` / TEXTURES `F7C6C9F3…`. Publicado na
   **v2.4**. Prévias `preview/kits-cintas-item48.png` e `cintas-item48.png`.)*
+- [x] **49. Texto da cinta laranja: 読めば尺八 (yomeba shakuhachi).** *(27/09, instalado: só `TEXTURES.BIN` dos dois
+  carros — 2012 `380AEF78…`, 2018 `38F231C8…`; pacote `work/c2012-stage/pacote-27-09p-cinta-laranja/`, anterior em
+  `backup/`. `tex48.py` (5 caracteres, fonte 40 px) e `strap_tex.py` (tamanho e espaçamento configuráveis). Prévia
+  `preview/cintas-item49.png`. A geometria é a da v2.4. Publicado na **v2.5**.)*
