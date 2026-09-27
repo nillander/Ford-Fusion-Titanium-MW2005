@@ -260,7 +260,15 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   *(27/09: itens 43, 44 (candidato 57) e 45 aprovados no jogo ("está quase perfeito") e publicados na **v2.2**: 2012
   GEOMETRY `FC59A72A…`, 2018 `EDDE6EE9…`, texturas iguais às da v2.1. Capturas do teste em
   `docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09-c57--*.png`.)*
-- [ ] **46. Para-choque encaixando na parte de baixo do farol (2012).** Pedido de 27/09 após a v2.2: a borda de cima do
+- [x] **46. Para-choque encaixando na parte de baixo do farol (2012).** Pedido de 27/09 após a v2.2: a borda de cima do
   para-choque deve encostar na parte de baixo do farol (hoje aparece a faixa escura da carcaça entre os dois, sob o
   farol e junto à ponta interna). Capturas `teste-27-09-c57--parachoque-sob-farol-marcado.png` e
   `teste-27-09-c57--parachoque-ponta-interna-marcado.png` (marcações em amarelo do usuário).
+  *(27/09, instalado para teste — `work/c2012-stage/pacote-27-09m-parachoque-farol/`: 2012 GEOMETRY `12F99EE6…`
+  (sobre a v2.2 `FC59A72A…`, em `backup/`). `hl59.py` com `LIFT=0.05 LOFF=0.0005 LENSIN=5 LSIG=0.006 BKIN=1`: a
+  lataria abaixo da borda de baixo da lente sobe até 0,5 mm dela (rampa de até 4,5 cm, afinando nas pontas) e a
+  superfície passa por baixo da borda da lente; pele de fundo chega até a lente. Fresta medida por fatias
+  (`gapmeas.py`): de 20–50 mm para 1–9 mm. `curtain.py`: piso inclinado na cor da pintura sob cada farol
+  (em `BASE_A–E`) que fecha a visão para dentro do carro por baixo do farol. Cinta preta larga mantida.
+  193 peças, 1.441.090 triângulos. Prévia `preview/parachoque-farol-item46.png`.)*
+  *(27/09: aprovado no jogo ("ficou perfeito") e publicado na **v2.3**: 2012 GEOMETRY `12F99EE6…`; 2018 igual à v2.2.)*

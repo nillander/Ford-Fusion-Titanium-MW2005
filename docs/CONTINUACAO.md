@@ -4,19 +4,19 @@ Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os
 (2018, V1prime) e `CONTINUACAO-FUSION2012.md`. Leia também `docs/APRENDIZADOS.md` (lições, com imagens),
 `docs/TODO.md` (itens 1–46) e `versions/fusion2012-fwd/LEIA-ME.md`.
 
-**Comece pela seção 3: a v2.2 foi publicada; o próximo pedido é o item 46.** As seções 4 em diante registram a
+**Comece pela seção 3: a v2.3 foi publicada e todos os itens (1–46) estão fechados.** As seções 4 em diante registram a
 construção e os testes antigos; números de versão e caminhos de nuvem nelas são históricos, não o estado instalado.
 
 ## 1. O projeto
 - **Fusion 2018 AWD** no slot `MUSTANGGT` (Ford Mustang GT) e **Fusion 2012 FWD** no slot `COBALTSS` (Cobalt SS,
   carro inicial). O 2012 é o 2018 com faróis, lanternas e faróis de milha do modelo 2012 (Mondeo 2016 do GTA V,
   de Humster3D, portado por BritishGamer88).
-- Branch `main`, tag única `v2.2`; remoto `git@github.com:nillander/nfsmw-ford-fusion-titanium.git`
+- Branch `main`, tag única `v2.3`; remoto `git@github.com:nillander/nfsmw-ford-fusion-titanium.git`
   (SSH). O usuário quer **uma única tag e uma única release**, sempre da última versão. Não publicar o teste
   atual dos faróis sem pedido/aprovação. Commits, quando solicitados, como `Nillander Alarcão <nillander@live.com>`.
-- Release **v2.2**: `release/Fusion2012_FWD_MW2005.zip` e `release/Fusion2018_AWD_MW2005.zip`.
+- Release **v2.3**: `release/Fusion2012_FWD_MW2005.zip` e `release/Fusion2018_AWD_MW2005.zip`.
   Cada ZIP abre na pasta com seu nome e inclui `instalar.bat`, `ADDONS`, `CARS`, `CREDITOS`, `LEIA-ME.md` e
-  `SHA256SUMS.txt`. Notas em `release/NOTAS-v2.2.md` (faróis do 2012, chapa da grade, cinta preta).
+  `SHA256SUMS.txt`. Notas em `release/NOTAS-v2.3.md` (para-choque e faróis do 2012, chapa da grade, cinta preta).
 
 ## 2. Como trabalhar com o usuário
 - Responder em **pt-BR**. **Um item por vez**; ao terminar, instalar no jogo e **parar para ele testar**.
@@ -27,15 +27,15 @@ construção e os testes antigos; números de versão e caminhos de nuvem nelas 
 - Git no PC: `git add` pode travar — usar `hash-object -w` / `update-index --cacheinfo` / `write-tree` /
   `commit-tree` / `update-ref`, com as linhas `Co-Authored-By`/`Claude-Session` no fim da mensagem.
 
-## 3. Estado atual em 27/09/2026 — v2.2 publicada
+## 3. Estado atual em 27/09/2026 — v2.3 publicada
 
-Instalado no jogo = conteúdo dos ZIPs da v2.2 (pacote `work/c2012-stage/pacote-27-09l-farois57-cinta/`,
-montagem dos ZIPs em `work/zipbuild/v2.2-pacotes/`):
+Instalado no jogo = conteúdo dos ZIPs da v2.3 (2012: pacote `work/c2012-stage/pacote-27-09m-parachoque-farol/`;
+2018: `pacote-27-09l-farois57-cinta/`; montagem dos ZIPs em `work/zipbuild/v2.3-pacotes/`):
 
 | Carro | GEOMETRY.BIN | TEXTURES.BIN | ZIP |
 | --- | --- | --- | --- |
-| 2012 (COBALTSS) | `FC59A72AB1498DC237EE8D8910CF7A34212FCF3288CCC8569108B506FC33696B` | `C969CB98…` (v2.1) | `99BFDEF58DC5B740F6C872012035DDC33CE792DCFF548095FE8AA1993118899B` |
-| 2018 (MUSTANGGT) | `EDDE6EE9B5D2FC30F78A6B4317E4FF10F6911D5EC3272EA068EB61C41264DA90` | `854CFB77…` (v2.1) | `DDCE7CC640B43D26DD4625BF44CB3BF03E41BE861B069D76A67627F3222897DB` |
+| 2012 (COBALTSS) | `12F99EE65681A7AEB8A0554D9BA7CAB9CE4DB4E6050A63D0FA7CB7D7E71C25BC` | `C969CB98…` (v2.1) | `4D2DA5F30456565F05C29E5C96686B569E6329388890E2C9E5A718D8F109545D` |
+| 2018 (MUSTANGGT) | `EDDE6EE9B5D2FC30F78A6B4317E4FF10F6911D5EC3272EA068EB61C41264DA90` | `854CFB77…` (v2.1) | `80F232F0FBEF1CB4AFA46E77E6F85AE78FAA4F03DDDBC2264A654204D526B8A5` |
 
 - **Faróis do 2012 (candidato 57, `versions/fusion2012-fwd/scripts/hl59.py`)**: em vez de novos remendos, a pintura
   das carrocerias numa faixa de até 7,5 cm da lente é **projetada** numa superfície lisa. Parametrização radial a
@@ -52,7 +52,12 @@ montagem dos ZIPs em `work/zipbuild/v2.2-pacotes/`):
 - **Chapa da grade** (`plate_grille.py` + `gmap.py`): grupo preto em `BASE_A–E`, x = 2,296 − 0,304·y², 12 mm atrás
   das barras.
 - **Cinta preta** (`strap_wide.py`): KIT01/KIT05 30 % mais larga (6,5 cm).
-- **Próximo (item 46):** fazer a borda de cima do para-choque encostar na parte de baixo do farol do 2012.
+- **Para-choque sob os faróis (item 46, v2.3)**: `hl59.py` com `LIFT=0.05 LOFF=0.0005 LENSIN=5 LSIG=0.006 BKIN=1`
+  sobre `pacote-27-09k-farois56-grade` (mesmos demais parâmetros): abaixo da borda inferior da lente a superfície sobe
+  até 0,5 mm dela (rampa de 4,5 cm, afinando nas pontas), e a superfície e a pele de fundo passam 5 células por baixo
+  da borda da lente. `curtain.py`: piso inclinado na cor da pintura (pele de fundo de `BASE_A–E`) de 3 mm atrás da
+  borda da lente até 7 cm para dentro e 6 cm para baixo, que fecha a visão do interior. Depois, `strap_wide.py`.
+  Folga lente–lataria (`gapmeas.py`): de 20–50 mm para 1–9 mm.
 
 ## 3.0 Histórico do teste dos faróis antes da v2.2
 

@@ -583,3 +583,4 @@
 /capturas/2018/Screenshot_191.png filter=lfs diff=lfs merge=lfs -text
 /capturas/2018/principal-1.png filter=lfs diff=lfs merge=lfs -text
 /capturas/2018/principal-2.png filter=lfs diff=lfs merge=lfs -text
+/versions/fusion2012-fwd/preview/parachoque-farol-item46.png filter=lfs diff=lfs merge=lfs -text

@@ -12,7 +12,7 @@ from scipy.ndimage import binary_dilation,binary_erosion,distance_transform_edt,
 from scipy.spatial import Delaunay
 from skimage.measure import find_contours
 RES=0.003; SKIN=0xB637F71F
-A=dict(SIG=0.0,EXH=-1,LENSDOM=False,NDOT=-2.0,R=0.06,RR=0.035,CAP=0.05,RW=0.001,EXCL=2,BLEND=4,WIN_IN=0.03,WIN_OUT=0.04,BACK=0.0015,TEST=False)
+A=dict(BKIN=0,LENSIN=0,LIFT=0.0,LRR=0.045,LOFF=0.002,LSIG=0.012,LTIP=0.15,SIG=0.0,EXH=-1,LENSDOM=False,NDOT=-2.0,R=0.06,RR=0.035,CAP=0.05,RW=0.001,EXCL=2,BLEND=4,WIN_IN=0.03,WIN_OUT=0.04,BACK=0.0015,TEST=False)
 for a in sys.argv[3:]:
     k,v=a.split('='); A[k]=type(A[k])(eval(v))
 SPACING={'A':(5,2),'B':(6,3),'C':(8,5),'D':(12,8),'E':(12,8)}
@@ -23,6 +23,34 @@ def fillnear(X):
 def sample(G,uv,grid,order=1):
     u0,v0,nu,nv=grid; ci=(uv[:,0]-u0)/RES-0.5; cj=(uv[:,1]-v0)/RES-0.5
     return map_coordinates(G,[cj,ci],order=order,mode='nearest')
+def lower_lift(d,band,H):
+    """raise the bumper (below the lens) up to the lens lower edge: biharmonic ramp within LRR of the lens"""
+    from scipy.sparse import coo_matrix,identity
+    from scipy.sparse.linalg import spsolve
+    lens=d['lens']; nv,nu=lens.shape
+    Lh=d['Lh']; ni=distance_transform_edt(np.isnan(Lh),return_indices=True)[1]; Lf=Lh[ni[0],ni[1]]
+    rim=band&binary_dilation(lens,iterations=1)
+    lo=np.full(nu,-1); ys,xs=np.nonzero(lens)
+    for i in range(nu):
+        c=np.nonzero(lens[:,i])[0]
+        if len(c): lo[i]=c.min()
+    J,I=np.nonzero(rim)
+    lower=np.zeros_like(rim); m=(lo[I]>=0)&(J<=lo[I]); lower[J[m],I[m]]=True
+    # taper towards both lamp ends (fraction LTIP of the lamp length)
+    u=(np.arange(nu)-xs.min())/max(xs.max()-xs.min(),1); tp=np.clip(np.minimum(u,1-u)/A['LTIP'],0,1); tp=tp*tp*(3-2*tp)
+    delta=np.clip(Lf-A['LOFF']-H,0,A['LIFT'])*tp[None,:]
+    delta=np.where(lower,delta,0.0)
+    sg=A['LSIG']/RES; wgt=gaussian_filter(lower.astype(float),sg); dsm=gaussian_filter(delta,sg)/np.maximum(wgt,1e-9)
+    dr=np.where(rim,np.where(lower,dsm,0.0),0.0)
+    dl=distance_transform_edt(~lens)*RES
+    ni2=distance_transform_edt(~rim,return_indices=True)[1]
+    near=dr[ni2[0],ni2[1]]
+    near=gaussian_filter(near,sg*0.6)
+    t=np.clip(1-dl/A['LRR'],0,1); t=t*t*(3-2*t)
+    lift=near*t
+    lift=np.clip(lift,0,None)
+    print('  lift max %.1f mm, lower rim cells %d'%(lift.max()*1e3,lower.sum()))
+    return np.where(band,lift,0.0)
 def plan(d):
     band,dl,excl=S.band_masks(d,R=A['R'],excl_dil=A['EXCL'],excl_hood=None if A['EXH']<0 else A['EXH'])
     H,Hx,lift=S.ramp4(d,band,Rr=A['RR'],cap=A['CAP'],Rw=A['RW'],with_lens=A['LENSDOM'])
@@ -38,10 +66,16 @@ def plan(d):
         num=gaussian_filter(B0,sg); den=gaussian_filter(valid.astype(float),sg)
         Hsm=num/np.maximum(den,1e-6)
         H=np.where(band,Hsm,np.nan)
-    Hfull=fillnear(np.where(band,H,d['Bh']))
+    if A['LIFT']>0: H=H+lower_lift(d,band,H)
+    Hb=np.where(band,H,d['Bh'])
+    if A['LENSIN']>0:
+        edge=d['lens']&binary_dilation(band,iterations=A['LENSIN'])
+        Hb=np.where(edge,np.nan,Hb); Hb=np.where(edge,fillnear(np.where(band,H,np.nan)),Hb)
+    Hfull=fillnear(Hb)
     Hs=gaussian_filter(Hfull,1.0)
     # blend weight: 0 outside the band, 1 from BLEND cells inside
     w=np.clip(distance_transform_edt(band|d['lens'])/A['BLEND'],0,1)*band; w=w*w*(3-2*w)
+    if A['LENSIN']>0: w=np.where(d['lens']&binary_dilation(band,iterations=A['LENSIN']),1.0,w)
     # paint UV fill for the backing patch
     UV=d['UVr'].copy()
     for k in range(2):
@@ -79,7 +113,7 @@ def project(pm,PL):
         moved+=len(vid)
     return moved
 def backing(pl,k,kc):
-    d=pl['d']; dom=binary_erosion(pl['band'],iterations=A['BLEND']+1); grid=d['grid']; u0,v0,nu,nv=grid; CC=d['c']
+    d=pl['d']; dom=(pl['band']&(distance_transform_edt(pl['band']|d['lens'])>A['BLEND']+1)) if A['BKIN'] else binary_erosion(pl['band'],iterations=A['BLEND']+1); grid=d['grid']; u0,v0,nu,nv=grid; CC=d['c']
     pts=[]
     for c in find_contours(np.pad(dom.astype(float),1),0.5):
         c=c-1; dd=np.r_[0,np.cumsum(np.linalg.norm(np.diff(c,axis=0),axis=1))]

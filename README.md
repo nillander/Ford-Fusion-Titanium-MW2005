@@ -2,12 +2,12 @@
 
 Dois mods para o Most Wanted de PC. Instalam juntos porque usam slots diferentes. O 2012 é a carroceria aprovada do Titanium 2018 com faróis, lanternas e faróis de milha do modelo 2012 (Ford Mondeo 2016 do GTA V).
 
-| Carro | Substitui | Slot | Tração gravada na v2.2 |
+| Carro | Substitui | Slot | Tração gravada na v2.3 |
 | --- | --- | --- | --- |
 | Ford Fusion 2012 FWD | Chevrolet Cobalt SS (carro inicial) | `COBALTSS` | Dianteira (`TORQUE_SPLIT` 1,0) |
 | Ford Fusion Titanium 2018 AWD | Ford Mustang GT | `MUSTANGGT` | Traseira (`TORQUE_SPLIT` 0). O nome na garagem é AWD |
 
-> **Release atual: v2.2 (27/09/2026).** Ela refaz a lataria em volta dos faróis do 2012 como uma superfície única e lisa (sem os calombos junto à grade e acima da seção laranja, sem o buraco escuro ao lado da ponta interna), coloca uma chapa preta atrás da grade superior dos dois carros (não se vê mais o interior pela grade) e alarga a cinta de reboque preta dos kits. As placas da v2.1 continuam. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md). O método que levou o 2018 ao Underground 2 está no repositório irmão `fusion-nfsu2`.
+> **Release atual: v2.3 (27/09/2026).** No 2012, a borda de cima do para-choque passou a encostar na parte de baixo dos faróis, e a lataria em volta deles é uma superfície única e lisa (desde a v2.2). Nos dois carros há uma chapa preta atrás da grade superior e a cinta de reboque preta ficou mais larga. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md). O método que levou o 2018 ao Underground 2 está no repositório irmão `fusion-nfsu2`.
 
 ## No jogo
 
@@ -18,7 +18,7 @@ Dois mods para o Most Wanted de PC. Instalam juntos porque usam slots diferentes
 | ![Traseira do 2012 e o logo FUSION](capturas/2012/Screenshot_172.png) | ![Traseira do 2018 com aerofólio](capturas/2018/Screenshot_168.png) |
 | ![2012 na cidade](capturas/2012/Screenshot_178.png) | ![2018 em perseguição](capturas/2018/Screenshot_185.png) |
 
-[Todas as capturas dos dois carros](capturas/README.md). São imagens feitas no jogo; algumas podem mostrar testes posteriores à v2.2. As anotações de diagnóstico (vermelho e amarelo) ficam em [docs/imagens-projeto/](docs/imagens-projeto/README.md).
+[Todas as capturas dos dois carros](capturas/README.md). São imagens feitas no jogo; algumas podem mostrar testes posteriores à v2.3. As anotações de diagnóstico (vermelho e amarelo) ficam em [docs/imagens-projeto/](docs/imagens-projeto/README.md).
 
 ## O que entra no jogo
 
@@ -53,12 +53,12 @@ O Mod Loader lê `ADDONS`. O instalador copia a mesma geometria e as mesmas text
 
 O `VINYLS.BIN` do Cobalt permanece o do jogo. A pintura do 2012 usa a UV contínua já gravada na carroceria.
 
-| Pacote v2.2 | SHA-256 do ZIP | `GEOMETRY.BIN` | `TEXTURES.BIN` |
+| Pacote v2.3 | SHA-256 do ZIP | `GEOMETRY.BIN` | `TEXTURES.BIN` |
 | --- | --- | --- | --- |
-| [Fusion2012_FWD_MW2005.zip](release/Fusion2012_FWD_MW2005.zip) | `99BFDEF58DC5B740F6C872012035DDC33CE792DCFF548095FE8AA1993118899B` | `FC59A72AB1498DC237EE8D8910CF7A34212FCF3288CCC8569108B506FC33696B` | `C969CB9861DCA8F848C6A6E671F78816A72BAAA7A25B21206D07D11AA3723FFE` |
-| [Fusion2018_AWD_MW2005.zip](release/Fusion2018_AWD_MW2005.zip) | `DDCE7CC640B43D26DD4625BF44CB3BF03E41BE861B069D76A67627F3222897DB` | `EDDE6EE9B5D2FC30F78A6B4317E4FF10F6911D5EC3272EA068EB61C41264DA90` | `854CFB7754B9793D8D61367A4D6CD24C5D117106CD7D94D544657814EF7800E8` |
+| [Fusion2012_FWD_MW2005.zip](release/Fusion2012_FWD_MW2005.zip) | `4D2DA5F30456565F05C29E5C96686B569E6329388890E2C9E5A718D8F109545D` | `12F99EE65681A7AEB8A0554D9BA7CAB9CE4DB4E6050A63D0FA7CB7D7E71C25BC` | `C969CB9861DCA8F848C6A6E671F78816A72BAAA7A25B21206D07D11AA3723FFE` |
+| [Fusion2018_AWD_MW2005.zip](release/Fusion2018_AWD_MW2005.zip) | `80F232F0FBEF1CB4AFA46E77E6F85AE78FAA4F03DDDBC2264A654204D526B8A5` | `EDDE6EE9B5D2FC30F78A6B4317E4FF10F6911D5EC3272EA068EB61C41264DA90` | `854CFB7754B9793D8D61367A4D6CD24C5D117106CD7D94D544657814EF7800E8` |
 
-Os hashes de cada arquivo interno estão em [release/SHA256SUMS-conteudo.txt](release/SHA256SUMS-conteudo.txt). As notas da release estão em [release/NOTAS-v2.2.md](release/NOTAS-v2.2.md).
+Os hashes de cada arquivo interno estão em [release/SHA256SUMS-conteudo.txt](release/SHA256SUMS-conteudo.txt). As notas da release estão em [release/NOTAS-v2.3.md](release/NOTAS-v2.3.md).
 
 ### Peças que o slot precisa ter
 
@@ -154,6 +154,7 @@ O pedido inicial, em [docs/historico/demanda-inicial.md](docs/historico/demanda-
 | 26/09 | **Fusion 2012.** Luzes do `oracle_hi.yft` enxertadas na z10, slot `COBALTSS`. Logo, tampa, grade inferior, lanternas, faróis de milha, freios, kits com cinta, antena reta, KIT04/KIT05 |
 | 27/09 | **v2.0**, os dois carros. Em seguida a **v2.1**, só as placas. A geometria da z10 do 2018 foi a origem do port para o Underground 2 |
 | 27/09 | **v2.2**: chapa preta atrás da grade (2012 e 2018), cinta preta mais larga e, no 2012, a lataria em volta dos faróis refeita por projeção numa superfície lisa (candidato 57, `hl59.py`) |
+| 27/09 | **v2.3**: no 2012, o para-choque sobe até a borda de baixo dos faróis e uma chapa na cor da pintura fecha a fresta por baixo (`hl59.py` com `LIFT`, `curtain.py`) |
 
 Checkpoints do 2018 e o commit de cada um estão em [versions/LEIA-ME.md](versions/LEIA-ME.md).
 
@@ -382,10 +383,8 @@ perf12.py         # ATTRIBUTES.MWPS
 
 ## Limites conhecidos
 
-A v2.1 está aprovada na garagem, na cidade e nas cenas que usam KIT04/KIT05.
+A v2.3 está aprovada na garagem, na cidade e nas cenas que usam KIT04/KIT05, com os faróis do 2012 encaixados na lataria e no para-choque e a chapa preta atrás da grade.
 
-- O encaixe final dos faróis do 2012 (lataria em volta da lente, item 44) está em teste local e fora do ZIP.
-- Pela grade cromada ainda se vê o interior. Uma chapa preta atrás das barras foi aprovada no jogo depois da v2.1 e também está fora do ZIP.
 - O 2018 se chama AWD na garagem e anda com tração traseira.
 - O logo Ford HD vale para todos os Ford.
 - Não há câmera interna neste jogo: a vista "de dentro" é a câmera do capô ou a do para-brisa.
