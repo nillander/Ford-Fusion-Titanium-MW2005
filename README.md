@@ -7,7 +7,7 @@ Dois mods para o Most Wanted de PC. Instalam juntos porque usam slots diferentes
 | Ford Fusion 2012 FWD | Chevrolet Cobalt SS (carro inicial) | `COBALTSS` | Dianteira (`TORQUE_SPLIT` 1,0) |
 | Ford Fusion Titanium 2018 AWD | Ford Mustang GT | `MUSTANGGT` | Traseira (`TORQUE_SPLIT` 0). O nome na garagem é AWD |
 
-> **Release atual: v2.3 (27/09/2026).** No 2012, a borda de cima do para-choque passou a encostar na parte de baixo dos faróis, e a lataria em volta deles é uma superfície única e lisa (desde a v2.2). Nos dois carros há uma chapa preta atrás da grade superior e a cinta de reboque preta ficou mais larga. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md). O método que levou o 2018 ao Underground 2 está no repositório irmão `fusion-nfsu2`.
+> **Release atual: v2.3 (27/09/2026).** No 2012, a borda de cima do para-choque passou a encostar na parte de baixo dos faróis, e a lataria em volta deles é uma superfície única e lisa (desde a v2.2). Nos dois carros há uma chapa preta atrás da grade superior e a cinta de reboque preta ficou mais larga. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md). O método dos dois ports para o Underground 2, com a tabela de slots, está só no repositório irmão `fusion-nfsu2` (`docs/PORTAR-PARA-NFSU2.md`).
 
 ## No jogo
 
