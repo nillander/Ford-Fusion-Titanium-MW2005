@@ -59,8 +59,9 @@ carroceria inteira e pode fechar o jogo.
   canto superior direito) pelo logo de `assets/nao-usar/ford-fusion-seeklogo.png`.
 - [x] **16. Chama do nitro.** *(Aprovado no jogo: V1prime-z3, pontos LEFT/RIGHT_EXHAUST no centro das saídas; ver `versions/v1prime/variants/v1prime-z3-logo-nitro/LEIA-ME.md`.)* O efeito de nitro/NOS exibe fogo saindo do escapamento, mas não está
   alinhado com a saída do escapamento do Fusion.
-- [ ] **17. Câmera interna (Fusion 2018 e 2012).** *(Não resolvido: a câmera "capô" parece ficar dentro da entrada de ar do teto instalada; falta descobrir onde o jogo define essa posição. Testar sem a entrada de ar do teto.)* Na visualização pela câmera de dentro do veículo não aparece textura,
+- [x] **17. Câmera interna (Fusion 2018 e 2012).** *(Não resolvido: a câmera "capô" parece ficar dentro da entrada de ar do teto instalada; falta descobrir onde o jogo define essa posição. Testar sem a entrada de ar do teto.)* Na visualização pela câmera de dentro do veículo não aparece textura,
   só alguns itens pretos.
+  *(27/09: encerrado sem alteração. Testando com a BMW original, o usuário viu que o MW não tem câmera interna: só a câmera sobre o capô e a do para-brisa, que nem mostra o capô. O teste do marcador ROOF_SCOOP foi desfeito; o jogo voltou para a GEOMETRY `2E4408AA…` (`pacote-26-09e`).)*
 - [x] **18. Adesivos (vinis) que não aparecem.** *(Aprovado no jogo: V1prime-z8, peças DECAL_* trazidas do GTO; ver `versions/v1prime/variants/v1prime-z6-final-refine/LEIA-ME.md`.)* Os adesivos de porta, do para-brisa dianteiro, do para-brisa
   traseiro e os números de porta não são exibidos.
 - [x] **19. Novos kits de carroceria.** *(Aprovado no jogo: V1prime-z8, kits "Street" e "Race".)* Gerar kits baseados em outros kits do jogo para ter mais uma opção

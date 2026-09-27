@@ -29,9 +29,6 @@ Substitui o **Ford Mustang GT** (slot `MUSTANGGT`). Versão de 26/09/2026.
 Para desinstalar, restaure o backup do passo 1. Confira os arquivos com `SHA256SUMS.txt`
 (ex.: `certutil -hashfile GEOMETRY.BIN SHA256` no Windows).
 
-## Limitação conhecida
-- A câmera "capô" fica dentro da cabine do Fusion e mostra peças por dentro do carro; use as outras câmeras.
-
 ## Créditos
 Modelo GTA V: AND1V79; conversão e texturas para o GTA V pelo autor do pacote original, disponibilizado
 por Gabriel Lima (ver `CREDITOS/source-readme.txt`). Base MW (Fusion 2010): Marcelo Castro (AJM3899), com
@@ -43,6 +40,6 @@ Arquivos para distribuir (26/09/2026):
 | ZIP | Carro | SHA-256 |
 |---|---|---|
 | `Fusion2012_FWD_MW2005.zip` | Ford Fusion 2012 FWD (slot COBALTSS) | `97D58FA789C1E3CB98DBE59695CB51B8CC9AF96D7AB26BAB3B9235B57D45B522` |
-| `Fusion2018_AWD_MW2005.zip` | Ford Fusion Titanium 2018 AWD (slot MUSTANGGT) | `C82DDF338454BEE01E3C48C5CFFA5742CF261969C1D5B2171828888085FC2764` |
+| `Fusion2018_AWD_MW2005.zip` | Ford Fusion Titanium 2018 AWD (slot MUSTANGGT) | `493C574B3AC01C11B7810923C926C43D66A42BDC3CFA9BD2B9677BEE75DD0E86` |
 
 `SHA256SUMS-conteudo.txt` lista os arquivos de dentro dos dois ZIPs. O LEIA-ME de cada carro está dentro do seu ZIP.
