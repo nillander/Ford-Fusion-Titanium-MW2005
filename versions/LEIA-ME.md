@@ -1,12 +1,12 @@
 # Histórico de versões
 
-A versão final é a **v2.0**, com o Fusion 2012 FWD e o Fusion Titanium 2018 AWD (zips em `release/`).
+A versão final é a **v2.0**, com o Fusion Titanium 2012 FWD e o Fusion Titanium 2018 AWD (zips em `release/`).
 
 Nesta pasta ficam o histórico e os aprendizados de cada etapa: LEIA-ME, STATUS, prévias, validações e scripts.
 
 | Pasta | O que é |
 | --- | --- |
-| `fusion2012-fwd/` | Fusion 2012 FWD (slot COBALTSS): scripts, prévias e referências |
+| `fusion2012-fwd/` | Fusion Titanium 2012 FWD (slot COBALTSS): scripts, prévias e referências |
 | `v1prime/` | Fusion 2018 (slot MUSTANGGT), linha final: variantes a–z10, capturas no jogo (`in-game/`) e checkpoints (`checkpoints/`) |
 | `performance/` | As três performances testadas para o 2018 |
 | `vprime/` | Base de onde saiu a v1prime (backup de 20/09) |

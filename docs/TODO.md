@@ -77,7 +77,7 @@ carroceria inteira e pode fechar o jogo.
 Pacote para outros jogadores: `release/Fusion2018_AWD_MW2005.zip` (versão final, única release).
 - [x] **21. Parte de baixo do para-choque dianteiro.** *(Aprovado no jogo: V1prime-z10 — superfície única, sem o degrau do meio; ver `versions/v1prime/variants/v1prime-z10-front-lip/LEIA-ME.md`.)* Última peça com marcas pretas depois da V1prime-z8.
 
-## Fusion 2012 FWD (slot COBALTSS)
+## Fusion Titanium 2012 FWD (slot COBALTSS)
 
 Um item por vez, do mais simples ao mais difícil. Avisar para testar no jogo antes de seguir.
 O zip `release/Fusion2012_FWD_MW2005.zip` ainda tem a geometria anterior (`2D4AF358…`) e só será refeito

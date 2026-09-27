@@ -1,4 +1,4 @@
-# Continuação — Ford Fusion 2012 FWD e Fusion Titanium 2018 AWD (NFS Most Wanted 2005)
+# Continuação — Ford Fusion Titanium 2012 FWD e Fusion Titanium 2018 AWD (NFS Most Wanted 2005)
 
 Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os antigos `CONTINUACAO-CODEX.md`
 (2018, V1prime) e `CONTINUACAO-FUSION2012.md`. Leia também `docs/APRENDIZADOS.md` (lições, com imagens),
@@ -8,7 +8,7 @@ Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os
 construção e os testes antigos; números de versão e caminhos de nuvem nelas são históricos, não o estado instalado.
 
 ## 1. O projeto
-- **Fusion 2018 AWD** no slot `MUSTANGGT` (Ford Mustang GT) e **Fusion 2012 FWD** no slot `COBALTSS` (Cobalt SS,
+- **Fusion 2018 AWD** no slot `MUSTANGGT` (Ford Mustang GT) e **Fusion Titanium 2012 FWD** no slot `COBALTSS` (Cobalt SS,
   carro inicial). O 2012 é o 2018 com faróis, lanternas e faróis de milha do modelo 2012 (Mondeo 2016 do GTA V,
   de Humster3D, portado por BritishGamer88).
 - Branch `main`, tag única `v2.4`; remoto `git@github.com:nillander/nfsmw-ford-fusion-titanium.git`

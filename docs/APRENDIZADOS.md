@@ -144,7 +144,7 @@ pneus, freios, chassi, massa e a reação da suspensão do BMW M3 GTR. O acerto 
 nesse carro empurrava o bico em alta, então a direção, a rotação e a barra traseira foram
 abertas. A posição das rodas do Fusion permanece a do carro.
 
-## 10. Fusion 2012 FWD: lições dos ajustes de 26/09 (itens 6, 1, 30, 31 e 27)
+## 10. Fusion Titanium 2012 FWD: lições dos ajustes de 26/09 (itens 6, 1, 30, 31 e 27)
 
 **Validar como o jogo desenha, não como o render desenha.**
 - O jogo não desenha o verso das faces nas peças do carro. Um render que desenha as duas faces esconde buracos:

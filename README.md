@@ -1,17 +1,17 @@
-# Ford Fusion 2012 FWD e Fusion Titanium 2018 AWD — Need for Speed Most Wanted (2005)
+# Ford Fusion Titanium 2012 FWD e Fusion Titanium 2018 AWD — Need for Speed Most Wanted (2005)
 
 Dois mods para o Most Wanted de PC. Instalam juntos porque usam slots diferentes. O 2012 é a carroceria aprovada do Titanium 2018 com faróis, lanternas e faróis de milha do modelo 2012 (Ford Mondeo 2016 do GTA V).
 
 | Carro | Substitui | Slot | Tração gravada na v2.4 |
 | --- | --- | --- | --- |
-| Ford Fusion 2012 FWD | Chevrolet Cobalt SS (carro inicial) | `COBALTSS` | Dianteira (`TORQUE_SPLIT` 1,0) |
+| Ford Fusion Titanium 2012 FWD | Chevrolet Cobalt SS (carro inicial) | `COBALTSS` | Dianteira (`TORQUE_SPLIT` 1,0) |
 | Ford Fusion Titanium 2018 AWD | Ford Mustang GT | `MUSTANGGT` | Traseira (`TORQUE_SPLIT` 0). O nome na garagem é AWD |
 
 > **Release atual: v2.5 (27/09/2026).** A cinta laranja (KIT03) passou a dizer 読めば尺八 em preto. O restante é o da v2.4: cinco cintas diferentes na dianteira (lado direito) e na traseira (lado esquerdo), KIT00 sem cinta, faróis e para-choque do 2012 encaixados na lataria e chapa preta atrás da grade. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md). O método que levou o 2018 ao Underground 2 está no repositório irmão [Ford-Fusion-Titanium-NFSU2](https://github.com/nillander/Ford-Fusion-Titanium-NFSU2).
 
 ## No jogo
 
-| Fusion 2012 FWD | Fusion Titanium 2018 AWD |
+| Fusion Titanium 2012 FWD | Fusion Titanium 2018 AWD |
 | --- | --- |
 | ![Fusion 2012 no menu principal](capturas/2012/principal.png) | ![Fusion 2018 no menu principal](capturas/2018/principal-2.png) |
 | ![Frente do 2012, com a cinta do kit](capturas/2012/Screenshot_175.png) | ![Lateral do 2018 na garagem](capturas/2018/Screenshot_170.png) |

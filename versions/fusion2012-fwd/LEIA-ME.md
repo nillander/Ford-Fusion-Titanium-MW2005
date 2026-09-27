@@ -1,4 +1,4 @@
-# Fusion 2012 FWD — substitui o Chevrolet Cobalt SS (slot `COBALTSS`)
+# Fusion Titanium 2012 FWD — substitui o Chevrolet Cobalt SS (slot `COBALTSS`)
 
 Base: V1prime-z10 (Fusion Titanium 2018, versão final aprovada). O 2012 e o 2018 são o mesmo carro; mudam
 só **faróis, lanternas traseiras e faróis de milha**. Todo o resto (carroceria suavizada, vidros, rodas de 20 raios,
