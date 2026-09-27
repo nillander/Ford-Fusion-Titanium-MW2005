@@ -7,7 +7,7 @@ Dois mods para o Most Wanted de PC. Instalam juntos porque usam slots diferentes
 | Ford Fusion 2012 FWD | Chevrolet Cobalt SS (carro inicial) | `COBALTSS` | Dianteira (`TORQUE_SPLIT` 1,0) |
 | Ford Fusion Titanium 2018 AWD | Ford Mustang GT | `MUSTANGGT` | Traseira (`TORQUE_SPLIT` 0). O nome na garagem é AWD |
 
-> **Release atual: v2.4 (27/09/2026).** Os kits de carroceria dos dois carros ganharam cinco cintas de reboque diferentes, na dianteira (lado direito) e na traseira (lado esquerdo): preta 大吉大利, vermelha 出入平安, laranja 一路顺风, azul FBI e zebrada preta e amarela; o KIT00 fica sem cinta. Continuam da v2.3 os faróis e o para-choque do 2012 encaixados na lataria e a chapa preta atrás da grade. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md). O método que levou o 2018 ao Underground 2 está no repositório irmão `fusion-nfsu2`.
+> **Release atual: v2.4 (27/09/2026).** Os kits de carroceria dos dois carros ganharam cinco cintas de reboque diferentes, na dianteira (lado direito) e na traseira (lado esquerdo): preta 大吉大利, vermelha 出入平安, laranja 一路顺风, azul FBI e zebrada preta e amarela; o KIT00 fica sem cinta. Continuam da v2.3 os faróis e o para-choque do 2012 encaixados na lataria e a chapa preta atrás da grade. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md). O método que levou o 2018 ao Underground 2 está no repositório irmão [Ford-Fusion-Titanium-NFSU2](https://github.com/nillander/Ford-Fusion-Titanium-NFSU2).
 
 ## No jogo
 
@@ -416,4 +416,4 @@ A conversão é de Nillander Alarcão. Três agentes oficiais entraram em etapas
 | --- | --- |
 | **Claude Code** | A partir da V3, um defeito por vez, medido na malha: grade opaca em DXT1, limite de 65.535 índices, kits que a IA e o Razor pedem, UV de vinil contínua, Fusion 2012 no slot `COBALTSS`, releases v2.0 e v2.1. O encaixe dos faróis do 2012 na lataria continua em teste local, fora dos ZIPs. |
 | **ChatGPT** | O começo: transplantar a carroceria nova para um carro doador que já abre no jogo. O plano está em [docs/historico/demanda-inicial.md](docs/historico/demanda-inicial.md); a release v0.1 seguiu esse fluxo. |
-| **Cursor** | Em 20/09, slot, grade 3D e cromado das tentativas v1 e v2. Em 24/09, a UV reta das portas na V1prime. Em 27/09, a documentação reunida numa estrutura só. O port aprovado no Underground 2 está no repositório `fusion-nfsu2`. |
+| **Cursor** | Em 20/09, slot, grade 3D e cromado das tentativas v1 e v2. Em 24/09, a UV reta das portas na V1prime. Em 27/09, a documentação reunida numa estrutura só. O port aprovado no Underground 2 está no repositório [Ford-Fusion-Titanium-NFSU2](https://github.com/nillander/Ford-Fusion-Titanium-NFSU2). |
