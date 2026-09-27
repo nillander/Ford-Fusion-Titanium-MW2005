@@ -12,7 +12,8 @@ Os dois zips estão em [`release/`](release/). Cada um abre numa pasta com o nom
 ## Onde fica cada coisa
 - [`docs/TODO.md`](docs/TODO.md): lista do que foi pedido, feito e aprovado no jogo.
 - [`docs/CONTINUACAO.md`](docs/CONTINUACAO.md): estado atual e como retomar o trabalho.
-- [`docs/APRENDIZADOS.md`](docs/APRENDIZADOS.md): lições técnicas, com imagens.
+- [`docs/APRENDIZADOS.md`](docs/APRENDIZADOS.md): lições técnicas do Most Wanted, com imagens.
+- [`docs/PORTAR-PARA-NFSU2.md`](docs/PORTAR-PARA-NFSU2.md): como levar um carro já aprovado aqui para o Underground 2. O Fusion 2018 AWD foi o primeiro; o método está nesse arquivo.
 - [`docs/imagens-projeto/`](docs/imagens-projeto/README.md): galeria de imagens, etapa por etapa.
 - [`docs/historico/`](docs/historico/): pedido inicial (`demanda-inicial.md`) e a release de teste v0.1.
 - [`versions/`](versions/LEIA-ME.md): histórico de cada versão. O 2012 fica em `versions/fusion2012-fwd/`; o 2018 em
