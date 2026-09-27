@@ -194,7 +194,7 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   vistos através do vidro escuro — prévia `versions/fusion2012-fwd/preview/para-brisa-bancos.png`. Aguardando decisão:
   escurecer os bancos/interior ou o vidro.
   *(27/09: usuário deu tudo como certo e pediu a release; item encerrado sem alteração na geometria.)*
-- [ ] **41. Refino de para-choques e paralamas dianteiros e traseiros (2012 e 2018).** Pedido de 27/09: tirar falhas,
+- [x] **41. Refino de para-choques e paralamas dianteiros e traseiros (2012 e 2018).** Pedido de 27/09: tirar falhas,
   triângulos malfeitos, marcas escuras e aperfeiçoar o encaixe de faróis e lanternas; no 2012, faróis mais para a frente.
   *(27/09, instalado para teste — `work/c2012-stage/pacote-27-09/`: 2012 GEOMETRY `B45C6A20…`, 2018 `F5A4B50F…`; texturas
   iguais. (1) Normais da lataria: faces da pele visíveis de fora (id-buffer de 120 direções) na frente (x>1,3) e
@@ -204,7 +204,7 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   vizinhas viradas como o para-choque (`teeth.py`). (3) 2012: faróis 8 mm para a frente (+x) e aro da carcaça fora do
   contorno da lente aparado (`hltrim.py`). Prévias `versions/fusion2012-fwd/preview/refino-item41-2012.png` e
   `-2018.png` (esquerda antes, direita depois; `pgr.py`).)*
-- [ ] **42. Riscos escuros, lábio dianteiro e encaixe do farol do 2012 (teste de 27/09).** Imagens em
+- [x] **42. Riscos escuros, lábio dianteiro e encaixe do farol do 2012 (teste de 27/09).** Imagens em
   `versions/fusion2012-fwd/reference/teste-27-09/`: riscos no paralama junto à coluna e acima da lanterna (2012 e
   2018), lábio de baixo do para-choque dianteiro ondulado (2018), farol do 2012 com frestas, buracos pretos e lascas.
   *(27/09, instalado para teste — `work/c2012-stage/pacote-27-09b/`: 2012 GEOMETRY `0D618738…`, 2018 `EFA07989…`.
@@ -215,4 +215,4 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   fora) apagadas (`hlvis.py`); buraco na ponta do farol junto à grade (via-se o interior preto do carro) e frestas em
   volta fechados com pele pintada (`hlfill.py`, máscara da lente sem furos). Prévias `preview/refino-item42-*.png` e
   `farois-item42.png`. Pendente: alguns riscos finos na lateral traseira são costuras da malha original.)*
-
+  *(27/09: o usuário deu o trabalho por finalizado; itens 41 e 42 encerrados e incluídos na release v2.0 — pacote `pacote-27-09b`.)*

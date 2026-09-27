@@ -10,8 +10,8 @@ Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os
   usuário tem permissão de redistribuição).
 - Branch `fusion2012-fwd` (a `main` está inteira dentro dela). Remoto `git@github.com:nillander/nfsmw-ford-fusion-titanium.git`
   (SSH). **Nunca dar push**: o usuário publica. Commits como `Nillander Alarcão <nillander@live.com>`.
-- Release **v2.0** (tag local em `d1e39038`, não publicada): `release/Fusion2012_FWD_MW2005.zip` (`97D58FA7…`) e
-  `release/Fusion2018_AWD_MW2005.zip` (`493C574B…`); notas em `release/NOTAS-v2.0.md`. Comandos de publicação
+- Release **v2.0** (tag local, não publicada): `release/Fusion2012_FWD_MW2005.zip` (`C5F730B9…`) e
+  `release/Fusion2018_AWD_MW2005.zip` (`5A441A85…`); notas em `release/NOTAS-v2.0.md`. Comandos de publicação
   (`git push`, `gh release create`) ficam com o usuário.
 
 ## 2. Como trabalhar com o usuário
@@ -23,25 +23,24 @@ Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os
 - Git no PC: `git add` pode travar — usar `hash-object -w` / `update-index --cacheinfo` / `write-tree` /
   `commit-tree` / `update-ref`, com as linhas `Co-Authored-By`/`Claude-Session` no fim da mensagem.
 
-## 3. Estado em 27/09/2026
-| Carro | Instalado no jogo (teste do item 42) | Nos zips da v2.0 (aprovado) |
-| --- | --- | --- |
-| 2012 (COBALTSS) | `pacote-27-09b`: GEOMETRY `0D618738…`, TEXTURES `39505AD5…` | `pacote-26-09e`: GEOMETRY `2E4408AA…`, TEXTURES `39505AD5…` |
-| 2018 (MUSTANGGT) | `pacote-27-09b`: GEOMETRY `EFA07989…`, TEXTURES `13E45A9D…` | `pacote-26-09d`: GEOMETRY `B4D1BDDE…`, TEXTURES `13E45A9D…` |
+## 3. Estado em 27/09/2026 — trabalho finalizado
+O usuário deu o trabalho por finalizado. Todos os itens do TODO.md estão fechados (1–42).
 
-Pacotes em `work/c2012-stage/` (cada um com `SHA256SUMS.txt`): `pacote-26-09` (itens 28, 29, 32, 34, 35),
-`pacote-26-09d` (33, 36/36b, 38), `pacote-26-09e` (37, 39 — aprovados, é o que está nos zips), `pacote-27-09` (41) e
-`pacote-27-09b` (42, **aguardando teste**). Montagem dos zips em `work/zipbuild/z12` e `z18`.
+| Carro | Instalado no jogo = release v2.0 |
+| --- | --- |
+| 2012 (COBALTSS) | `pacote-27-09b`: GEOMETRY `0D618738…`, TEXTURES `39505AD5…` |
+| 2018 (MUSTANGGT) | `pacote-27-09b`: GEOMETRY `EFA07989…`, TEXTURES `13E45A9D…` |
 
-**Pendentes (TODO.md):**
-- **41** — refino de para-choques/paralamas (normais da lataria, dente de serra sob o farol, faróis 8 mm à frente).
-  Testado em 27/09: o usuário apontou os problemas que viraram o item 42.
-- **42** — riscos escuros (paralama junto à coluna, lateral acima da lanterna), lábio dianteiro do 2018, encaixe do
-  farol do 2012. Instalado para teste. Ainda sobram riscos finos na lateral traseira que parecem costuras da malha
-  original (não são normais): próxima abordagem = soldar/fechar as costuras visíveis ou refazer a pele nesses trechos.
-- Depois de aprovar 41/42: commit, refazer os dois zips (`work/zipbuild`) e atualizar hashes em `release/LEIA-ME.md`,
-  `release/NOTAS-v2.0.md`, `release/SHA256SUMS-conteudo.txt` e mover a tag `v2.0` (ou criar `v2.1`).
-- Item 17 encerrado: o MW não tem câmera interna (só capô e para-brisa).
+Zips: `release/Fusion2012_FWD_MW2005.zip` `C5F730B9…`, `release/Fusion2018_AWD_MW2005.zip` `5A441A85…`
+(montagem em `work/zipbuild/z12` e `z18`). Tag local `v2.0`; publicação fica com o usuário:
+`git push origin fusion2012-fwd`, `git push origin v2.0` (com `-f` se a tag antiga já tiver sido enviada) e
+`gh release create v2.0 release/Fusion2012_FWD_MW2005.zip release/Fusion2018_AWD_MW2005.zip --notes-file release/NOTAS-v2.0.md`.
+
+Pacotes anteriores em `work/c2012-stage/` (cada um com `SHA256SUMS.txt`): `pacote-26-09`, `-26-09d`, `-26-09e`,
+`-27-09`, `-27-09b` (final).
+
+**Se voltar a mexer:** ainda há riscos finos na lateral traseira que parecem costuras da malha original (ver
+APRENDIZADOS seção 13); o `BODY_A` do 2012 está a ~1.100 vértices do limite.
 
 ## 4. Cadeia de geometria (nuvem, `/home/claude/c12/build`)
 - **2012**: `36_12` → `hl37.py 1.10 1.10 0.010 sym` → `lid38.py` → `fin39.py` → `tail39.py` → `hl40.py 1.5 0.12`
