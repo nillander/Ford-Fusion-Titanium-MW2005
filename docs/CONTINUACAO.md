@@ -9,8 +9,8 @@ construção e os testes antigos; números de versão e caminhos de nuvem nelas 
 
 ## 1. O projeto
 - **Fusion 2018 AWD** no slot `MUSTANGGT` (Ford Mustang GT) e **Fusion 2012 FWD** no slot `COBALTSS` (Cobalt SS,
-  carro inicial). O 2012 é o 2018 com faróis, lanternas e faróis de milha do modelo 2012 (Mondeo 2016 do GTA V; o
-  usuário tem permissão de redistribuição).
+  carro inicial). O 2012 é o 2018 com faróis, lanternas e faróis de milha do modelo 2012 (Mondeo 2016 do GTA V,
+  de Humster3D, portado por BritishGamer88).
 - Branch `main`, tag local única `v2.1`; remoto `git@github.com:nillander/nfsmw-ford-fusion-titanium.git`
   (SSH). O usuário quer **uma única tag e uma única release**, sempre da última versão. Não publicar o teste
   atual dos faróis sem pedido/aprovação. Commits, quando solicitados, como `Nillander Alarcão <nillander@live.com>`.
@@ -34,7 +34,7 @@ carros**: removeu a antiga moldura preta 3D texturizada, que flutuava atrás da 
 arredondados agora pertence à própria placa. **Preservar** a faixa azul Mercosul e a bandeira do Brasil. O texto
 “Mercosul” na moldura descartada não era necessário. Depois de corrigir os ZIPs para conter a pasta-raiz de cada
 carro e `instalar.bat`, a v2.1 foi publicada. Hashes dos ZIPs locais: 2012
-`B47B3C372345C331DD847D022494B9B3AEEBD613B6CDC9975B64EA68A1BBE0DF`; 2018
+`6D8631DE5E16E20892DB24457E730842F1BCCE2CF558B66E7F899740E4ECD2AD`; 2018
 `AC372B2D4B81F724977B08B3D1683CFE69ADC19D653599D21C3031CAC079A4A5`.
 
 **Trabalho ainda aberto:** encaixe dos faróis dianteiros do Fusion **2012** na lataria (capô, paralamas e
@@ -210,7 +210,6 @@ não tomá-los como base. A cobertura interna larga do 46 gerou calombo, motivo 
 - A malha "gum" do GTA é uma segunda casca preta de toda a carroceria: excluir o que estiver a < 4 mm da pintura.
 - Recortar a pele com triângulos grandes deixa dentes; subdividir só onde a borda cruza e cortar linearmente.
 - UV exatamente em 0/1 dá volta para o outro lado do atlas; recuar as UVs dentro de cada quadrante.
-- Créditos: o Mondeo (Humster3D / BritishGamer88) pede "não redistribuir sem permissão"; o zip é para uso pessoal.
 
 ## Anexo A — O que deu errado no 1º teste e o que foi corrigido
 ### A.1 Travamento ao selecionar (causa provável, corrigida)

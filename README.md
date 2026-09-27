@@ -55,7 +55,7 @@ O `VINYLS.BIN` do Cobalt permanece o do jogo. A pintura do 2012 usa a UV contín
 
 | Pacote v2.1 | SHA-256 do ZIP | `GEOMETRY.BIN` | `TEXTURES.BIN` |
 | --- | --- | --- | --- |
-| [Fusion2012_FWD_MW2005.zip](release/Fusion2012_FWD_MW2005.zip) | `B47B3C372345C331DD847D022494B9B3AEEBD613B6CDC9975B64EA68A1BBE0DF` | `9021E30C13A6A7C9A6FE4305D4AB339E1EB3F529B556329634000A1B9A1B6895` | `C969CB9861DCA8F848C6A6E671F78816A72BAAA7A25B21206D07D11AA3723FFE` |
+| [Fusion2012_FWD_MW2005.zip](release/Fusion2012_FWD_MW2005.zip) | `6D8631DE5E16E20892DB24457E730842F1BCCE2CF558B66E7F899740E4ECD2AD` | `9021E30C13A6A7C9A6FE4305D4AB339E1EB3F529B556329634000A1B9A1B6895` | `C969CB9861DCA8F848C6A6E671F78816A72BAAA7A25B21206D07D11AA3723FFE` |
 | [Fusion2018_AWD_MW2005.zip](release/Fusion2018_AWD_MW2005.zip) | `AC372B2D4B81F724977B08B3D1683CFE69ADC19D653599D21C3031CAC079A4A5` | `66B89F3051C6C933C5C52080CE3C1F983BC56CD97CA101ACF61E6CD4C699E48A` | `854CFB7754B9793D8D61367A4D6CD24C5D117106CD7D94D544657814EF7800E8` |
 
 Os hashes de cada arquivo interno estão em [release/SHA256SUMS-conteudo.txt](release/SHA256SUMS-conteudo.txt). As notas da release estão em [release/NOTAS-v2.1.md](release/NOTAS-v2.1.md).
@@ -158,11 +158,101 @@ Checkpoints do 2018 e o commit de cada um estão em [versions/LEIA-ME.md](versio
 
 ## Geometria e reconstrução
 
-O modelo de origem, lido do GTA e pintado por peça. Azul é a lataria; vermelho, as rodas; amarelo e verde, as luzes.
+Os dois carros compartilham a lataria do Titanium 2018. O 2012 só troca faróis, lanternas e faróis de milha. A malha do 2018 foi montada primeiro, no slot `MUSTANGGT`.
 
-| Lateral | Frente |
+### Fusion Titanium 2018
+
+O doador de estrutura é o Fusion 2010 de AJM3899: 64 sólidos, marcadores, shaders e o catálogo que o Mustang GT já aceitava. A carroceria nova vem dos drawables do Fusion no GTA V (`main`, `fusion_exh_2`, `fusion_rfst`, `fusion_rollcage`). Azul é a lataria; vermelho, as rodas; amarelo e verde, as luzes.
+
+| Catálogo do doador, Fusion 2010 | Carroceria nova, por peça |
 | --- | --- |
-| ![Peças do modelo de origem, vista lateral](docs/imagens-projeto/00-renders-iniciais/06-lateral-pecas-por-cor.png) | ![Peças do modelo de origem, vista frontal](docs/imagens-projeto/00-renders-iniciais/08-perspectiva-frente-pecas-por-cor.png) |
+| ![Peças do Fusion 2010 usado como estrutura](docs/imagens-projeto/01-diagnostico-do-modelo/0923-2105-ajm_parts.png) | ![Peças do Fusion 2018 lidas do GTA](docs/imagens-projeto/00-renders-iniciais/06-lateral-pecas-por-cor.png) |
+
+| Frente do mesmo modelo | O que passava de 65.535 índices, em vermelho |
+| --- | --- |
+| ![Frente do modelo de origem, por peça](docs/imagens-projeto/00-renders-iniciais/08-perspectiva-frente-pecas-por-cor.png) | ![Trechos da vprime acima do limite de índices](versions/v1prime/preview/vprime-index-over-65535-red.png) |
+
+A primeira compilação está descrita em [versions/vprime/README.md](versions/vprime/README.md): extração do RPF, alinhamento no Blender (`scripts/build_scene.py`), `mwgc` para o `GEOMETRY.BIN`, transplante dos sólidos e marcadores do doador, TPK com `mwtc`. O `scripts/build.ps1` que ficou no repositório grava essa compilação no slot de teste `FORDGT`. O BIN da v2.1 é a cadeia de patches seguinte, da vprime até a z10, um por variante em `versions/v1prime/variants/`.
+
+O que a compilação ainda entregava errado, e o que foi refeito na geometria:
+
+| Placa com as letras CHAPINHA em relevo | UV da pintura, contínua entre os painéis |
+| --- | --- |
+| ![Face furada e as letras 3D que atravessavam a placa](versions/v1prime/preview/vprime-plate-chapinha-geometry.png) | ![Grade de teste na UV da V1prime-e](versions/v1prime/preview/vinyl-uv-v1prime-e.png) |
+
+As letras 3D saíram (147 triângulos no LOD A) e a face furada virou um plano com UV de `NEWZERA`. A UV do GTA mapeava cada porta sozinha; `vinyluv.py` + `ApplyUV.cs` gravaram `u = 0,169·x + 0,5` só nos `KIT00_BODY_A–E`.
+
+| Roda do doador e a roda lida do `fusion_hi.yft` | Normais da pele, antes e depois |
+| --- | --- |
+| ![Cinco raios do doador em cima, vinte raios do Fusion embaixo](versions/v1prime/variants/v1prime-v-gta-wheel/v1prime-v-roda.png) | ![Reflexo facetado na z0 e a pele suavizada na z6](versions/v1prime/variants/v1prime-z4-smooth-kits/suavidade-antes-depois.png) |
+
+A roda de 20 raios entra no lugar da roda do Fusion 2010. O diâmetro acompanha aro 18 e perfil 40, que é o que a loja do MW oferece. A suavidade veio de recalcular as normais na vizinhança, e de uma camada pintada 4 mm sob a pele, que tampa a fresta da coluna C e das junções. Na cobertura, verde é camada nova, azul é fundo que já existia, roxo e vermelho são o que ainda ficava aberto.
+
+| Camada de fundo sob a pele | Lábio do para-choque, z9 em cima e z10 embaixo |
+| --- | --- |
+| ![Cobertura da camada pintada por baixo da lataria](versions/v1prime/variants/v1prime-z5-backing-details/camada-de-fundo-cobertura.png) | ![Para-choque inferior antes e depois da superfície única](versions/v1prime/variants/v1prime-z10-front-lip/parachoque-inferior-z9-z10.png) |
+
+Os 17 capôs da loja são o capô do Fusion com o detalhe de cada `STYLE` do GTO, separados da carroceria em `KIT00_HOOD` e `STYLExx_HOOD`. Os emblemas FUSION e TITANIUM foram traçados das artes oficiais, em cromado, com 2,5 mm de relevo, no lugar das letras que vieram do GTA. Cada janela ficou com uma camada `WINDSHIELD` e a textura de vidro correspondente, para o insulfilme da loja pegar.
+
+![Amostra dos capôs da loja sobre o capô do Fusion](versions/v1prime/variants/v1prime-s-hoods/v1prime-s-capos.png)
+
+Pontos de montagem gravados nessa malha, e herdados pelo 2012: aerofólio em x −2,150 / z 0,868, brake light central em x −1,170 / z 1,172, entrada de ar do teto em x 0,300 / z 1,207 (inclinação 6,5°), nitro no centro das saídas do para-choque. O doador não tinha o ponto `ROOF_SCOOP`.
+
+O acervo inteiro, em ordem de trabalho, está em [docs/imagens-projeto/](docs/imagens-projeto/README.md). Cada pasta é uma etapa; o que segue é a captura que fecha o diagnóstico.
+
+**Grade e normais.** O miolo da grade sumia com a textura em DXT3. O mapa de peças separa barras, anel e painel; o render listrado exagera a normal errada da v3, corrigida na v3b.
+
+| Peças da grade | Normais da v3b |
+| --- | --- |
+| ![Barras, anel e painel da grade em cores separadas](docs/imagens-projeto/03-v1prime-placas-grade-e-pecas/0923-2159-vp_grille_parts.png) | ![Normais recalculadas na carroceria da v3b](docs/imagens-projeto/02-lanternas-grade-e-normais/0923-2135-v3b_normals.png) |
+
+**Adesivo entre as portas.** A faixa de teste quebra na coluna B com a UV do GTA e segue reta depois da V1prime-g. Em cima, a UV antiga; embaixo, a contínua.
+
+![Faixa de teste na lateral, antes e depois da UV](docs/imagens-projeto/04-adesivos-nas-portas/0924-2227-cmp.png)
+
+**Aerofólio, brake light e antena.** O ponto `SPOILER` herdado do Mustang flutuava 8 cm acima da tampa. A antena tubarão (196 × 96 × 61 mm) entrou no grupo da pintura, no lugar da antena de para-raios.
+
+| Pontos do aerofólio e do brake light | Antena tubarão no teto |
+| --- | --- |
+| ![Marcadores vermelhos na tampa e no vidro traseiro](docs/imagens-projeto/05-aerofolio-e-brake-light/0924-2238-sp3.png) | ![Antena em várias vistas, já no grupo da pintura](docs/imagens-projeto/06-antena-tubarao/0924-2303-fin3.png) |
+
+**Emblemas.** As letras do GTA saíram. FUSION e TITANIUM foram traçados da arte oficial e extrudados 2,5 mm em cromado.
+
+| Contorno usado no relevo | Letras na tampa |
+| --- | --- |
+| ![Máscaras de FUSION e TITANIUM](docs/imagens-projeto/07-emblemas-fusion-titanium/0924-2318-masks.png) | ![Emblemas 3D ao lado da placa NEWZERA](docs/imagens-projeto/07-emblemas-fusion-titanium/0924-2320-emb3.png) |
+
+**Coluna C.** O risco escuro era fresta: por ela aparecia o interior. A camada pintada por baixo fecha o vão. À esquerda, a fresta; à direita, o fundo.
+
+![Coluna C antes e depois da camada de fundo](docs/imagens-projeto/09-traseira-e-coluna-c/0925-0012-backing_cmp.png)
+
+**Vidros.** Cada janela tinha duas camadas, e a cópia escondia o interior. Ficou uma camada `WINDSHIELD` por janela, com a textura de vidro daquela posição, para o insulfilme da loja pegar.
+
+| As duas camadas, separadas | Cada janela com a textura da sua posição |
+| --- | --- |
+| ![Vidros duplicados, grupo 0 e grupo 1](docs/imagens-projeto/11-vidros-e-logotipo/0925-0038-glass_layers.png) | ![Para-brisa, laterais e vidro traseiro em cores diferentes](docs/imagens-projeto/11-vidros-e-logotipo/0925-0040-glass_new.png) |
+
+**Nitro.** Os pontos `LEFT_EXHAUST` e `RIGHT_EXHAUST` (vermelho) estavam fora das saídas. Os novos (amarelo) ficam no centro de cada ponteira.
+
+![Planta do para-choque com os pontos de nitro antigos e novos](docs/imagens-projeto/12-chama-do-nitro/0925-0107-nitro.png)
+
+**Frestas e vão do capô.** Com a carroceria branca e o resto preto, o que aparece no fundo é buraco. No vão do capô, branco é lataria ou capô; a fenda preta é o que o jogo mostrava escuro.
+
+| Carroceria branca na z5, fundo azul onde não há pele | Vão entre capô e grade |
+| --- | --- |
+| ![Teste de fresta com a pele isolada](docs/imagens-projeto/14-frestas-e-refino/0925-0149-thru5.png) | ![Capô e carroceria em branco, o restante em preto](docs/imagens-projeto/16-ajustes-pos-teste-z6/0925-0908-hoodgap.png) |
+
+**Adesivos da loja e kits.** As peças `DECAL_*` trazidas do GTO cobrem porta, números e as faixas do para-brisa e do vidro traseiro. Os kits da z6 ainda eram saias e lábios; na v2.1 viraram a carroceria de fábrica com a cinta de reboque.
+
+| Espaços de adesivo, cada um numa cor | Os três kits lado a lado |
+| --- | --- |
+| ![Porta, números e faixas de vidro mapeados na malha](docs/imagens-projeto/15-refino-final-camera-adesivos-kits/0925-0216-decals.png) | ![KIT00, Street e Race na mesma vista](docs/imagens-projeto/15-refino-final-camera-adesivos-kits/0925-0219-kits.jpg) |
+
+**Para-lama do motorista.** O lado +Y, onde fica o `KIT00_DRIVER`, era o que amassava. A z8 espelhou a pele boa do passageiro e fechou o vão do capô.
+
+![Para-lama do motorista, z7 à esquerda e z8 à direita](docs/imagens-projeto/comparacoes/para-lama-motorista-z7-z8.png)
+
+### Fusion 2012
 
 As luzes do 2012 saem do Mondeo (`source/fusion-2016-dev`, `oracle_hi.yft`) por um leitor RSC7 próprio (`versions/fusion2012-fwd/scripts/yftp.py`), sem o Windows. O alinhamento é afim, pelas rodas, e depois um ICP contra `KIT00_BODY_A` + o capô (erro mediano 1,2 cm), com um deslocamento local por lâmpada.
 
@@ -173,6 +263,30 @@ As luzes do 2012 saem do Mondeo (`source/fusion-2016-dev`, `oracle_hi.yft`) por 
 A pele do 2018 é recortada no contorno da lente (subdivisão só onde a borda cruza o triângulo, corte linear). Uma aba de cerca de 2 cm da pintura do 2012, 2 mm para fora da pele do 2018, cobre a emenda. O atlas das luzes junta o que foi mantido do 2018, as folhas `fari` e `redglass` do Mondeo, e células de cor sólida para anel vermelho e miolo branco.
 
 ![Atlas das luzes do Fusion 2012](versions/fusion2012-fwd/preview/atlas-luzes.png)
+
+Cada item abaixo foi conferido num render com descarte de faces e fundo magenta, e depois no jogo. As prévias comparam o passo anterior (em cima, ou à esquerda) com o seguinte.
+
+| Faróis girados 1,5° em torno da lente | Lanternas levadas até a borda da lataria |
+| --- | --- |
+| ![Farol do 2012 antes e depois do giro](versions/fusion2012-fwd/preview/farois-item37c.png) | ![Lanterna lateral antes e depois do cisalhamento](versions/fusion2012-fwd/preview/lanternas-item39b.png) |
+
+| Grade inferior, terminando antes dos faróis de milha | Tampa reta no lugar da aba do friso cromado |
+| --- | --- |
+| ![Para-choque com a grade trapezoidal e o nicho do farol de milha](versions/fusion2012-fwd/preview/grade-inferior-item1.png) | ![Tampa do porta-malas antes e depois de alinhar a aba](versions/fusion2012-fwd/preview/tampa-item7.png) |
+
+| Farol de milha redondo, sem a perninha | Discos e pinças do GTO no lugar da textura de multimídia |
+| --- | --- |
+| ![Farol de milha avançado e com o aro no plano da moldura](versions/fusion2012-fwd/preview/farol-milha-item30.png) | ![Freio dianteiro com disco e pinça próprios](versions/fusion2012-fwd/preview/freios-item33.png) |
+
+| Cinta de reboque no para-choque dos kits | Antena com a traseira reta, sem o V da base |
+| --- | --- |
+| ![Cintas preta e vermelha na carroceria de fábrica](versions/fusion2012-fwd/preview/cinta-reboque-item35.png) | ![Base da antena fechada coluna a coluna](versions/fusion2012-fwd/preview/antena-item36b.png) |
+
+| Normais da frente e da traseira do 2012 | O mesmo passe no 2018 |
+| --- | --- |
+| ![Reflexo do 2012 antes e depois de corrigir os cantos escuros](versions/fusion2012-fwd/preview/refino-item41-2012.png) | ![Reflexo do 2018 antes e depois das mesmas normais](versions/fusion2012-fwd/preview/refino-item41-2018.png) |
+
+As capturas anotadas pelo jogo (farol, lanterna, lábio, antena) e o restante das prévias estão em [docs/imagens-projeto/19-fusion2012-e-refino/](docs/imagens-projeto/19-fusion2012-e-refino/). O relato de cada item está em [docs/APRENDIZADOS.md](docs/APRENDIZADOS.md).
 
 A prévia offline, antes de instalar. O render não reproduz o reflexo do jogo; serve para ver peça faltando, face virada e fresta.
 
@@ -203,7 +317,6 @@ A v2.1 está aprovada na garagem, na cidade e nas cenas que usam KIT04/KIT05.
 - O logo Ford HD vale para todos os Ford.
 - Não há câmera interna neste jogo: a vista "de dentro" é a câmera do capô ou a do para-brisa.
 - Alguns riscos finos na lateral traseira são costura da malha de origem.
-- O modelo do Mondeo pede para não ser redistribuído sem permissão. O ZIP do 2012 é para uso pessoal.
 
 ## Onde continuar
 
