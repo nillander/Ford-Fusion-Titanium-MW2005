@@ -186,9 +186,10 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   *(26/09, instalado para teste — `pacote-26-09d`: medido por fatias em x, a lente ficava 1,3–3 cm para dentro da borda da lataria (bordas de cima e de baixo do buraco) na parte lateral (x −2,15 a −1,80). Lanterna inteira (lente e interior, LODs A–D) deslocada para fora em y, fatia a fatia, até 1 mm da borda, suavizado em x e com rampa na quina de trás (x −2,20 a −2,14; a parte de trás não se move). Folga final 0–3 mm. `scripts/tail39.py` + `slice39.py`; prévia `versions/fusion2012-fwd/preview/lanternas-item39.png` (em cima antes, embaixo depois).)*
   *(26/09, teste no jogo: ainda para dentro — aba da lataria acima da ponta de fora. Medido por fatias: a borda de BAIXO da lente já estava no nível da lataria, mas a de CIMA ficava 3–4,5 cm para dentro (a lente "olhava" para cima). 2ª versão, instalada para teste (`pacote-26-09e`): cisalhamento em y pela altura (0 na borda de baixo, gap − 3 mm na de cima), x −2,21 → −1,70 com rampa na quina; folga final da borda de cima 1–4 mm. `scripts/tail40.py` + `tailtb.py`; prévia `versions/fusion2012-fwd/preview/lanternas-item39b.png` (render em perspectiva, `persp.py`; em cima antes, embaixo depois).)*
   *(Aprovado no jogo em 26/09, pacote `pacote-26-09e`.)*
-- [ ] **40. Para-brisa com "duas faixas faltando" (2012; conferir no 2018).** Visto de frente, o para-brisa mostra duas
+- [x] **40. Para-brisa com "duas faixas faltando" (2012; conferir no 2018).** Visto de frente, o para-brisa mostra duas
   faixas verticais mais claras (imagem `versions/fusion2012-fwd/reference/teste-26-09e/para-brisa-faixas.png`).
   Análise de 26/09: a malha do para-brisa (`KIT00_FRONT_WINDOW_A`, grupo 7B220DDF) não tem buracos nem normais
   trocadas vista de fora; as faixas coincidem com os dois bancos da frente (couro claro, `KIT00_INTERIOR_A`, 6BCF3825)
   vistos através do vidro escuro — prévia `versions/fusion2012-fwd/preview/para-brisa-bancos.png`. Aguardando decisão:
   escurecer os bancos/interior ou o vidro.
+  *(27/09: usuário deu tudo como certo e pediu a release; item encerrado sem alteração na geometria.)*
