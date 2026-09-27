@@ -1,19 +1,26 @@
-# Fusion Titanium 2018 para MW2005
+# Ford Fusion 2012 FWD e Fusion Titanium 2018 AWD para NFS Most Wanted 2005
 
-**Versão final: V1prime-z10** (aprovada no jogo em 25/09/2026).
+**Versão final: v2.0** (27/09/2026), com os dois carros:
 
-**Fusion 2012 FWD (novo, 25/09/2026):** substitui o Chevrolet Cobalt SS (slot `COBALTSS`, carro inicial). Mesma
-carroceria da V1prime-z10 com faróis, lanternas (sem a faixa cromada do porta-malas) e faróis de milha do 2012,
-tração dianteira e motor do Cobalt +20 %. Release: [`release/Fusion2012_FWD_MW2005.zip`](release/); detalhes em
-[versions/fusion2012-fwd/LEIA-ME.md](versions/fusion2012-fwd/LEIA-ME.md). Logo e tampa do porta-malas aprovados
-no jogo em 26/09; as outras correções de lataria estão em [TODO.md](TODO.md). O zip ainda não inclui a tampa corrigida.
+- **Fusion 2012 FWD**: substitui o Chevrolet Cobalt SS (slot `COBALTSS`, carro inicial).
+  Detalhes em [versions/fusion2012-fwd/LEIA-ME.md](versions/fusion2012-fwd/LEIA-ME.md).
+- **Fusion Titanium 2018 AWD**: substitui o Ford Mustang GT (slot `MUSTANGGT`).
 
-- Release única: [`release/Fusion2018_AWD_MW2005.zip`](release/) — instalação e créditos em [release/LEIA-ME.md](release/LEIA-ME.md).
-- Lista do que foi feito e aprovado: [TODO.md](TODO.md).
-- Aprendizados técnicos: [APRENDIZADOS_FUSION_MW2005.md](APRENDIZADOS_FUSION_MW2005.md) e os LEIA-ME de cada etapa em
-  [versions/v1prime/variants/](versions/v1prime/variants/) e [versions/](versions/LEIA-ME.md).
-- Galeria de imagens do projeto, etapa por etapa: [docs/imagens-projeto/](docs/imagens-projeto/README.md).
-- Primeira release de teste (v0.1, histórica): [docs/historico/release-v0.1/](docs/historico/release-v0.1/LEIA-ME.md).
+Os dois zips estão em [`release/`](release/). Cada um abre numa pasta com o nome do arquivo e traz o
+`instalar.bat`. Instalação e créditos em [release/LEIA-ME.md](release/LEIA-ME.md).
+
+## Onde fica cada coisa
+- [`docs/TODO.md`](docs/TODO.md): lista do que foi pedido, feito e aprovado no jogo.
+- [`docs/CONTINUACAO.md`](docs/CONTINUACAO.md): estado atual e como retomar o trabalho.
+- [`docs/APRENDIZADOS.md`](docs/APRENDIZADOS.md): lições técnicas, com imagens.
+- [`docs/imagens-projeto/`](docs/imagens-projeto/README.md): galeria de imagens, etapa por etapa.
+- [`docs/historico/`](docs/historico/): pedido inicial (`demanda-inicial.md`) e a release de teste v0.1.
+- [`versions/`](versions/LEIA-ME.md): histórico de cada versão. O 2012 fica em `versions/fusion2012-fwd/`; o 2018 em
+  `versions/v1prime/` (variantes, capturas no jogo e checkpoints).
+- `release/`: os zips de distribuição, o instalador e as notas da v2.0.
+- `assets/`: logotipos. `source/` e `donor/`: modelos de origem (GTA V) e carros-base do MW. `tools/`: ferramentas.
+- `scripts/`, `reference/`, `preview/`, `blender/` e `work/`: fluxo de montagem das versões v0.1–v3 (descrito abaixo).
+  `work/` também guarda os pacotes intermediários do 2012 (`work/c2012-stage/`) e a montagem dos zips (`work/zipbuild/`).
 
 O conteúdo abaixo descreve o fluxo das versões anteriores (v0.1–v3) e fica como histórico.
 
@@ -51,4 +58,4 @@ O repositório indicado no documento para BNV disponibilizava apenas o README qu
 
 Fontes das ferramentas: [Blender](https://www.blender.org/), [Sollumz I/O](https://github.com/Sollumz/szio), [mwgc](https://github.com/NFSTools/mwgc), [mwtc](https://github.com/NFSTools/mwtc), [NFS-ModTools](https://github.com/NFSTools/NFS-ModTools), [OpenNFSTools](https://github.com/MWisBest/OpenNFSTools).
 
-O arquivo `demanda.md` serviu como contexto técnico. A decisão de instalar ferramentas e deixar o teste no jogo para o final foi dada diretamente pelo usuário.
+O arquivo `docs/historico/demanda-inicial.md` serviu como contexto técnico. A decisão de instalar ferramentas e deixar o teste no jogo para o final foi dada diretamente pelo usuário.

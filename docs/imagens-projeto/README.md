@@ -12,6 +12,15 @@ criada ou recebida).
   `versions/v1prime/in-game/` continuam lá; aqui estão todas as imagens de trabalho.
 - As etapas de 19 a 22/09 (v0, v1 AJM3899, v2 Shelby, v3) têm as prévias do Blender em `versions/*/preview`.
 
+## 00-renders-iniciais (antes de 23/09)
+Primeiros renders do modelo do GTA V no Blender: frente e perspectivas com a pintura (`01`–`05`, rodas destacadas em
+vermelho nos `03`–`05`) e as mesmas vistas com cada peça numa cor (`06`–`08`). O `04-...-copia` é idêntico ao `04`.
+
+## comparacoes (23–26/09)
+Montagens de antes/depois que o Claude preparou para mostrar o resultado de cada ajuste: frestas da lateral e da
+traseira, suavidade, capô, para-lama do motorista, kits, nitro, adesivos, emblema Ford, logo, para-choque inferior
+(z8→z9→z10) e a primeira prévia do Fusion 2012.
+
 Cores usadas nos renders de diagnóstico: cada cor é uma peça ou grupo do GEOMETRY.BIN; nos renders
 cinza "com faixas" o reflexo é listrado de propósito para exagerar qualquer erro de normal (ondulação).
 
@@ -68,7 +77,8 @@ Vista traseira baixa com os pontos LEFT/RIGHT_EXHAUST antigos (vermelho) e novos
 saídas do para-choque (`rear_low`, `tipL`, `nitro`). Resultado V1prime-z3.
 
 ## 13-suavidade-e-kits (25/09, itens 9, 14 e 11)
-`Screenshot_146/147` (Fusion vs. SLR no jogo), mapa do erro das normais (`dev`), peças (`parts`, `zp`),
+Suas capturas do Fusion vs. SLR no jogo (em `versions/v1prime/in-game/`: `2018-item9-manchas-nas-juncoes.png` e
+`referencia-item9-carros-do-jogo-peca-unica.png`), mapa do erro das normais (`dev`), peças (`parts`, `zp`),
 reflexo em faixas antes (`nrm`, `z0`) e depois da suavização com raio 5 e 9 cm (`nrm1`, `nrm2`, `z2`,
 `zrear`), bordas abertas da malha (`cracks`). Resultado V1prime-z4.
 

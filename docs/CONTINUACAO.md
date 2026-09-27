@@ -1,18 +1,17 @@
 # Continuação — Ford Fusion 2012 FWD e Fusion Titanium 2018 AWD (NFS Most Wanted 2005)
 
 Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os antigos `CONTINUACAO-CODEX.md`
-(2018, V1prime) e `CONTINUACAO-FUSION2012.md`. Leia também `APRENDIZADOS_FUSION_MW2005.md` (lições, com imagens),
-`TODO.md` (itens 1–42) e `versions/fusion2012-fwd/LEIA-ME.md`.
+(2018, V1prime) e `CONTINUACAO-FUSION2012.md`. Leia também `docs/APRENDIZADOS.md` (lições, com imagens),
+`docs/TODO.md` (itens 1–42) e `versions/fusion2012-fwd/LEIA-ME.md`.
 
 ## 1. O projeto
 - **Fusion 2018 AWD** no slot `MUSTANGGT` (Ford Mustang GT) e **Fusion 2012 FWD** no slot `COBALTSS` (Cobalt SS,
   carro inicial). O 2012 é o 2018 com faróis, lanternas e faróis de milha do modelo 2012 (Mondeo 2016 do GTA V; o
   usuário tem permissão de redistribuição).
-- Branch `fusion2012-fwd` (a `main` está inteira dentro dela). Remoto `git@github.com:nillander/nfsmw-ford-fusion-titanium.git`
+- Branch única `main` e tag única `v2.0`. Remoto `git@github.com:nillander/nfsmw-ford-fusion-titanium.git`
   (SSH). **Nunca dar push**: o usuário publica. Commits como `Nillander Alarcão <nillander@live.com>`.
-- Release **v2.0**: `release/Fusion2012_FWD_MW2005.zip` (`69D7BC6A…`) e
-  `release/Fusion2018_AWD_MW2005.zip` (`939EB20C…`). Cada zip abre numa pasta com o nome do arquivo e traz `instalar.bat`. Notas em `release/NOTAS-v2.0.md`. Comandos de publicação
-  (`git push`, `gh release create`) ficam com o usuário.
+- Release **v2.0** publicada no GitHub: `release/Fusion2012_FWD_MW2005.zip` e `release/Fusion2018_AWD_MW2005.zip`.
+  Cada zip abre numa pasta com o nome do arquivo e traz `instalar.bat`. Notas em `release/NOTAS-v2.0.md`.
 
 ## 2. Como trabalhar com o usuário
 - Responder em **pt-BR**. **Um item por vez**; ao terminar, instalar no jogo e **parar para ele testar**.
@@ -24,7 +23,7 @@ Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os
   `commit-tree` / `update-ref`, com as linhas `Co-Authored-By`/`Claude-Session` no fim da mensagem.
 
 ## 3. Estado em 27/09/2026 — trabalho finalizado
-O usuário deu o trabalho por finalizado. Todos os itens do TODO.md estão fechados (1–42).
+O usuário deu o trabalho por finalizado. Todos os itens do `docs/TODO.md` estão fechados (1–42).
 
 | Carro | Instalado no jogo = release v2.0 |
 | --- | --- |
@@ -32,9 +31,8 @@ O usuário deu o trabalho por finalizado. Todos os itens do TODO.md estão fecha
 | 2018 (MUSTANGGT) | `pacote-27-09b`: GEOMETRY `EFA07989…`, TEXTURES `13E45A9D…` |
 
 Zips: `release/Fusion2012_FWD_MW2005.zip` `69D7BC6A…`, `release/Fusion2018_AWD_MW2005.zip` `939EB20C…`
-(montagem em `work/zipbuild/z12` e `z18`). Tag local `v2.0`; publicação fica com o usuário:
-`git push origin fusion2012-fwd`, `git push origin v2.0` (com `-f` se a tag antiga já tiver sido enviada) e
-`gh release create v2.0 release/Fusion2012_FWD_MW2005.zip release/Fusion2018_AWD_MW2005.zip --notes-file release/NOTAS-v2.0.md`.
+(montagem em `work/zipbuild/z12` e `z18`: cada pasta vira `<nome do zip>/` dentro do zip, junto com
+`release/instalar.bat`).
 
 Pacotes anteriores em `work/c2012-stage/` (cada um com `SHA256SUMS.txt`): `pacote-26-09`, `-26-09d`, `-26-09e`,
 `-27-09`, `-27-09b` (final).

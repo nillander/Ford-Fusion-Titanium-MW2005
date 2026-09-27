@@ -30,7 +30,7 @@ Posições, normais e todas as outras peças ficaram idênticas. Prévia do padr
 
 O usuário aprovou: vidros, janelas, rodas, cromados, grade frontal, grade do escapamento e faróis.
 Captura em `in-game/v1prime-d-approved.png`. Resumo completo em
-[APRENDIZADOS_FUSION_MW2005.md](../../APRENDIZADOS_FUSION_MW2005.md).
+[docs/APRENDIZADOS.md](../../docs/APRENDIZADOS.md).
 
 GEOMETRY igual à V1prime-b (`C8A2D660…C5FB`); TEXTURES `BF9A0842…47D8`.
 

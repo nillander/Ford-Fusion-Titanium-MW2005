@@ -1,11 +1,11 @@
 # TODO — Fusion Titanium 2018 (versão final: V1prime-z10)
 
-Versão final: `release/Fusion2018_AWD_MW2005.zip` (V1prime-z10, GEOMETRY `BB90B702…`, TEXTURES `EEBB0B83…`, ATTRIBUTES.MWPS `3BE53CF9…`, SECONDARYLOGO.BIN `E4721014…`); ver `versions/checkpoint-v1prime-z10/LEIA-ME.md`.
-Checkpoints anteriores (binários só no histórico do git, pelas tags): `checkpoint-v1prime-z8` (`FC6C27FA…`), `checkpoint-v1prime-z3` (`8D9BE4F9…`), `checkpoint-v1prime-z2` (`B12D0E90…`), `checkpoint-v1prime-y` (`A8DA8897…`), `checkpoint-v1prime-u` (`CD41C016…`), `checkpoint-v1prime-s` (`2F66D3D2…`), `checkpoint-v1prime-q` (`DD6212A8…`), `checkpoint-v1prime-p` (`B1375C52…`), `checkpoint-v1prime-l` (`695DC7F7…`), `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
+Versão final: `release/Fusion2018_AWD_MW2005.zip` (V1prime-z10, GEOMETRY `BB90B702…`, TEXTURES `EEBB0B83…`, ATTRIBUTES.MWPS `3BE53CF9…`, SECONDARYLOGO.BIN `E4721014…`); ver `versions/v1prime/checkpoints/checkpoint-v1prime-z10/LEIA-ME.md`.
+Checkpoints anteriores (binários só no histórico do git; o commit de cada um está em `versions/LEIA-ME.md`): `checkpoint-v1prime-z8` (`FC6C27FA…`), `checkpoint-v1prime-z3` (`8D9BE4F9…`), `checkpoint-v1prime-z2` (`B12D0E90…`), `checkpoint-v1prime-y` (`A8DA8897…`), `checkpoint-v1prime-u` (`CD41C016…`), `checkpoint-v1prime-s` (`2F66D3D2…`), `checkpoint-v1prime-q` (`DD6212A8…`), `checkpoint-v1prime-p` (`B1375C52…`), `checkpoint-v1prime-l` (`695DC7F7…`), `checkpoint-v1prime-j` (`97803AD8…`), `checkpoint-v1prime-i` (`CD799ED4…`), `checkpoint-v1prime-g` (`EE2FFBAB…`), `checkpoint-v1prime-d` (`C8A2D660…`).
 Toda tarefa deve partir dele. Depois de pronta, testar **abrindo o jogo com o save ZHABES (que tem o
 adesivo da Dinamarca)** antes de ser dada como concluída.
 
-Regras aprendidas, para não quebrar nada (ver `APRENDIZADOS_FUSION_MW2005.md`):
+Regras aprendidas, para não quebrar nada (ver `docs/APRENDIZADOS.md`):
 peças opacas usam textura DXT1 com nome padrão; nenhum grupo pode passar de 65.535 índices; instalar
 com o jogo fechado, nas duas rotas, conferindo o SHA-256.
 
@@ -40,8 +40,8 @@ carroceria inteira e pode fechar o jogo.
 - [x] **9. Refino dos encaixes da carroceria.** *(Aprovado no jogo: V1prime-z8 — camada de fundo pintada, frente do motorista espelhada do passageiro, vão do capô fechado; ver `versions/v1prime/variants/v1prime-z8-fender-hoodgap/LEIA-ME.md`.)* Perto das junções aparecem manchas negras, um
   escurecimento da pintura. O para-lama dianteiro fica escuro na conexão com o para-choque, o farol
   e a porta. A hipótese é que triângulos e retângulos da geometria não se encontram e deixam fresta
-  ou normal errada; conferir na carroceria inteira, começando por `Screenshot_146.png`, e polir só
-  o encaixe, sem refazer a UV da pintura. Nos veículos do jogo é como se a lataria inteira fosse uma peça única, veja em `Screenshot_147.png`
+  ou normal errada; conferir na carroceria inteira, começando por `versions/v1prime/in-game/2018-item9-manchas-nas-juncoes.png`, e polir só
+  o encaixe, sem refazer a UV da pintura. Nos veículos do jogo é como se a lataria inteira fosse uma peça única, veja em `versions/v1prime/in-game/referencia-item9-carros-do-jogo-peca-unica.png`
 - [x] **10. Rodas originais do GTA.** Concluído em 25/09 (V1prime-y), aprovado no jogo. Roda de 20 raios
   lida do `fusion_hi.yft`, toda em metal usinado (tom médio, textura DXT1); aro 18" via `RIM_SIZE` 18 e
   `ASPECT_RATIO` 40 (mesmo diâmetro de pneu). O MW só tem rodas de loja de 17 a 20" e não oferece escolha
@@ -80,7 +80,7 @@ O zip `release/Fusion2012_FWD_MW2005.zip` ainda tem a geometria anterior (`2D4AF
 quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (26/09, tudo aprovado): 2012 `pacote-26-09e/` — GEOMETRY `2E4408AA…`/TEXTURES `39505AD5…`; 2018 `pacote-26-09d/` — GEOMETRY `B4D1BDDE…`/TEXTURES `13E45A9D…` — 2012 GEOMETRY `260F59AF…`/TEXTURES `39505AD5…`; 2018 GEOMETRY `B4D1BDDE…`/TEXTURES `13E45A9D…` (itens 36b e 39). Antes: `pacote-26-09c/` — 2012 GEOMETRY `BD51BA28…`/TEXTURES `39505AD5…`; 2018 GEOMETRY `2A26C393…`/TEXTURES `13E45A9D…` (o 2018 é o mesmo do `pacote-26-09b/`). Anterior aprovado: `pacote-26-09/`.
 
 - [x] **22. Marca e nome (item 8).** Aprovado no jogo em 26/09. O jogo mostrava "temp350" porque o Mod Loader
-  procura `SECONDARY_LOGO_COBALTSS_1` (hash `623849E1`). Logo do 2018 com esse hash. Ver `CONTINUACAO.md` anexo A.6.
+  procura `SECONDARY_LOGO_COBALTSS_1` (hash `623849E1`). Logo do 2018 com esse hash. Ver `docs/CONTINUACAO.md` anexo A.6.
 - [x] **23. Tampa do porta-malas (item 7).** Aprovado no jogo em 26/09 (GEOMETRY `C159D615…`). A faixa clara/escura
   era a aba do friso cromado do 2018, inclinada e com frestas; ficou reta do vinco até a moldura da placa, sombreado
   uniforme, frestas fechadas por trás. O vinco de uma lanterna à outra permanece. Ver `versions/fusion2012-fwd/scripts/lidfix.py`

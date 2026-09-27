@@ -9,7 +9,7 @@ rodas, cromados, grade frontal, grade do escapamento, faróis, tudo").
 | GEOMETRY.BIN | `C8A2D660B3A8031AA31FF9A61095F4A8A36366A520D162866B2F428E4311C5FB` |
 | TEXTURES.BIN | `BF9A08426FB00AD40784558E99A179715B8FE916E58CF3A46F97673566B847D8` |
 | Slot | `MUSTANGGT`, instalado em `CARS/MUSTANGGT` e em `ADDONS/CARS_REPLACE/MUSTANGGT` |
-| Base | vprime (backup `fusion-mw2005.7z` de 20/09 03:10): catálogo AJM3899 com 64 sólidos e carroceria 2018 montada a partir dos drawables do GTA V |
+| Base | vprime (backup local `work/backup/fusion-mw2005.7z` de 20/09 03:10): catálogo AJM3899 com 64 sólidos e carroceria 2018 montada a partir dos drawables do GTA V |
 
 ---
 
@@ -137,7 +137,7 @@ Os scripts estão em `versions/v3-fusion-ajm3899/scripts` e `versions/v1prime/sc
 Potência e dirigibilidade do Fusion estão em `GLOBAL\ATTRIBUTES.BIN` e no
 `ATTRIBUTES.MWPS` do Mod Loader. Trocar `GEOMETRY.BIN` não muda como o carro anda.
 O detalhe das três opções e o que cada uma copia está em
-[versions/performance/PERFORMANCE.md](versions/performance/PERFORMANCE.md).
+[versions/performance/PERFORMANCE.md](../versions/performance/PERFORMANCE.md).
 
 A opção instalada é `slr-m3gtr`: motor, câmbio e admissão da Mercedes-Benz SLR McLaren;
 pneus, freios, chassi, massa e a reação da suspensão do BMW M3 GTR. O acerto puro do M3
@@ -257,19 +257,19 @@ Todas as imagens desta etapa (capturas do usuário no jogo e prévias) estão em
 **Ler a captura do usuário antes de medir.** "Lanterna para dentro" era a borda de *cima* da ponta lateral (a de baixo
 já estava rente): medir por fatias as duas bordas separadamente e corrigir com cisalhamento pela altura
 (`tail40.py`), não com deslocamento único.
-![lanterna lateral](docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-26-09c--lanterna-lateral-1.png) ![depois](docs/imagens-projeto/19-fusion2012-e-refino/previas/lanternas-item39b.png)
+![lanterna lateral](imagens-projeto/19-fusion2012-e-refino/usuario/teste-26-09c--lanterna-lateral-1.png) ![depois](imagens-projeto/19-fusion2012-e-refino/previas/lanternas-item39b.png)
 
 **Farol "deslocado"**: o usuário sugeriu girar e acertou — 1,5° em torno do eixo vertical da lente, pivô do lado da
 grade (`hl40.py`): a ponta de trás entra, a da frente sai. Depois, 8 mm para a frente (`hltrim.py`).
-![faróis](docs/imagens-projeto/19-fusion2012-e-refino/previas/farois-item37c.png)
+![faróis](imagens-projeto/19-fusion2012-e-refino/previas/farois-item37c.png)
 
 **Divisão em V na antena** = fresta fina entre o remendo reto e a borda quebrada da face achatada; fechar coluna a
 coluna no mesmo plano (`fin39.py`).
-![antena](docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-26-09c--antena-divisao.png) ![depois](docs/imagens-projeto/19-fusion2012-e-refino/previas/antena-item36b.png)
+![antena](imagens-projeto/19-fusion2012-e-refino/usuario/teste-26-09c--antena-divisao.png) ![depois](imagens-projeto/19-fusion2012-e-refino/previas/antena-item36b.png)
 
 **"Faixas no para-brisa"**: o vidro estava inteiro; o usuário encerrou sem mudança. Conferir hipóteses com ele antes
 de mexer (a primeira hipótese, bancos vistos pelo vidro, estava errada).
-![para-brisa](docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-26-09e--para-brisa-faixas.png)
+![para-brisa](imagens-projeto/19-fusion2012-e-refino/usuario/teste-26-09e--para-brisa-faixas.png)
 
 **Câmera interna não existe no MW** (só capô e para-brisa) — o usuário confirmou com a BMW original. Não há ponto de
 câmera no GEOMETRY.BIN; o teste com o `ROOF_SCOOP` foi desfeito.
@@ -279,7 +279,7 @@ mostra o que o jogo mostra; o render com normal da face esconde. Correção (`nf
 fora (id-buffer de 120 direções, `vis.py`), canto com normal gravada a mais de ~45° da normal geométrica (média das
 faces vizinhas dentro de 45°) recebe a geométrica. Suavizar tudo (Laplaciano, raio, refazer do zero) piorou: a malha
 é irregular e as normais originais escondem isso — só corrigir os cantos ruins.
-![antes/depois 2012](docs/imagens-projeto/19-fusion2012-e-refino/previas/refino-item41-2012.png)
+![antes/depois 2012](imagens-projeto/19-fusion2012-e-refino/previas/refino-item41-2012.png)
 
 **Dente de serra sob o farol**: aba quase horizontal intercalada com o para-choque; normais dos vértices da faixa
 = média das faces viradas como o para-choque (`teeth.py`).
@@ -290,18 +290,18 @@ faces da pele invisíveis de fora (fora de grade, lentes, vidros e z>0,85) (`pru
 
 **Lábio do para-choque dianteiro ondulado (2018)**: mesma solução do item 32 do 2012 — superfície regrada lisa
 (`lip42.py`, aceita `SKIN` e todos os kits).
-![lábio](docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09--2-labio-2018.png) ![depois](docs/imagens-projeto/19-fusion2012-e-refino/previas/refino-item42-detalhes.png)
+![lábio](imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09--2-labio-2018.png) ![depois](imagens-projeto/19-fusion2012-e-refino/previas/refino-item42-detalhes.png)
 
 **Farol do 2012 — lascas e buraco**: lascas = carcaça (`HEADLIGHT`) fora do contorno *real* da lente (máscara
 rasterizada, não casco convexo) e visível de fora (`hlvis.py`); apagar só o que é visível **e** fora da lente — apagar
 tudo que é visível abriu buracos dentro do farol. A cunha preta na ponta junto à grade era um **buraco** na lataria
 (via-se uma peça preta a 1 m dali): `pick.py` num pixel resolve dúvidas assim. Fechar com pele pintada
 (`hlfill.py`), usando máscara da lente sem furos (`binary_fill_holes`), senão o remendo aparece dentro do farol.
-![farol 2012 no jogo](docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09--4-farol-2012.png) ![depois](docs/imagens-projeto/19-fusion2012-e-refino/previas/farois-item42.png)
+![farol 2012 no jogo](imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09--4-farol-2012.png) ![depois](imagens-projeto/19-fusion2012-e-refino/previas/farois-item42.png)
 
 **Riscos finos na lateral traseira**: não são normais nem faces atravessando (testados `poke.py` e `crack.py`);
 parecem costuras da malha original. Ficam para a próxima rodada.
-![lateral traseira](docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09--3-lateral-traseira-2018.png)
+![lateral traseira](imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09--3-lateral-traseira-2018.png)
 
 ## 14. Próximos passos sugeridos
 
