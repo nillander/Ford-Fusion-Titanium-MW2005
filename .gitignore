@@ -9,7 +9,22 @@ work/v2-shelby-geometry-check.json
 # manifests and human-readable status remain versioned.
 versions/*/release/**/*.BIN
 versions/*/work/
-scripts/__pycache__/
+# Builds grandes e regeneráveis: SDK, Blender portátil, venv e saídas compiladas.
+tools/dotnet/
+tools/blender-*/
+work/venv/
+work/venv-wsl/
+work/blender-site/
+work/blender.zip
+work/mods-ui/
+work/zipbuild/
+work/wslpkgs/
+work/*-local.dll
+work/*.mwr
+work/compiled-textures/
+work/compiled-game-jdlz/
+**/__pycache__/
+*.pyc
 # Build-time C# helpers; their sources are versioned and the build recompiles them.
 tools/mwgc/MakeLampFacesTwoSided.exe
 tools/mwgc/ProbeLampMaterial.exe
