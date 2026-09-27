@@ -65,11 +65,11 @@ Tudo acima foi validado fora do jogo (leitura independente e renders). Pontos a 
 ## 1º teste no jogo (26/09): falhou — corrigido, aguardando novo teste
 "Temp 350" no lugar do logo e o jogo fechou ao selecionar o carro. Correções: TEXTURES.BIN refeita (o mwtc
 estourava o campo de nome com `COBALTSS_KIT00_HEADLIGHT_OFF`/`_BRAKELIGHT_OFF`) e SECONDARYLOGO.BIN com hash próprio
-`A3782D31` (`SECONDARY_LOGO_COBALTSS`). Detalhes e próximos passos em `CONTINUACAO-FUSION2012.md` (raiz do projeto).
+`A3782D31` (`SECONDARY_LOGO_COBALTSS`). Detalhes e próximos passos em `CONTINUACAO.md` (raiz do projeto).
 
 ## Testes seguintes (26/09)
 - 2º–4º testes: o carro aparece e o jogo abre; o logo mostrava "temp350".
 - **Logo corrigido e aprovado no jogo:** o Mod Loader procura `SECONDARY_LOGO_<internal>_1`; para o Cobalt, hash
   `623849E1`. `SECONDARYLOGO.BIN` = o do Fusion 2018 com esse hash (offsets 0xD4 e 0x108). Detalhes na seção 4.6 de
-  `CONTINUACAO-FUSION2012.md`, que também lista as 7 correções de geometria pendentes (seção 4.7).
+  `CONTINUACAO.md`, que também lista as 7 correções de geometria pendentes (anexo A.7).
 - `diag-z10-no-slot-cobalt/`: os .BIN ficam só locais (diagnóstico, não versionados).

@@ -107,3 +107,11 @@ Investigação das marcas pretas na parte de baixo do para-choque dianteiro: vis
 branca e demais peças pretas ou coloridas (`lower`), a malha original em perfil e de frente mostrando os
 triângulos grandes dobrados (`lipgeo_*`), render com luz vinda de cima como no jogo antes/depois (`gl_*`,
 `g3_*`, `g4_*`, `c3`, `c4`, `gl_cmp*`) e reflexo em faixas (`sl_*`, `sb_*`, `s3_*`, `slcmp`). Resultado V1prime-z9.
+
+## 19-fusion2012-e-refino (26–27/09, Fusion 2012 e refino dos dois carros)
+`usuario/`: capturas enviadas pelo usuário — fotos do Fusion 2013 de referência (`fotos-2013--*`), lataria e freios
+(`item4-lataria--*`), cintas de reboque de referência (`cintas-reboque--*`), testes de 26/09 (lanternas laterais,
+divisão da antena, faixas do para-brisa) e de 27/09 (riscos no paralama e na lateral traseira, lábio do 2018, farol do
+2012). `previas/`: renders antes/depois de cada item do 2012 e do refino (itens 1, 6, 7, 27–42).
+Resultados: release v2.0 e pacotes `pacote-27-09`/`27-09b`.
+

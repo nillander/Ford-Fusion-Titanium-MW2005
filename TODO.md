@@ -80,7 +80,7 @@ O zip `release/Fusion2012_FWD_MW2005.zip` ainda tem a geometria anterior (`2D4AF
 quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (26/09, tudo aprovado): 2012 `pacote-26-09e/` — GEOMETRY `2E4408AA…`/TEXTURES `39505AD5…`; 2018 `pacote-26-09d/` — GEOMETRY `B4D1BDDE…`/TEXTURES `13E45A9D…` — 2012 GEOMETRY `260F59AF…`/TEXTURES `39505AD5…`; 2018 GEOMETRY `B4D1BDDE…`/TEXTURES `13E45A9D…` (itens 36b e 39). Antes: `pacote-26-09c/` — 2012 GEOMETRY `BD51BA28…`/TEXTURES `39505AD5…`; 2018 GEOMETRY `2A26C393…`/TEXTURES `13E45A9D…` (o 2018 é o mesmo do `pacote-26-09b/`). Anterior aprovado: `pacote-26-09/`.
 
 - [x] **22. Marca e nome (item 8).** Aprovado no jogo em 26/09. O jogo mostrava "temp350" porque o Mod Loader
-  procura `SECONDARY_LOGO_COBALTSS_1` (hash `623849E1`). Logo do 2018 com esse hash. Ver `CONTINUACAO-FUSION2012.md` seção 4.6.
+  procura `SECONDARY_LOGO_COBALTSS_1` (hash `623849E1`). Logo do 2018 com esse hash. Ver `CONTINUACAO.md` anexo A.6.
 - [x] **23. Tampa do porta-malas (item 7).** Aprovado no jogo em 26/09 (GEOMETRY `C159D615…`). A faixa clara/escura
   era a aba do friso cromado do 2018, inclinada e com frestas; ficou reta do vinco até a moldura da placa, sombreado
   uniforme, frestas fechadas por trás. O vinco de uma lanterna à outra permanece. Ver `versions/fusion2012-fwd/scripts/lidfix.py`
@@ -194,3 +194,25 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   vistos através do vidro escuro — prévia `versions/fusion2012-fwd/preview/para-brisa-bancos.png`. Aguardando decisão:
   escurecer os bancos/interior ou o vidro.
   *(27/09: usuário deu tudo como certo e pediu a release; item encerrado sem alteração na geometria.)*
+- [ ] **41. Refino de para-choques e paralamas dianteiros e traseiros (2012 e 2018).** Pedido de 27/09: tirar falhas,
+  triângulos malfeitos, marcas escuras e aperfeiçoar o encaixe de faróis e lanternas; no 2012, faróis mais para a frente.
+  *(27/09, instalado para teste — `work/c2012-stage/pacote-27-09/`: 2012 GEOMETRY `B45C6A20…`, 2018 `F5A4B50F…`; texturas
+  iguais. (1) Normais da lataria: faces da pele visíveis de fora (id-buffer de 120 direções) na frente (x>1,3) e
+  traseira (x<−1,5) com canto de normal muito diferente da forma (cos<0,7) recebem a normal geométrica (vizinhança
+  <45°) — 3.739 cantos no 2012, 4.003 no 2018 (`scripts/nfix.py`, `nrm.py`, `vis.py`). (2) 2012: aba abaixo dos faróis
+  com sombreado em dente de serra — normais dos vértices a até 6 cm abaixo da borda da lente = média das faces
+  vizinhas viradas como o para-choque (`teeth.py`). (3) 2012: faróis 8 mm para a frente (+x) e aro da carcaça fora do
+  contorno da lente aparado (`hltrim.py`). Prévias `versions/fusion2012-fwd/preview/refino-item41-2012.png` e
+  `-2018.png` (esquerda antes, direita depois; `pgr.py`).)*
+- [ ] **42. Riscos escuros, lábio dianteiro e encaixe do farol do 2012 (teste de 27/09).** Imagens em
+  `versions/fusion2012-fwd/reference/teste-27-09/`: riscos no paralama junto à coluna e acima da lanterna (2012 e
+  2018), lábio de baixo do para-choque dianteiro ondulado (2018), farol do 2012 com frestas, buracos pretos e lascas.
+  *(27/09, instalado para teste — `work/c2012-stage/pacote-27-09b/`: 2012 GEOMETRY `0D618738…`, 2018 `EFA07989…`.
+  (1) Correção de normais estendida à lataria inteira (antes só frente/traseira): 2.930 cantos no 2012, 2.481 no 2018;
+  no 2012, para caber no limite de 65.535 vértices, apagadas 4.940 faces escondidas da frente/traseira (`nfix.py`,
+  `prune41.py`). (2) 2018: lábio de baixo do para-choque refeito como superfície lisa, como no item 32 do 2012
+  (`lip42.py`). (3) 2012: lascas da carcaça do farol que apareciam por fora (fora do contorno da lente e visíveis de
+  fora) apagadas (`hlvis.py`); buraco na ponta do farol junto à grade (via-se o interior preto do carro) e frestas em
+  volta fechados com pele pintada (`hlfill.py`, máscara da lente sem furos). Prévias `preview/refino-item42-*.png` e
+  `farois-item42.png`. Pendente: alguns riscos finos na lateral traseira são costuras da malha original.)*
+

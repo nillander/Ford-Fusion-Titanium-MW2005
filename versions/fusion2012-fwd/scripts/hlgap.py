@@ -15,7 +15,7 @@ def masks(Z,side,dump=None):
         m=np.zeros((nv,nu),bool); h=np.full((nv,nu),-9.0)
         iu=((P3[:,0]-u0)/RES).astype(int); iv=((P3[:,1]-v0)/RES).astype(int); ok=(iu>=0)&(iu<nu)&(iv>=0)&(iv<nv)&(P3[:,2]>zmin)
         np.maximum.at(h,(iv[ok],iu[ok]),P3[ok,2]); return h
-    Lh=rast(L); lens=binary_closing(Lh>-8,iterations=2)
+    Lh=rast(L); lens=binary_closing(Lh>-8,iterations=2); from scipy.ndimage import binary_fill_holes; lens=binary_fill_holes(lens)
     import fit28
     fit28.RES=RES
     Bh=np.full((nv,nu),np.nan)

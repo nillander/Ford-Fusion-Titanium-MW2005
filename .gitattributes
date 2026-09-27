@@ -540,3 +540,11 @@
 /versions/fusion2012-fwd/reference/item4-lataria/6-parachoque-inferior-degradado.png filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/in-game/2018-carreira-menu-partes-faltando.png filter=lfs diff=lfs merge=lfs -text
 /versions/v1prime/in-game/2018-razor-corrida-partes-faltando.png filter=lfs diff=lfs merge=lfs -text
+/docs/imagens-projeto/19-fusion2012-e-refino/usuario/item4-lataria--4-teste-item1-lado1.png filter=lfs diff=lfs merge=lfs -text
+/docs/imagens-projeto/19-fusion2012-e-refino/usuario/item4-lataria--6-parachoque-inferior-degradado.png filter=lfs diff=lfs merge=lfs -text
+/docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09--1-paralama-2018.png filter=lfs diff=lfs merge=lfs -text
+/docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09--2-labio-2018.png filter=lfs diff=lfs merge=lfs -text
+/docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09--5-frente-2012.png filter=lfs diff=lfs merge=lfs -text
+/versions/fusion2012-fwd/reference/teste-27-09/1-paralama-2018.png filter=lfs diff=lfs merge=lfs -text
+/versions/fusion2012-fwd/reference/teste-27-09/2-labio-2018.png filter=lfs diff=lfs merge=lfs -text
+/versions/fusion2012-fwd/reference/teste-27-09/5-frente-2012.png filter=lfs diff=lfs merge=lfs -text

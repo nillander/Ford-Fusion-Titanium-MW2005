@@ -250,7 +250,60 @@ na direção da câmera. Peças `DECAL_*` aparecem cinza (textura de vinil fora 
 carrega o carro; quando o usuário estiver jogando, preparar o pacote em `work/c2012-stage/pacote-*/` e só instalar
 quando ele pedir.
 
-## 13. Próximos passos sugeridos
+## 13. Encaixes, sombreado e riscos da lataria (26–27/09, itens 36b–42) — com imagens
+
+Todas as imagens desta etapa (capturas do usuário no jogo e prévias) estão em `docs/imagens-projeto/19-fusion2012-e-refino/` (`usuario/` e `previas/`).
+
+**Ler a captura do usuário antes de medir.** "Lanterna para dentro" era a borda de *cima* da ponta lateral (a de baixo
+já estava rente): medir por fatias as duas bordas separadamente e corrigir com cisalhamento pela altura
+(`tail40.py`), não com deslocamento único.
+![lanterna lateral](docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-26-09c--lanterna-lateral-1.png) ![depois](docs/imagens-projeto/19-fusion2012-e-refino/previas/lanternas-item39b.png)
+
+**Farol "deslocado"**: o usuário sugeriu girar e acertou — 1,5° em torno do eixo vertical da lente, pivô do lado da
+grade (`hl40.py`): a ponta de trás entra, a da frente sai. Depois, 8 mm para a frente (`hltrim.py`).
+![faróis](docs/imagens-projeto/19-fusion2012-e-refino/previas/farois-item37c.png)
+
+**Divisão em V na antena** = fresta fina entre o remendo reto e a borda quebrada da face achatada; fechar coluna a
+coluna no mesmo plano (`fin39.py`).
+![antena](docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-26-09c--antena-divisao.png) ![depois](docs/imagens-projeto/19-fusion2012-e-refino/previas/antena-item36b.png)
+
+**"Faixas no para-brisa"**: o vidro estava inteiro; o usuário encerrou sem mudança. Conferir hipóteses com ele antes
+de mexer (a primeira hipótese, bancos vistos pelo vidro, estava errada).
+![para-brisa](docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-26-09e--para-brisa-faixas.png)
+
+**Câmera interna não existe no MW** (só capô e para-brisa) — o usuário confirmou com a BMW original. Não há ponto de
+câmera no GEOMETRY.BIN; o teste com o `ROOF_SCOOP` foi desfeito.
+
+**Marcas escuras = normais gravadas erradas.** Renderizar com normais de vértice e brilho em perspectiva (`pgr.py`)
+mostra o que o jogo mostra; o render com normal da face esconde. Correção (`nfix.py`): nas faces da pele visíveis de
+fora (id-buffer de 120 direções, `vis.py`), canto com normal gravada a mais de ~45° da normal geométrica (média das
+faces vizinhas dentro de 45°) recebe a geométrica. Suavizar tudo (Laplaciano, raio, refazer do zero) piorou: a malha
+é irregular e as normais originais escondem isso — só corrigir os cantos ruins.
+![antes/depois 2012](docs/imagens-projeto/19-fusion2012-e-refino/previas/refino-item41-2012.png)
+
+**Dente de serra sob o farol**: aba quase horizontal intercalada com o para-choque; normais dos vértices da faixa
+= média das faces viradas como o para-choque (`teeth.py`).
+
+**Limite de 65.535 vértices**: o `BODY_A` do 2012 vive no limite. Mudar a normal de um canto compartilhado exige
+duplicar o vértice; fazer no lugar quando todos os usos do vértice querem a mesma normal e liberar espaço apagando
+faces da pele invisíveis de fora (fora de grade, lentes, vidros e z>0,85) (`prune41.py`).
+
+**Lábio do para-choque dianteiro ondulado (2018)**: mesma solução do item 32 do 2012 — superfície regrada lisa
+(`lip42.py`, aceita `SKIN` e todos os kits).
+![lábio](docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09--2-labio-2018.png) ![depois](docs/imagens-projeto/19-fusion2012-e-refino/previas/refino-item42-detalhes.png)
+
+**Farol do 2012 — lascas e buraco**: lascas = carcaça (`HEADLIGHT`) fora do contorno *real* da lente (máscara
+rasterizada, não casco convexo) e visível de fora (`hlvis.py`); apagar só o que é visível **e** fora da lente — apagar
+tudo que é visível abriu buracos dentro do farol. A cunha preta na ponta junto à grade era um **buraco** na lataria
+(via-se uma peça preta a 1 m dali): `pick.py` num pixel resolve dúvidas assim. Fechar com pele pintada
+(`hlfill.py`), usando máscara da lente sem furos (`binary_fill_holes`), senão o remendo aparece dentro do farol.
+![farol 2012 no jogo](docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09--4-farol-2012.png) ![depois](docs/imagens-projeto/19-fusion2012-e-refino/previas/farois-item42.png)
+
+**Riscos finos na lateral traseira**: não são normais nem faces atravessando (testados `poke.py` e `crack.py`);
+parecem costuras da malha original. Ficam para a próxima rodada.
+![lateral traseira](docs/imagens-projeto/19-fusion2012-e-refino/usuario/teste-27-09--3-lateral-traseira-2018.png)
+
+## 14. Próximos passos sugeridos
 
 - `KIT00_BRAKELIGHT` e `KIT00_HEADLIGHT` continuam DXT3 (cerca de 20 % de alfa). O teste atual aprovou
   os faróis; manter assim enquanto não houver defeito.

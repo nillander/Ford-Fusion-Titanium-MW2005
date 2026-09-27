@@ -56,7 +56,7 @@ if __name__=='__main__':
         G[L]=[g for g in (patch_geom(D[s],K) for s in D) if g]
         print(L,'patch verts',sum(len(g[0]) for g in G[L]))
     recs=[]
-    for k in ('KIT00','KIT01','KIT02'):
+    for k in ('KIT00','KIT01','KIT02','KIT04','KIT05'):
         for L in 'ABCDE':
             pm=PartMesh(Z['COBALTSS_%s_BODY_%s'%(k,L)]); add(pm,G[L]); recs.append(pm)
     with open(sys.argv[2],'wb') as f:
