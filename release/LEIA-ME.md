@@ -1,6 +1,6 @@
 # Ford Fusion Titanium 2018 AWD — Need for Speed: Most Wanted (2005)
 
-Substitui o **Ford Mustang GT** (slot `MUSTANGGT`). Release v2.5 de 27/09/2026.
+Substitui o **Ford Mustang GT** (slot `MUSTANGGT`). Release v2.6 de 27/09/2026.
 
 ## O que vem no pacote
 - **Visual**: carroceria do Fusion Titanium 2018 com faróis, lanternas, grade, vidros com película, antena
@@ -35,11 +35,11 @@ por Gabriel Lima (ver `CREDITOS/source-readme.txt`). Base MW (Fusion 2010): Marc
 peças de FOX, Porsche4ever e AJ Lethal (ver `CREDITOS/donor-readme.txt`). Conversão para o MW 2005: Nillander Alarcão, com Claude.
 
 ---
-Arquivos para distribuir (v2.5, 27/09/2026):
+Arquivos para distribuir (v2.6, 27/09/2026):
 
 | ZIP | Carro | SHA-256 |
 |---|---|---|
-| `Fusion2012_FWD_MW2005.zip` | Ford Fusion Titanium 2012 FWD (slot COBALTSS) | `E376A31FAE4FE0753B8F65238112C50B5DEB418137ED308D3EFDA87C76E5D749` |
-| `Fusion2018_AWD_MW2005.zip` | Ford Fusion Titanium 2018 AWD (slot MUSTANGGT) | `5114665B48DD5A4F513C788139A46ED297778292EB10EA3DE296B8108C36C181` |
+| `Fusion2012_FWD_MW2005.zip` | Ford Fusion Titanium 2012 FWD (slot COBALTSS) | `13F015B8036A945ADA169673340ADD0050CC63BEEE95A74681D60207C74E7CBB` |
+| `Fusion2018_AWD_MW2005.zip` | Ford Fusion Titanium 2018 AWD (slot MUSTANGGT) | `6C76C445CE3B5590635DFC53701AD4F221CCED4DA8E834204040F83318A3110B` |
 
 `SHA256SUMS-conteudo.txt` lista os arquivos de dentro dos dois ZIPs. O LEIA-ME de cada carro está dentro do seu ZIP.

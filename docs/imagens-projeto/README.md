@@ -125,3 +125,8 @@ divisão da antena, faixas do para-brisa) e de 27/09 (riscos no paralama e na la
 2012). `previas/`: renders antes/depois de cada item do 2012 e do refino (itens 1, 6, 7, 27–42).
 Resultados: release v2.0 e pacotes `pacote-27-09`/`27-09b`.
 
+## 20-lente-vidros-capo (27/09, v2.6)
+Capturas do usuário (`usuario--*`: farol do 2018 na prévia e capô preto no jogo com Xbox 360 Stuff) e diagnósticos:
+atlas e alfa sob a lente do 2018 (`farol-2018-diagnostico`), lente antes/depois na prévia e com o vidro misturado
+pelo alfa (`lente-2018-antes-depois`), para-brisa com a UV espelhada e as duas chapas (`para-brisa-diagnostico`) e
+os vidros com textura de teste antes/depois (`vidros-antes-depois`). Resultado v2.6.

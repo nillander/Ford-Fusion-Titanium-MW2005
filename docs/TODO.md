@@ -291,3 +291,16 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   carros — 2012 `380AEF78…`, 2018 `38F231C8…`; pacote `work/c2012-stage/pacote-27-09p-cinta-laranja/`, anterior em
   `backup/`. `tex48.py` (5 caracteres, fonte 40 px) e `strap_tex.py` (tamanho e espaçamento configuráveis). Prévia
   `preview/cintas-item49.png`. A geometria é a da v2.4. Publicado na **v2.5**.)*
+- [x] **50. Lente dos faróis do 2018 preta com listras (prévia e jogo com mods).** A UV de
+  `KIT00_RIGHT_HEADLIGHT_GLASS_A–D` apontava para uma área preta do atlas `KIT00_HEADLIGHT_OFF`, com alfa em colunas
+  (três 100 %, uma 20 %). O jogo original não mostra a cor dessa lente; o Xbox 360 Stuff e texturas novas mostram.
+  *(`scripts/lente-vidros-capo/lente50.py`: célula clara com alfa 27 % em x 512–575 / y 128–191 e UV da lente nela;
+  pisca âmbar mantido. Imagens em `docs/imagens-projeto/20-lente-vidros-capo/`. Aprovado no jogo e publicado na **v2.6**.)*
+- [x] **51. Para-brisa em duas camadas e textura espelhada (2012 e 2018).** Cada vidro tinha a chapa de fora e a de
+  dentro (5,5 mm) e o para-brisa usava um quarto da textura, espelhado no meio; o vidro traseiro também, dividido
+  entre dois sólidos. *(`vidros51.py` + `aplica51.py`: uma chapa por janela, textura da posição, UV 0–1 plana sem
+  espelho, em `FRONT_WINDOW_A–D` e `REAR_WINDOW_A–D`. Aprovado no jogo e publicado na **v2.6**.)*
+- [x] **52. Capô preto com mods (2012 e 2018).** O `KIT00_HOOD` tinha cada triângulo repetido com a face para baixo
+  na mesma posição; com os dois lados desenhados, a cópia escura cobria a pintura. *(`capo52.py`: sai toda face do
+  `KIT00_HOOD_A–D` virada para dentro; nos `STYLExx_HOOD` só a cópia de baixo nas partes planas. Aprovado no jogo e
+  publicado na **v2.6**: 2012 GEOMETRY `2C8C625C…`, 2018 GEOMETRY `7D95E28E…` / TEXTURES `8DF768ED…`.)*

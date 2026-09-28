@@ -338,3 +338,32 @@ marcas restantes são sobretudo na **lataria**, não motivo para transladar a lu
 Estado instalado e passos de reprodução: `docs/CONTINUACAO.md`, seção 3. O teste local agora combina o
 candidato 56 dos faróis com a chapa da grade já aprovada; a release v2.1 permanece separada até a
 aprovação visual dos faróis.
+
+## 16. v2.6 — o que os mods mostram: lente, vidros e capô (27/09)
+
+O usuário joga com Xbox 360 Stuff, pacotes de textura e ReShade. Esses mods desenham coisas que o jogo original
+esconde. Três defeitos da v2.5 só apareciam com eles (e dois na prévia).
+
+**Lente do farol do 2018.** A UV da lente (`HEADLIGHTGLASS`) caía numa área preta do atlas, com alfa em colunas
+(três a 100 %, uma a 20 %). A prévia, com teste de alfa, mostrava listras pretas; o jogo original não usa a cor dessa
+lente; com os mods ela vira uma película preta. Correção: célula clara com alfa 27 % (a lente do 2012 já era assim) e a
+UV da lente nela, deixando o pisca âmbar.
+![diagnóstico](imagens-projeto/20-lente-vidros-capo/farol-2018-diagnostico.png)
+![antes e depois](imagens-projeto/20-lente-vidros-capo/lente-2018-antes-depois.png)
+
+**Vidros.** Do GTA vieram vidros com espessura: chapa de fora e de dentro a 5,5 mm. A UV era a do atlas do GTA: o
+para-brisa usava um quarto da textura e cada metade repetia a mesma meia imagem, espelhada. Com a textura quase lisa do
+jogo nada aparecia; com uma textura desenhada, o vidro parecia dois. Correção: só a chapa de fora e UV 0–1 plana por
+janela (topo da imagem na borda de cima, imagem direita vista de fora).
+![diagnóstico](imagens-projeto/20-lente-vidros-capo/para-brisa-diagnostico.png)
+![antes e depois](imagens-projeto/20-lente-vidros-capo/vidros-antes-depois.png)
+
+**Capô.** Cada triângulo do `KIT00_HOOD` tinha uma cópia virada para baixo na mesma posição (o verso do capô). O jogo
+descarta o verso; com os mods, a cópia escura disputa a profundidade com a pintura e o capô fica preto com manchas.
+Correção: apagar as faces viradas para dentro do capô de fábrica. Nos capôs da loja só as das partes planas, porque
+as paredes das entradas de ar podem ser vistas dos dois lados.
+![capô preto com mods](imagens-projeto/20-lente-vidros-capo/usuario--capo-preto-mods.png)
+
+**Como editar sem recompilar.** Os grupos de um sólido usam faixas contíguas de vértices e os índices são absolutos.
+Dá para regravar vértices, índices e os campos do grupo (caixa, nº de vértices, nº de triângulos, início e tamanho dos
+índices) mantendo o total; triângulo removido vira degenerado e sobra de vértice vai para o fim do último grupo.

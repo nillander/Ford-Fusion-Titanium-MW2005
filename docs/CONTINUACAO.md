@@ -2,9 +2,9 @@
 
 Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os antigos `CONTINUACAO-CODEX.md`
 (2018, V1prime) e `CONTINUACAO-FUSION2012.md`. Leia também `docs/APRENDIZADOS.md` (lições, com imagens),
-`docs/TODO.md` (itens 1–48) e `versions/fusion2012-fwd/LEIA-ME.md`.
+`docs/TODO.md` (itens 1–52) e `versions/fusion2012-fwd/LEIA-ME.md`.
 
-**Comece pela seção 3: a v2.4 foi publicada e todos os itens (1–48) estão fechados.** As seções 4 em diante registram a
+**Comece pela seção 3: a v2.6 foi publicada e todos os itens (1–52) estão fechados.** As seções 4 em diante registram a
 construção e os testes antigos; números de versão e caminhos de nuvem nelas são históricos, não o estado instalado.
 
 ## 1. O projeto
@@ -27,7 +27,26 @@ construção e os testes antigos; números de versão e caminhos de nuvem nelas 
 - Git no PC: `git add` pode travar — usar `hash-object -w` / `update-index --cacheinfo` / `write-tree` /
   `commit-tree` / `update-ref`, com as linhas `Co-Authored-By`/`Claude-Session` no fim da mensagem.
 
-## 3. Estado atual em 27/09/2026 — v2.4 publicada
+## 3. Estado atual em 27/09/2026 — v2.6 publicada
+
+Instalado no jogo = conteúdo dos ZIPs da v2.6 (pacote `work/pacote-27-09-capo62/`; a v2.5 que estava instalada ficou em
+`work/pacote-27-09-vidros61/backup-antes/`). Jogo em `D:\Program Files (x86)\Electronic Arts\Need For Speed Most Wanted Black Edition`.
+
+| Carro | GEOMETRY.BIN | TEXTURES.BIN | ZIP |
+| --- | --- | --- | --- |
+| 2012 (COBALTSS) | `2C8C625C2EF57F43F53E04093688D229AA008FBFAE5EB7FE106518FD12683AEE` | `380AEF7826723967DB0E3CD49284387A4469E75938D767EC437CEC9A8670A5B7` | `13F015B8036A945ADA169673340ADD0050CC63BEEE95A74681D60207C74E7CBB` |
+| 2018 (MUSTANGGT) | `7D95E28E9A44307C90047CED1D1433BF607C61599505286572B636C14A0D5350` | `8DF768ED4BCB4BF933FC4F686FDDF1B13FA203BCB21A656986132008A617F8EF` | `6C76C445CE3B5590635DFC53701AD4F221CCED4DA8E834204040F83318A3110B` |
+
+- **v2.6 (itens 50–52)**, sobre a v2.5, com os scripts de `scripts/lente-vidros-capo/` (leem e editam os BIN no lugar,
+  em Python; ver o LEIA-ME da pasta): lente clara nos faróis do 2018 (`lente50.py`), uma chapa por vidro com UV 0–1
+  sem espelho (`vidros51.py`, `aplica51.py`) e capô sem as cópias do verso (`capo52.py`). Aprovado pelo usuário no
+  jogo com Xbox 360 Stuff e texturas.
+- O usuário testa com mods (Xbox 360 Stuff, texturas, ReShade), que desenham o verso das faces e mostram UV e cor de
+  lente que o jogo original ignora. Antes de concluir um item, procurar faces opostas coincidentes (`dupscan.py`).
+- Pendências possíveis com mods: faces duplicadas no interior, na grade (`RIGHT_SIDE_MIRROR`), no pneu dianteiro e nas
+  paredes das entradas de ar dos capôs da loja.
+
+## 3.a Estado da v2.4 (histórico)
 
 Instalado no jogo = conteúdo dos ZIPs da v2.4 (pacote `work/c2012-stage/pacote-27-09o-cintas5/`, montagem dos ZIPs
 em `work/zipbuild/v2.4-pacotes/`):

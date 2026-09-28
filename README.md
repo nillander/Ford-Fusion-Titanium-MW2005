@@ -7,7 +7,7 @@ Dois mods para o Most Wanted de PC. Instalam juntos porque usam slots diferentes
 | Ford Fusion Titanium 2012 FWD | Chevrolet Cobalt SS (carro inicial) | `COBALTSS` | Dianteira (`TORQUE_SPLIT` 1,0) |
 | Ford Fusion Titanium 2018 AWD | Ford Mustang GT | `MUSTANGGT` | Traseira (`TORQUE_SPLIT` 0). O nome na garagem é AWD |
 
-> **Release atual: v2.5 (27/09/2026).** A cinta laranja (KIT03) passou a dizer 読めば尺八 em preto. O restante é o da v2.4: cinco cintas diferentes na dianteira (lado direito) e na traseira (lado esquerdo), KIT00 sem cinta, faróis e para-choque do 2012 encaixados na lataria e chapa preta atrás da grade. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md). O método que levou o 2018 ao Underground 2 está no repositório irmão [Ford-Fusion-Titanium-NFSU2](https://github.com/nillander/Ford-Fusion-Titanium-NFSU2).
+> **Release atual: v2.6 (27/09/2026).** A lente dos faróis do 2018 deixou de ser preta, cada vidro virou uma chapa só com a textura inteira e sem espelho, e o capô perdeu as cópias do verso que ficavam pretas com mods (Xbox 360 Stuff, pacotes de textura, ReShade). O restante é o da v2.5: cinta laranja 読めば尺八 e, da v2.4, cinco cintas diferentes na dianteira (lado direito) e na traseira (lado esquerdo), KIT00 sem cinta, faróis e para-choque do 2012 encaixados na lataria e chapa preta atrás da grade. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md). O método que levou o 2018 ao Underground 2 está no repositório irmão [Ford-Fusion-Titanium-NFSU2](https://github.com/nillander/Ford-Fusion-Titanium-NFSU2).
 
 ## No jogo
 
@@ -53,12 +53,12 @@ O Mod Loader lê `ADDONS`. O instalador copia a mesma geometria e as mesmas text
 
 O `VINYLS.BIN` do Cobalt permanece o do jogo. A pintura do 2012 usa a UV contínua já gravada na carroceria.
 
-| Pacote v2.5 | SHA-256 do ZIP | `GEOMETRY.BIN` | `TEXTURES.BIN` |
+| Pacote v2.6 | SHA-256 do ZIP | `GEOMETRY.BIN` | `TEXTURES.BIN` |
 | --- | --- | --- | --- |
-| [Fusion2012_FWD_MW2005.zip](release/Fusion2012_FWD_MW2005.zip) | `E376A31FAE4FE0753B8F65238112C50B5DEB418137ED308D3EFDA87C76E5D749` | `643E5E4A7DEFC67E82FF3FFDF381C2F5BC0E854EB7201369EC64E9C36F075583` | `380AEF7826723967DB0E3CD49284387A4469E75938D767EC437CEC9A8670A5B7` |
-| [Fusion2018_AWD_MW2005.zip](release/Fusion2018_AWD_MW2005.zip) | `5114665B48DD5A4F513C788139A46ED297778292EB10EA3DE296B8108C36C181` | `4E950229DC116F8ACF3D79C1F2EDD5CFE93E68042D6FA6A1CC76EE09B9671C4E` | `38F231C8DC1DE1116E01D34E4E217DC6CAD5DEE218B31D8E93F9D81D2A5EBCBE` |
+| [Fusion2012_FWD_MW2005.zip](release/Fusion2012_FWD_MW2005.zip) | `13F015B8036A945ADA169673340ADD0050CC63BEEE95A74681D60207C74E7CBB` | `2C8C625C2EF57F43F53E04093688D229AA008FBFAE5EB7FE106518FD12683AEE` | `380AEF7826723967DB0E3CD49284387A4469E75938D767EC437CEC9A8670A5B7` |
+| [Fusion2018_AWD_MW2005.zip](release/Fusion2018_AWD_MW2005.zip) | `6C76C445CE3B5590635DFC53701AD4F221CCED4DA8E834204040F83318A3110B` | `7D95E28E9A44307C90047CED1D1433BF607C61599505286572B636C14A0D5350` | `8DF768ED4BCB4BF933FC4F686FDDF1B13FA203BCB21A656986132008A617F8EF` |
 
-Os hashes de cada arquivo interno estão em [release/SHA256SUMS-conteudo.txt](release/SHA256SUMS-conteudo.txt). As notas da release estão em [release/NOTAS-v2.5.md](release/NOTAS-v2.5.md).
+Os hashes de cada arquivo interno estão em [release/SHA256SUMS-conteudo.txt](release/SHA256SUMS-conteudo.txt). As notas da release estão em [release/NOTAS-v2.6.md](release/NOTAS-v2.6.md).
 
 ### Peças que o slot precisa ter
 
@@ -91,6 +91,7 @@ O relato completo, com as imagens de cada diagnóstico, está em [docs/APRENDIZA
 8. **Logo da tela de carros.** O Mod Loader troca o nome procurado para `SECONDARY_LOGO_<internal>_1`. O hash dentro do `SECONDARYLOGO.BIN` (offsets 0xD4 e 0x108) tem de ser esse. Hash repetido de outro carro mostra "temp 350"; hash que já existe no `FrontB.lzc` mostra o logo original do slot.
 9. **Duas pastas, jogo fechado.** Com o jogo aberto, `ADDONS/CARS_REPLACE` fica travada e só `CARS` atualiza. O Mod Loader lê `ADDONS`, então o teste mostra a versão antiga. Conferir o SHA-256 nos dois caminhos.
 10. **Casca "gum" do GTA.** O shader gum do Mondeo é uma segunda carroceria preta colada na pintura. O que fica a menos de 4 mm da lataria entra no enxerto e precisa ser excluído.
+11. **O que o jogo esconde, os mods mostram.** Com Xbox 360 Stuff, pacotes de textura e ReShade aparecem camadas que o jogo original não desenha: o verso das faces (a chapa de dentro dos vidros e a cópia virada para baixo do capô, que deixava o capô preto), a cor de uma lente que o shader original ignorava (lente do 2018 em área preta do atlas) e a UV dos vidros (o para-brisa usava um quarto da textura, espelhado no meio). Conferir com textura de teste e contar faces opostas coincidentes (`scripts/lente-vidros-capo/dupscan.py`).
 
 A primeira aprovação visual do 2018, com a grade opaca de volta, foi a V1prime-d:
 
@@ -156,6 +157,7 @@ O pedido inicial, em [docs/historico/demanda-inicial.md](docs/historico/demanda-
 | 27/09 | **v2.3**: no 2012, o para-choque sobe até a borda de baixo dos faróis e uma chapa na cor da pintura fecha a fresta por baixo (`hl59.py` com `LIFT`, `curtain.py`) |
 | 27/09 | **v2.4**: cinco cintas diferentes nos kits KIT01–KIT05 (dianteira e traseira), KIT03 restaurado |
 | 27/09 | **v2.5**: o texto da cinta laranja passou de 一路顺风 para 読めば尺八. A geometria continua a da v2.4 |
+| 27/09 | **v2.6**: lente clara nos faróis do 2018, uma chapa por vidro com UV 0–1 sem espelho e capô sem as cópias do verso (`scripts/lente-vidros-capo/`) |
 
 Checkpoints do 2018 e o commit de cada um estão em [versions/LEIA-ME.md](versions/LEIA-ME.md).
 
@@ -384,19 +386,20 @@ perf12.py         # ATTRIBUTES.MWPS
 
 ## Limites conhecidos
 
-A v2.5 está publicada com a geometria da v2.4 e a cinta laranja 読めば尺八. A v2.4 foi aprovada na garagem, na cidade e nas cenas que usam KIT04/KIT05, com os faróis do 2012 encaixados na lataria e no para-choque e a chapa preta atrás da grade.
+A v2.6 está publicada e foi aprovada no jogo com Xbox 360 Stuff e texturas: faróis, vidros e capô. Nela a lente do 2018, os vidros e o capô foram corrigidos sobre a v2.5 (cinta laranja 読めば尺八). A v2.4 foi aprovada na garagem, na cidade e nas cenas que usam KIT04/KIT05, com os faróis do 2012 encaixados na lataria e no para-choque e a chapa preta atrás da grade.
 
 - O 2018 se chama AWD na garagem e anda com tração traseira.
 - O logo Ford HD vale para todos os Ford.
 - Não há câmera interna neste jogo: a vista "de dentro" é a câmera do capô ou a do para-brisa.
 - Alguns riscos finos na lateral traseira são costura da malha de origem.
+- Ainda têm faces duplicadas com o verso para fora: interior (1.128 pares), grade em `RIGHT_SIDE_MIRROR` (1.665), pneu dianteiro (90), lataria (10) e as paredes das entradas de ar dos capôs da loja. Com mods que desenham os dois lados podem aparecer manchas escuras nessas peças.
 
 ## Onde continuar
 
 | Caminho | Conteúdo |
 | --- | --- |
 | [docs/CONTINUACAO.md](docs/CONTINUACAO.md) | Estado instalado, hashes e como retomar o teste dos faróis |
-| [docs/TODO.md](docs/TODO.md) | Itens 1–44, com o que foi aprovado no jogo |
+| [docs/TODO.md](docs/TODO.md) | Itens 1–52, com o que foi aprovado no jogo |
 | [docs/APRENDIZADOS.md](docs/APRENDIZADOS.md) | Diagnósticos, com imagem |
 | [docs/imagens-projeto/](docs/imagens-projeto/README.md) | Renders e capturas anotadas, por etapa |
 | [capturas/](capturas/README.md) | Galeria no jogo |
