@@ -7,7 +7,7 @@ Dois mods para o Most Wanted de PC. Instalam juntos porque usam slots diferentes
 | Ford Fusion Titanium 2012 FWD | Chevrolet Cobalt SS (carro inicial) | `COBALTSS` | Dianteira (`TORQUE_SPLIT` 1,0) |
 | Ford Fusion Titanium 2018 AWD | Ford Mustang GT | `MUSTANGGT` | Traseira (`TORQUE_SPLIT` 0). O nome na garagem é AWD |
 
-> **Release atual: v2.6 (27/09/2026).** A lente dos faróis do 2018 deixou de ser preta, cada vidro virou uma chapa só com a textura inteira e sem espelho, e o capô perdeu as cópias do verso que ficavam pretas com mods (Xbox 360 Stuff, pacotes de textura, ReShade). O restante é o da v2.5: cinta laranja 読めば尺八 e, da v2.4, cinco cintas diferentes na dianteira (lado direito) e na traseira (lado esquerdo), KIT00 sem cinta, faróis e para-choque do 2012 encaixados na lataria e chapa preta atrás da grade. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md). O método que levou o 2018 ao Underground 2 está no repositório irmão [Ford-Fusion-Titanium-NFSU2](https://github.com/nillander/Ford-Fusion-Titanium-NFSU2).
+> **Release atual: v2.7 (01/10/2026).** Os refletores traseiros do 2012 são vermelho sólido, as lanternas do 2018 preservam a lente sem reflexo excessivo e os retrovisores dos dois carros usam a lente inteira com textura local reflexiva, sem manchas pretas. A v2.7 também corrige os nomes no ModLoader. Ela inclui a v2.6: lente clara nos faróis do 2018, vidros em chapa única e capô sem cópias internas visíveis com Xbox 360 Stuff, pacotes de textura e ReShade. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md).
 
 ## No jogo
 
@@ -53,12 +53,12 @@ O Mod Loader lê `ADDONS`. O instalador copia a mesma geometria e as mesmas text
 
 O `VINYLS.BIN` do Cobalt permanece o do jogo. A pintura do 2012 usa a UV contínua já gravada na carroceria.
 
-| Pacote v2.6 | SHA-256 do ZIP | `GEOMETRY.BIN` | `TEXTURES.BIN` |
+| Pacote v2.7 | SHA-256 do ZIP | `GEOMETRY.BIN` | `TEXTURES.BIN` |
 | --- | --- | --- | --- |
-| [Fusion2012_FWD_MW2005.zip](release/Fusion2012_FWD_MW2005.zip) | `13F015B8036A945ADA169673340ADD0050CC63BEEE95A74681D60207C74E7CBB` | `2C8C625C2EF57F43F53E04093688D229AA008FBFAE5EB7FE106518FD12683AEE` | `380AEF7826723967DB0E3CD49284387A4469E75938D767EC437CEC9A8670A5B7` |
-| [Fusion2018_AWD_MW2005.zip](release/Fusion2018_AWD_MW2005.zip) | `6C76C445CE3B5590635DFC53701AD4F221CCED4DA8E834204040F83318A3110B` | `7D95E28E9A44307C90047CED1D1433BF607C61599505286572B636C14A0D5350` | `8DF768ED4BCB4BF933FC4F686FDDF1B13FA203BCB21A656986132008A617F8EF` |
+| [Fusion2012_FWD_MW2005.zip](release/Fusion2012_FWD_MW2005.zip) | `28526462BE3426D1614C3CA81C983D7F2E201F34F522875063D6A53A43B81528` | `3510AFFC49EF3318B0429549F1CEED06F47E01A5D03A112C89DD5DDDC097B813` | `380AEF7826723967DB0E3CD49284387A4469E75938D767EC437CEC9A8670A5B7` |
+| [Fusion2018_AWD_MW2005.zip](release/Fusion2018_AWD_MW2005.zip) | `079C4A717FAE13294AB275AB307FB9707711DF0D0A9A1C1978687044AAD9A830` | `BA4216CEC845BD8809CB38E490A00D5EB4163AAA5477AFCA63EC1D54B1B9A8C6` | `8DF768ED4BCB4BF933FC4F686FDDF1B13FA203BCB21A656986132008A617F8EF` |
 
-Os hashes de cada arquivo interno estão em [release/SHA256SUMS-conteudo.txt](release/SHA256SUMS-conteudo.txt). As notas da release estão em [release/NOTAS-v2.6.md](release/NOTAS-v2.6.md).
+Os hashes de cada arquivo interno estão em [release/SHA256SUMS-conteudo.txt](release/SHA256SUMS-conteudo.txt). As notas da release estão em [release/NOTAS-v2.7.md](release/NOTAS-v2.7.md).
 
 ### Peças que o slot precisa ter
 

@@ -367,3 +367,25 @@ as paredes das entradas de ar podem ser vistas dos dois lados.
 **Como editar sem recompilar.** Os grupos de um sólido usam faixas contíguas de vértices e os índices são absolutos.
 Dá para regravar vértices, índices e os campos do grupo (caixa, nº de vértices, nº de triângulos, início e tamanho dos
 índices) mantendo o total; triângulo removido vira degenerado e sobra de vértice vai para o fim do último grupo.
+
+## 17. Refletores traseiros — material, não brilho da textura (30/09)
+
+Os pequenos refletores vermelhos acima do escape do Fusion 2012 não eram parte da pintura nem uma falha do ReShade:
+os seus triângulos estavam no grupo da lente de lanterna, com shader de vidro `A6348EE3`. Esse shader consulta a
+reflexão do ambiente; por isso os refletores ficavam espelhados mesmo quando a amostra do atlas era vermelha.
+
+A correção aprovada separa somente esses triângulos em um grupo próprio, preserva posição, normal e índice, aponta a
+UV para vermelho opaco do atlas e usa o shader de luz de freio `05BC3A3C`. Assim o resultado é vermelho sólido e não
+reage ao ambiente. A mesma regra deve ser aplicada a qualquer lente/refletor que o usuário peça sem reflexo — não
+basta escurecer ou repintar a textura. Para o Fusion 2018, as lentes traseiras também devem ser verificadas contra
+esse par de material antes de alterar alfa ou geometria.
+
+**Limite desta regra.** Ela vale para o refletor pequeno, que e uma peca opaca. Nao se deve remover nem tornar degenerada a malha de uma lente externa de lanterna: a lente cobre os LEDs e refletores internos. Nas lanternas, preservar a cobertura e ajustar material/atlas de modo reversivel, testando no jogo antes de substituir a lente.
+
+## 18. Lanternas, refletores e retrovisores aprovados (01/10)
+
+**Refletores traseiros do 2012.** Somente os triangulos dos dois refletores pequenos devem sair do grupo de lente e ir para o shader opaco `05BC3A3C`, com UV vermelho local. A lente principal continua intocada. Isso elimina a reacao ao ambiente sem criar buraco no para-choque.
+
+**Lanternas traseiras do 2018.** A lente externa e indispensavel: apagar seus triangulos revela LEDs e suportes, em vez de produzir uma lanterna opaca. A solucao aprovada preserva todos os triangulos de `RIGHT_BRAKELIGHT_GLASS_A` a `_D` e os desenha no shader difuso `0FEDEE40`; assim a cobertura permanece e o reflexo ambiental excessivo desaparece.
+
+**Retrovisores dos dois Fusion.** O shader reflexivo oficial `54949AFD` precisa usar uma textura que exista no `TEXTURES.BIN` do proprio carro. Referenciar a textura de espelho do BMW (`7E47FBB0`) a partir de COBALTSS ou MUSTANGGT resolve como preto. A lente inteira tem 120 triangulos na regiao compacta do espelho (nao apenas os 33 triangulos planos): todos usam o shader reflexivo e a celula cinza do atlas `MISC` local (`E67A7FA5` no 2012, `5A00E244` no 2018). Isso elimina manchas pretas e a divisao diagonal.
