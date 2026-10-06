@@ -95,7 +95,7 @@ O relato completo, com as imagens de cada diagnóstico, está em [docs/APRENDIZA
 
 A primeira aprovação visual do 2018, com a grade opaca de volta, foi a V1prime-d:
 
-![V1prime-d aprovada no jogo](versions/v1prime/in-game/v1prime-d-approved.png)
+![V1prime-d aprovada no jogo](docs/imagens-projeto/03-v1prime-placas-grade-e-pecas/0923-2228-enviada-pelo-usuario-114b203d.jpg)
 
 ## Performance
 
@@ -181,7 +181,7 @@ O doador de estrutura é o Fusion 2010 de AJM3899: 64 sólidos, marcadores, shad
 
 | Frente pintada | O que passava de 65.535 índices, em vermelho |
 | --- | --- |
-| ![Frente pintada do modelo de origem](docs/imagens-projeto/00-renders-iniciais/02-frente.png) | ![Trechos da vprime acima do limite de índices](versions/v1prime/preview/vprime-index-over-65535-red.png) |
+| ![Frente pintada do modelo de origem](docs/imagens-projeto/00-renders-iniciais/02-frente.png) | ![Trechos da vprime acima do limite de índices](docs/imagens-projeto/03-v1prime-placas-grade-e-pecas/0923-2159-vp_beyond.png) |
 
 **v2 e v3.** A v2, no catálogo Shelby, desenhava um segundo par de retrovisores. A v3a invertia faces sem recalcular as normais, e o capô ficava escuro. Um triângulo da reconstrução saía do teto. As luzes da v2 estavam num sólido que já passava de 65.535 índices: amarelo e ciano são faróis e lanternas.
 
@@ -201,7 +201,7 @@ A primeira compilação está descrita em [versions/vprime/README.md](versions/v
 
 **UV da pintura.** A UV do GTA mapeava cada porta sozinha. `vinyluv.py` + `ApplyUV.cs` gravaram `u = 0,169·x + 0,5` só nos `KIT00_BODY_A–E`.
 
-![Grade de teste na UV da V1prime-e](versions/v1prime/preview/vinyl-uv-v1prime-e.png)
+![Grade de teste na UV da V1prime-e](docs/imagens-projeto/04-adesivos-nas-portas/0923-2246-vinyl_uv_new.png)
 
 O quadriculado amarelo é o mesmo teste na malha inteira. Em cima, a UV do GTA, cada painel no seu mapa. Embaixo, as linhas seguem de uma porta à outra. No jogo a faixa quebrava nessa coluna.
 
@@ -211,7 +211,7 @@ O quadriculado amarelo é o mesmo teste na malha inteira. Em cima, a UV do GTA, 
 
 | Roda do doador e a roda lida do `fusion_hi.yft` | Normais da pele, antes e depois |
 | --- | --- |
-| ![Cinco raios do doador em cima, vinte raios do Fusion embaixo](versions/v1prime/variants/v1prime-v-gta-wheel/v1prime-v-roda.png) | ![Reflexo facetado na z0 e a pele suavizada na z6](versions/v1prime/variants/v1prime-z4-smooth-kits/suavidade-antes-depois.png) |
+| ![Cinco raios do doador em cima, vinte raios do Fusion embaixo](docs/imagens-projeto/10-rodas-gta/0925-0023-wheel_cmp.jpg) | ![Reflexo facetado na z0 e a pele suavizada na z6](docs/imagens-projeto/comparacoes/suavidade-antes-depois.png) |
 
 A roda de 20 raios entra no lugar da roda do Fusion 2010. O `fusion_hi.yft` chega partido em sólidos (calota, leque de raios, aro, pneu). O diâmetro acompanha aro 18 e perfil 40, que é o que a loja do MW oferece.
 
@@ -223,11 +223,11 @@ A suavidade veio de recalcular as normais na vizinhança, e de uma camada pintad
 
 | Camada de fundo sob a pele | Lábio do para-choque, z9 em cima e z10 embaixo |
 | --- | --- |
-| ![Cobertura da camada pintada por baixo da lataria](versions/v1prime/variants/v1prime-z5-backing-details/camada-de-fundo-cobertura.png) | ![Para-choque inferior antes e depois da superfície única](versions/v1prime/variants/v1prime-z10-front-lip/parachoque-inferior-z9-z10.png) |
+| ![Cobertura da camada pintada por baixo da lataria](docs/imagens-projeto/14-frestas-e-refino/0925-0148-cat.png) | ![Para-choque inferior antes e depois da superfície única](docs/imagens-projeto/comparacoes/parachoque-inferior-z9-z10.png) |
 
 Os 17 capôs da loja são o capô do Fusion com o detalhe de cada `STYLE` do GTO, separados da carroceria em `KIT00_HOOD` e `STYLExx_HOOD`. Os emblemas FUSION e TITANIUM foram traçados das artes oficiais, em cromado, com 2,5 mm de relevo, no lugar das letras que vieram do GTA. Cada janela ficou com uma camada `WINDSHIELD` e a textura de vidro correspondente, para o insulfilme da loja pegar.
 
-![Amostra dos capôs da loja sobre o capô do Fusion](versions/v1prime/variants/v1prime-s-hoods/v1prime-s-capos.png)
+![Amostra dos capôs da loja sobre o capô do Fusion](docs/imagens-projeto/08-entradas-de-ar-e-capo/0924-2354-hoodedge.png)
 
 A malha do capô, isolada. Na borda do `STYLE07`, a fileira de cima é o capô padrão, a do meio é a V1prime-r (a borda entortava) e a de baixo é a V1prime-s, já alinhada ao padrão.
 
@@ -337,33 +337,33 @@ As luzes do 2012 saem do Mondeo (`source/fusion-2016-dev`, `oracle_hi.yft`) por 
 
 | Peça extraída e o furo na lataria | Encaixe colorido ao lado do modelo de origem |
 | --- | --- |
-| ![Seleção das luzes 2012](versions/fusion2012-fwd/preview/selecao-luzes-2016.png) | ![Comparação do enxerto com o GTA](versions/fusion2012-fwd/preview/comparacao-2018-x-2016-gta.png) |
+| ![Seleção das luzes 2012](docs/imagens-projeto/19-fusion2012-e-refino/previas/selecao-luzes-2016.png) | ![Comparação do enxerto com o GTA](docs/imagens-projeto/19-fusion2012-e-refino/previas/comparacao-2018-x-2016-gta.png) |
 
 A pele do 2018 é recortada no contorno da lente (subdivisão só onde a borda cruza o triângulo, corte linear). Uma aba de cerca de 2 cm da pintura do 2012, 2 mm para fora da pele do 2018, cobre a emenda. O atlas das luzes junta o que foi mantido do 2018, as folhas `fari` e `redglass` do Mondeo, e células de cor sólida para anel vermelho e miolo branco.
 
-![Atlas das luzes do Fusion 2012](versions/fusion2012-fwd/preview/atlas-luzes.png)
+![Atlas das luzes do Fusion 2012](docs/imagens-projeto/19-fusion2012-e-refino/previas/atlas-luzes.png)
 
 Cada item abaixo foi conferido num render com descarte de faces e fundo magenta, e depois no jogo. As prévias comparam o passo anterior (em cima, ou à esquerda) com o seguinte.
 
 | Faróis girados 1,5° em torno da lente | Lanternas levadas até a borda da lataria |
 | --- | --- |
-| ![Farol do 2012 antes e depois do giro](versions/fusion2012-fwd/preview/farois-item37c.png) | ![Lanterna lateral antes e depois do cisalhamento](versions/fusion2012-fwd/preview/lanternas-item39b.png) |
+| ![Farol do 2012 antes e depois do giro](docs/imagens-projeto/19-fusion2012-e-refino/previas/farois-item37c.png) | ![Lanterna lateral antes e depois do cisalhamento](docs/imagens-projeto/19-fusion2012-e-refino/previas/lanternas-item39b.png) |
 
 | Grade inferior, terminando antes dos faróis de milha | Tampa reta no lugar da aba do friso cromado |
 | --- | --- |
-| ![Para-choque com a grade trapezoidal e o nicho do farol de milha](versions/fusion2012-fwd/preview/grade-inferior-item1.png) | ![Tampa do porta-malas antes e depois de alinhar a aba](versions/fusion2012-fwd/preview/tampa-item7.png) |
+| ![Para-choque com a grade trapezoidal e o nicho do farol de milha](docs/imagens-projeto/19-fusion2012-e-refino/previas/grade-inferior-item1.png) | ![Tampa do porta-malas antes e depois de alinhar a aba](docs/imagens-projeto/19-fusion2012-e-refino/previas/tampa-item7.png) |
 
 | Farol de milha redondo, sem a perninha | Discos e pinças do GTO no lugar da textura de multimídia |
 | --- | --- |
-| ![Farol de milha avançado e com o aro no plano da moldura](versions/fusion2012-fwd/preview/farol-milha-item30.png) | ![Freio dianteiro com disco e pinça próprios](versions/fusion2012-fwd/preview/freios-item33.png) |
+| ![Farol de milha avançado e com o aro no plano da moldura](docs/imagens-projeto/19-fusion2012-e-refino/previas/farol-milha-item30.png) | ![Freio dianteiro com disco e pinça próprios](docs/imagens-projeto/19-fusion2012-e-refino/previas/freios-item33.png) |
 
 | Cinta de reboque no para-choque dos kits | Antena com a traseira reta, sem o V da base |
 | --- | --- |
-| ![Cintas preta e vermelha na carroceria de fábrica](versions/fusion2012-fwd/preview/cinta-reboque-item35.png) | ![Base da antena fechada coluna a coluna](versions/fusion2012-fwd/preview/antena-item36b.png) |
+| ![Cintas preta e vermelha na carroceria de fábrica](docs/imagens-projeto/19-fusion2012-e-refino/previas/cinta-reboque-item35.png) | ![Base da antena fechada coluna a coluna](docs/imagens-projeto/19-fusion2012-e-refino/previas/antena-item36b.png) |
 
 | Normais da frente e da traseira do 2012 | O mesmo passe no 2018 |
 | --- | --- |
-| ![Reflexo do 2012 antes e depois de corrigir os cantos escuros](versions/fusion2012-fwd/preview/refino-item41-2012.png) | ![Reflexo do 2018 antes e depois das mesmas normais](versions/fusion2012-fwd/preview/refino-item41-2018.png) |
+| ![Reflexo do 2012 antes e depois de corrigir os cantos escuros](docs/imagens-projeto/19-fusion2012-e-refino/previas/refino-item41-2012.png) | ![Reflexo do 2018 antes e depois das mesmas normais](docs/imagens-projeto/19-fusion2012-e-refino/previas/refino-item41-2018.png) |
 
 As capturas anotadas pelo jogo (farol, lanterna, lábio, antena) e o restante das prévias estão em [docs/imagens-projeto/19-fusion2012-e-refino/](docs/imagens-projeto/19-fusion2012-e-refino/). O relato de cada item está em [docs/APRENDIZADOS.md](docs/APRENDIZADOS.md).
 
@@ -371,7 +371,7 @@ A prévia offline, antes de instalar. O render não reproduz o reflexo do jogo; 
 
 | Prévia do 2012 | LODs e o kit 01 |
 | --- | --- |
-| ![Prévia offline do Fusion 2012](versions/fusion2012-fwd/preview/fusion2012-previa.png) | ![LODs da carroceria e o kit com cinta](versions/fusion2012-fwd/preview/lods-e-kit01.png) |
+| ![Prévia offline do Fusion 2012](docs/imagens-projeto/19-fusion2012-e-refino/previas/fusion2012-previa.png) | ![LODs da carroceria e o kit com cinta](docs/imagens-projeto/19-fusion2012-e-refino/previas/lods-e-kit01.png) |
 
 Ordem usada na nuvem para refazer o 2012, detalhada na seção 9 de [docs/CONTINUACAO.md](docs/CONTINUACAO.md):
 
