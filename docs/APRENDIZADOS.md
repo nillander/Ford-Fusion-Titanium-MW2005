@@ -389,3 +389,12 @@ esse par de material antes de alterar alfa ou geometria.
 **Lanternas traseiras do 2018.** A lente externa e indispensavel: apagar seus triangulos revela LEDs e suportes, em vez de produzir uma lanterna opaca. A solucao aprovada preserva todos os triangulos de `RIGHT_BRAKELIGHT_GLASS_A` a `_D` e os desenha no shader difuso `0FEDEE40`; assim a cobertura permanece e o reflexo ambiental excessivo desaparece.
 
 **Retrovisores dos dois Fusion.** O shader reflexivo oficial `54949AFD` precisa usar uma textura que exista no `TEXTURES.BIN` do proprio carro. Referenciar a textura de espelho do BMW (`7E47FBB0`) a partir de COBALTSS ou MUSTANGGT resolve como preto. A lente inteira tem 120 triangulos na regiao compacta do espelho (nao apenas os 33 triangulos planos): todos usam o shader reflexivo e a celula cinza do atlas `MISC` local (`E67A7FA5` no 2012, `5A00E244` no 2018). Isso elimina manchas pretas e a divisao diagonal.
+
+## 19. v2.8 — faces duplicadas em todas as peças (06/10)
+
+O capô (seção 16) não era caso isolado: capôs da loja, interior, grade, base, pneu, carrocerias dos kits e lanternas do
+2012 também tinham triângulos repetidos na mesma posição, quase sempre virados ao contrário. Para decidir qual face de
+cada par fica, não serve uma regra de "para fora do carro" (o encosto do banco visto pelo para-brisa aponta para dentro):
+o carro é desenhado de 144 direções com descarte de verso e fica a face que mais aparece. Faces que nunca aparecem
+decidem pela orientação; cópias iguais ficam com a última. Medir antes e depois com o mesmo desenho (sem mods) mostra se
+algo abriu: no 2018, 0,0006 % dos pixels viraram fundo.

@@ -304,3 +304,8 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   na mesma posição; com os dois lados desenhados, a cópia escura cobria a pintura. *(`capo52.py`: sai toda face do
   `KIT00_HOOD_A–D` virada para dentro; nos `STYLExx_HOOD` só a cópia de baixo nas partes planas. Aprovado no jogo e
   publicado na **v2.6**: 2012 GEOMETRY `2C8C625C…`, 2018 GEOMETRY `7D95E28E…` / TEXTURES `8DF768ED…`.)*
+- [x] **53. Faces duplicadas na mesma posição em todas as peças (2012 e 2018).** Pedido de 06/10: além do capô, tirar
+  todo triângulo repetido na mesma posição (virado ao contrário para mostrar o verso, ou igual). *(`scripts/faces-duplicadas/`:
+  pares exatos (0,5 mm); fica a face mais vista de fora (144 direções, com descarte de verso), escondidas pela orientação,
+  iguais pela última. 2018 −42.314 triângulos em 117 sólidos, 2012 −48.459 em 146. Aprovado no jogo e publicado na
+  **v2.8**: 2012 GEOMETRY `46EA9057…`, 2018 GEOMETRY `C6506D3F…`. Texturas da v2.7.)*

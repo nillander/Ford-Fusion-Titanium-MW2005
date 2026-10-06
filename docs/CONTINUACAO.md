@@ -4,7 +4,7 @@ Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os
 (2018, V1prime) e `CONTINUACAO-FUSION2012.md`. Leia também `docs/APRENDIZADOS.md` (lições, com imagens),
 `docs/TODO.md` (itens 1–52) e `versions/fusion2012-fwd/LEIA-ME.md`.
 
-**Comece pela seção 3: a v2.6 foi publicada e todos os itens (1–52) estão fechados.** As seções 4 em diante registram a
+**Comece pela seção 3: a v2.8 foi publicada e todos os itens (1–53) estão fechados.** As seções 4 em diante registram a
 construção e os testes antigos; números de versão e caminhos de nuvem nelas são históricos, não o estado instalado.
 
 ## 1. O projeto
@@ -27,7 +27,22 @@ construção e os testes antigos; números de versão e caminhos de nuvem nelas 
 - Git no PC: `git add` pode travar — usar `hash-object -w` / `update-index --cacheinfo` / `write-tree` /
   `commit-tree` / `update-ref`, com as linhas `Co-Authored-By`/`Claude-Session` no fim da mensagem.
 
-## 3. Estado atual em 27/09/2026 — v2.6 publicada
+## 3. Estado atual em 06/10/2026 — v2.8 publicada
+
+Instalado no jogo = geometria da v2.8 nos dois carros (a da v2.7 ficou em `work/dup53/MUSTANGGT.BIN` e `COBALTSS.BIN`).
+O `TEXTURES.BIN` do 2012 instalado (`477A7001…`) é de um teste posterior à v2.7 e não entrou na release.
+
+| Carro | GEOMETRY.BIN | TEXTURES.BIN (release) | ZIP |
+| --- | --- | --- | --- |
+| 2012 (COBALTSS) | `46EA905703DC3BADAA92236FCCA8DD0BE65BFBAA95DC65B9D807DC427F4115C3` | `380AEF7826723967DB0E3CD49284387A4469E75938D767EC437CEC9A8670A5B7` | `FAF2EC7BBF3AF4CDF169CB9086163FDA8AE855D2C3C4916E162546DB4531987D` |
+| 2018 (MUSTANGGT) | `C6506D3FA563EC05926315CCC994DE5DC3150DC281F460139BCEE2C16B706F01` | `8DF768ED4BCB4BF933FC4F686FDDF1B13FA203BCB21A656986132008A617F8EF` | `D786292C56092EEFAC98E4CAB19E1A7D16A1B15A4B9D367D5B6C76A1F9D51E71` |
+
+- **v2.8 (item 53)**, sobre a v2.7: faces duplicadas na mesma posição removidas de todas as peças e LODs
+  (`scripts/faces-duplicadas/`, ver o LEIA-ME da pasta). Aprovado pelo usuário no jogo com os mods.
+- Publicação: o GitHub não aceita push desta sessão; o commit e a tag são feitos no PC e o usuário roda
+  `work/publicar-v2.8.bat` (push, tag e release nova, mantendo as anteriores).
+
+## 3.b Estado da v2.6 (histórico)
 
 Instalado no jogo = conteúdo dos ZIPs da v2.6 (pacote `work/pacote-27-09-capo62/`; a v2.5 que estava instalada ficou em
 `work/pacote-27-09-vidros61/backup-antes/`). Jogo em `D:\Program Files (x86)\Electronic Arts\Need For Speed Most Wanted Black Edition`.
