@@ -309,3 +309,8 @@ quando os itens abaixo estiverem aprovados. Instalado e nos ZIPs de `release/` (
   pares exatos (0,5 mm); fica a face mais vista de fora (144 direções, com descarte de verso), escondidas pela orientação,
   iguais pela última. 2018 −42.314 triângulos em 117 sólidos, 2012 −48.459 em 146. Aprovado no jogo e publicado na
   **v2.8**: 2012 GEOMETRY `46EA9057…`, 2018 GEOMETRY `C6506D3F…`. Texturas da v2.7.)*
+
+- [x] **54. Fusion 2018 deve ser AWD, não RWD (07/10).** Base e melhorado com
+  TORQUE_SPLIT 0,5 e diferencial central ativo 0,75. Só quatro valores mudam.
+  Patch instalado localmente; pacote v2.9 auditado, BIN e pacote 2012 intactos.
+  Teste de dirigibilidade em jogo ainda pendente; publicação solicitada pelo usuário.

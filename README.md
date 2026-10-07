@@ -2,12 +2,12 @@
 
 Dois mods para o Most Wanted de PC. Instalam juntos porque usam slots diferentes. O 2012 é a carroceria aprovada do Titanium 2018 com faróis, lanternas e faróis de milha do modelo 2012 (Ford Mondeo 2016 do GTA V).
 
-| Carro | Substitui | Slot | Tração gravada na v2.4 |
+| Carro | Substitui | Slot | Tração atual (v2.9) |
 | --- | --- | --- | --- |
 | Ford Fusion Titanium 2012 FWD | Chevrolet Cobalt SS (carro inicial) | `COBALTSS` | Dianteira (`TORQUE_SPLIT` 1,0) |
-| Ford Fusion Titanium 2018 AWD | Ford Mustang GT | `MUSTANGGT` | Traseira (`TORQUE_SPLIT` 0). O nome na garagem é AWD |
+| Ford Fusion Titanium 2018 AWD | Ford Mustang GT | `MUSTANGGT` | Integral (`TORQUE_SPLIT` 0,5 na base e melhorado; diferencial central ativo) |
 
-> **Release atual: v2.8 (06/10/2026).** Saíram de todas as peças os triângulos repetidos na mesma posição (o verso das chapas do GTA), que com Xbox 360 Stuff, pacotes de textura e ReShade deixavam manchas escuras: 42.314 triângulos a menos no 2018 e 48.459 no 2012. Ela inclui a v2.7: Os refletores traseiros do 2012 são vermelho sólido, as lanternas do 2018 preservam a lente sem reflexo excessivo e os retrovisores dos dois carros usam a lente inteira com textura local reflexiva, sem manchas pretas. A v2.7 também corrige os nomes no ModLoader. Ela inclui a v2.6: lente clara nos faróis do 2018, vidros em chapa única e capô sem cópias internas visíveis com Xbox 360 Stuff, pacotes de textura e ReShade. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md).
+> **Release atual: v2.9 (07/10/2026).** Corrige a tração do 2018 para AWD nos níveis original e melhorado; os demais ajustes e BIN continuam os da v2.8. O 2012 FWD permanece intacto. **v2.8:** Saíram de todas as peças os triângulos repetidos na mesma posição (o verso das chapas do GTA), que com Xbox 360 Stuff, pacotes de textura e ReShade deixavam manchas escuras: 42.314 triângulos a menos no 2018 e 48.459 no 2012. Ela inclui a v2.7: Os refletores traseiros do 2012 são vermelho sólido, as lanternas do 2018 preservam a lente sem reflexo excessivo e os retrovisores dos dois carros usam a lente inteira com textura local reflexiva, sem manchas pretas. A v2.7 também corrige os nomes no ModLoader. Ela inclui a v2.6: lente clara nos faróis do 2018, vidros em chapa única e capô sem cópias internas visíveis com Xbox 360 Stuff, pacotes de textura e ReShade. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md).
 
 ## No jogo
 
@@ -53,12 +53,12 @@ O Mod Loader lê `ADDONS`. O instalador copia a mesma geometria e as mesmas text
 
 O `VINYLS.BIN` do Cobalt permanece o do jogo. A pintura do 2012 usa a UV contínua já gravada na carroceria.
 
-| Pacote v2.8 | SHA-256 do ZIP | `GEOMETRY.BIN` | `TEXTURES.BIN` |
+| Pacotes da release v2.9 | SHA-256 do ZIP | `GEOMETRY.BIN` | `TEXTURES.BIN` |
 | --- | --- | --- | --- |
 | [Fusion2012_FWD_MW2005.zip](release/Fusion2012_FWD_MW2005.zip) | `FAF2EC7BBF3AF4CDF169CB9086163FDA8AE855D2C3C4916E162546DB4531987D` | `46EA905703DC3BADAA92236FCCA8DD0BE65BFBAA95DC65B9D807DC427F4115C3` | `380AEF7826723967DB0E3CD49284387A4469E75938D767EC437CEC9A8670A5B7` |
-| [Fusion2018_AWD_MW2005.zip](release/Fusion2018_AWD_MW2005.zip) | `D786292C56092EEFAC98E4CAB19E1A7D16A1B15A4B9D367D5B6C76A1F9D51E71` | `C6506D3FA563EC05926315CCC994DE5DC3150DC281F460139BCEE2C16B706F01` | `8DF768ED4BCB4BF933FC4F686FDDF1B13FA203BCB21A656986132008A617F8EF` |
+| [Fusion2018_AWD_MW2005.zip](release/Fusion2018_AWD_MW2005.zip) | `48E667619B4231EEEE69B9EB3A6970E901A7497D654D0509203A8B7CBB8BD38F` | `C6506D3FA563EC05926315CCC994DE5DC3150DC281F460139BCEE2C16B706F01` | `8DF768ED4BCB4BF933FC4F686FDDF1B13FA203BCB21A656986132008A617F8EF` |
 
-Os hashes de cada arquivo interno estão em [release/SHA256SUMS-conteudo.txt](release/SHA256SUMS-conteudo.txt). As notas da release estão em [release/NOTAS-v2.8.md](release/NOTAS-v2.8.md).
+Os hashes de cada arquivo interno estão em [release/SHA256SUMS-conteudo.txt](release/SHA256SUMS-conteudo.txt). As notas da release estão em [release/NOTAS-v2.9.md](release/NOTAS-v2.9.md). O ZIP do 2012 é o mesmo da v2.8.
 
 ### Peças que o slot precisa ter
 
@@ -423,3 +423,17 @@ A conversão é de Nillander Alarcão. Três agentes oficiais entraram em etapas
 | **Claude Code** | A partir da V3, um defeito por vez, medido na malha: grade opaca em DXT1, limite de 65.535 índices, kits que a IA e o Razor pedem, UV de vinil contínua, Fusion 2012 no slot `COBALTSS`, releases v2.0 e v2.1. O encaixe dos faróis do 2012 na lataria continua em teste local, fora dos ZIPs. |
 | **ChatGPT** | O começo: transplantar a carroceria nova para um carro doador que já abre no jogo. O plano está em [docs/historico/demanda-inicial.md](docs/historico/demanda-inicial.md); a release v0.1 seguiu esse fluxo. |
 | **Cursor** | Em 20/09, slot, grade 3D e cromado das tentativas v1 e v2. Em 24/09, a UV reta das portas na V1prime. Em 27/09, a documentação reunida numa estrutura só. O port aprovado no Underground 2 está no repositório [Ford-Fusion-Titanium-NFSU2](https://github.com/nillander/Ford-Fusion-Titanium-NFSU2). |
+
+### Correção AWD — v2.9 (07/10/2026)
+
+A v2.8 tinha nome AWD, mas `TORQUE_SPLIT` era zero. A v2.9 muda apenas quatro
+valores do `ATTRIBUTES.MWPS`: divisão 0,5 nas transmissões `mustanggt` e
+`mustanggt_top`, com diferencial central 0,75 em ambos os níveis. Os offsets foram
+conferidos nos campos do VLT original do MW. Preço, desbloqueio, motor, relações,
+geometria e texturas permanecem iguais; o ZIP do 2012 não muda.
+
+Fonte atual: `versions/performance/fusion-awd/ATTRIBUTES.MWPS`.
+Reprodução e comparação dos arquivos: `scripts/release_awd_v2_9.py`.
+Relatório: `docs/awd-v2.9-verification.json`. O patch foi instalado localmente com
+backup em `work/zipbuild/v2.9-before/installed-ATTRIBUTES.MWPS`.
+Validação de dados e pacote concluída; teste de dirigibilidade ainda pendente.

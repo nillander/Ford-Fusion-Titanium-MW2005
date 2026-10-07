@@ -1,0 +1,20 @@
+{
+  "version": "v2.9",
+  "passed": true,
+  "in_game_tested": false,
+  "patch_changes": {
+    "0x1e718": "0.5",
+    "0x1f690": "0.5",
+    "0x1e6e4": "0.75",
+    "0x1f65c": "0.75"
+  },
+  "only_four_patch_values_changed": true,
+  "geometry_textures_other_payloads_unchanged": true,
+  "fusion2012_unchanged": true,
+  "attributes_sha256": "8C472EAF2E606560419E9C1B65DBFFD41483E84A5F9B0DB7B3CDD9BF22CB5831",
+  "fusion2018_zip_sha256": "48E667619B4231EEEE69B9EB3A6970E901A7497D654D0509203A8B7CBB8BD38F",
+  "fusion2012_zip_sha256": "FAF2EC7BBF3AF4CDF169CB9086163FDA8AE855D2C3C4916E162546DB4531987D",
+  "installed_in_game": true,
+  "installed_path": "D:/Program Files (x86)/Electronic Arts/Need For Speed Most Wanted Black Edition/ADDONS/CARS_REPLACE/MUSTANGGT/ATTRIBUTES.MWPS",
+  "offsets_independently_checked_against_mw_vlt": true
+}

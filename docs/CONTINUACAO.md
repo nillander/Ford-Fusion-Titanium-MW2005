@@ -1,3 +1,22 @@
+# Atualização prioritária — v2.9 AWD (07/10/2026)
+
+O usuário pediu corrigir o único defeito do 2018 (RWD indevido), instalar no jogo,
+fazer commit e publicar tag/release/remoto. A v2.9 muda só quatro valores de
+ATTRIBUTES.MWPS: TORQUE_SPLIT 0,5 e diferencial central 0,75, na base e melhorado.
+Patch instalado em ADDONS/CARS_REPLACE/MUSTANGGT, hash
+8C472EAF2E606560419E9C1B65DBFFD41483E84A5F9B0DB7B3CDD9BF22CB5831.
+Backup local: work/zipbuild/v2.9-before/installed-ATTRIBUTES.MWPS.
+Demais parâmetros, visual e preço MW (42.000) preservados; 2012 ZIP intacto.
+
+Fonte atual: versions/performance/fusion-awd/ATTRIBUTES.MWPS.
+Script: scripts/release_awd_v2_9.py; relatório docs/awd-v2.9-verification.json.
+Validação de pacote/offsets concluída. Teste de dirigibilidade ainda pendente.
+Remoto atual: git@github.com:nillander/Ford-Fusion-Titanium-MW2005.git.
+Preservar releases/tags anteriores, conforme a publicação da v2.8.
+Os estados e instruções de versões anteriores abaixo são históricos.
+
+---
+
 # Continuação — Ford Fusion Titanium 2012 FWD e Fusion Titanium 2018 AWD (NFS Most Wanted 2005)
 
 Documento único para retomar o trabalho. Atualizado em 27/09/2026. Substitui os antigos `CONTINUACAO-CODEX.md`
