@@ -1,6 +1,6 @@
 # Ford Fusion Titanium 2018 AWD — Need for Speed: Most Wanted (2005)
 
-Substitui o **Ford Mustang GT** (slot `MUSTANGGT`). Release v2.9 de 07/10/2026.
+Substitui o **Ford Mustang GT** (slot `MUSTANGGT`). Release v2.10 de 07/10/2026.
 
 ## O que vem no pacote
 - **Visual**: carroceria do Fusion Titanium 2018 com faróis, lanternas, grade, vidros com película, antena
@@ -11,8 +11,8 @@ Substitui o **Ford Mustang GT** (slot `MUSTANGGT`). Release v2.9 de 07/10/2026.
 - **Personalização**: 17 capôs da loja ajustados ao Fusion, entrada de ar do teto, aerofólio, kits de
   carroceria (a de fábrica e cinco kits com cintas de reboque diferentes, na dianteira e na traseira (preta 大吉大利, vermelha 出入平安, laranja 読めば尺八, azul FBI e zebrada preta e amarela)), adesivos
   de porta, números de porta e faixas do para-brisa e do vidro traseiro.
-- **Performance e dirigibilidade** (`ATTRIBUTES.MWPS`): chassi, peso (1.600 kg), suspensão, barras,
-  distribuição de peso e aderência do Mustang GT; direção menos sensível.
+- **Performance e dirigibilidade** (`ATTRIBUTES.MWPS`): motor do Mercedes-Benz SLR McLaren, tração
+  integral, chassi, peso (1.600 kg), suspensão e barras do Mustang GT, pneus do SLR.
 - **Telas do jogo**: nome "Ford Fusion Titanium AWD", logotipo FUSION (`SECONDARYLOGO.BIN`) e logotipo
   Ford em alta resolução (`ADDONS/FRONTEND/MANUFACTURERS/27-FORD_HD.BIN`; troca o logo da Ford para
   todos os carros Ford).
@@ -35,13 +35,13 @@ por Gabriel Lima (ver `CREDITOS/source-readme.txt`). Base MW (Fusion 2010): Marc
 peças de FOX, Porsche4ever e AJ Lethal (ver `CREDITOS/donor-readme.txt`). Conversão para o MW 2005: Nillander Alarcão, com Claude.
 
 ---
-Arquivos para distribuir (v2.9, 07/10/2026; 2012 preservado da v2.8):
+Arquivos para distribuir (v2.10, 07/10/2026; 2012 preservado da v2.8):
 
 | ZIP | Carro | SHA-256 |
 |---|---|---|
 | `Fusion2012_FWD_MW2005.zip` | Ford Fusion Titanium 2012 FWD (slot COBALTSS) | `FAF2EC7BBF3AF4CDF169CB9086163FDA8AE855D2C3C4916E162546DB4531987D` |
-| `Fusion2018_AWD_MW2005.zip` | Ford Fusion Titanium 2018 AWD (slot MUSTANGGT) | `48E667619B4231EEEE69B9EB3A6970E901A7497D654D0509203A8B7CBB8BD38F` |
+| `Fusion2018_AWD_MW2005.zip` | Ford Fusion Titanium 2018 AWD (slot MUSTANGGT) | `A9DD3568ECC4FA28D35E254BA6B2756B9CF556BCDD4FAA3FFBC3B858C9FB766B` |
 
 `SHA256SUMS-conteudo.txt` lista os arquivos de dentro dos dois ZIPs. O LEIA-ME de cada carro está dentro do seu ZIP.
 
-A v2.9 corrige o 2018 para AWD na base e no nível melhorado (TORQUE_SPLIT 0,5, diferencial central 0,75). Demais ajustes preservados.
+A v2.10 coloca no 2018 os pneus do SLR nos dois níveis e diferenciais em 0,7 / 0,7 / 0,7. A v2.9 corrigiu a tração para AWD. Demais ajustes preservados.

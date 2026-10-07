@@ -7,7 +7,7 @@ Dois mods para o Most Wanted de PC. Instalam juntos porque usam slots diferentes
 | Ford Fusion Titanium 2012 FWD | Chevrolet Cobalt SS (carro inicial) | `COBALTSS` | Dianteira (`TORQUE_SPLIT` 1,0) |
 | Ford Fusion Titanium 2018 AWD | Ford Mustang GT | `MUSTANGGT` | Integral (`TORQUE_SPLIT` 0,5 na base e melhorado; diferencial central ativo) |
 
-> **Release atual: v2.9 (07/10/2026).** Corrige a tração do 2018 para AWD nos níveis original e melhorado; os demais ajustes e BIN continuam os da v2.8. O 2012 FWD permanece intacto. **v2.8:** Saíram de todas as peças os triângulos repetidos na mesma posição (o verso das chapas do GTA), que com Xbox 360 Stuff, pacotes de textura e ReShade deixavam manchas escuras: 42.314 triângulos a menos no 2018 e 48.459 no 2012. Ela inclui a v2.7: Os refletores traseiros do 2012 são vermelho sólido, as lanternas do 2018 preservam a lente sem reflexo excessivo e os retrovisores dos dois carros usam a lente inteira com textura local reflexiva, sem manchas pretas. A v2.7 também corrige os nomes no ModLoader. Ela inclui a v2.6: lente clara nos faróis do 2018, vidros em chapa única e capô sem cópias internas visíveis com Xbox 360 Stuff, pacotes de textura e ReShade. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md).
+> **Release atual: v2.10 (07/10/2026).** O 2018 recebe os pneus do Mercedes-Benz SLR McLaren (aderência, controle de giro, velocidade de giro e direção) nos dois níveis e diferenciais em 0,7 / 0,7 / 0,7: continua com o motor do SLR e tração integral, mas agora é tão fácil de guiar quanto o 2012. O 2012 FWD permanece intacto. **v2.9:** tração do 2018 corrigida para AWD nos níveis original e melhorado. **v2.8:** Saíram de todas as peças os triângulos repetidos na mesma posição (o verso das chapas do GTA), que com Xbox 360 Stuff, pacotes de textura e ReShade deixavam manchas escuras: 42.314 triângulos a menos no 2018 e 48.459 no 2012. Ela inclui a v2.7: Os refletores traseiros do 2012 são vermelho sólido, as lanternas do 2018 preservam a lente sem reflexo excessivo e os retrovisores dos dois carros usam a lente inteira com textura local reflexiva, sem manchas pretas. A v2.7 também corrige os nomes no ModLoader. Ela inclui a v2.6: lente clara nos faróis do 2018, vidros em chapa única e capô sem cópias internas visíveis com Xbox 360 Stuff, pacotes de textura e ReShade. O estado do trabalho está em [docs/CONTINUACAO.md](docs/CONTINUACAO.md).
 
 ## No jogo
 
@@ -53,12 +53,12 @@ O Mod Loader lê `ADDONS`. O instalador copia a mesma geometria e as mesmas text
 
 O `VINYLS.BIN` do Cobalt permanece o do jogo. A pintura do 2012 usa a UV contínua já gravada na carroceria.
 
-| Pacotes da release v2.9 | SHA-256 do ZIP | `GEOMETRY.BIN` | `TEXTURES.BIN` |
+| Pacotes da release v2.10 | SHA-256 do ZIP | `GEOMETRY.BIN` | `TEXTURES.BIN` |
 | --- | --- | --- | --- |
 | [Fusion2012_FWD_MW2005.zip](release/Fusion2012_FWD_MW2005.zip) | `FAF2EC7BBF3AF4CDF169CB9086163FDA8AE855D2C3C4916E162546DB4531987D` | `46EA905703DC3BADAA92236FCCA8DD0BE65BFBAA95DC65B9D807DC427F4115C3` | `380AEF7826723967DB0E3CD49284387A4469E75938D767EC437CEC9A8670A5B7` |
-| [Fusion2018_AWD_MW2005.zip](release/Fusion2018_AWD_MW2005.zip) | `48E667619B4231EEEE69B9EB3A6970E901A7497D654D0509203A8B7CBB8BD38F` | `C6506D3FA563EC05926315CCC994DE5DC3150DC281F460139BCEE2C16B706F01` | `8DF768ED4BCB4BF933FC4F686FDDF1B13FA203BCB21A656986132008A617F8EF` |
+| [Fusion2018_AWD_MW2005.zip](release/Fusion2018_AWD_MW2005.zip) | `A9DD3568ECC4FA28D35E254BA6B2756B9CF556BCDD4FAA3FFBC3B858C9FB766B` | `C6506D3FA563EC05926315CCC994DE5DC3150DC281F460139BCEE2C16B706F01` | `8DF768ED4BCB4BF933FC4F686FDDF1B13FA203BCB21A656986132008A617F8EF` |
 
-Os hashes de cada arquivo interno estão em [release/SHA256SUMS-conteudo.txt](release/SHA256SUMS-conteudo.txt). As notas da release estão em [release/NOTAS-v2.9.md](release/NOTAS-v2.9.md). O ZIP do 2012 é o mesmo da v2.8.
+Os hashes de cada arquivo interno estão em [release/SHA256SUMS-conteudo.txt](release/SHA256SUMS-conteudo.txt). As notas da release estão em [release/NOTAS-v2.10.md](release/NOTAS-v2.10.md). O ZIP do 2012 é o mesmo da v2.8.
 
 ### Peças que o slot precisa ter
 
@@ -103,7 +103,7 @@ Potência e dirigibilidade ficam no VLT (`GLOBAL/ATTRIBUTES.BIN`), não na malha
 
 ### Fusion 2018 (`MUSTANGGT`)
 
-Motor e câmbio da Mercedes-Benz SLR McLaren; chassi, barras, molas, aderência e direção do Mustang GT, com massa de 1.600 kg. `STEERING` 1,0 e `YAW_SPEED` 0,40 / 0,38 nos dois estágios. `TORQUE_SPLIT` 0 nos dois estágios (tração traseira). Aro 18, perfil 40, seção 255 mm.
+Motor e câmbio da Mercedes-Benz SLR McLaren; chassi, barras e molas do Mustang GT, com massa de 1.600 kg. Desde a v2.10, o bloco de pneus inteiro do SLR (`slr` / `slr_top`): aderência, `GRIP_SCALE`, `YAW_CONTROL` ativo, `YAW_SPEED` 0,45 / 0,47 e `STEERING` 1,04 / 1,15; 295/30 R19 no original e 295/35 R19 no melhorado. `TORQUE_SPLIT` 0,5 e `DIFFERENTIAL` 0,7 / 0,7 / 0,7 nos dois estágios (tração integral). Script: `scripts/release_awd_v2_10.py`; fonte em `versions/performance/fusion-awd-pneus-slr/`.
 
 | | Estoque | Melhorado |
 | --- | --- | --- |
@@ -112,7 +112,7 @@ Motor e câmbio da Mercedes-Benz SLR McLaren; chassi, barras, molas, aderência 
 | Marcha final | 3,06 | 3,50 |
 | Barras dianteira / traseira | 250 / 250 | 300 / 325 |
 | Molas dianteira / traseira | 500 / 500 | 600 / 700 |
-| Aderência estática diant. / tras. | 1,75 / 1,85 | 2,025 / 2,1 |
+| Aderência estática diant. / tras. | 2,10 / 2,10 | 2,20 / 2,20 |
 | Peso dianteiro | 53 | 53,5 |
 
 Rodas, medidas no `ecar` do próprio MWPS: dianteira em X = +1,425, traseira em X = −1,305 (entre-eixos 2,73 m), meia-bitola Y = 0,895, escala de diâmetro 0,345. Preço 42.000 e Blacklist 9 vêm do `FE.MWPS`. O detalhe campo a campo da dirigibilidade está em [versions/v1prime/variants/v1prime-z2-handling-logo/LEIA-ME.md](versions/v1prime/variants/v1prime-z2-handling-logo/LEIA-ME.md); o hash do `ATTRIBUTES.MWPS` da v2.1 é o dessa variante (`3BE53CF9…`).
@@ -390,7 +390,7 @@ perf12.py         # ATTRIBUTES.MWPS
 
 A v2.8 está publicada e foi aprovada no jogo com Xbox 360 Stuff e texturas, sem faces duplicadas. A v2.6 corrigiu faróis, vidros e capô. Nela a lente do 2018, os vidros e o capô foram corrigidos sobre a v2.5 (cinta laranja 読めば尺八). A v2.4 foi aprovada na garagem, na cidade e nas cenas que usam KIT04/KIT05, com os faróis do 2012 encaixados na lataria e no para-choque e a chapa preta atrás da grade.
 
-- O 2018 se chama AWD na garagem e anda com tração traseira.
+- O 2018 tinha tração traseira até a v2.8 (corrigido na v2.9) e pneus de Mustang GT básico com o motor do SLR até a v2.9 (corrigido na v2.10).
 - O logo Ford HD vale para todos os Ford.
 - Não há câmera interna neste jogo: a vista "de dentro" é a câmera do capô ou a do para-brisa.
 - Alguns riscos finos na lateral traseira são costura da malha de origem.

@@ -1,0 +1,12 @@
+{
+  "version": "v2.10",
+  "passed": true,
+  "in_game_tested": true,
+  "change": "2018 tires = slr / slr_top (whole required block, YAW_CONTROL active); DIFFERENTIAL 0.7/0.7/0.7 base and top",
+  "only_tires_and_differentials_changed_in_vlt": true,
+  "geometry_textures_other_payloads_unchanged": true,
+  "fusion2012_unchanged": true,
+  "attributes_sha256": "6CEC72B045E5A44A7E7605370AD5B85B967F23E30616ED193B05E382F9B8FF8E",
+  "fusion2018_zip_sha256": "A9DD3568ECC4FA28D35E254BA6B2756B9CF556BCDD4FAA3FFBC3B858C9FB766B",
+  "fusion2012_zip_sha256": "FAF2EC7BBF3AF4CDF169CB9086163FDA8AE855D2C3C4916E162546DB4531987D"
+}

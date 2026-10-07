@@ -1,4 +1,20 @@
-# Atualização prioritária — v2.9 AWD (07/10/2026)
+# Atualização prioritária — v2.10 pneus do SLR (07/10/2026)
+
+O 2018 era difícil de guiar perto do 2012. Comparação campo a campo: chassi, pneus,
+massa e freios eram idênticos; a diferença era o motor do SLR (523/621) em pneus de
+Mustang básico, mais diferenciais travados. A v2.10 copia o bloco `tires` inteiro de
+`slr` -> `mustanggt` e `slr_top` -> `mustanggt_top` (inclui o cabeçalho do array
+YAW_CONTROL, que estava com zero itens e por isso inativo) e põe DIFFERENTIAL
+0,7/0,7/0,7 nos dois níveis. Testado e aprovado no jogo pelo usuário.
+Patch instalado em ADDONS/CARS_REPLACE/MUSTANGGT, hash
+6CEC72B045E5A44A7E7605370AD5B85B967F23E30616ED193B05E382F9B8FF8E.
+Backup no jogo: MUSTANGGT/backup-claude-2026-10-07-antes-pneus-slr/.
+Fonte: versions/performance/fusion-awd-pneus-slr/ (MWPS + build_pneus_slr.py), também
+copiado para versions/performance/fusion-awd/. Script do pacote:
+scripts/release_awd_v2_10.py; relatório docs/awd-v2.10-verification.json.
+O 2012 tem o mesmo YAW_CONTROL vazio e 714 de torque no melhorado; não mexido.
+
+# Atualização anterior — v2.9 AWD (07/10/2026)
 
 O usuário pediu corrigir o único defeito do 2018 (RWD indevido), instalar no jogo,
 fazer commit e publicar tag/release/remoto. A v2.9 muda só quatro valores de
